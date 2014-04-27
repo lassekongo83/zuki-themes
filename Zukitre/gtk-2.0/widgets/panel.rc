@@ -1,0 +1,69 @@
+style "murrine-panel" = "murrine-thin" {
+	xthickness = 2
+
+	bg[NORMAL] = @panel_bg_color
+	bg[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
+	bg[SELECTED] =  mix (0.21, @panel_fg_color, @panel_bg_color)
+	bg[ACTIVE] = shade (0.6, @panel_bg_color)
+	bg[INSENSITIVE] = @panel_bg_color
+
+	fg[NORMAL] = @panel_fg_color
+	fg[PRELIGHT] = shade (1.08, @panel_fg_color)
+	fg[SELECTED] = shade (1.08, @panel_fg_color)
+	fg[ACTIVE] = @panel_fg_color
+	fg[INSENSITIVE] = mix (0.5, @panel_bg_color, @panel_fg_color)
+
+	base[NORMAL] = @panel_bg_color
+	base[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
+	base[SELECTED] =  mix (0.21, @panel_fg_color, @panel_bg_color)
+	base[ACTIVE] = shade (0.9, @panel_bg_color)
+	base[INSENSITIVE] = @panel_bg_color
+
+	text[NORMAL] = @panel_fg_color
+	text[PRELIGHT] = shade (1.08, @panel_fg_color)
+	text[SELECTED] = shade (1.08, @panel_fg_color)
+	text[ACTIVE] = @panel_fg_color
+	text[INSENSITIVE] = mix (0.5, @panel_bg_color, @panel_fg_color)
+
+	engine "murrine" {
+		roundness = 0
+		contrast = 0.0
+		border_shades = {1.0, 1.0}
+		shadow_shades = {1.0, 1.0}
+		gradient_shades	= {1.0,1.0,1.0,1.0}
+		lightborder_shade = 1.0
+	}
+}
+
+widget "*PanelWidget*" style "murrine-panel"
+widget "*PanelApplet*" style "murrine-panel"
+widget "*fast-user-switch*" style "murrine-panel"
+widget "*CPUFreq*Applet*" style "murrine-panel"
+widget "*indicator-applet*" style "murrine-panel"
+class "PanelApp*" style "murrine-panel"
+class "PanelToplevel*" style "murrine-panel"
+widget_class "*PanelToplevel*" style "murrine-panel"
+widget_class "*notif*" style "murrine-panel"
+widget_class "*Notif*" style "murrine-panel"
+widget_class "*Tray*" style "murrine-panel" 
+widget_class "*tray*" style "murrine-panel"
+widget_class "*computertemp*" style "murrine-panel"
+widget_class "*Applet*Tomboy*" style "murrine-panel"
+widget_class "*Applet*Netstatus*" style "murrine-panel"
+widget "*gdm-user-switch-menubar*" style "murrine-panel"
+widget "*Xfce*Panel*" style "murrine-panel"
+class "*Xfce*Panel*" style "murrine-panel"
+
+style "bold-panel-item" {
+	font_name = "Bold"
+
+	engine "murrine" {
+		roundness = 0
+	}
+}
+
+widget "*Panel*MenuBar*" style "bold-panel-item"
+widget "*gimmie*" style "bold-panel-item"
+
+# widget_class "*Mail*" style "murrine-panel" # Disabled to fix Evolution bug
+# class "*Panel*" style "murrine-panel" # Disabled to fix bug

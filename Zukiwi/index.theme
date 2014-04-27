@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukiwi
+Comment=A grey theme with shiny buttons
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukiwi
+MetacityTheme=Zukiwi
+ButtonLayout=:minimize,maximize,close

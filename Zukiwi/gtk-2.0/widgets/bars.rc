@@ -1,0 +1,34 @@
+### This style handles the toolbars and menubars. ###
+
+style "pixbuf-toolbar" = "murrine-thin"
+{
+	bg[NORMAL]	= @bg_color
+
+	engine "pixmap" {
+	image {
+			function	= BOX
+			file		= "widgets/Bars/toolbar.png"
+			border		= { 0, 0, 4, 4 }
+			stretch		= TRUE
+		}
+	}
+}
+
+# Invisible toolbar separator
+style "murrine-toolseparator" {
+	xthickness = 0
+  	ythickness = 0
+
+	engine "pixmap" {
+		image {
+			function	= BOX
+			file		= "widgets/Others/null.png"
+			border		= { 2, 2, 2, 2 }
+			stretch		= TRUE
+    		}
+ 	}
+}
+
+class "*GtkToolbar*"			style "pixbuf-toolbar"
+class "GtkSeparatorToolItem"		style "murrine-toolseparator"
+
