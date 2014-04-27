@@ -3470,12 +3470,9 @@ GtkInfoBar {
 GtkPopover {
 	border-radius: 3px;
 	background-clip: border-box;
-	/*
-	background-color: @osd_popover_bg;
-	*/
-	background-color: @theme_bg_color;
+	background-color: @menu_bg_color;
 
-	border-color: darker(@theme_bg_color);
+	border-color: @borders;
 	border-width: 1px;
 	border-style: solid;
 
@@ -3511,7 +3508,9 @@ GtkModelButton.button {
 GtkModelButton.button:active,
 GtkModelButton.button:insensitive,
 GtkModelButton.button:active:insensitive,
-GtkModelButton.button {
+GtkModelButton.button,
+GtkModelButton.button:focus,
+GtkModelButton.button:active:focus {
 	background-color: transparent;
 	background-image: none;
 	border-color: transparent;
