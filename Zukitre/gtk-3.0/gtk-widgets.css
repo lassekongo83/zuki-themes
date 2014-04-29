@@ -1545,13 +1545,12 @@ GtkLinkButton.button:active {
 .notebook tab.top:active,
 .notebook tab.top:active:hover {
 	background-color: alpha(@theme_base_color, 0.6);
-	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0), inset 0 1px alpha(@borders, 1.0);
+	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0);
 	border-bottom-width: 0px;
 }
 
 .notebook tab.top:hover {
 	background-color: alpha(@theme_base_color, 0.2);
-	box-shadow: inset 1px 0 alpha(@borders, 0.6), inset -1px 0 alpha(@borders, 0.6);
 	border-bottom-width: 0px;
 }
 
@@ -1562,13 +1561,12 @@ GtkLinkButton.button:active {
 .notebook tab.bottom:active,
 .notebook tab.bottom:active:hover {
 	background-color: alpha(@theme_base_color, 0.6);
-	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0), inset 0 -1px alpha(@borders, 1.0);
+	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0);
 	border-top-width: 0px;
 }
 
 .notebook tab.bottom:hover {
 	background-color: alpha(@theme_base_color, 0.2);
-	box-shadow: inset 1px 0 alpha(@borders, 0.6), inset -1px 0 alpha(@borders, 0.6);
 }
 
 .notebook tab.bottom:active {
@@ -1602,7 +1600,6 @@ GtkLinkButton.button:active {
 
 .notebook tab.reorderable-page:hover {
 	background-color: alpha(@theme_base_color, 0.2);
-	box-shadow: inset 1px 0 alpha(@borders, 0.6), inset -1px 0 alpha(@borders, 0.6);
 	border-style: none;
 }
 .notebook tab.reorderable-page:active,
@@ -1614,7 +1611,7 @@ GtkLinkButton.button:active {
 
 /* close button styling */
 .notebook tab .button {
-	color: mix (@theme_fg_color, @theme_bg_color, 0.85);
+	color: alpha(@theme_fg_color, 0.8);
 	border-image: none;
 	background-image: none;
 	background-color: transparent;
@@ -1630,7 +1627,7 @@ GtkLinkButton.button:active {
 .notebook tab.prelight-page .button,
 .notebook .active-page .button,
 .notebook tab.active-page .button {
-	color: mix(@theme_fg_color, @theme_base_color, 0.6);
+	color: alpha(@theme_fg_color, 0.8);
 	icon-shadow: 0 1px @button_text_shadow;
 }
 
@@ -1641,7 +1638,7 @@ GtkLinkButton.button:active {
 
 .notebook tab .button:active,
 .notebook tab .button:active:hover {
-	color:  @button_active_text;
+	color: alpha(@theme_fg_color, 0.8);
 	background-color: alpha(black, 0.08);
 	box-shadow: inset 0 1px alpha(black, 0.05);
 	icon-shadow: 0 1px @button_active_text_shadow;

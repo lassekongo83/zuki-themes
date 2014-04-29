@@ -1,0 +1,130 @@
+/**
+* Firefox custom CSS for Zukitre GTK Theme
+* To use with Firefox Zukitre Theme : https://addons.mozilla.org/fr/firefox/addon/numix-gtk3theme/
+* Better with Omnibar FIrefox Add-On : https://addons.mozilla.org/fr/firefox/addon/omnibar/
+*/
+ 
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+ 
+/* Awesomebar improvements */
+#urlbar {
+	-moz-appearance: textfield !important;
+	border: 1px solid #717171 !important;
+}
+ 
+#urlbar .autocomplete-textbox-container {
+background-color: -moz-Field !important;
+	-moz-appearance: none !important;
+}
+ 
+#urlbar > .autocomplete-history-dropmarker {
+	-moz-appearance: toolbarbutton-dropdown !important;
+	margin: 0px 3px 0px 5px !important;
+}
+ 
+#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+	background: -moz-Field !important;
+}
+ 
+#PopupAutoCompleteRichResult .autocomplete-richlistitem[selected="true"] {
+	background: Highlight !important;
+}
+ 
+#PopupAutoCompleteRichResult .autocomplete-richlistitem[selected="true"],
+#PopupAutoCompleteRichResult .autocomplete-richlistitem[selected="true"] * {
+	color: HighlightText !important;
+}
+ 
+.ac-title {
+	color: -moz-Fieldtext !important;
+}
+ 
+#PopupAutoComplete .autocomplete-treebody {
+background-color: -moz-Field !important;
+	color: -moz-Fieldtext !important;
+}
+ 
+/* Identity/Bookmark pop-up improvements */
+#identity-popup-container {
+	-moz-appearance: dialog !important;
+}
+ 
+#editBookmarkPanel {
+	-moz-appearance: dialog !important;
+}
+ 
+#editBMPanel_foldersExpander, #editBMPanel_tagsSelectorExpander {
+	-moz-appearance: menulist-button !important;
+}
+
+/* Remove focus lines from tabs */
+.tabbrowser-tab > .tab-text {
+	border: 1px dotted transparent !important;
+}
+ 
+/* Square tabs */
+.tabs-newtab-button,
+.tabbrowser-tab:not([selected]) {
+	background-color: transparent !important;
+	color: #2c2c2c !important;
+	border: none !important;
+	background-image: none !important;
+	border-radius: 0 !important;
+}
+ 
+.tabs-newtab-button:hover,
+.tabbrowser-tab:not([selected]):hover {
+	background-color: rgba(255,255,255,0.2) !important;
+	color: #2c2c2c !important;
+}
+ 
+.tabbrowser-tab[selected] {
+	background-color: rgba(255,255,255,0.7) !important;
+	color: #2c2c2c !important;
+	border: 1px solid #afafaf !important;
+	border-top-width: 0 !important;
+	border-bottom-width: 0 !important;
+	border-radius: 0 !important;
+	background-image: none !important;
+	box-shadow: inset 0 2px rgba(0,0,0,0.05) !important;
+}
+ 
+ 
+.tabbrowser-tab {
+	padding: 0 2px !important;
+	margin: 0 !important;
+}
+#nav-bar {
+	/*background-image: -moz-linear-gradient(rgb(197,197,197), rgb(205,205,205) 95%) !important;*/
+	background-image: none !important;
+	background-color: #d6d6d6 !important;
+	/*border-color: #afafaf !important;
+	box-shadow: inset 0 2px #bcbcbc !important;*/
+	box-shadow: inset 0 -1px #E3E3E3 !important;
+}
+ 
+#urlbar, #search-bar {
+	-moz-appearance: none !important;
+}
+
+/* Tabbar */
+.tabbrowser-tabs {
+	background-color: #ccc !important;
+	border-top: 1px solid #afafaf !important;
+	box-shadow: inset 0 2px #C0C0C0 !important;
+	border-bottom: 1px solid #afafaf !important;
+}
+
+/* menu button */
+#appmenu-toolbar-button {
+	-moz-appearance: none !important;
+	background-color: #ccc !important;
+	border-top: 1px solid #afafaf !important;
+	box-shadow: inset 0 2px #C0C0C0 !important;
+	border-bottom: 1px solid #afafaf !important;
+}
+
+#appmenu-toolbar-button:hover {
+	background-color: rgba(255,255,255,0.2) !important;
+	box-shadow: inset 0 2px #d2d2d2 !important;
+}
