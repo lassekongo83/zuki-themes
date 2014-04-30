@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>Zukitre</name>
+	<name>Derp</name>
 	<author>lassekongo83</author>
 	<copyright>GPL-3.0+</copyright>
-	<date>2014</date>
+	<date>2013</date>
 	<description>Mutter Theme</description>
 </info>
 
@@ -209,105 +209,105 @@
 </draw_ops>
 
 <!-- ::: BUTTON ICONS ::: -->
-<!-- note: negative values in x or y causes gnome-shell to crash -->
+
 <!-- close icon -->
 <draw_ops name="close_focused">
-	<image filename="close_focused_normal.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="close_focused_normal.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_focused_prelight">
-	<image filename="close_focused_prelight.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="close_focused_prelight.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
-	<image filename="close_focused_pressed.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="close_focused_pressed.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_unfocused">
-	<image filename="close_focused_normal.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="close_unfocused.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_unfocused_prelight">
-	<image filename="close_focused_prelight.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="close_unfocused_prelight.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_unfocused_pressed">
-	<image filename="close_focused_pressed.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="close_focused_pressed.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <!-- maximize icon -->
 <draw_ops name="maximize_focused">
-	<image filename="maximize_focused_normal.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="maximize_focused_normal.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_prelight">
-	<image filename="maximize_focused_prelight.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="maximize_focused_prelight.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
-	<image filename="maximize_focused_pressed.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="maximize_focused_pressed.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_unfocused">
-	<image filename="maximize_focused_normal.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="maximize_unfocused.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_prelight">
-	<image filename="maximize_focused_prelight.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="maximize_unfocused_prelight.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_pressed">
-	<image filename="maximize_focused_pressed.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="maximize_focused_pressed.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <!-- unmaximize icon -->
 <draw_ops name="unmaximize_focused">
-	<image filename="unmaximize_focused_normal.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="unmaximize_focused_normal.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_prelight">
-	<image filename="unmaximize_focused_prelight.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="unmaximize_focused_prelight.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_pressed">
-	<image filename="unmaximize_focused_pressed.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="unmaximize_focused_pressed.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused">
-	<image filename="unmaximize_focused_normal.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="unmaximize_unfocused.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused_prelight">
-	<image filename="unmaximize_focused_prelight.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="unmaximize_unfocused_prelight.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused_pressed">
-	<image filename="unmaximize_focused_pressed.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="unmaximize_focused_pressed.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <!-- minimize icon -->
 <draw_ops name="minimize_focused">
-	<image filename="minimize_focused_normal.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="minimize_focused_normal.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_prelight">
-	<image filename="minimize_focused_prelight.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="minimize_focused_prelight.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
-	<image filename="minimize_focused_pressed.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="minimize_focused_pressed.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_unfocused">
-	<image filename="minimize_focused_normal.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="minimize_unfocused.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_unfocused_prelight">
-	<image filename="minimize_focused_prelight.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="minimize_unfocused_prelight.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_unfocused_pressed">
-	<image filename="minimize_focused_pressed.png" x="0" y="(0 `max` ((height - title_height) / 7)) + 3" width="object_width" height="object_height"/>
+	<image filename="minimize_focused_pressed.svg" x="0" y="5" width="object_width" height="object_height" />
 </draw_ops>
 
 <!-- menu icon -->

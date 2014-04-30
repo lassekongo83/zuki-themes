@@ -3583,7 +3583,7 @@ GtkModelButton.button:selected {
 	color: @wm_title;
 	/*background: none;
 	padding: 5px 5px 6px 5px;*/
-	padding: 2px 6px 3px 3px; /* important for background size */
+	padding: 2px 6px 2px 2px; /* important for background size */
 	/*border-radius: 3px;
 	border-width: 2px;
 	border-color: transparent;
