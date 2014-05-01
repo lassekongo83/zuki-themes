@@ -63,6 +63,19 @@ background-color: -moz-Field !important;
 }
  
 /* Square tabs */
+.tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+.tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before, .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+.tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before, .tab-background-start[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,
+.tab-background-end[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before, .tab-background-end[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,
+.tab-background-start[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before,.tab-background-start[selected=true]:-moz-locale-dir(ltr)::after,
+.tab-background-end[selected=true]:-moz-locale-dir(rtl)::after,.tab-background-end[selected=true]:-moz-locale-dir(ltr)::after,
+.tab-background-start[selected=true]:-moz-locale-dir(rtl)::after, .tab-background-middle[selected=true], .tab-background-middle[selected=true]:-moz-lwtheme, .tab-background-start[selected=true]:-moz-lwtheme::before,
+.tab-background-end[selected=true]:-moz-lwtheme::before, #tabbrowser-tabs::before, .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]){
+	background-image: none !important;
+	background-color: transparent !important;
+	background-size: 100% 100%;
+}
+
 .tabs-newtab-button,
 .tabbrowser-tab:not([selected]) {
 	background-color: transparent !important;
@@ -83,7 +96,7 @@ background-color: -moz-Field !important;
 	color: #2c2c2c !important;
 	border: 1px solid #afafaf !important;
 	border-top-width: 0 !important;
-	border-bottom-width: 0 !important;
+	border-bottom-width: 1px !important;
 	border-radius: 0 !important;
 	background-image: none !important;
 	box-shadow: inset 0 2px rgba(0,0,0,0.05) !important;
@@ -95,11 +108,8 @@ background-color: -moz-Field !important;
 	margin: 0 !important;
 }
 #nav-bar {
-	/*background-image: -moz-linear-gradient(rgb(197,197,197), rgb(205,205,205) 95%) !important;*/
 	background-image: none !important;
 	background-color: #d6d6d6 !important;
-	/*border-color: #afafaf !important;
-	box-shadow: inset 0 2px #bcbcbc !important;*/
 	box-shadow: inset 0 -1px #E3E3E3 !important;
 }
  
@@ -112,19 +122,35 @@ background-color: -moz-Field !important;
 	background-color: #ccc !important;
 	border-top: 1px solid #afafaf !important;
 	box-shadow: inset 0 2px #C0C0C0 !important;
-	border-bottom: 1px solid #afafaf !important;
+	margin: 0 !important;
+	border-bottom-width: 0 !important;
 }
 
-/* menu button */
-#appmenu-toolbar-button {
-	-moz-appearance: none !important;
-	background-color: #ccc !important;
-	border-top: 1px solid #afafaf !important;
-	box-shadow: inset 0 2px #C0C0C0 !important;
-	border-bottom: 1px solid #afafaf !important;
+/* places the tabs at the bottom */
+#TabsToolbar {
+	-moz-box-ordinal-group: 2 !important;
+}
+#addon-bar {
+	-moz-box-ordinal-group: 3 !important;
 }
 
-#appmenu-toolbar-button:hover {
-	background-color: rgba(255,255,255,0.2) !important;
-	box-shadow: inset 0 2px #d2d2d2 !important;
+#TabsToolbar {
+	margin-bottom: -3px !important;
+	padding-left: 0 !important;
+}
+
+#TabsToolbar:after {
+	border-bottom: 1px solid #afafaf !important;
+	margin-bottom: -1px !important;
+}
+
+.tabbrowser-tab:before,
+.tabbrowser-tab:after { 
+	visibility: hidden !important;
+}
+
+.tabs-newtab-button {
+	margin: 0 !important;
+	padding: 0 !important;
+	max-width: 24px !important;
 }
