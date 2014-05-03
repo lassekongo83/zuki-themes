@@ -9,7 +9,7 @@
 /* Awesomebar improvements */
 #urlbar {
 	-moz-appearance: textfield !important;
-	border: 1px solid #717171 !important;
+	/*border: 1px solid #717171 !important;*/
 }
  
 #urlbar .autocomplete-textbox-container {
