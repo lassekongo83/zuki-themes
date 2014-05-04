@@ -15,7 +15,7 @@
    id="svg3904"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="Nytt dokument 4">
+   sodipodi:docname="checkbox-off.svg">
   <defs
      id="defs3906">
     <linearGradient
@@ -68,9 +68,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="127.5"
-     inkscape:cy="8"
+     inkscape:zoom="8"
+     inkscape:cx="10.190287"
+     inkscape:cy="16.481232"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
@@ -88,7 +88,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -97,35 +97,34 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer">
     <g
-       transform="translate(18.000131,-1.3065338e-4)"
-       id="g3856">
+       id="g4298">
       <rect
-         style="fill:url(#linearGradient3850);fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="rect3840"
-         width="14"
-         height="14"
-         x="-17"
+         rx="0.00013065338"
+         ry="0.00013065338"
          y="1"
-         ry="1"
-         rx="1" />
-      <rect
-         rx="1"
-         ry="1"
-         y="1"
-         x="-17"
+         x="1"
          height="14"
          width="14"
-         id="rect3842"
-         style="fill:url(#linearGradient3852);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+         id="rect2993"
+         style="fill:#454545;fill-opacity:1;fill-rule:nonzero;stroke:none" />
       <rect
-         rx="1.4997387"
-         ry="1.4997387"
-         y="0.50026131"
-         x="-17.5"
-         height="14.999739"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:0.19607843;stroke-dasharray:none"
+         id="rect3813"
          width="14.999739"
-         id="rect3846"
-         style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:0.58666663;stroke-dasharray:none" />
+         height="14.999739"
+         x="0.5"
+         y="0.50026131"
+         ry="0"
+         rx="0" />
+      <rect
+         rx="0"
+         ry="0"
+         y="1.5001074"
+         x="1.4998468"
+         height="13.000046"
+         width="13.000045"
+         id="rect3953"
+         style="fill:none;stroke:#555555;stroke-width:0.99995494;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>
 </svg>

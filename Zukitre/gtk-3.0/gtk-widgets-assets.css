@@ -147,19 +147,19 @@ GtkModelButton.button.radio:active:insensitive,
  * GtkSwitch *
  *************/
 GtkSwitch.trough {
- 	background-image: url("assets/switch-off.png");
+ 	background-image: url("assets/switch-off.svg");
 }
 
 GtkSwitch.trough:active {
-	background-image: url("assets/switch-on.png");
+	background-image: url("assets/switch-on.svg");
 }
 
 GtkSwitch.trough:insensitive {
-	background-image: url("assets/switch-off-ins.png");
+	background-image: url("assets/switch-off-ins.svg");
 }
 
 GtkSwitch.trough:active:insensitive {
-	background-image: url("assets/switch-on-ins.png");
+	background-image: url("assets/switch-on-ins.svg");
 }
 
 /*********************

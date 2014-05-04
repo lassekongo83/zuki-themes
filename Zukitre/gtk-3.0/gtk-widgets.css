@@ -3115,7 +3115,7 @@ GtkAssistant .sidebar {
 
 GtkSwitch {
 	border-radius: 0px;
-	padding: 2px;
+	padding: 0px;
 	background-color: transparent;
 }
 
@@ -3126,7 +3126,7 @@ GtkSwitch.trough:insensitive {
 	color: transparent;
 	box-shadow: none;
 	background-color: transparent;
-	background-size: /*48px 26px*/ 50px 28px; /* Size + 2 to adjust to the padding. */
+	background-size: 52px 22px;
 	background-position: center center;
 	background-repeat: no-repeat;
 	text-shadow: none;
