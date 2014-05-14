@@ -679,7 +679,7 @@ GtkColorButton.button {
 GtkProgressBar {
 	-GtkProgressBar-min-horizontal-bar-height: 16;
 	-GtkProgressBar-min-vertical-bar-width: 16;
-	border-radius: 16px;
+	border-radius: 0px;
 	padding: 0 0 1px 0;
 }
 
