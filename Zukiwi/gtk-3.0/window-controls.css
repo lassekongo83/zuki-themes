@@ -97,3 +97,17 @@
 .titlebar .right .titlebutton:last-child:active {
 	background-image: url('window-controls/close_focused_pressed.png');
 }
+
+/* Menu button when fallback kicks in (XFCE, Cinnamon etc.) */
+
+.titlebar .button.menu-button.titlebutton {
+	background-image: url('window-controls/menu.png');
+}
+
+.titlebar .button.menu-button.titlebutton:hover {
+	background-image: url('window-controls/menu_prelight.png');
+}
+
+.titlebar .button.menu-button.titlebutton:active {
+	background-image: url('window-controls/menu.png');
+}
