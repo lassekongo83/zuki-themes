@@ -2893,7 +2893,7 @@ GtkProgressBar.osd.progressbar {
 	icon-shadow: none;
 	background-image: none;
 	background-color: @insentitive_bg_color;
-	border: 1px solid @insensitive_borders;
+	/*border: 1px solid @insensitive_borders;*/
 }
 
 .suggested-action.button GtkLabel:insensitive {
