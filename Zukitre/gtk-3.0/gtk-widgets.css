@@ -440,7 +440,7 @@ GtkTreeView.separator,
 }
 
 .spinbutton .button:insensitive {
-	color: @internal_element_insensitive;
+	color: @internal_element_color;
 }
 
 .spinbutton .button:active,
@@ -3196,7 +3196,7 @@ GtkIconView.cell:selected:focus {
 }
 
 .cell {
-	color: @theme_text_color;
+	/*color: @theme_text_color;*/ /* Don't use, seems to change hover effect on combobox menuitems */
 	padding: 2px;
 	text-shadow: none;
 }
