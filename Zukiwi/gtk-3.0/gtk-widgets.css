@@ -3378,7 +3378,26 @@ column-header .button.dnd {
 }
 
 .list-row:selected {
-	background-color: @theme_selected_bg_color;
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+	border-color: shade (@theme_selected_bg_color, 0.85);
+	background-image: linear-gradient(to bottom,
+		shade (@theme_selected_bg_color, 1.0),
+		shade (@theme_selected_bg_color, 0.85));
+	box-shadow: none;
+	color: @theme_selected_fg_color;
+}
+
+.list-row:selected:backdrop {
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+	border-color: shade (@theme_bg_color, 0.85);
+	background-image: linear-gradient(to bottom,
+		shade (@theme_bg_color, 1.0),
+		shade (@theme_bg_color, 0.85));
+	color: @theme_fg_color;
+	text-shadow: none;
+	box-shadow: none;
 }
 
 /**************

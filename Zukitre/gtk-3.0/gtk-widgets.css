@@ -1547,6 +1547,7 @@ GtkLinkButton.button:active {
 	background-color: alpha(@theme_base_color, 0.6);
 	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0);
 	border-bottom-width: 0px;
+	border-top-width: 1px;
 }
 
 .notebook tab.top:hover {
@@ -1563,6 +1564,7 @@ GtkLinkButton.button:active {
 	background-color: alpha(@theme_base_color, 0.6);
 	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0);
 	border-top-width: 0px;
+	border-bottom-width: 1px;
 }
 
 .notebook tab.bottom:hover {
@@ -3338,7 +3340,26 @@ column-header .button.dnd {
 }
 
 .list-row:selected {
-	background-color: @theme_selected_bg_color;
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+	border-color: shade (@theme_selected_bg_color, 0.85);
+	background-image: linear-gradient(to bottom,
+		shade (@theme_selected_bg_color, 1.0),
+		shade (@theme_selected_bg_color, 1.0));
+	box-shadow: none;
+	color: @theme_selected_fg_color;
+}
+
+.list-row:selected:backdrop {
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+	border-color: shade (@theme_bg_color, 0.85);
+	background-image: linear-gradient(to bottom,
+		shade (@theme_bg_color, 0.94),
+		shade (@theme_bg_color, 0.94));
+	color: @theme_fg_color;
+	text-shadow: none;
+	box-shadow: none;
 }
 
 /**************

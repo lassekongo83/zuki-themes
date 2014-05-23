@@ -173,6 +173,10 @@ GeditWindow .pane-separator:hover {
 	color: @borders;
 }
 
+.gedit-headerbar-paned:backdrop {
+	background-image: url("assets/null.png");
+}
+
 .gedit-document-panel {
 	background-color: @sidebar_bg;
 }
