@@ -1544,8 +1544,8 @@ GtkLinkButton.button:active {
 
 .notebook tab.top:active,
 .notebook tab.top:active:hover {
-	background-color: alpha(@theme_base_color, 0.6);
-	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0);
+	background-color: shade(@theme_base_color, 0.94);
+	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0), inset 0 2px alpha(@borders, 0.3);
 	border-bottom-width: 0px;
 	border-top-width: 1px;
 }
@@ -1561,7 +1561,7 @@ GtkLinkButton.button:active {
 
 .notebook tab.bottom:active,
 .notebook tab.bottom:active:hover {
-	background-color: alpha(@theme_base_color, 0.6);
+	background-color: shade(@theme_base_color, 0.94);
 	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0);
 	border-top-width: 0px;
 	border-bottom-width: 1px;
@@ -1606,9 +1606,10 @@ GtkLinkButton.button:active {
 }
 .notebook tab.reorderable-page:active,
 .notebook tab.reorderable-page:active:hover {
-	background-color: alpha(@theme_base_color, 0.6);
-	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0);
+	background-color: shade(@theme_base_color, 0.94);
+	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0), inset 0 2px alpha(@borders, 0.3);
 	border-style: solid;
+	border-top-width: 0;
 }
 
 /* close button styling */
@@ -1868,28 +1869,28 @@ GtkFileChooserButton GtkImage:last-child {
 
 .scrollbar.slider.vertical {
 	background-image: linear-gradient(to right,
-		shade(@scrollbar_slider, 0.9),
-		shade(@scrollbar_slider, 0.9));
+		shade(@scrollbar_slider, 0.8),
+		shade(@scrollbar_slider, 0.8));
 	border-radius: 20px;
 	border-image: none;
 	border-style: solid;
 	border-color: alpha(@borders, 0.0);
-	border-width: 2px;
+	border-width: 4px;
 	box-shadow: inset 0 0 0 1px shade(@borders, 0.8);
 }
 
 .scrollbar.slider.vertical:hover,
 .scrollbar.slider.vertical:hover:active {
 	background-image: linear-gradient(to right,
-		shade(@scrollbar_slider, 1.0),
-		shade(@scrollbar_slider, 1.0));
+		shade(@scrollbar_slider, 0.9),
+		shade(@scrollbar_slider, 0.9));
 	border-image: none;
 }
 
 .scrollbar.slider.horizontal {
 	background-image: linear-gradient(to right,
-		shade(@scrollbar_slider, 0.9),
-		shade(@scrollbar_slider, 0.9));
+		shade(@scrollbar_slider, 0.8),
+		shade(@scrollbar_slider, 0.8));
 	border-radius: 20px;
 	border-image: none;
 	border-style: solid;
@@ -1901,8 +1902,8 @@ GtkFileChooserButton GtkImage:last-child {
 .scrollbar.slider.horizontal:hover,
 .scrollbar.slider.horizontal:hover:active {
 	background-image: linear-gradient(to bottom,
-		shade(@scrollbar_slider, 1.0),
-		shade(@scrollbar_slider, 1.0));
+		shade(@scrollbar_slider, 0.9),
+		shade(@scrollbar_slider, 0.9));
 	border-image: none;
 }
 
