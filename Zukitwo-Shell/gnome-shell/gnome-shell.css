@@ -548,16 +548,14 @@ StScrollBar StButton#vhandle:active {
 /* Panel */
 
 #panel {
-	border: 1px solid rgba(255,255,255,0.1);
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
+	border: 0;
 	border-radius: 0px;
 	background-gradient-direction: vertical;
 	background-gradient-start: rgba(0,0,0,0.35);
 	background-gradient-end: rgba(0,0,0,0.45);
 	font-weight: bold;
 	height: 1.86em;
+	box-shadow: 0 0 1px 0 rgba(255,255,255,0.18);
 }
 
 #panel.unlock-screen,
