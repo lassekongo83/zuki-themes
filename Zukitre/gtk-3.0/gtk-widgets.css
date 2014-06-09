@@ -1494,18 +1494,21 @@ GtkLinkButton.button:active {
 	border-bottom: 1px solid @borders;
 	border-left: 1px solid @borders;
 	border-right: 1px solid @borders;
+	box-shadow: inset 0 -2px 0 0 alpha(@borders, 0.4);
 }
 
 .notebook.header.frame.left {
 	border-top: 1px solid @borders;
 	border-bottom: 1px solid @borders;
 	border-left: 1px solid @borders;
+	box-shadow: inset 2px 0 0 0 alpha(@borders, 0.4);
 }
 
 .notebook.header.frame.right {
 	border-top: 1px solid @borders;
 	border-bottom: 1px solid @borders;
 	border-right: 1px solid @borders;
+	box-shadow: inset -2px 0 0 0 alpha(@borders, 0.4);
 }
 
 .notebook GtkViewport {
@@ -1562,7 +1565,7 @@ GtkLinkButton.button:active {
 .notebook tab.bottom:active,
 .notebook tab.bottom:active:hover {
 	background-color: shade(@theme_base_color, 0.94);
-	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0);
+	box-shadow: inset 1px 0 alpha(@borders, 1.0), inset -1px 0 alpha(@borders, 1.0), inset 0 -2px alpha(@borders, 0.3);
 	border-top-width: 0px;
 	border-bottom-width: 1px;
 }
@@ -1582,28 +1585,32 @@ GtkLinkButton.button:active {
 	padding: 5px 20px;
 }
 
+.notebook tab.left:active,
+.notebook tab.left:active:hover {
+	background-color: shade(@theme_base_color, 0.94);
+	box-shadow: inset 0 1px alpha(@borders, 1.0), inset 0 -1px alpha(@borders, 1.0), inset 2px 0 alpha(@borders, 0.3);
+	border-left-width: 1px;
+	border-right-width: 0px;
+}
+
+.notebook tab.right:active,
+.notebook tab.right:active:hover {
+	background-color: shade(@theme_base_color, 0.94);
+	box-shadow: inset 0 1px alpha(@borders, 1.0), inset 0 -1px alpha(@borders, 1.0), inset -2px 0 alpha(@borders, 0.3);
+	border-left-width: 0px;
+	border-right-width: 1px;
+}
+
 .notebook tab.left:hover,
-.notebook tab.left:active {
-	border-right-width: 2px;
-}
-
-.notebook tab.left:active {
-	border-right-color: @notebook_active_tab_border;
-}
-
-.notebook tab.right:hover,
-.notebook tab.right:active {
-	border-left-width: 2px;
-}
-
-.notebook tab.right:active {
-	border-left-color: @notebook_active_tab_border;
+.notebook tab.right:hover {
+	background-color: alpha(@theme_base_color, 0.2);
 }
 
 .notebook tab.reorderable-page:hover {
 	background-color: alpha(@theme_base_color, 0.2);
 	border-style: none;
 }
+
 .notebook tab.reorderable-page:active,
 .notebook tab.reorderable-page:active:hover {
 	background-color: shade(@theme_base_color, 0.94);
@@ -1875,15 +1882,14 @@ GtkFileChooserButton GtkImage:last-child {
 	border-image: none;
 	border-style: solid;
 	border-color: alpha(@borders, 0.0);
-	border-width: 4px;
-	box-shadow: inset 0 0 0 0px shade(@borders, 0.8);
+	border-width: 3px;
 }
 
 .scrollbar.slider.vertical:hover,
 .scrollbar.slider.vertical:hover:active {
 	background-image: linear-gradient(to right,
-		shade(@scrollbar_slider, 0.9),
-		shade(@scrollbar_slider, 0.9));
+		shade(@scrollbar_slider, 0.75),
+		shade(@scrollbar_slider, 0.75));
 	border-image: none;
 }
 
@@ -1895,15 +1901,14 @@ GtkFileChooserButton GtkImage:last-child {
 	border-image: none;
 	border-style: solid;
 	border-color: alpha(@borders, 0.0);
-	border-width: 2px;
-	box-shadow: inset 0 0 0 1px shade(@borders, 0.8);
+	border-width: 3px;
 }
 
 .scrollbar.slider.horizontal:hover,
 .scrollbar.slider.horizontal:hover:active {
 	background-image: linear-gradient(to bottom,
-		shade(@scrollbar_slider, 0.9),
-		shade(@scrollbar_slider, 0.9));
+		shade(@scrollbar_slider, 0.75),
+		shade(@scrollbar_slider, 0.75));
 	border-image: none;
 }
 
@@ -2408,13 +2413,15 @@ GtkMessageDialog {
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
 	border-bottom-color: alpha (@theme_base_color, 0.3);
+	border-top-color: alpha (@theme_base_color, 0.3);
 	border-style: solid;
 	border-width: 1px 0 1px 0;
 
 	-GtkWidget-window-dragging: true;
 	-GtkToolbar-button-relief: normal;
 	box-shadow: inset 0 -1px 0 0 @borders,
-		inset 0 2px 0 0 alpha(@borders, 0.4);
+				inset 0 1px 0 0 @borders,
+				inset 0 3px 0 0 alpha(@borders, 0.4);
 	text-shadow: 0 1px @button_text_shadow;
 	padding-top: 1px;
 	padding-bottom: 1px;
