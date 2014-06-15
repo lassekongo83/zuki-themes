@@ -267,3 +267,86 @@ OsScrollbar:insensitive {
 .ubuntu-online-accounts.frame {
 	border-top-width: 0;
 }
+
+/****************
+ * Mate-Panel *
+ ****************/
+
+/* the panel bar itself */
+.mate-panel-menu-bar,
+MatePanelApplet > GtkMenuBar.menubar,
+PanelToplevel,
+PanelWidget,
+PanelAppletFrame,
+MatePanelApplet {
+	background-color: @os_chrome_bg_color;
+	background-image: none;
+	color: @os_chrome_fg_color;
+	text-shadow: none;
+}
+
+MatePanelApplet {
+	border-width: 0;
+}
+
+PanelSeparator {
+	border-width: 0;
+	background-image: none;
+	background-color: transparent;
+	color: transparent;
+	text-shadow: none;
+}
+
+/* prelight of WnckPager */
+MatePanelApplet *:hover {
+	background-image: linear-gradient(to bottom,
+		alpha (@theme_base_color, 0.1),
+		alpha (@theme_base_color, 0.1));
+	background-color: @theme_base_color;
+}
+
+/* desktop-applet, clockapplet, drivemount, character-map,
+dictionary */
+MatePanelApplet .button {
+	background-image: none;
+	background-color: @os_chrome_bg_color;
+	color: @os_chrome_fg_color;
+
+	border-image: none;
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 0px;
+	text-shadow: none;
+	-GtkWidget-window-dragging: true;
+}
+
+MatePanelApplet .button:active:hover,
+MatePanelApplet .button:active {
+	background-image: linear-gradient(to bottom,
+		@theme_selected_bg_color,
+		@theme_selected_bg_color);
+	background-color: @theme_base_color;
+	color: @os_chrome_fg_color;
+
+	border-image: none;
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 5px;
+	text-shadow: none;
+	-GtkWidget-window-dragging: true;
+}
+
+MatePanelApplet .button:hover {
+	background-image: linear-gradient(to bottom,
+		alpha (@theme_base_color, 0.1),
+		alpha (@theme_base_color, 0.1));
+	background-color: @theme_base_color;
+	color: @os_chrome_fg_color;
+
+	border-image: none;
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 5px;
+	text-shadow: none;
+	-GtkWidget-window-dragging: true;
+}
