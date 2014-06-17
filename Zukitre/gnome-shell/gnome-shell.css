@@ -1154,10 +1154,12 @@ StScrollBar StButton#vhandle:active {
 }
 
 .app-folder-popup {
-	-arrow-border-radius: 8px;
-	-arrow-background-color: rgba(0,0,0,0.3);
-	-arrow-base: 24px;
-	-arrow-rise: 11px;
+	-arrow-border-radius: 2px;
+	-arrow-background-color: rgba(45,45,45,1.0);
+	-arrow-border-width: 1px;
+	-arrow-border-color: rgba(40,40,40,1.0);
+	-arrow-base: 15px;
+	-arrow-rise: 8px;
 }
 
 .app-folder-popup-bin {
