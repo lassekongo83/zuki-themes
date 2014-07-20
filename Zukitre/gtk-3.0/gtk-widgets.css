@@ -2820,7 +2820,7 @@ GtkProgressBar.osd.progressbar {
 .suggested-action.button {
 	background-image: linear-gradient(to bottom,
 		@suggested_action_button_a,
-		@suggested_action_button_b);
+		@suggested_action_button_a);
 
 	color: @suggested_action_button_fg;
 }
@@ -2828,8 +2828,8 @@ GtkProgressBar.osd.progressbar {
 .toolbar .suggested-action.button:hover,
 .suggested-action.button:hover {
 	background-image: linear-gradient(to bottom,
-		shade(@suggested_action_button_a, 1.10),
-		shade(@suggested_action_button_b, 1.05));
+		shade(@suggested_action_button_a, 1.05),
+		shade(@suggested_action_button_a, 1.05));
 }
 
 .toolbar .suggested-action.button:active,
@@ -2838,7 +2838,7 @@ GtkProgressBar.osd.progressbar {
 .suggested-action.button:hover:active {
 	background-image: linear-gradient(to bottom,
 		@suggested_action_button_b,
-		@suggested_action_button_a);
+		@suggested_action_button_b);
 
 	color: @suggested_action_button_fg;
 }
@@ -2877,22 +2877,22 @@ GtkProgressBar.osd.progressbar {
 .destructive-action.button {
 	background-image: linear-gradient(to bottom,
 		@destructive_action_button_a,
-		@destructive_action_button_b);
+		@destructive_action_button_a);
 
 	color: @destructive_action_button_fg;
 }
 
 .destructive-action.button:hover {
 	background-image: linear-gradient(to bottom,
-		shade(@destructive_action_button_a, 1.10),
-		shade(@destructive_action_button_b, 1.05));
+		shade(@destructive_action_button_a, 1.05),
+		shade(@destructive_action_button_a, 1.05));
 }
 
 .destructive-action.button:active,
 .destructive-action.button:hover:active {
 	background-image: linear-gradient(to bottom,
 		@destructive_action_button_b,
-		@destructive_action_button_a);
+		@destructive_action_button_b);
 
 	color: @destructive_action_button_fg;
 }
@@ -2943,7 +2943,7 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar GtkToolButton .button {
 	background-image: linear-gradient(to bottom,
 		@selection_toolbar_button_a,
-		@selection_toolbar_button_b);
+		@selection_toolbar_button_a);
 
 	border-image: none;
 	border-color: @selection_toolbar_button_border;
@@ -2959,7 +2959,7 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar GtkToolButton .button:hover {
 	background-image: linear-gradient(to bottom,
 		shade(@selection_toolbar_button_a, 1.05),
-		shade(@selection_toolbar_button_b, 1.02));
+		shade(@selection_toolbar_button_a, 1.05));
 }
 
 .selection-mode.header-bar .button:active,
@@ -2969,8 +2969,8 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar GtkToolButton .button:active,
 .selection-mode.toolbar GtkToolButton .button:hover:active {
 	background-image: linear-gradient(to bottom,
-		shade(@selection_toolbar_button_b, 0.95),
-		shade(@selection_toolbar_button_a, 0.88));
+		shade(@selection_toolbar_button_b, 1.0),
+		shade(@selection_toolbar_button_b, 1.0));
 	box-shadow: none;
 }
 

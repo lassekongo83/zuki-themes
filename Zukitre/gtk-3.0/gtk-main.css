@@ -1,7 +1,7 @@
 /* Default color scheme */
 @define-color theme_base_color #f7f7f7;
 @define-color theme_bg_color #d6d6d6;
-@define-color theme_selected_bg_color #4B9DDB;
+@define-color theme_selected_bg_color #2099d6; /* Old: #4B9DDB; */
 @define-color theme_text_color #2c2c2c;
 @define-color theme_fg_color @theme_text_color;
 @define-color theme_selected_fg_color #ffffff;
@@ -48,8 +48,8 @@
 @define-color button_active_text_shadow alpha(white, 0.4);
 @define-color button_text_shadow alpha(white, 0.4);
 
-@define-color button_hover_gradient_color_a shade(@button_gradient_color_a, 1.11);
-@define-color button_hover_gradient_color_b shade(@button_gradient_color_b, 1.06);
+@define-color button_hover_gradient_color_a shade(@button_gradient_color_a, 1.05);
+@define-color button_hover_gradient_color_b shade(@button_gradient_color_b, 1.05);
 
 @define-color insensitive_bg_color shade(@theme_bg_color, 0.95);
 @define-color insensitive_fg_color shade(@theme_bg_color, 0.6);
@@ -75,7 +75,7 @@
 @define-color switch_trough_active_bg_a shade(@theme_selected_bg_color, 0.96);
 @define-color switch_trough_active_bg_b shade(@theme_selected_bg_color, 0.89);
 
-@define-color progressbar_background_a shade(@theme_selected_bg_color, 0.95);
+@define-color progressbar_background_a shade(@theme_selected_bg_color, 1.0);
 @define-color progressbar_background_b shade(@theme_selected_bg_color, 1.1);
 @define-color progressbar_pattern shade(@theme_selected_bg_color, 0.8);
 @define-color progressbar_border @progressbar_pattern;
@@ -84,8 +84,8 @@
 @define-color progressbar_unfocused_trough @theme_unfocused_bg_color;
 
 @define-color entry_text_color @theme_text_color;
-@define-color entry_background_a shade(@theme_base_color, 0.94);
-@define-color entry_background_b @theme_base_color;
+@define-color entry_background_a @theme_base_color;
+@define-color entry_background_b shade(@theme_base_color, 0.94);
 
 @define-color entry_inset alpha(black, 0.1);
 
