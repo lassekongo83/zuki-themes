@@ -5,8 +5,11 @@
 GtkComboBox.combobox-entry .entry,
 GtkComboBox.combobox-entry .button,
 .button:active,
+.button:checked,
 .spinbutton.vertical .button:active,
-.inline-toolbar.toolbar.vertical .button:active
+.inline-toolbar.toolbar.vertical .button:active,
+.spinbutton.vertical .button:checked,
+.inline-toolbar.toolbar.vertical .button:checked
 /*.titlebar .titlebutton:active,
 .titlebar .titlebutton:hover:active*/ {
 	border-image: url("borders/entry.png") 3 3 3 3 / 3px 3px 3px 3px stretch;
@@ -45,7 +48,9 @@ GtkComboBox.combobox-entry .button,
 .entry:focus,
 GtkComboBox.combobox-entry .entry:focus,
 .button.default:active,
-.inline-toolbar.toolbar.vertical .button.default:active { 
+.button.default:checked,
+.inline-toolbar.toolbar.vertical .button.default:active,
+.inline-toolbar.toolbar.vertical .button.default:checked { 
 	border-image: url("borders/entry-focus.png") 3 3 3 3 / 3px 3px 3px 3px stretch;
 	border-radius: 3px;
 	border-width: 2px; /*1px 1px 2px 1px;*/
@@ -75,6 +80,8 @@ GtkComboBox.combobox-entry .entry:focus,
 	border-color: transparent;
 }
 
+.button:checked:focus,
+.button:active:checked:focus,
 .button:active:focus { 
 	border-image: url("borders/entry-focus.png") 3 3 3 3 / 3px 3px 3px 3px stretch;
 }
@@ -85,6 +92,7 @@ GtkComboBox.combobox-entry .entry:focus,
 	background-color: transparent;
 }
 
+.primary-toolbar .button:checked,
 .primary-toolbar .button:active {
 	border-image: url("borders/entry.png") 3 3 3 3 / 3px 3px 3px 3px stretch;
 	background-color: transparent;
@@ -121,7 +129,12 @@ GtkComboBox.combobox-entry .entry:focus,
 .primary-toolbar .button.raised:active,
 .primary-toolbar .raised .button:active,
 .inline-toolbar.toolbar .button:active,
+.primary-toolbar .button:checked,
+.primary-toolbar .button.raised:checked,
+.primary-toolbar .raised .button:checked,
+.inline-toolbar.toolbar .button:checked,
 .primary-toolbar GtkSwitch.trough,
+.primary-toolbar GtkComboBox .button:checked,
 .primary-toolbar GtkComboBox .button:active {
 	border-image: url("borders/entry.png") 3 3 3 3 / 3px 3px 3px 3px stretch;
 	border-radius: 3px;
@@ -149,6 +162,9 @@ GtkComboBox.combobox-entry .entry:focus,
 /* primary toolbar - focused element borders */
 .primary-toolbar .entry:focus,
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus,
+.primary-toolbar .button.raised.default:checked,
+.primary-toolbar .raised .button.default:checked,
+.inline-toolbar.toolbar .button.default:checked,
 .primary-toolbar .button.raised.default:active,
 .primary-toolbar .raised .button.default:active,
 .inline-toolbar.toolbar .button.default:active {
@@ -189,6 +205,10 @@ column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
 column-header .button:active:hover,
+column-header.button:checked,
+column-header .button:checked,
+column-header.button:checked:hover,
+column-header .button:checked:hover,
 column-header.button:insensitive,
 column-header .button:insensitive {
 	border-width: 0 1px 1px 0;
@@ -203,6 +223,10 @@ column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
 column-header .button:active:hover,
+column-header.button:checked,
+column-header .button:checked,
+column-header.button:checked:hover,
+column-header .button:checked:hover,
 column-header .button.dnd {
 	border-image: linear-gradient(to top,
 		alpha(@theme_base_color, 0.0),
@@ -221,7 +245,11 @@ column-header:last-child .button,
 column-header.button:last-child:active,
 column-header:last-child .button:active,
 column-header.button:last-child:active:hover,
-column-header:last-child .button:active:hover {
+column-header:last-child .button:active:hover,
+column-header.button:last-child:checked,
+column-header:last-child .button:checked,
+column-header.button:last-child:checked:hover,
+column-header:last-child .button:checked:hover {
 	border-right-width: 0;
 }
 
@@ -247,6 +275,7 @@ column-header .button:focus {
 
 /* suggested action buttons borders */
 .suggested-action.button,
+.suggested-action.button:checked,
 .suggested-action.button:active {
 	border-image: url("borders/button-focus.png") 3 3 3 3 / 3px 3px 3px 3px stretch;
 	border-radius: 3px;
@@ -258,6 +287,7 @@ column-header .button:focus {
 
 /* destructive action buttons borders */
 .destructive-action.button,
+.destructive-action.button:checked,
 .destructive-action.button:active {
 	border-image: url("borders/button-focus.png") 3 3 3 3 / 3px 3px 3px 3px stretch;
 	border-radius: 3px;
