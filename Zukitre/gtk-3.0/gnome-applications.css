@@ -223,7 +223,8 @@ GeditWindow .pane-separator:hover {
 	transition: all 200ms ease-in;
 }
 
-.gedit-document-panel .prelight-row .button:active {
+.gedit-document-panel .prelight-row .button:active,
+.gedit-document-panel .prelight-row .button:checked {
 	color:  @button_active_text;
 	background-color: alpha(black, 0.08);
 	box-shadow: inset 0 1px alpha(black, 0.05);
@@ -272,12 +273,16 @@ GeditStatusbar GeditSmallButton.button,
 GeditStatusbar GeditSmallButton.button:hover,
 GeditStatusbar GeditSmallButton.button:active,
 GeditStatusbar GeditSmallButton.button:active:hover,
+GeditStatusbar GeditSmallButton.button:checked,
+GeditStatusbar GeditSmallButton.button:checked:hover,
 GeditStatusMenuButton.button:backdrop,
 GeditStatusMenuButton.button:backdrop:hover,
 GeditStatusMenuButton.button,
 GeditStatusMenuButton.button:hover,
 GeditStatusMenuButton.button:active,
-GeditStatusMenuButton.button:active:hover {
+GeditStatusMenuButton.button:active:hover,
+GeditStatusMenuButton.button:checked,
+GeditStatusMenuButton.button:checked:hover {
 	border-image: none;
 	border-style: solid;
 	border-width: 0 1px;
@@ -288,14 +293,20 @@ GeditStatusMenuButton.button:active:hover {
 GeditStatusbar GeditSmallButton.button:hover,
 GeditStatusbar GeditSmallButton.button:active,
 GeditStatusbar GeditSmallButton.button:active:hover,
+GeditStatusbar GeditSmallButton.button:checked,
+GeditStatusbar GeditSmallButton.button:checked:hover,
 GeditStatusMenuButton.button:hover,
 GeditStatusMenuButton.button:active,
-GeditStatusMenuButton.button:active:hover {
+GeditStatusMenuButton.button:active:hover,
+GeditStatusMenuButton.button:checked,
+GeditStatusMenuButton.button:checked:hover {
 	border-color: @borders;
 }
 
 GeditStatusbar GeditSmallButton.button:active,
-GeditStatusMenuButton.button:active {
+GeditStatusMenuButton.button:active,
+GeditStatusbar GeditSmallButton.button:checked,
+GeditStatusMenuButton.button:checked {
 	background-image: linear-gradient(to bottom,
 		@borders,
 		shade(@theme_bg_color, 0.95));
@@ -420,7 +431,9 @@ GeditFileBrowserWidget .toolbar {
 }
 
 .documents-favorite.button:active,
-.documents-favorite.button:active:hover {
+.documents-favorite.button:active:hover,
+.documents-favorite.button:checked,
+.documents-favorite.button:checked:hover {
 	color: shade(@theme_selected_bg_color, 1.20);
 }
 
@@ -443,7 +456,9 @@ GeditFileBrowserWidget .toolbar {
 .documents-entry-tag.button,
 .documents-entry-tag.button:hover,
 .documents-entry-tag.button:active,
-.documents-entry-tag.button:active:hover {
+.documents-entry-tag.button:active:hover,
+.documents-entry-tag.button:checked,
+.documents-entry-tag.button:checked:hover {
 	background-color: transparent;
 	background-image: none;
 	border-image: none;
@@ -621,7 +636,9 @@ EphyToolbar .location-entry .button:hover {
 }
 
 EphyToolbar .location-entry .button:active,
-EphyToolbar .location-entry .button:active:hover {
+EphyToolbar .location-entry .button:active:hover,
+EphyToolbar .location-entry .button:checked,
+EphyToolbar .location-entry .button:checked:hover {
 	background-image: -gtk-gradient(linear,
 		left top, left bottom,
 		from(shade(@entry_background_a, 0.9)),
@@ -629,7 +646,8 @@ EphyToolbar .location-entry .button:active:hover {
 }
 
 EphyToolbar .location-entry .button:hover,
-EphyToolbar .location-entry .button:active {
+EphyToolbar .location-entry .button:active,
+EphyToolbar .location-entry .button:checked {
 	color: @theme_text_color;
 }
 

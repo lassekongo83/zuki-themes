@@ -6,7 +6,7 @@
 	-GtkButtonBox-child-min-height: 26;
 	-GtkToolButton-icon-spacing: 4;
 	-GtkTextView-error-underline-color: @error_color;
-	-GtkPaned-handle-size: 5;
+	-GtkPaned-handle-size: 1;
 	-GtkCheckButton-indicator-size: 16;
 	-GtkCheckMenuItem-indicator-size: 12;
 	-GtkScrolledWindow-scrollbar-spacing: 0;
@@ -211,9 +211,15 @@ GtkTreeView.separator,
 	color: transparent;
 }
 
+
 .pane-separator {
-	background-color: @theme_bg_color;
-	color: shade (@inactive_frame_color, 0.80);
+	-GtkPaned-handle-size: 1;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: @borders;
+	background-color: @sidebar_bg;
+	background-image: url("assets/null.png");
+	color: @borders;
 }
 
 .pane-separator:hover,
@@ -593,12 +599,9 @@ GtkColorButton.button {
 /****************
  * Progress bar *
  ****************/
-
-/* FIXME: this should really be a margin... */
 GtkProgressBar {
-	-GtkProgressBar-min-horizontal-bar-height: 16;
-	-GtkProgressBar-min-vertical-bar-width: 16;
 	padding: 0 0 1px 0;
+	font-size: smaller;
 }
 
 /* progress component */
@@ -2545,6 +2548,14 @@ GtkMessageDialog {
 	background-color: @sidebar_bg;
 }
 
+.sidebar .frame {
+	border-style: none;
+}
+
+.sidebar row:hover {
+	background-color: shade (@theme_bg_color, 0.95);
+}
+
 .sidebar .scrollbar.trough {
 	box-shadow: none;
 	border-radius: 100px;
@@ -3439,11 +3450,12 @@ GtkExpander:checked {
 }
 
 .list-row:hover {
-	background-color: @content_view_bg;
+	background-color: shade (@content_view_bg, 0.95);
 }
 
-.list-row:selected {
-	border-width: 1px 0 1px 0;
+.list-row:selected,
+.list-row:selected:hover {
+	border-width: 0;
 	border-style: solid;
 	border-color: shade (@theme_selected_bg_color, 0.85);
 	background-image: linear-gradient(to bottom,
@@ -3453,8 +3465,9 @@ GtkExpander:checked {
 	color: @theme_selected_fg_color;
 }
 
-.list-row:selected:backdrop {
-	border-width: 1px 0 1px 0;
+.list-row:selected:backdrop,
+.list-row:selected:backdrop:hover {
+	border-width: 0;
 	border-style: solid;
 	border-color: shade (@theme_bg_color, 0.85);
 	background-image: linear-gradient(to bottom,
