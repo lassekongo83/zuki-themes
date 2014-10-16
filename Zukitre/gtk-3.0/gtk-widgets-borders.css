@@ -9,9 +9,7 @@ GtkComboBox.combobox-entry .button,
 .spinbutton.vertical .button:active,
 .inline-toolbar.toolbar.vertical .button:active,
 .spinbutton.vertical .button:checked,
-.inline-toolbar.toolbar.vertical .button:checked
-/*.titlebar .titlebutton:active,
-.titlebar .titlebutton:hover:active*/ {
+.inline-toolbar.toolbar.vertical .button:checked {
 	border-image: url("borders/entry.png") 3 3 3 3 / 3px 3px 3px 3px stretch;
 	border-radius: 3px;
 	border-width: 2px;
@@ -60,7 +58,6 @@ GtkComboBox.combobox-entry .entry:focus,
 
 /* generic button borders */
 .button,
-/*.titlebar .titlebutton:hover,*/
 .spinbutton.vertical .button,
 .inline-toolbar.toolbar.vertical .button {
 	border-image: url("borders/button.png") 3 3 3 3 / 3px 3px 3px 3px stretch;

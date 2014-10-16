@@ -189,6 +189,8 @@ GtkStatusbar {
 	padding: 5px;
 	color: @theme_fg_color;
 	-GtkStatusbar-shadow-type: none;
+	box-shadow: inset 0 1px 0 0 @borders;
+	font-size: smaller;
 }
 
 .dnd {
@@ -600,6 +602,9 @@ GtkColorButton.button {
  * Progress bar *
  ****************/
 GtkProgressBar {
+	/* FIXME - Not working 3.14 */
+	-GtkProgressBar-min-horizontal-bar-height: 16;
+	-GtkProgressBar-min-vertical-bar-width: 16;
 	padding: 0 0 1px 0;
 	font-size: smaller;
 }
@@ -682,28 +687,6 @@ GtkLevelBar.vertical {
 .level-bar.indicator-discrete.fill-block.vertical {
 	margin: 1px 0;
 }
-
-/* discrete indicator border rounding,
-   uncomment when :nth-child will be working
-   on the widget
-
-.level-bar.indicator-discrete.fill-block.horizontal:first-child {
-	border-radius: 2px 0 0 2px;
-}
-
-.level-bar.indicator-discrete.fill-block.horizontal:last-child {
-	border-radius: 0 2px 2px 0;
-}
-
-.level-bar.indicator-discrete.fill-block.vertical:first-child {
-	border-radius: 2px 2px 0 0;
-}
-
-.level-bar.indicator-discrete.fill-block.vertical:last-child {
-	border-radius: 0 0 2px 2px;
-}
-
-*/
 
 .level-bar.fill-block.level-high {
 	border-color: shade(@success_color, 0.85);
@@ -879,12 +862,12 @@ GtkScrolledWindow GtkViewport.frame {
 .button.menuitem.menubar,
 GtkColorButton.button,
 GtkComboBox.combobox-entry .button {
-	padding: 5px 8px 6px; /*1px 4px;*/
+	padding: 4px;
 }
 
 .button.image-button,
 .primary-toolbar.toolbar .button.image-button {
-	padding: 8px; /*3px 4px 4px;*/
+	padding: 4px;
 }
 
 .button {
@@ -1157,6 +1140,8 @@ GtkComboBox.combobox-entry .button {
 .linked.vertical .button:checked,
 .linked.vertical .button:checked:hover,
 .linked.vertical .button:insensitive {
+	border-left-width: 2px;
+	border-right-width: 2px;
 	border-top-width: 0;
 	border-bottom-width: 0;
 	border-image-width: 0 3px;
@@ -1171,6 +1156,9 @@ GtkComboBox.combobox-entry .button {
 .linked.vertical .button:checked:first-child,
 .linked.vertical .button:checked:hover:first-child,
 .linked.vertical .button:insensitive:first-child {
+	border-left-width: 2px;
+	border-right-width: 2px;
+	border-top-width: 2px;
 	border-bottom-width: 0;
 	border-image-width: 3px 3px 0 3px;
 	border-radius: 3px 3px 0 0;
@@ -1184,6 +1172,7 @@ GtkComboBox.combobox-entry .button {
 .linked.vertical .button:checked:last-child,
 .linked.vertical .button:checked:hover:last-child,
 .linked.vertical .button:insensitive:last-child {
+	border-bottom-width: 2px;
 	border-top-width: 0;
 	border-image-width: 0 3px 3px 3px;
 	border-radius: 0 0 3px 3px;
@@ -1197,9 +1186,9 @@ GtkComboBox.combobox-entry .button {
 .linked.vertical .button:checked:only-child,
 .linked.vertical .button:checked:hover:only-child,
 .linked.vertical .button:insensitive:only-child {
-	border-top-width: 1px;
-	border-bottom-width: 1px;
-	border-image-width: 3px 3px 4px 3px;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-image-width: 3px 3px 3px 3px;
 	border-radius: 3px;
 }
 
@@ -1482,7 +1471,7 @@ GtkCalendar.header .stack-switcher > .button.titlebutton > GtkImage {
 .stack-switcher > .button.image-button, .header-bar .stack-switcher > .titlebutton.button,
 .titlebar .stack-switcher > .titlebutton.button,
 GtkCalendar.header .stack-switcher > .titlebutton.button {
-	padding: 5px 2px; 
+	padding: 5px 2px;
 }
 .stack-switcher > .button.needs-attention > GtkLabel, .stack-switcher > .button.needs-attention > GtkImage {
 	animation: needs_attention 150ms ease-in;
@@ -2318,7 +2307,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
 }
 
 .header-bar .button.image-button {
-	padding: 5px 5px 4px 5px;
+	padding: 5px 5px 5px 5px;
 }
 
 .titlebar .title, GtkCalendar.header .title,
@@ -3331,6 +3320,19 @@ GtkTreeView row:nth-child(even):backdrop:hover {
 	background-color: shade (@theme_base_color, 0.96);
 }
 
+.sidebar GtkTreeView row:backdrop:selected {
+	background-color: @theme_selected_bg_color;
+	border-style: solid;
+	border-width: 1px 0 1px 0;
+	border-top-color: @borders;
+	border-bottom-color: shade (@theme_base_color, 0.96);
+	box-shadow: inset 0 1px 0 alpha (@borders, 0.3), inset 0 -1px 0 @borders;
+}
+
+.sidebar GtkTreeView row:hover {
+	background-color: shade (@theme_base_color, 0.96);
+}
+
 column-header.button,
 column-header .button {
 	color: @theme_fg_color;
@@ -3498,7 +3500,7 @@ GtkCalendar {
 }
 
 GtkCalendar.view {
-	border-radius: 3px;
+	border-radius: 0px;
 	border-style: solid;
 	border-width: 1px;
 	padding: 2px;
@@ -3541,7 +3543,7 @@ GtkInfoBar {
 .error {
 	background-color: @infobar_bg_color;
 	color: @infobar_fg_color;
-	text-shadow: 0 1px @infobar_text_shadow;
+	text-shadow: none;
 	border-color: darker(@infobar_bg_color);
 }
 
@@ -3549,8 +3551,8 @@ GtkInfoBar {
 .warning .button.close,
 .question .button.close,
 .error .button.close {
-	color: @infobar_fg_color;
-	icon-shadow: 0 1px @infobar_text_shadow;
+	color: @theme_fg_color;
+	icon-shadow: none;
 }
 
 .info .button.close:hover,
@@ -3578,22 +3580,25 @@ GtkInfoBar {
 .info .button,
 .info .button:insensitive,
 .info .button:active,
+.info .button:checked,
 .warning .entry,
 .warning .entry:focus,
 .warning .button,
 .warning .button:insensitive,
 .warning .button:active,
+.warning .button:checked,
 .error .entry,
 .error .entry:focus,
 .error .button,
 .error .button:insensitive,
 .error .button:active,
+.error .button:checked,
 .question .entry,
 .question .entry:focus,
 .question .button,
 .question .button:insensitive,
-.question .button:active {
-	border-image: none;
+.question .button:active,
+.question .button:checked {
 	color: @theme_fg_color;
 	border-color: darker(@infobar_bg_color);
 	border-style: solid;
@@ -3779,51 +3784,20 @@ GtkModelButton.button:selected {
 }
 
 .titlebar .titlebutton {
-	/*icon-shadow: 0px 1px @wm_title_shadow;*/
 	color: @wm_title;
-	/*background: none;
-	padding: 5px 5px 6px 5px;*/
-	padding: 2px 6px 2px 2px; /* important for background size */
-	/*border-radius: 3px;
-	border-width: 2px;
-	border-color: transparent;
-	border-style: solid;*/
+	padding: 2px 6px 2px 2px;
 	border: none;
 	border-image: none;
 }
 
 .titlebar .titlebutton:hover {
-	/*background-image: linear-gradient(to bottom,
-		@button_hover_gradient_color_a,
-		@button_hover_gradient_color_b);*/
 	border: none;
 	border-image: none;
 }
 
 .titlebar .titlebutton:active {
-	/*background-image: linear-gradient(to bottom,
-		@borders,
-		shade(@theme_bg_color, 0.95));
-	color: @theme_selected_fg_color;
-	icon-shadow: none;*/
 	border: none;
 	border-image: none;
-}
-
-.titlebar .right .titlebutton:first-child {
-/*	border-left: 1px solid @menu_separator; */
-}
-
-.titlebar .right .titlebutton:last-child {
-
-}
-
-.titlebar .left .titlebutton:last-child {
-/*	border-right: 1px solid @menu_separator; */
-}
-
-.titlebar .left .titlebutton:first-child {
-
 }
 
 .titlebar .titlebutton:backdrop {
@@ -3833,9 +3807,8 @@ GtkModelButton.button:selected {
 
 .window-frame {
 	border-radius: 2px 2px 0 0;
-	/* lamefun trick to get rounded borders regardless of CSD use */
 	border-width: 0px;	
-	box-shadow: /*0 0 0 1px @wm_border,*/ 0 2px 8px 3px @wm_shadow;
+	box-shadow: 0 2px 8px 3px @wm_shadow;
 
 	/* this is used for the resize cursor area */
 	margin: 10px;
@@ -3847,5 +3820,16 @@ GtkModelButton.button:selected {
 }
 
 .window-frame:backdrop {
-	box-shadow: /*0 0 0 1px shade(@wm_border,1.1),*/ 0 2px 5px 1px @wm_shadow;
+	box-shadow: 0 2px 5px 1px @wm_shadow;
+}
+
+/* FIXME - Some stuff that can probably be done better or in another way */
+GtkRevealer {
+	background-color: @theme_bg_color;
+	color: @theme_fg_color;
+}
+
+GtkRevealer .button,
+GtkRevealer GtkLabel {
+	color: @theme_fg_color;
 }
