@@ -973,7 +973,6 @@ GtkComboBox.combobox-entry .button {
 		inset 1px 2px alpha(@theme_selected_bg_color, 0.1),
 		inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
 		inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
-
 }
 
 .linked .entry:focus:first-child {
@@ -981,7 +980,6 @@ GtkComboBox.combobox-entry .button {
 		inset 1px 2px alpha(@theme_selected_bg_color, 0.1),
 		inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
 		inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
-
 }
 
 .linked .entry:focus:last-child {
@@ -989,7 +987,6 @@ GtkComboBox.combobox-entry .button {
 		inset 1px 2px alpha(@theme_selected_bg_color, 0.1),
 		inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
 		inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
-
 }
 
 /* Set up shadows and hilights for button visual separation */
@@ -2299,7 +2296,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
 	box-shadow: inset 0 -1px shade(@wm_bg_b, 0.95);
 	background-color: @theme_bg_color;
 
-	padding: 6px; /*6px 6px 5px 6px;*/
+	padding: 6px;
 }
 
 .header-bar .button.text-button {
@@ -2307,7 +2304,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
 }
 
 .header-bar .button.image-button {
-	padding: 5px 5px 5px 5px;
+	padding: 5px;
 }
 
 .titlebar .title, GtkCalendar.header .title,
@@ -3207,6 +3204,44 @@ GtkSwitch.slider {
 	border-image: none;
 }
 
+/************
+ * Pathbars *
+ ************/
+.path-bar .button, .path-bar .header-bar .button.titlebutton, .header-bar .path-bar .button.titlebutton,
+.path-bar .titlebar .button.titlebutton,
+.titlebar .path-bar .button.titlebutton,
+.path-bar GtkCalendar.header .button.titlebutton,
+GtkCalendar.header .path-bar .button.titlebutton {
+	padding: 5px 6px 6px;
+}
+.path-bar .button:first-child {
+	padding-left: 8px;
+}
+.path-bar .button:last-child {
+	padding-right: 8px;
+}
+.path-bar .button:only-child {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.path-bar .button .label:last-child {
+	padding-left: 2px;
+}
+.path-bar .button .label:first-child {
+	padding-right: 2px;
+}
+.path-bar .button .label:only-child {
+	padding-right: 0;
+	padding-left: 0;
+}
+.path-bar .button GtkImage, .path-bar .header-bar .button.titlebutton GtkImage, .header-bar .path-bar .button.titlebutton GtkImage,
+.path-bar .titlebar .button.titlebutton GtkImage,
+.titlebar .path-bar .button.titlebutton GtkImage,
+.path-bar GtkCalendar.header .button.titlebutton GtkImage,
+GtkCalendar.header .path-bar .button.titlebutton GtkImage {
+	padding-top: 1px;
+}
+
 /***********************
  * Tree and Icon views *
  ***********************/
@@ -3823,6 +3858,8 @@ GtkModelButton.button:selected {
 	box-shadow: 0 2px 5px 1px @wm_shadow;
 }
 
+/* Various hacks and shit */
+
 /* FIXME - Some stuff that can probably be done better or in another way */
 GtkRevealer {
 	background-color: @theme_bg_color;
@@ -3832,4 +3869,9 @@ GtkRevealer {
 GtkRevealer .button,
 GtkRevealer GtkLabel {
 	color: @theme_fg_color;
+}
+
+/* gedit */
+.gedit-headerbar-paned:backdrop {
+	background-image: url("assets/null.png");
 }

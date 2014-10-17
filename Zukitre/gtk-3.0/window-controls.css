@@ -16,10 +16,6 @@
 	background-size: 18px 18px;
 }
 
-/*.titlebar .right .titlebutton:nth-child(3) {
-	padding: 2px 0px 2px 2px;
-}*/
-
 /* Set correct layout with 
 	gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <':minimize,maximize,close'>}" for
  	buttons on the right or
@@ -105,6 +101,7 @@
 .titlebar .left .titlebutton:first-child,
 .titlebar .left:dir(rtl) .titlebutton:last-child {
 	background-image: url('window-controls/close_focused_normal.svg');
+	/*padding: 2px 6px 3px 3px;*/ /* FIXME: Uncomment this shit when using the Faenza icon theme and maybe some other icon themes */
 }
 
 .titlebar .right .titlebutton:last-child:hover,

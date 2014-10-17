@@ -13,8 +13,8 @@
    height="18"
    id="svg3859"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="maximize_unfocused.svg">
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="maximize_focused_normal.svg">
   <defs
      id="defs3861" />
   <sodipodi:namedview
@@ -33,8 +33,8 @@
      inkscape:document-units="px"
      inkscape:window-width="1190"
      inkscape:window-height="630"
-     inkscape:window-x="647"
-     inkscape:window-y="267"
+     inkscape:window-x="166"
+     inkscape:window-y="190"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,7 +62,8 @@
      inkscape:groupmode="layer"
      transform="translate(0,2)">
     <g
-       id="g4464">
+       id="g4464"
+       transform="translate(0,-5e-5)">
       <path
          id="path3039"
          d="m 4,10 4,-4 0,0 1,-1 0,0 0,0 1,1 0,0 4,4 -2,0 -3,-3 -3,3 z"
