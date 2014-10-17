@@ -3957,3 +3957,7 @@ GtkRevealer GtkLabel {
 .gedit-headerbar-paned:backdrop {
 	background-image: url("assets/null.png");
 }
+
+.gedit-search-slider * {
+	color: @theme_fg_color;
+}

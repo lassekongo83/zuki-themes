@@ -4,7 +4,7 @@ zuki-themes
 Themes for GTK, gnome-shell and more.
 
 Requirements:
-- GTK 3.12
+- GTK 3.14
 - Murrine GTK2 engine
 - gtk-engines/gtk2-engines (Debian based distros also need gtk2-pixbuf-engine.)
 
