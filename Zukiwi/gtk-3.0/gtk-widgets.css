@@ -3943,8 +3943,8 @@ GtkModelButton.button:selected {
 }
 
 /* Various hacks and shit */
+/* FIXME - BELOW: Some stuff that can probably be done better or in another way */
 
-/* FIXME - Some stuff that can probably be done better or in another way */
 GtkRevealer {
 	background-color: @theme_bg_color;
 	color: @theme_fg_color;
@@ -3962,4 +3962,68 @@ GtkRevealer GtkLabel {
 
 .gedit-search-slider * {
 	color: @theme_fg_color;
+}
+
+.gedit-document-panel {
+	background-color: @theme_bg_color;
+}
+
+/* Floating Bar */
+.floating-bar {
+	background-image: linear-gradient(to bottom, 
+		@theme_base_color 20%, 
+		shade(@theme_base_color, 0.9));
+	background-color: @theme_base_color;
+	border-color: @borders;
+
+	color: @theme_text_color;
+	text-shadow: 0 1px @button_text_shadow;
+
+	border-radius: 0px;
+	border-width: 1px;
+	border-style: solid;
+	box-shadow: inset 1px 1px @inset_light_color, -1px -1px @inset_light_color;
+}
+
+.floating-bar.top {
+	border-top-width: 0;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.floating-bar.right {
+	border-right-width: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.floating-bar.bottom {
+	border-bottom-width: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.floating-bar.left {
+	border-left-width: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.floating-bar.bottom.right {
+	box-shadow: inset 1px 1px @inset_light_color;
+}
+
+.floating-bar.bottom.left {
+	box-shadow: inset -1px 1px @inset_light_color;
+}
+
+.floating-bar .button {
+	background-color: alpha (@theme_base_color, 0.0);
+	background-image: none;
+
+	border-style: none;
+	border-image: none;
+
+	-GtkButton-image-spacing: 0;
+	-GtkButton-inner-border: 0;
 }
