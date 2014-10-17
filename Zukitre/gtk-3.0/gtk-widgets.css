@@ -2252,7 +2252,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
 	border-color: darker (@theme_bg_color);
 	padding: 6px;
 	background-color: @theme_bg_color;
-	border-bottom: 1px solid @borders; /* FIXME: May have to remove. Looks better in old 3.10 file-roller for example. */
+	border-bottom: 1px solid @borders;
 }
 
 .toolbar .button {
@@ -2369,18 +2369,26 @@ GtkMessageDialog {
 .dialog-action-area.linked .button,
 .dialog-action-area.linked .button:active,
 .dialog-action-area.linked .button:active:hover,
+.dialog-action-area.linked .button:checked,
+.dialog-action-area.linked .button:checked:hover,
 .dialog-action-area.linked .button:insensitive,
 .dialog-action-area.linked .button:only-child,
 .dialog-action-area.linked .button:active:only-child,
 .dialog-action-area.linked .button:active:hover:only-child,
+.dialog-action-area.linked .button:checked:only-child,
+.dialog-action-area.linked .button:checked:hover:only-child,
 .dialog-action-area.linked .button:insensitive:only-child,
 .dialog-action-area.linked .button:first-child,
 .dialog-action-area.linked .button:active:first-child,
 .dialog-action-area.linked .button:active:hover:first-child,
+.dialog-action-area.linked .button:checked:first-child,
+.dialog-action-area.linked .button:checked:hover:first-child,
 .dialog-action-area.linked .button:insensitive:first-child,
 .dialog-action-area.linked .button:last-child,
 .dialog-action-area.linked .button:active:last-child,
 .dialog-action-area.linked .button:active:hover:last-child,
+.dialog-action-area.linked .button:checked:last-child,
+.dialog-action-area.linked .button:checked:hover:last-child,
 .dialog-action-area.linked .button:insensitive:last-child {
 	border-style: solid;
 	border-radius: 0;
@@ -2392,10 +2400,14 @@ GtkMessageDialog {
 .dialog-action-area.linked .button:only-child,
 .dialog-action-area.linked .button:active:only-child,
 .dialog-action-area.linked .button:active:hover:only-child,
+.dialog-action-area.linked .button:checked:only-child,
+.dialog-action-area.linked .button:checked:hover:only-child,
 .dialog-action-area.linked .button:insensitive:only-child,
 .dialog-action-area.linked .button:last-child,
 .dialog-action-area.linked .button:active:last-child,
 .dialog-action-area.linked .button:active:hover:last-child,
+.dialog-action-area.linked .button:checked:last-child,
+.dialog-action-area.linked .button:checked:hover:last-child,
 .dialog-action-area.linked .button:insensitive:last-child {
 	/*border-right-width: 1px;*/
 }
@@ -2403,16 +2415,21 @@ GtkMessageDialog {
 .dialog-action-area.linked .button:only-child,
 .dialog-action-area.linked .button:active:only-child,
 .dialog-action-area.linked .button:active:hover:only-child,
+.dialog-action-area.linked .button:checked:only-child,
+.dialog-action-area.linked .button:checked:hover:only-child,
 .dialog-action-area.linked .button:insensitive:only-child,
 .dialog-action-area.linked .button:first-child,
 .dialog-action-area.linked .button:active:first-child,
 .dialog-action-area.linked .button:active:hover:first-child,
+.dialog-action-area.linked .button:checked:first-child,
+.dialog-action-area.linked .button:checked:hover:first-child,
 .dialog-action-area.linked .button:insensitive:first-child {
 	/*border-left-width: 1px;*/
 }
 
 .dialog-action-area.linked .button.default,
 .dialog-action-area.linked .button.default:active,
+.dialog-action-area.linked .button.default:checked,
 .dialog-action-area.linked .button.default:insensitive,
 .dialog-action-area.linked .button:focus {
 	border-color: @theme_selected_bg_color;
@@ -2422,6 +2439,7 @@ GtkMessageDialog {
 
 .dialog-action-area.linked .button.suggested-action,
 .dialog-action-area.linked .button.suggested-action:active,
+.dialog-action-area.linked .button.suggested-action:checked,
 .dialog-action-area.linked .button.suggested-action:insensitive {
 	box-shadow: none;
 }
@@ -2592,8 +2610,10 @@ GtkOverlay.osd {
 
 .osd.button,
 .osd.button:active,
+.osd.button:checked,
 .osd .button,
-.osd .button:active {
+.osd .button:active,
+.osd .button:checked {
 	border-width: 1px;
 	border-style: solid;
 	border-image: none;
@@ -2607,7 +2627,8 @@ GtkOverlay.osd {
 	border-color: alpha(@osd_button_border,0.5);
 }
 
-.osd .button:active {
+.osd .button:active,
+.osd .button:checked {
 	border-color: @osd_button_border_active;
 }
 
@@ -2632,19 +2653,22 @@ GtkOverlay.osd {
 }
 
 .osd.button,
-.osd.button:active {
+.osd.button:active,
+.osd.button:checked {
 	border-color: transparent;
 }
 
 .osd.button,
 .osd.button:prelight,
-.osd.button:active {
+.osd.button:active,
+.osd.button:checked {
 	background-color: shade(@osd_bg, 1.10);
 }
 
 .osd .button,
 .osd .button:prelight,
-.osd .button:active {
+.osd .button:active,
+.osd .button:checked {
 	background-color: transparent;
 }
 
@@ -2655,7 +2679,9 @@ GtkOverlay.osd {
 }
 
 .osd.button:active:insensitive,
-.osd .button:active:insensitive {
+.osd .button:active:insensitive,
+.osd.button:checked:insensitive,
+.osd .button:checked:insensitive {
 	background-image: none;
 	background-color: @osd_button_bg_insensitive_active;
 }
@@ -2668,14 +2694,20 @@ GtkOverlay.osd {
 .osd.button:active,
 .osd.button:hover:active,
 .osd .button:active,
-.osd .button:hover:active {
+.osd .button:hover:active,
+.osd.button:checked,
+.osd.button:hover:checked,
+.osd .button:checked,
+.osd .button:hover:checked {
 	color: @osd_button_fg_active;
 }
 
 .osd.button:insensitive,
 .osd.button:active *:insensitive,
+.osd.button:checked *:insensitive,
 .osd .button:insensitive,
-.osd .button:active *:insensitive {
+.osd .button:active *:insensitive,
+.osd .button:checked *:insensitive {
 	color: @osd_button_fg_insensitive;
 	text-shadow: none;
 	icon-shadow: none;
@@ -2694,7 +2726,12 @@ GtkOverlay.osd {
 .osd.button:active:hover,
 .osd .button:active,
 .osd .button:active:hover,
-.osd GtkMenuButton.menu-button:active {
+.osd GtkMenuButton.menu-button:active,
+.osd.button:checked,
+.osd.button:checked:hover,
+.osd .button:checked,
+.osd .button:checked:hover,
+.osd GtkMenuButton.menu-button:checked {
 	background-image: linear-gradient(to bottom,
 		@osd_button_bg_active_a,
 		@osd_button_bg_active_b 20%,
@@ -2884,7 +2921,11 @@ GtkProgressBar.osd.progressbar {
 .toolbar .suggested-action.button:active,
 .toolbar .suggested-action.button:hover:active,
 .suggested-action.button:active,
-.suggested-action.button:hover:active {
+.suggested-action.button:hover:active,
+.toolbar .suggested-action.button:checked,
+.toolbar .suggested-action.button:hover:checked,
+.suggested-action.button:checked,
+.suggested-action.button:hover:checked {
 	background-image: linear-gradient(to bottom,
 		@suggested_action_button_b,
 		@suggested_action_button_b);
@@ -2901,14 +2942,19 @@ GtkProgressBar.osd.progressbar {
 .toolbar .suggested-action.button:active,
 .toolbar .suggested-action.button:hover:active,
 .suggested-action.button:active,
-.suggested-action.button:hover:active {
+.suggested-action.button:hover:active,
+.toolbar .suggested-action.button:checked,
+.toolbar .suggested-action.button:hover:checked,
+.suggested-action.button:checked,
+.suggested-action.button:hover:checked {
 	text-shadow: 0 1px shade(@suggested_action_button_shadow, 1.15);
 	icon-shadow: 0 1px shade(@suggested_action_button_shadow, 1.15);
 }
 
 
 .suggested-action.button:insensitive,
-.suggested-action.button:active *:insensitive {
+.suggested-action.button:active *:insensitive,
+.suggested-action.button:checked *:insensitive {
 	icon-shadow: none;
 	background-image: none;
 	background-color: @insentitive_bg_color;
@@ -2938,7 +2984,9 @@ GtkProgressBar.osd.progressbar {
 }
 
 .destructive-action.button:active,
-.destructive-action.button:hover:active {
+.destructive-action.button:hover:active,
+.destructive-action.button:checked,
+.destructive-action.button:hover:checked {
 	background-image: linear-gradient(to bottom,
 		@destructive_action_button_b,
 		@destructive_action_button_b);
@@ -2952,7 +3000,9 @@ GtkProgressBar.osd.progressbar {
 }
 
 .destructive-action.button:active,
-.destructive-action.button:hover:active {
+.destructive-action.button:hover:active,
+.destructive-action.button:checked,
+.destructive-action.button:hover:checked {
 	text-shadow: 0 1px shade(@destructive_action_button_shadow, 1.15);
 	icon-shadow: 0 1px shade(@destructive_action_button_shadow, 1.15);
 }
@@ -3016,7 +3066,13 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar .button:active,
 .selection-mode.toolbar .button:hover:active,
 .selection-mode.toolbar GtkToolButton .button:active,
-.selection-mode.toolbar GtkToolButton .button:hover:active {
+.selection-mode.toolbar GtkToolButton .button:hover:active,
+.selection-mode.header-bar .button:checked,
+.selection-mode.header-bar .button:hover:checked,
+.selection-mode.toolbar .button:checked,
+.selection-mode.toolbar .button:hover:checked,
+.selection-mode.toolbar GtkToolButton .button:checked,
+.selection-mode.toolbar GtkToolButton .button:hover:checked {
 	background-image: linear-gradient(to bottom,
 		shade(@selection_toolbar_button_b, 1.0),
 		shade(@selection_toolbar_button_b, 1.0));
@@ -3025,16 +3081,22 @@ GtkProgressBar.osd.progressbar {
 
 .selection-mode.header-bar .button:active,
 .selection-mode.toolbar .button:active,
-.selection-mode.toolbar GtkToolButton .button:active {
+.selection-mode.toolbar GtkToolButton .button:active,
+.selection-mode.header-bar .button:checked,
+.selection-mode.toolbar .button:checked,
+.selection-mode.toolbar GtkToolButton .button:checked {
 	color: @selection_toolbar_button_fg;
 }
 
 .selection-mode.header-bar .button,
 .selection-mode.header-bar .button:active,
+.selection-mode.header-bar .button:checked,
 .selection-mode.toolbar .button,
 .selection-mode.toolbar .button:active,
+.selection-mode.toolbar .button:checked,
 .selection-mode.toolbar GtkToolButton .button,
-.selection-mode.toolbar GtkToolButton .button:active {
+.selection-mode.toolbar GtkToolButton .button:active,
+.selection-mode.toolbar GtkToolButton .button:checked {
 	text-shadow: 0 1px @selection_toolbar_button_shadow;
 	icon-shadow: 0 1px @selection_toolbar_button_shadow;
 }
@@ -3071,7 +3133,13 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar .suggested-action.button:active,
 .selection-mode.toolbar .suggested-action.button:hover:active,
 .selection-mode.toolbar GtkToolButton.suggested-action .button:active,
-.selection-mode.toolbar GtkToolButton.suggested-action .button:hover:active {
+.selection-mode.toolbar GtkToolButton.suggested-action .button:hover:active,
+.selection-mode.header-bar .suggested-action.button:checked,
+.selection-mode.header-bar .suggested-action.button:hover:checked,
+.selection-mode.toolbar .suggested-action.button:checked,
+.selection-mode.toolbar .suggested-action.button:hover:checked,
+.selection-mode.toolbar GtkToolButton.suggested-action .button:checked,
+.selection-mode.toolbar GtkToolButton.suggested-action .button:hover:checked {
 	background-image: linear-gradient(to bottom,
 		shade(@selection_toolbar_suggested_button_c, 0.92),
 		@selection_toolbar_suggested_button_b 40%,
@@ -3081,16 +3149,22 @@ GtkProgressBar.osd.progressbar {
 
 .selection-mode.header-bar .suggested-action.button:active,
 .selection-mode.toolbar .suggested-action.button:active,
-.selection-mode.toolbar GtkToolButton.suggested-action:active {
+.selection-mode.toolbar GtkToolButton.suggested-action:active,
+.selection-mode.header-bar .suggested-action.button:checked,
+.selection-mode.toolbar .suggested-action.button:checked,
+.selection-mode.toolbar GtkToolButton.suggested-action:checked {
 	color: @theme_text_color;
 }
 
 .selection-mode.header-bar .suggested-action.button,
 .selection-mode.header-bar .suggested-action.button:active,
+.selection-mode.header-bar .suggested-action.button:checked,
 .selection-mode.toolbar .suggested-action.button,
 .selection-mode.toolbar .suggested-action.button:active,
+.selection-mode.toolbar .suggested-action.button:checked,
 .selection-mode.toolbar GtkToolButton.suggested-action .button,
-.selection-mode.toolbar GtkToolButton.suggested-action:active {
+.selection-mode.toolbar GtkToolButton.suggested-action:active,
+.selection-mode.toolbar GtkToolButton.suggested-action:checked {
 	text-shadow: 0 1px @button_text_shadow;
 	icon-shadow: 0 1px @button_text_shadow;
 }
@@ -3121,7 +3195,9 @@ GtkProgressBar.osd.progressbar {
 }
 
 .selection-mode.header-bar .selection-menu.button:active,
-.selection-mode.toolbar .selection-menu.button:active {
+.selection-mode.toolbar .selection-menu.button:active,
+.selection-mode.header-bar .selection-menu.button:checked,
+.selection-mode.toolbar .selection-menu.button:checked {
 	border-color: transparent;
 	border-radius: 3px;
 	border-width: 1px;
@@ -3130,7 +3206,9 @@ GtkProgressBar.osd.progressbar {
 }
 
 .selection-mode.header-bar .selection-menu.button:active,
-.selection-mode.toolbar .selection-menu.button:active {
+.selection-mode.toolbar .selection-menu.button:active,
+.selection-mode.header-bar .selection-menu.button:checked,
+.selection-mode.toolbar .selection-menu.button:checked {
 	color: @selection_menu_active;
 }
 
@@ -3394,7 +3472,11 @@ column-header .button:hover,
 column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
-column-header .button:active:hover {
+column-header .button:active:hover,
+column-header.button:checked,
+column-header .button:checked,
+column-header.button:checked:hover,
+column-header .button:checked:hover {
 	color: @theme_fg_color;
 	text-shadow: none;
 	icon-shadow: none;

@@ -25,8 +25,11 @@
 }
 
 /* Pushed button and progressbar through background */
+.button:checked,
 .button:active, 
 .button:active:hover,
+.spinbutton.vertical .button:checked,
+.spinbutton.vertical .button:checked:hover,
 .spinbutton.vertical .button:active,
 .spinbutton.vertical .button:active:hover,
 .toolbar .button:active,
@@ -34,7 +37,13 @@
 .toolbar .button.raised:active,
 .toolbar .raised .button:active,
 .toolbar .button.raised:active:hover,
-.toolbar .raised .button:active:hover {
+.toolbar .raised .button:active:hover,
+.toolbar .button:checked,
+.toolbar .button:checked:hover,
+.toolbar .button.raised:checked,
+.toolbar .raised .button:checked,
+.toolbar .button.raised:checked:hover,
+.toolbar .raised .button:checked:hover {
 	background-image: linear-gradient(to bottom,
 		@button_active_gradient_color_a,
 		@button_active_gradient_color_b);
@@ -50,11 +59,15 @@
 	background-color: transparent; 
 }
 
+.button:checked:hover,
 .button:active:hover,
 .spinbutton.vertical .button:active:hover,
 .toolbar .button:active:hover,
 .toolbar .button.raised:active:hover,
 .toolbar .raised .button:active:hover,
+.toolbar .button:checked:hover,
+.toolbar .button.raised:checked:hover,
+.toolbar .raised .button:checked:hover,
 .trough row:hover {
 	background-image: linear-gradient(to bottom,
 		shade (@button_active_gradient_color_a, 1.05),
@@ -63,6 +76,8 @@
 }
 
 /* Primary and inline toolbars pushed button background */
+.primary-toolbar .button:checked,
+.inline-toolbar .button:checked,
 .primary-toolbar .button:active,
 .inline-toolbar .button:active {
 	background-image: linear-gradient(to bottom,
@@ -71,6 +86,8 @@
 	background-color: transparent;
 }
 
+.primary-toolbar .button:checked:hover,
+.inline-toolbar .button:checked:hover,
 .primary-toolbar .button:active:hover,
 .inline-toolbar .button:active:hover {
 	background-image: linear-gradient(to bottom,
@@ -112,8 +129,11 @@
 
 /* Pushed + Insensitive button background */
 .button:active:insensitive,
+.button:checked:insensitive,
 .toolbar .button:active:insensitive,
-.toolbar GtkComboBox .button:active:insensitive {
+.toolbar .button:checked:insensitive,
+.toolbar GtkComboBox .button:active:insensitive,
+.toolbar GtkComboBox .button:checked:insensitive {
 	background-image: linear-gradient(to bottom,
 		shade(@insensitive_bg_color, 0.95),
 		@insensitive_bg_color 40%,
@@ -137,10 +157,14 @@ GtkComboBox.combobox-entry .button:hover,
 
 /* Entry pushed button background */
 .primary-toolbar GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:checked,
 /* .primary-toolbar GtkComboBox.combobox-entry .button:hover:active,*/
 GtkComboBox.combobox-entry .button:active,
 .spinbutton .button:active,
-.spinbutton .button:active:hover {
+.spinbutton .button:active:hover,
+GtkComboBox.combobox-entry .button:checked,
+.spinbutton .button:checked,
+.spinbutton .button:checked:hover {
 	background-image: linear-gradient(to bottom,
 		shade(@entry_background_a, 0.9),
 		@entry_background_b);
@@ -167,6 +191,10 @@ column-header .button:hover {
 
 column-header.button:focus,
 column-header .button:focus,
+column-header.button:checked,
+column-header .button:checked,
+column-header.button:checked:hover,
+column-header .button:checked:hover,
 column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,

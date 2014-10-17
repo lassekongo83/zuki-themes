@@ -78,8 +78,7 @@ GtkComboBox.combobox-entry .entry:focus,
 }
 
 .button:checked:focus,
-.button:active:checked:focus,
-.button:active:focus { 
+.button:active:focus {
 	border-image: url("borders/entry-focus.png") 3 3 3 3 / 3px 3px 3px 3px stretch;
 }
 

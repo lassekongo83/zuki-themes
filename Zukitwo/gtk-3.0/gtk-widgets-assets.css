@@ -47,17 +47,17 @@
  *************************/
 
 /* draw regular check and radio items using our SVG assets */
-GtkModelButton.button.check,
-GtkModelButton.button.check:hover,
+
 .check,
 .view.cell.check {
+	-gtk-icon-source: -gtk-scaled(url("assets/check-normal.png"));
 	background-image: url("assets/check-normal.png");
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-GtkModelButton.button.check:insensitive,
 .check:insensitive {
+	-gtk-icon-source: -gtk-scaled(url("assets/check-normal-ins.png"));
 	background-image: url("assets/check-normal-ins.png");
 }
 
@@ -65,37 +65,40 @@ GtkModelButton.button.check:insensitive,
 	background-color: transparent;
 }
 
-GtkModelButton.button.check:active,
-GtkModelButton.button.check:active:hover,
 .check:active,
-.view.cell.check:active {
+.check:checked,
+.view.cell.check:active,
+.view.cell.check:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/check-active.png"));
 	background-image: url("assets/check-active.png");
 }
 
-GtkModelButton.button.check:active:insensitive,
-.check:active:insensitive {
+.check:active:insensitive,
+.check:checked:insensitive {
+	-gtk-icon-source: -gtk-scaled(url("assets/check-active-ins.png"));
 	background-image: url("assets/check-active-ins.png");
 }
 
 .check:inconsistent {
+	-gtk-icon-source: -gtk-scaled(url("assets/check-mixed-active.png"));
 	background-image: url("assets/check-mixed-active.png");
 }
 
 .check:inconsistent:insensitive {
+	-gtk-icon-source: -gtk-scaled(url("assets/check-mixed-active-ins.png"));
 	background-image: url("assets/check-mixed-active-ins.png");
 }
 
-GtkModelButton.button.radio,
-GtkModelButton.button.radio:hover,
 .radio,
 .view.cell.radio {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-normal.png"));
 	background-image: url("assets/radio-normal.png");
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-GtkModelButton.button.radio:insensitive,
 .radio:insensitive {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-normal-ins.png"));
 	background-image: url("assets/radio-normal-ins.png");
 }
 
@@ -103,43 +106,56 @@ GtkModelButton.button.radio:insensitive,
 	background-color: transparent;
 }
 
-GtkModelButton.button.radio:active,
-GtkModelButton.button.radio:active:hover,
 .radio:active,
-.view.cell.radio:active {
+.view.cell.radio:active,
+.radio:checked,
+.view.cell.radio:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-active.png"));
 	background-image: url("assets/radio-active.png");
 }
 
-GtkModelButton.button.radio:active:insensitive,
-.radio:active:insensitive {
+.radio:active:insensitive,
+.radio:checked:insensitive {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-active-ins.png"));
 	background-image: url("assets/radio-active-ins.png");
 }
 
 .radio:inconsistent {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-active.png"));
 	background-image: url("assets/radio-mixed-active.png");
 }
 
 .radio:inconsistent:insensitive {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-active-ins.png"));
 	background-image: url("assets/radio-mixed-active-ins.png");
 }
 
 .sidebar .view.radio:active,
 .sidebar .view.radio:active:focus,
-.sidebar .view.radio:active:hover {
+.sidebar .view.radio:active:hover,
+.sidebar .view.radio:checked,
+.sidebar .view.radio:checked:focus,
+.sidebar .view.radio:checked:hover {
+	-gtk-icon-source: -gtk-scaled(url("assets/sidebar-radio-checked.svg"));
 	background-image: url("assets/sidebar-radio-checked.svg");
 }
 
 .sidebar .view.radio:hover {
+	-gtk-icon-source: -gtk-scaled(url("assets/sidebar-radio-prelight.svg"));
 	background-image: url("assets/sidebar-radio-prelight.svg");
 }
 
 .sidebar .view.radio:active:selected,
-.sidebar .view.radio:active:selected:focus {
+.sidebar .view.radio:active:selected:focus,
+.sidebar .view.radio:checked:selected,
+.sidebar .view.radio:checked:selected:focus {
+	-gtk-icon-source: -gtk-scaled(url("assets/sidebar-radio-selected.svg"));
 	background-image: url("assets/sidebar-radio-selected.svg");
 }
 
 .sidebar .view.radio:selected:hover,
 .sidebar .view.radio:selected:focus {
+	-gtk-icon-source: -gtk-scaled(url("assets/sidebar-radio-selected-prelight.svg"));
 	background-image: url("assets/sidebar-radio-selected-prelight.svg");	
 }
 
@@ -270,6 +286,15 @@ GtkSwitch.trough:active:insensitive {
 
 .cursor-handle.top {
 	background-image: url("assets/slider.png");
+}
+
+.entry.cursor-handle.top,
+.cursor-handle.top {
+	-gtk-icon-source: -gtk-icontheme("selection-start-symbolic");
+}
+.entry.cursor-handle.bottom,
+.cursor-handle.bottom {
+	-gtk-icon-source: -gtk-icontheme("selection-end-symbolic");
 }
 
 /****************
