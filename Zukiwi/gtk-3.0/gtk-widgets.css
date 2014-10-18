@@ -4022,3 +4022,31 @@ GtkRevealer GtkLabel {
 	-GtkButton-image-spacing: 0;
 	-GtkButton-inner-border: 0;
 }
+
+/* Nautilus desktop */
+.nautilus-canvas-item {
+	border-radius: 5px;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+	color: @theme_selected_fg_color;
+	text-shadow: 1px 1px black;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+	color: @theme_text_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+	color: @theme_selected_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+	text-shadow: none;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected:backdrop {
+	color: @theme_unfocused_selected_fg_color;
+}
