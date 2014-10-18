@@ -130,10 +130,10 @@ StScrollBar StButton#vhandle:active {
 .slider {
 	height: 1em;
 	-slider-height: 0.3em;
-	-slider-background-color: #333333;
-	-slider-border-color: #5f5f5f;
-	-slider-active-background-color: #76b0ec;
-	-slider-active-border-color: #1f6dbc;
+	-slider-background-color: #222;
+	-slider-border-color: transparent;
+	-slider-active-background-color: #2099d6;
+	-slider-active-border-color: #2099d6;
 	-slider-border-width: 1px;
 	-slider-handle-radius: 6px;
 }
@@ -181,6 +181,11 @@ StScrollBar StButton#vhandle:active {
 
 .popup-submenu-menu-item:open {
 	background-color: #252525;
+	border: 1px solid rgba(255,255,255,0.05);
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.2);
 }
 
 .fallback-app-menu .popup-submenu-menu-item:open {
@@ -196,7 +201,7 @@ StScrollBar StButton#vhandle:active {
 	background-gradient-start: #252525;
 	background-gradient-end: #252525;
 	background-gradient-direction: vertical;
-	box-shadow: none;
+	box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.1);
 }
 
 .fallback-app-menu .popup-sub-menu {

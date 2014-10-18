@@ -10,7 +10,7 @@
 # NOTE: Uncommenting means to delete the "#" at the beginning of a line. Commenting means to add a "#" at the beginning of a line. The "#" tells the theme wether to ignore the specified line or not.
 
 # These are the defined colors for the theme.
-gtk_color_scheme = "bg_color:#d6d6d6\nselected_bg_color:#4B9DDB\nbase_color:#F7F7F7" # Background, base.
+gtk_color_scheme = "bg_color:#d6d6d6\nselected_bg_color:#2099d6\nbase_color:#F7F7F7" # Background, base.
 gtk_color_scheme = "fg_color:#2c2c2c\nselected_fg_color:#ffffff\ntext_color:#2c2c2c" # Foreground, text.
 gtk_color_scheme = "tooltip_bg_color:#F5F5B5\ntooltip_fg_color:#000000" # Tooltips.
 gtk_color_scheme = "link_color:#08c" # Hyperlinks
