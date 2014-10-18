@@ -68,12 +68,14 @@ GtkComboBox.combobox-entry .button:focus,
 .inline-toolbar.toolbar.vertical .button.default:checked,
 .button:active:focus,
 .spinbutton.vertical .button:active:focus,
+.button:checked:focus,
+.spinbutton.vertical .button:checked:focus,
 .inline-toolbar.toolbar.vertical .button:active:focus,
 .spinbutton.vertical .button:checked:focus,
 .inline-toolbar.toolbar.vertical .button:checked:focus { 
 	border-image: url("borders/button-active-focus.png") 3 4 4 4 / 3px 4px 4px 4px stretch;
 	border-radius: 4px;
-	border-width: 2px; /*1px 1px 2px 1px;*/
+	border-width: 2px;
 	border-style: solid;
 	border-color: transparent;
 }

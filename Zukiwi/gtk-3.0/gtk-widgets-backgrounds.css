@@ -227,7 +227,7 @@ GtkComboBox.combobox-entry .button:insensitive,
 .primary-toolbar.toolbar,
 .inline-toolbar.toolbar  {
 	background-image: linear-gradient(to bottom,
-		shade (@theme_bg_color, 1.0),
+		shade (@theme_bg_color, 0.9),
 		shade (@theme_bg_color, 0.96));
 	background-color: transparent;
 }

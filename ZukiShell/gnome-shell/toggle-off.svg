@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="38"
+   height="20"
+   id="svg3010"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="toggle-off-hover.svg">
+  <defs
+     id="defs3012" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="16"
+     inkscape:cx="19.794044"
+     inkscape:cy="9.3195479"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1202"
+     inkscape:window-height="514"
+     inkscape:window-x="193"
+     inkscape:window-y="82"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3018"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3015">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1032.3622)">
+    <path
+       style="fill:#ffffff;fill-opacity:0.25098041;stroke:none"
+       d="M 11 2 C 6.581722 2 3 5.5817 3 10 C 3 14.4183 6.581722 18 11 18 C 15.078288 18 18.443689 14.944457 18.9375 11 L 35 11 L 35 9 L 18.9375 9 C 18.443689 5.0555426 15.078288 2 11 2 z M 11 4 C 14.313708 4 17 6.6863 17 10 C 17 13.3137 14.313708 16 11 16 C 7.686292 16 5 13.3137 5 10 C 5 6.6863 7.686292 4 11 4 z "
+       transform="translate(0,1032.3622)"
+       id="rect3792" />
+  </g>
+</svg>
