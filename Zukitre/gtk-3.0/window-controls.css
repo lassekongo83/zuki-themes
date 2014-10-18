@@ -101,7 +101,7 @@
 .titlebar .left .titlebutton:first-child,
 .titlebar .left:dir(rtl) .titlebutton:last-child {
 	background-image: url('window-controls/close_focused_normal.svg');
-	/*padding: 2px 6px 3px 3px;*/ /* FIXME: Uncomment this shit when using the Faenza icon theme and maybe some other icon themes */
+	/*padding: 2px 6px 3px 3px;*/ /* Uncomment this when using the Faenza icon theme and maybe some other icon themes */
 }
 
 .titlebar .right .titlebutton:last-child:hover,
