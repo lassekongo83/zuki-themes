@@ -3940,16 +3940,6 @@ GtkModelButton.button:selected {
 /* Various hacks and shit */
 /* FIXME - BELOW: Some stuff that can probably be done better or in another way */
 
-GtkRevealer {
-	background-color: @theme_bg_color;
-	color: @theme_fg_color;
-}
-
-GtkRevealer .button,
-GtkRevealer GtkLabel {
-	color: @theme_fg_color;
-}
-
 /* gedit */
 .gedit-headerbar-paned:backdrop {
 	background-image: url("assets/null.png");
