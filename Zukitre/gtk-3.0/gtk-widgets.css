@@ -2486,8 +2486,8 @@ GtkMessageDialog {
 				inset 0 1px 0 0 @borders,
 				inset 0 3px 0 0 alpha(@borders, 0.4);
 	text-shadow: 0 1px @button_text_shadow;
-	padding-top: 1px;
-	padding-bottom: 1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .primary-toolbar .toolbar .separator,

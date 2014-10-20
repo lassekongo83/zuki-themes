@@ -559,7 +559,7 @@ style "murrine-radiocheck-menu" {
 
 style "murrine-toolbar" = "murrine-thin" {
 	bg[NORMAL] = @bg_color
-	ythickness = 3
+	ythickness = 2
 }
 
 style "pixmap-sidebar-handle-left" {

@@ -2484,15 +2484,14 @@ GtkMessageDialog {
  */
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
-	/*border-bottom-color: shade (@theme_bg_color, 0.92);*/
 	border-style: solid;
 	border-width: 0 0 1px 0;
 	border-color: alpha(@borders, 0.4);
 	-GtkWidget-window-dragging: true;
 	-GtkToolbar-button-relief: normal;
 	text-shadow: 0 1px @button_text_shadow;
-	padding-top: 1px;
-	padding-bottom: 1px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	box-shadow: inset 0 1px 0 0 alpha(@borders, 0.4);
 }
 
