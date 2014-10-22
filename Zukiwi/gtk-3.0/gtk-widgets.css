@@ -2079,7 +2079,7 @@ GtkTreeMenu .menuitem,
 }
 
 .menu .menuitem {
-	-GtkMenuItem-arrow-scaling: 0.4;
+	-GtkMenuItem-arrow-scaling: 0.8;
 	padding: 4px;
 }
 

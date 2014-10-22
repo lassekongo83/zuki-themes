@@ -271,6 +271,7 @@ style "murrine-menubar" = "murrine-default" {
 
 style "pixbuf-menubar-menuitem" = "murrine-wider" {
 	xthickness	= 6
+
 	bg[PRELIGHT]	= @base_color
 	bg[SELECTED]	= @base_color
 
