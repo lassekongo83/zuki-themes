@@ -130,11 +130,11 @@ StScrollBar StButton#vhandle:active {
 .slider {
 	height: 1em;
 	-slider-height: 0.3em;
-	-slider-background-color: #222;
+	-slider-background-color: #333;
 	-slider-border-color: transparent;
 	-slider-active-background-color: #2099d6;
 	-slider-active-border-color: #2099d6;
-	-slider-border-width: 1px;
+	-slider-border-width: 0px;
 	-slider-handle-radius: 6px;
 }
 
@@ -150,7 +150,7 @@ StScrollBar StButton#vhandle:active {
 	-arrow-border-radius: 2px;
 	-arrow-background-color: #1d1d1d;
 	-arrow-border-width: 0px;
-	-arrow-border-color: #a5a5a5;
+	-arrow-border-color: #1d1d1d;
 	-arrow-base: 16px;
 	-arrow-rise: 8px;
 }
@@ -243,6 +243,10 @@ StScrollBar StButton#vhandle:active {
 
 .popup-menu-item {
 	spacing: 4px;
+	border: 1px solid transparent;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
 }
 
 .popup-menu-item:ltr {
@@ -254,7 +258,12 @@ StScrollBar StButton#vhandle:active {
 }
 
 .popup-menu-item:active {
-	background-color: #4c4c4c;
+	background-color: #454545;
+	box-shadow: inset 0 1px 0 0 #555;
+	border: 1px solid #555;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
 }
 
 .popup-menu-item:insensitive {
@@ -288,8 +297,8 @@ StScrollBar StButton#vhandle:active {
 
 .popup-separator-menu-item {
 	-gradient-height: 1px;
-	-gradient-start: rgba(255,255,255,0.1);
-	-gradient-end: rgba(255,255,255,0.1);
+	-gradient-start: rgba(255,255,255,0.0);
+	-gradient-end: rgba(255,255,255,0.0);
 	-margin-horizontal: 0px;
 	height: 1px;
 	padding: 8px 0px;
@@ -977,9 +986,9 @@ StScrollBar StButton#vhandle:active {
 	color: white;
 	font-size: 9pt;
 	padding: 4px 0px;
-	background-color: #1d1d1d;
-	background-image: url('noise-texture.png');
-	background-repeat: repeat;
+	background-color: rgba(29,29,29,0.8);
+	/*background-image: url('noise-texture.png');
+	background-repeat: repeat;*/
 	border: 1px solid rgba(255,255,255,0.05);
 	border-left: 0px;
 	border-radius: 0px;
