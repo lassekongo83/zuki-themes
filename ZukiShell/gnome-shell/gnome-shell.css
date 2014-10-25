@@ -628,8 +628,8 @@ StScrollBar StButton#vhandle:active {
 #panel {
 	border: 0px;
 	background-gradient-direction: vertical;
-	background-gradient-start: #1d1d1d;
-	background-gradient-end: #1d1d1d;
+	background-gradient-start: rgba(29,29,29,0.8);
+	background-gradient-end: rgba(29,29,29,0.8);
 	font-weight: bold;
 	height: 1.86em;
 	box-shadow: 0 0 1px 0 rgba(255,255,255,0.1);
@@ -790,6 +790,33 @@ StScrollBar StButton#vhandle:active {
 .panel-button:checked > .system-status-icon,
 .panel-button:focus > .system-status-icon {
 	icon-shadow: black 0px 2px 2px;
+}
+
+/* Replaces the activities text with a custom image 		*/
+/* If you want it to align with 48px icons on an extended 	*/
+/* dash to dock extension, edit the canvas size on the		*/
+/* image to 78px in width and change the width to that 		*/
+/* value below. 											*/
+#panelActivities {
+	background-image: url("activities.png");
+	background-position: center top;
+	background-repeat:no-repeat;
+	background-size: contain;
+	border: 0;
+	width: 62px;
+	color: transparent;
+	box-shadow: none;
+	border-image: none;
+}
+
+#panelActivities:active,
+#panelActivities:overview,
+#panelActivities:hover {
+	background-image: url("activities-hover.png") !important;
+	border-image: none;
+	background-gradient-direction: none;
+	background-gradient-start: transparent;
+	background-gradient-end: transparent;
 }
 
 .panel-menu {
@@ -986,13 +1013,14 @@ StScrollBar StButton#vhandle:active {
 	color: white;
 	font-size: 9pt;
 	padding: 4px 0px;
-	background-color: rgba(29,29,29,0.8);
-	/*background-image: url('noise-texture.png');
-	background-repeat: repeat;*/
+	background-color: rgba(29,29,29,0.4);
 	border: 1px solid rgba(255,255,255,0.05);
 	border-left: 0px;
 	border-radius: 0px;
 	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+	/* Below can be enabled if you use an expanded dash to dock extension */
+	/*border-top: 0;
+	border-bottom: 0;*/
 }
 
 #dash:rtl {
