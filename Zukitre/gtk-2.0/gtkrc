@@ -158,7 +158,7 @@ style "murrine-default" {
 		listviewheaderstyle	= 1			# 0 = flat, 1 = glassy, 2 = raised
 		listviewstyle		= 0			# 0 = nothing, 1 = dotted
 		menubaritemstyle	= 0			# 0 = menuitem look, 1 = button look
-		menubarstyle		= 2			# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
+		menubarstyle		= 0			# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
 		menuitemstyle		= 0			# 0 = flat, 1 = glassy, 2 = striped
 		menustyle		= 0			# 0 = no vertical menu stripe, 1 = display vertical menu stripe
 		prelight_shade		= .95			# shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors		
@@ -384,7 +384,7 @@ style "murrine-progressbar" = "murrine-thin" {
 		trough_shades		= { 1.06, 1.16}
 		gradient_shades		= {0.95,0.95,1.1,1.1}
 		border_shades		= { 1.1, 1.1 }
-		roundness		= 0
+		roundness			= 0
 	}
 }
 
@@ -392,7 +392,13 @@ style "murrine-statusbar" {
 	xthickness = 2
 }
 
-style "murrine-comboboxentry" { engine "murrine" { contrast = .4 }}
+style "murrine-comboboxentry" { 
+	engine "murrine" {
+		contrast		= .8
+		gradient_shades		= {1.1,1.1,1.1,1.1}
+		roundness			= 0
+	}
+}
 
 style "murrine-spinbutton" { 
 	bg[ACTIVE] = shade (0.85, @bg_color) # Color for pressed-spinbuttons. 
