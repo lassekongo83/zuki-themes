@@ -888,13 +888,11 @@ StScrollBar StButton#vhandle:active {
 .workspace-thumbnails {
 	spacing: 11px;
 	visible-width: 32px; /* Amount visible before hovering */
-	border: 1px solid rgba(0,0,0,0.05);
+	border: 1px solid rgba(255,255,255,0.05);
 	border-right: 0px;
 	border-radius: 0px;
-	background-color: rgba(255,255,255,0.2);
-	background-image: url('noise-texture.png');
-	background-repeat: repeat;
-	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+	background-color: rgba(29,29,29,0.4);
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
 	padding: 11px 7px 11px 11px;
 }
 
@@ -2030,8 +2028,8 @@ StScrollBar StButton#vhandle:active {
 }
 
 .workspace-switcher-container {
-	background: #313437;
-	border: 1px solid #313437;
+	background: #1d1d1d;
+	border: 1px solid #1d1d1d;
 	border-radius: 4px;
 	padding: 20px;
 }
