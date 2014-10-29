@@ -149,7 +149,7 @@ style "murrine-default" {
 		focus_color		= @selected_bg_color
 		focusstyle		= 3
 		glazestyle		= 1			# 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
-		gradient_shades		= {1.1,1.1,0.94,0.94}	# Sets the gradients on the widgets.
+		gradient_shades		= {1.1,1.1,1.1,1.1}	# Sets the gradients on the widgets.
 		glowstyle		= 0			# 0,1,2,3,4
 		glow_shade		= 1.1
 		highlight_shade		= 1.0			# set highlight amount for buttons or widgets
@@ -735,7 +735,7 @@ widget "xfwm4-tabwin*" style "murrine-dark"
 # Invisible toolbar separator
 style "murrine-toolseparator" {
 	xthickness = 0
-  	ythickness = 0
+	ythickness = 0
 
 	engine "pixmap" {
 		image {
@@ -743,8 +743,8 @@ style "murrine-toolseparator" {
 			file		= "widgets/Others/null.png"
 			border		= { 2, 2, 2, 2 }
 			stretch		= TRUE
-    		}
- 	}
+		}
+	}
 }
 class "GtkSeparatorToolItem" style "murrine-toolseparator"
 
