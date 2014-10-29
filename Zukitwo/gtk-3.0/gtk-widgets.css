@@ -27,7 +27,8 @@
 	-GtkDialog-action-area-border: 0;
 	-GtkStatusbar-shadow-type: none;
 	outline-color: alpha(@theme_text_color, 0.3);
-	outline-style: dashed;
+	/*outline-style: dashed;*/
+	outline-style: none; /* There are lot's of dotted borders in Ubuntu GNOME 14.10 if this line missing */
 	outline-offset: -3px; /* 2px */
 	outline-width: 1px;
 	outline-radius: 2px;
