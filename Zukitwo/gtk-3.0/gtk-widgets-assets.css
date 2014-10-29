@@ -65,9 +65,14 @@
 	background-color: transparent;
 }
 
+/* next two blocks must be separated becaouse of a bug? in Ubuntu GNOME 14.10 */
 .check:active,
+.view.cell.check:active {
+	-gtk-icon-source: -gtk-scaled(url("assets/check-active.png"));
+	background-image: url("assets/check-active.png");
+}
+
 .check:checked,
-.view.cell.check:active,
 .view.cell.check:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/check-active.png"));
 	background-image: url("assets/check-active.png");
@@ -106,10 +111,15 @@
 	background-color: transparent;
 }
 
-.radio:active,
-.view.cell.radio:active,
+/* next two block must be separated beacouse of a bug? in Ubuntu GNOME 14.10 */
 .radio:checked,
 .view.cell.radio:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-active.png"));
+	background-image: url("assets/radio-active.png");
+}
+
+.radio:active,
+.view.cell.radio:active {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-active.png"));
 	background-image: url("assets/radio-active.png");
 }
