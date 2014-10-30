@@ -65,9 +65,14 @@
 	background-color: transparent;
 }
 
+/* active and checked needs to be seperated for older GTK support? */
 .check:active,
+.view.cell.check:active {
+	-gtk-icon-source: -gtk-scaled(url("assets/check-active.png"));
+	background-image: url("assets/check-active.png");
+}
+
 .check:checked,
-.view.cell.check:active,
 .view.cell.check:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/check-active.png"));
 	background-image: url("assets/check-active.png");
@@ -106,13 +111,19 @@
 	background-color: transparent;
 }
 
+/* active and checked needs to be seperated for older GTK support? */
 .radio:active,
-.view.cell.radio:active,
+.view.cell.radio:active {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-active.png"));
+	background-image: url("assets/radio-active.png");
+}
+
 .radio:checked,
 .view.cell.radio:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-active.png"));
 	background-image: url("assets/radio-active.png");
 }
+
 
 .radio:active:insensitive,
 .radio:checked:insensitive {
