@@ -1545,13 +1545,12 @@ StScrollBar StButton#vhandle:active {
 
 /* Hack used in lieu of border-collapse - see calendar.js */
 .calendar-day {
-	border: 1px solid #1d1d1d;
+	border: 1px solid rgba(0,0,0,0);
 	color: #eee;
 	border-top-width: 0;
 	border-left-width: 0;
 	width: 32px;
-	background-color: #363636;
-	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.05);
+	height: 32px;
 }
 
 .calendar-day-top {
@@ -1566,7 +1565,6 @@ StScrollBar StButton#vhandle:active {
 }
 
 .calendar-nonwork-day {
-	background-color: #2f2f2f;
 }
 
 .calendar-today {
@@ -1582,7 +1580,6 @@ StScrollBar StButton#vhandle:active {
 
 .calendar-other-month-day {
 	color: #777;
-	background-color: #1d1d1d;
 	box-shadow: none;
 }
 
