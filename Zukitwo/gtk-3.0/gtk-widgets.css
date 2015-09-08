@@ -129,7 +129,8 @@ GtkTextView {
 /* Zuki-theme FIXME: Figure out what this is. */
 .app-notification,
 .app-notification.frame {
-	color: @theme_base_color;
+	color: @theme_text_color;
+        background-color: alpha(@theme_bg_color, 0.35);
 	outline-color: @theme_bg_color;
 	text-shadow: none;
 	icon-shadow: none; 
