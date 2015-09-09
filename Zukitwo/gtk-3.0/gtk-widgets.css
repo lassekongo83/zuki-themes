@@ -130,7 +130,7 @@ GtkTextView {
 .app-notification,
 .app-notification.frame {
 	color: @theme_text_color;
-        background-color: alpha(@theme_bg_color, 0.35);
+        background-color: alpha(@theme_base_color, 0.85);
 	outline-color: @theme_bg_color;
 	text-shadow: none;
 	icon-shadow: none; 
