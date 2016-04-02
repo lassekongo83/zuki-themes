@@ -11,7 +11,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state 					= NORMAL
 			shadow          		= OUT
-			overlay_file    		= "Check-Radio/check-normal.png"
+			overlay_file    		= "Check-Radio/checkbox-unchecked.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -20,7 +20,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state 					= PRELIGHT
 			shadow          		= OUT
-			overlay_file    		= "Check-Radio/check-normal.png"
+			overlay_file    		= "Check-Radio/checkbox-unchecked.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -29,7 +29,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state 					= ACTIVE
 			shadow          		= OUT
-			overlay_file    		= "Check-Radio/check-normal.png"
+			overlay_file    		= "Check-Radio/checkbox-unchecked.png"
 			overlay_stretch 		= FALSE
 		}
 		image
@@ -38,7 +38,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state 					= SELECTED
 			shadow          		= OUT
-			overlay_file    		= "Check-Radio/check-normal.png"
+			overlay_file    		= "Check-Radio/checkbox-unchecked.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -47,7 +47,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state 					= INSENSITIVE
 			shadow          		= OUT
-			overlay_file    		= "Check-Radio/check-normal-ins.png"
+			overlay_file    		= "Check-Radio/checkbox-unchecked-insensitive.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -56,7 +56,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state	 				= NORMAL
 			shadow          		= IN
-			overlay_file    		= "Check-Radio/check-active.png"
+			overlay_file    		= "Check-Radio/checkbox-checked.png"
 			overlay_stretch	 		= FALSE
 		}
 		image 
@@ -65,7 +65,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state 					= PRELIGHT
 			shadow          		= IN
-			overlay_file    		= "Check-Radio/check-active.png"
+			overlay_file    		= "Check-Radio/checkbox-checked.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -74,7 +74,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state 		        	= ACTIVE
 			shadow          		= IN
-			overlay_file    		= "Check-Radio/check-active.png"
+			overlay_file    		= "Check-Radio/checkbox-checked.png"
 			overlay_stretch 		= FALSE
         }
 		image
@@ -83,7 +83,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state 		        	= SELECTED
 			shadow          		= IN
-			overlay_file    		= "Check-Radio/check-active.png"
+			overlay_file    		= "Check-Radio/checkbox-checked.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -92,7 +92,7 @@ style "check-radio"
 			recolorable     		= TRUE
 			state 		       		= INSENSITIVE
 			shadow          		= IN
-			overlay_file			= "Check-Radio/check-active-ins.png"
+			overlay_file			= "Check-Radio/checkbox-checked-insensitive.png"
 			overlay_stretch 		= FALSE
 		}
 
@@ -103,7 +103,7 @@ style "check-radio"
 			function        		= OPTION
 			state 					= NORMAL
 			shadow          		= OUT
-			overlay_file    		= "Check-Radio/radio-normal.png"
+			overlay_file    		= "Check-Radio/radio-unchecked.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -111,7 +111,7 @@ style "check-radio"
 			function        		= OPTION
 			state 					= PRELIGHT
 			shadow          		= OUT
-			overlay_file    		= "Check-Radio/radio-normal.png"
+			overlay_file    		= "Check-Radio/radio-unchecked.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -119,7 +119,7 @@ style "check-radio"
 			function        		= OPTION
 			state 					= ACTIVE
 			shadow          		= OUT
-			overlay_file    		= "Check-Radio/radio-normal.png"
+			overlay_file    		= "Check-Radio/radio-unchecked.png"
 			overlay_stretch 		= FALSE
 		}
 		image
@@ -127,7 +127,7 @@ style "check-radio"
 			function        		= OPTION
 			state 					= SELECTED
 			shadow          		= OUT
-			overlay_file    		= "Check-Radio/radio-normal.png"
+			overlay_file    		= "Check-Radio/radio-unchecked.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -135,7 +135,7 @@ style "check-radio"
 			function        		= OPTION
 			state 					= INSENSITIVE
 			shadow         			= OUT
-			overlay_file    		= "Check-Radio/radio-normal-ins.png"
+			overlay_file    		= "Check-Radio/radio-unchecked-insensitive.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -143,7 +143,7 @@ style "check-radio"
 			function        		= OPTION
 			state 					= NORMAL
 			shadow          		= IN
-			overlay_file    		= "Check-Radio/radio-active.png"
+			overlay_file    		= "Check-Radio/radio-checked.png"
 			overlay_stretch 		= FALSE
         }
 		image 
@@ -151,7 +151,7 @@ style "check-radio"
 			function        		= OPTION
 			state					= PRELIGHT
 			shadow          		= IN
-			overlay_file    		= "Check-Radio/radio-active.png"
+			overlay_file    		= "Check-Radio/radio-checked.png"
 			overlay_stretch 		= FALSE
 		}
 		image 
@@ -159,7 +159,7 @@ style "check-radio"
 			function        		= OPTION
 			state					= ACTIVE
 			shadow          		= IN
-			overlay_file    		= "Check-Radio/radio-active.png"
+			overlay_file    		= "Check-Radio/radio-checked.png"
 			overlay_stretch	 		= FALSE
 		}
 		image
@@ -167,7 +167,7 @@ style "check-radio"
 			function        		= OPTION
 			state					= SELECTED
 			shadow          		= IN
-			overlay_file    		= "Check-Radio/radio-active.png"
+			overlay_file    		= "Check-Radio/radio-checked.png"
 			overlay_stretch	 		= FALSE
 		}
 		image 
@@ -175,7 +175,7 @@ style "check-radio"
 			function        		= OPTION
 			state 					= INSENSITIVE
 			shadow          		= IN
-			overlay_file    		= "Check-Radio/radio-active-ins.png"
+			overlay_file    		= "Check-Radio/radio-checked-insensitive.png"
 			overlay_stretch 		= FALSE
 		}
 	}
