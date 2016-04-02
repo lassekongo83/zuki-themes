@@ -1,107 +1,193 @@
-style "murrine-panel" = "murrine-thin" {
+style "theme-panel" = "dark"
+{
+	xthickness	= 1
+
+	bg[NORMAL]	= @panel_bg_color
+	bg[ACTIVE]	= shade (0.6, @panel_bg_color)
+	bg[PRELIGHT]	= shade (1.2, @panel_bg_color)
+	bg[SELECTED]	= shade (0.6, @panel_bg_color)
+
+	fg[NORMAL]	= @panel_fg_color
+	fg[PRELIGHT]	= @panel_fg_color
+	fg[ACTIVE]	= @panel_fg_color
+	fg[SELECTED]	= @panel_fg_color
+
+	text[NORMAL]	= @panel_fg_color
+	text[PRELIGHT]	= @panel_fg_color
+	text[ACTIVE]	= @panel_fg_color
+	text[SELECTED]	= @panel_fg_color
+
+	engine "murrine" {
+		reliefstyle = 0
+		glazestyle = 0
+		glow_shade = 1.0
+		highlight_shade = 1.0
+		roundness = 0
+		gradient_shades = {1.0,1.0,1.0,1.0}
+		textstyle = 0
+		contrast = 0.0
+		textstyle = 0
+	}
+}
+
+style "panelbar" {
+
+	fg[NORMAL] = @panel_fg_color
+	fg[ACTIVE] = @panel_fg_color
+	fg[PRELIGHT] = @panel_fg_color
+	fg[SELECTED] = @selected_fg_color
+
+	bg[SELECTED] = @selected_bg_color
+
+	engine "murrine" {}
+}
+
+style "panelbuttons" {
+
 	xthickness = 4
-
-	bg[NORMAL] = @panel_bg_color
-	bg[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	bg[SELECTED] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	bg[ACTIVE] = shade (0.6, @panel_bg_color)
-	bg[INSENSITIVE] = @panel_bg_color
-
-	fg[NORMAL] = @panel_fg_color
-	fg[PRELIGHT] = shade (1.08, @panel_fg_color)
-	fg[SELECTED] = shade (1.08, @panel_fg_color)
-	fg[ACTIVE] = @panel_fg_color
-	fg[INSENSITIVE] = mix (0.5, @panel_bg_color, @panel_fg_color)
-
-	base[NORMAL] = @panel_bg_color
-	base[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	base[SELECTED] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	base[ACTIVE] = shade (0.9, @panel_bg_color)
-	base[INSENSITIVE] = @panel_bg_color
-
-	text[NORMAL] = @panel_fg_color
-	text[PRELIGHT] = shade (1.08, @panel_fg_color)
-	text[SELECTED] = shade (1.08, @panel_fg_color)
-	text[ACTIVE] = @panel_fg_color
-	text[INSENSITIVE] = mix (0.5, @panel_bg_color, @panel_fg_color)
+	ythickness = 0
 
 	engine "murrine" {
-		roundness = 0
+		textstyle = 0
+	}
+}
+
+style "theme-panel-text"
+{
+	fg[NORMAL]	= @panel_fg_color
+	fg[PRELIGHT]	= @panel_fg_color
+	fg[ACTIVE]	= @panel_fg_color
+
+	text[NORMAL]	= @panel_fg_color
+	text[PRELIGHT]	= @panel_fg_color
+	text[ACTIVE]	= @panel_fg_color
+
+	engine "murrine" {
+	}
+}
+
+style "panel-entry" = "dark"
+{
+	fg[NORMAL]	= @text_color
+	fg[PRELIGHT]	= @text_color
+	fg[ACTIVE]	= @text_color
+	fg[SELECTED]	= @text_color
+	fg[INSENSITIVE]	= @text_color
+
+	text[NORMAL]	= @text_color
+	text[PRELIGHT]	= @text_color
+	text[ACTIVE]	= @text_color
+	text[SELECTED]	= @text_color
+	text[INSENSITIVE]	= @text_color
+
+}
+
+style "theme-main-menu-text" = "theme-panel-text"
+{
+	fg[PRELIGHT]	= "#ffffff"
+	text[PRELIGHT]	= "#ffffff"
+}
+
+style "workspace-switcher" = "theme-panel"
+{
+	bg[SELECTED]	= shade (0.8, @selected_bg_color)
+}
+
+style "window-buttons" = "theme-panel"
+{
+	xthickness	= 3
+
+	bg[ACTIVE]	= shade (0.6, @panel_bg_color)
+	bg[PRELIGHT]	= shade (1.2, @panel_bg_color)
+	bg[SELECTED]	= shade (0.6, @panel_bg_color)
+
+	fg[NORMAL]	= shade (0.7, @base_color)
+	fg[ACTIVE]	= @base_color
+	fg[PRELIGHT]	= @base_color
+
+	engine "murrine" {
 		contrast = 0.0
-		border_shades = {1.0, 1.0}
-		shadow_shades = {1.0, 1.0}
-		gradient_shades	= {1.0,1.0,1.0,1.0}
-		lightborder_shade = 1.0
+		gradient_shades	= { 1.0, 1.0, 1.0, 1.0 }
+		roundness	= 0
+		reliefstyle	= 0
 	}
 }
 
-# Different xthickness for XFCE because Mate and XFCE panels works different.
-style "xfce-panel" = "murrine-thin" {
-	xthickness = 2
+style "indicator" = "theme-panel"
+{
+	xthickness	= 0
+	ythickness	= 0
+}
 
-	bg[NORMAL] = @panel_bg_color
-	bg[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	bg[SELECTED] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	bg[ACTIVE] = shade (0.6, @panel_bg_color)
-	bg[INSENSITIVE] = @panel_bg_color
+widget "*tasklist*"                                   style "panelbuttons"
+widget_class "*Xfce*Panel*.GtkToggleButton"           style "panelbuttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panelbuttons"
+widget_class "*PanelToplevel*Button"                  style "panelbuttons"
+widget_class "*Panel*GtkToggleButton"                 style "panelbuttons"
+widget_class "*Xfce*Panel*Button*"                    style "panelbuttons"
+widget_class "*<XfceArrowButton>"                     style "panelbuttons"
+widget_class "*<XfceActionsPlugin>*"                  style "panelbuttons"
+widget_class "*XfcePanelPlugin.GtkButton"             style "panelbuttons"
+widget "*dict*Applet*"                                style "panelbuttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panelbuttons"
+widget_class "*Tasklist*"                             style:highest "panelbuttons"
 
-	fg[NORMAL] = @panel_fg_color
-	fg[PRELIGHT] = shade (1.08, @panel_fg_color)
-	fg[SELECTED] = shade (1.08, @panel_fg_color)
-	fg[ACTIVE] = @panel_fg_color
-	fg[INSENSITIVE] = mix (0.5, @panel_bg_color, @panel_fg_color)
+class "*Panel*MenuBar*"                               style "panelbar"
+widget_class "*Panel*MenuBar*"                        style "panelbar"
+widget_class "*Panel*MenuBar*Item*"                   style:highest "panelbar"
 
-	base[NORMAL] = @panel_bg_color
-	base[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	base[SELECTED] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-	base[ACTIVE] = shade (0.9, @panel_bg_color)
-	base[INSENSITIVE] = @panel_bg_color
+widget "*PanelWidget*"			style "theme-panel"
+widget "*PanelApplet*"			style "theme-panel"
+widget "*fast-user-switch*"		style "theme-panel"
+widget "*CPUFreq*Applet*"		style "theme-panel"
+widget "*TopMenu*"		style "theme-panel"
+class "PanelApp*"			style "theme-panel"
+class "PanelToplevel*"			style "theme-panel"
+widget_class "*PanelToplevel*"		style "theme-panel"
+widget_class "*notif*"			style "theme-panel"
+widget_class "*Notif*"			style "theme-panel"
+widget_class "*Tray*"			style "theme-panel"
+widget_class "*tray*"			style "theme-panel"
+widget_class "*computertemp*"		style "theme-panel"
+widget_class "*Applet*Tomboy*"		style "theme-panel"
+widget_class "*Applet*Netstatus*"	style "theme-panel"
 
-	text[NORMAL] = @panel_fg_color
-	text[PRELIGHT] = shade (1.08, @panel_fg_color)
-	text[SELECTED] = shade (1.08, @panel_fg_color)
-	text[ACTIVE] = @panel_fg_color
-	text[INSENSITIVE] = mix (0.5, @panel_bg_color, @panel_fg_color)
+# Fixes for tooltip text in some apps.
+widget_class "*Notif*Beagle*"		style "theme-panel"
+widget_class "*Notif*Brasero*"		style "theme-panel"
 
+# XFCE panel theming.
+widget "*Xfce*Panel*"			style "theme-panel"
+class "*Xfce*Panel*"			style "theme-panel"
+widget "*WnckPager*"			style "workspace-switcher"
+
+# Fix gtk-entries in the panel
+widget "*bookmark*GtkEntry" style "panel-entry" # fixes smartbookmark-plugin
+
+# Make sure panel text color doesn't change
+widget_class "*Panel*MenuBar*"		style "theme-main-menu-text"
+widget_class "*Panel*<GtkMenuBar>*"	style "theme-main-menu-text"
+widget "*.clock-applet-button.*"	style "theme-panel-text"
+widget "*PanelApplet*"			style "theme-panel-text"
+
+# Override general panel-style with specific plugin-styles
+widget "*indicator-applet*"		style "indicator"
+widget "*indicator-button*"		style "indicator"
+widget "*XfceTasklist*"			style "window-buttons"
+
+style "xfce-panel-image-style"
+{
+  # Fix the panel images to a default gtk icon size, is only works for
+  # images below 32 pixels. You can for example use this when you have
+  # fuzzy launcher icons.
+  XfcePanelImage::force-gtk-icon-sizes = true
+}
+class "XfcePanelImage" style "xfce-panel-image-style"
+
+# Whiskermenu fix.
+style "whiskerfix"
+{
 	engine "murrine" {
-		roundness = 0
-		contrast = 0.0
-		border_shades = {1.0, 1.0}
-		shadow_shades = {1.0, 1.0}
-		gradient_shades	= {1.0,1.0,1.0,1.0}
-		lightborder_shade = 1.0
 	}
 }
-
-widget "*PanelWidget*" style "murrine-panel"
-widget "*PanelApplet*" style "murrine-panel"
-widget "*fast-user-switch*" style "murrine-panel"
-widget "*CPUFreq*Applet*" style "murrine-panel"
-widget "*indicator-applet*" style "murrine-panel"
-class "PanelApp*" style "murrine-panel"
-class "PanelToplevel*" style "murrine-panel"
-widget_class "*PanelToplevel*" style "murrine-panel"
-widget_class "*notif*" style "murrine-panel"
-widget_class "*Notif*" style "murrine-panel"
-widget_class "*Tray*" style "murrine-panel" 
-widget_class "*tray*" style "murrine-panel"
-widget_class "*computertemp*" style "murrine-panel"
-widget_class "*Applet*Tomboy*" style "murrine-panel"
-widget_class "*Applet*Netstatus*" style "murrine-panel"
-widget "*gdm-user-switch-menubar*" style "murrine-panel"
-widget "*Xfce*Panel*" style "xfce-panel"
-class "*Xfce*Panel*" style "xfce-panel"
-
-style "bold-panel-item" {
-	font_name = "Bold"
-
-	engine "murrine" {
-		roundness = 0
-	}
-}
-
-widget "*Panel*MenuBar*" style "bold-panel-item"
-widget "*gimmie*" style "bold-panel-item"
-
-# widget_class "*Mail*" style "murrine-panel" # Disabled to fix Evolution bug
-# class "*Panel*" style "murrine-panel" # Disabled to fix bug
+widget "whiskermenu-window*" style "whiskerfix"

@@ -15,7 +15,7 @@ gtk_color_scheme = "fg_color:#2c2c2c\nselected_fg_color:#ffffff\ntext_color:#2c2
 gtk_color_scheme = "tooltip_bg_color:#F5F5B5\ntooltip_fg_color:#000000" # Tooltips.
 gtk_color_scheme = "link_color:#08c" # Hyperlinks
 gtk_color_scheme = "bg_color_dark:#3f3f3f\ntext_color_dark:#FFF" # Dark colors
-gtk_color_scheme = "panel_bg_color:#2d2d2d\npanel_fg_color:#dcdcdc" # Panel colors
+gtk_color_scheme = "panel_bg_color:#434f5a\npanel_fg_color:#dcdcdc" # Panel colors
 
 ### EXTERNAL FILES ###
 include "widgets/scrollbar.rc"  	# Scrollbar styling
@@ -274,6 +274,12 @@ style "pixbuf-menubar-menuitem" = "murrine-wider" {
 
 	bg[PRELIGHT]	= @base_color
 	bg[SELECTED]	= @base_color
+	fg[NORMAL]     = @fg_color
+	fg[PRELIGHT]   = @selected_bg_color
+	fg[SELECTED]   = @selected_bg_color
+	text[NORMAL]   = @fg_color
+	text[PRELIGHT] = @selected_bg_color
+	text[SELECTED] = @selected_bg_color
 
 	engine "pixmap" {
 		image
@@ -282,7 +288,7 @@ style "pixbuf-menubar-menuitem" = "murrine-wider" {
 				recolorable	= TRUE
 				state		= PRELIGHT
 				file		= "widgets/Others/menuitem.png"
-				border		= { 2, 2, 2, 2 }
+				border		= { 3, 3, 3, 3 }
 				stretch		= TRUE
 			}
 	}
@@ -292,12 +298,27 @@ style "murrine-menu" {
 	xthickness = 0
 	ythickness = 0
 
-	bg[NORMAL] = shade (1.1, @bg_color)
+	bg[SELECTED]      = @selected_bg_color
+	bg[NORMAL]        = shade (1.1, @bg_color)
+	bg[PRELIGHT]      = @selected_bg_color
+	bg[ACTIVE]        = shade (1.1, @bg_color)
+	bg[INSENSITIVE]   = shade (1.1, @bg_color)
+	fg[NORMAL]        = @fg_color # Color for normal text.
+	fg[PRELIGHT]      = @base_color
+	fg[SELECTED]      = @base_color
+	fg[ACTIVE]        = @base_color
+	fg[INSENSITIVE]   = mix (0.4, @fg_color, @bg_color) # Text color for non-interactive menu items
+	text[NORMAL]      = @text_color # Color for menu-item radio/checks.
+	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
+	text[PRELIGHT]    = @base_color
+	text[SELECTED]    = @base_color
+	text[ACTIVE]      = @fg_color
+	text[INSENSITIVE] = @text_color
 
 	engine "murrine" {
 		roundness = 0 # Roundness of menu items.
 		textstyle = 0
-		contrast = 1.02
+		contrast = 1.0
 	}
 }
 
