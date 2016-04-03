@@ -10,12 +10,12 @@
 # NOTE: Uncommenting means to delete the "#" at the beginning of a line. Commenting means to add a "#" at the beginning of a line. The "#" tells the theme wether to ignore the specified line or not.
 
 # These are the defined colors for the theme.
-gtk_color_scheme = "bg_color:#d6d6d6\nselected_bg_color:#2099d6\nbase_color:#F7F7F7" # Background, base.
+gtk_color_scheme = "bg_color:#d6d6d6\nselected_bg_color:#3399ff\nbase_color:#F7F7F7" # Background, base.
 gtk_color_scheme = "fg_color:#2c2c2c\nselected_fg_color:#ffffff\ntext_color:#2c2c2c" # Foreground, text.
 gtk_color_scheme = "tooltip_bg_color:#F5F5B5\ntooltip_fg_color:#000000" # Tooltips.
 gtk_color_scheme = "link_color:#08c" # Hyperlinks
-gtk_color_scheme = "bg_color_dark:#3f3f3f\ntext_color_dark:#FFF" # Dark colors
-gtk_color_scheme = "panel_bg_color:#434f5a\npanel_fg_color:#dcdcdc" # Panel colors
+gtk_color_scheme = "bg_color_dark:#2b3137\ntext_color_dark:#FFF" # Dark colors
+gtk_color_scheme = "panel_bg_color:#2b3137\npanel_fg_color:#FFF" # Panel colors
 
 ### EXTERNAL FILES ###
 include "widgets/scrollbar.rc"  	# Scrollbar styling
@@ -241,7 +241,7 @@ style "murrine-button" = "murrine-wider" {
 }
 
 style "murrine-notebook-bg" {
-	bg[NORMAL] = shade (1.1, @bg_color)
+	bg[NORMAL] = @base_color
 	bg[ACTIVE] = shade (0.97, @bg_color)
 	fg[ACTIVE] = mix (0.8, @fg_color, shade (0.97, @bg_color))
 }
@@ -275,11 +275,11 @@ style "pixbuf-menubar-menuitem" = "murrine-wider" {
 	bg[PRELIGHT]	= @base_color
 	bg[SELECTED]	= @base_color
 	fg[NORMAL]     = @fg_color
-	fg[PRELIGHT]   = @selected_bg_color
-	fg[SELECTED]   = @selected_bg_color
+	fg[PRELIGHT]   = @fg_color
+	fg[SELECTED]   = @fg_color
 	text[NORMAL]   = @fg_color
-	text[PRELIGHT] = @selected_bg_color
-	text[SELECTED] = @selected_bg_color
+	text[PRELIGHT] = @fg_color
+	text[SELECTED] = @fg_color
 
 	engine "pixmap" {
 		image

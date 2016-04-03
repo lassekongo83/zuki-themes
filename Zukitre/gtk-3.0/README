@@ -30,3 +30,8 @@ You can read about SASS at http://sass-lang.com/documentation/. Once you make yo
 _common.scss file, you can either run the ./parse-sass.sh script or keep SASS watching for changes as you
 edit. This is done by running `bundle exec sass --watch --sourcemap=none .` If sass is out of date, or is
 missing, you can install it with `bundle install`.
+
+How to edit the assets
+----------------------
+
+The assets are created in the assets.svg file and then rendered with ./render-assets.sh by fetching the object id name from assets.txt. If you're going to edit an image in inkscape make sure the object id is the same when you're saving. If you're going to create a new asset you need to add the object id in assets.txt.
