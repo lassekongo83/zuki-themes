@@ -47,6 +47,7 @@ If you have a GTK/Gnome version newer or older than 3.18 the theme may not work 
 ## Bug reporting
 
 If you find a bug, please report it at https://github.com/lassekongo83/zuki-themes/issues
+When submitting a bug it would be helpful if you could provide me with a screenshot of the issue. Use a trusted and good image uploader like http://imgur.com for example. Don't use bad ones like ImageShack, PhotoBucket etc.
 
 ## Other stuff
 
