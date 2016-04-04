@@ -53,10 +53,10 @@ When submitting a bug it would be helpful if you could provide me with a screens
 
 Older version (no longer supported) for GTK 3.14 can be found here: https://github.com/lassekongo83/zuki-themes/releases
 
-Main focus is now on the Zukitre theme. Zukitwo theme may get an update as soon as I've fixed everything on Zukitre. Zukiwi is gone and won't get any update. The ZukiShell theme will also arrive eventually.
+Zukiwi has been abandoned and won't get updated any more.
 
 ##### Todo list
-  * Update the titlebars on xfwm4, metacity-1 and unity with the new titlebuttons.
-  * Re-create Zukitwo and ZukiShell in sass and also re-create some of the assets or create new ones.
+  * Fix Zukitwo assets to something better.
+  * Fix some issues with the Zukitwo gtk2 theme.
   * Update to GTK 3.20 eventually. Main development focus is at the moment on Ubuntu 16.04 LTS and Debian Stretch. Will have to keep a virtual machine with ArchLinux to develop for newer releases.
   * Whatever else I've forgotten.
