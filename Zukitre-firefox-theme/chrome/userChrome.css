@@ -88,14 +88,14 @@ background-color: -moz-Field !important;
 }
  
 .tabbrowser-tab[selected] {
-	background-color: rgba(255,255,255,0.7) !important;
+	background-color: rgba(255,255,255,1.0) !important;
 	color: #2c2c2c !important;
-	border: 1px solid #afafaf !important;
-	border-top-width: 0 !important;
-	border-bottom-width: 1px !important;
+	border: 1px solid #b0b0b0 !important;
+	border-top-width: 1px !important;
+	border-bottom-width: 0px !important;
 	border-radius: 0 !important;
 	background-image: none !important;
-	box-shadow: inset 0 2px rgba(0,0,0,0.05) !important;
+	box-shadow: none;
 }
  
  
@@ -115,9 +115,9 @@ background-color: -moz-Field !important;
 
 /* Tabbar */
 .tabbrowser-tabs {
-	background-color: #ccc !important;
-	border-top: 1px solid #afafaf !important;
-	box-shadow: inset 0 2px #C0C0C0 !important;
+	background-color: #c9c9c9 !important;
+	border-top: 1px solid #b0b0b0 !important;
+	box-shadow: inset 0 -1px #b0b0b0, inset 0 2px rgba(176, 176, 176, 0.35) !important;
 	margin: 0 !important;
 	border-bottom-width: 0 !important;
 }
