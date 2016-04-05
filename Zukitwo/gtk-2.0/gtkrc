@@ -141,7 +141,7 @@ style "murrine-default" {
 		focus_color		= @selected_bg_color
 		focusstyle		= 3
 		glazestyle		= 1			# 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
-		gradient_shades		= {1.1,1.1,0.94,0.94}	# Sets the gradients on the widgets.
+		gradient_shades		= {1.05,1.05,0.98,0.98}	# Sets the gradients on the widgets.
 		glowstyle		= 0			# 0,1,2,3,4
 		glow_shade		= 1.1
 		highlight_shade		= 1.0			# set highlight amount for buttons or widgets
@@ -221,8 +221,8 @@ style "murrine-button" = "murrine-wider" {
 		contrast		= .8
 		lightborder_shade	= 1.9
 		roundness		= 2
-		border_shades		= {0.95, 0.8}
-		shadow_shades		= {1.0, 0.1}
+		border_shades		= {0.8, 0.8}
+		shadow_shades		= {0.5, 0.5}
 	}
 }
 

@@ -1570,12 +1570,12 @@ column-header.button.dnd { // for treeview-like derive widgets
                                           lighten($bg_color,10%),
                                           lighten($bg_color, 8%));
             box-shadow: inset 0 1px $borders_color,
-                        inset 0 -1px $base_color,
+                        inset 0 -1px lighten($bg_color, 8%),
                         inset 1px 0 $borders_color,
                         inset -1px 0 $borders_color;
           }
           @else if $_tab==bottom {
-            box-shadow: inset 0 -1px $base_color,
+            box-shadow: inset 0 -1px lighten($bg_color, 8%),
                         inset 0 -1px $borders_color,
                         inset 1px 0 $borders_color,
                         inset -1px 0 $borders_color;
@@ -1587,7 +1587,7 @@ column-header.button.dnd { // for treeview-like derive widgets
             box-shadow: inset 0 1px $borders_color,
                         inset 0 -1px $borders_color,
                         inset 1px 0 $borders_color,
-                        inset -1px 0 $base_color;
+                        inset -1px 0 lighten($bg_color, 8%);
             background-image: linear-gradient(to right,
                                           lighten($bg_color,10%),
                                           lighten($bg_color, 8%));
@@ -1595,7 +1595,7 @@ column-header.button.dnd { // for treeview-like derive widgets
           @else if $_tab==right {
             box-shadow: inset 0 1px $borders_color,
                         inset 0 -1px $borders_color,
-                        inset 1px 0 $base_color,
+                        inset 1px 0 lighten($bg_color, 8%),
                         inset -1px 0 $borders_color;
             background-image: linear-gradient(to left,
                                           lighten($bg_color,10%),
@@ -2842,7 +2842,7 @@ GtkVolumeButton.button {
   $_wm_border: if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
   $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.82), transparentize($borders_color, 0.1));
 
-  box-shadow: 0 3px 9px 1px transparentize(black, 0.5),
+  box-shadow: 0 1px 4px 1px transparentize(black, 0.5),
               0 0 0 1px $_wm_border; //doing borders with box-shadow
 
   // FIXME rationalize window-frame shadows
@@ -2851,7 +2851,7 @@ GtkVolumeButton.button {
   margin: 10px;
 
   &:backdrop {
-    box-shadow: 0 2px 6px 2px transparentize(black, 0.8),
+    box-shadow: 0 1px 2px 1px transparentize(black, 0.8),
                 0 0 0 1px $_wm_border_backdrop;
   }
   &.tiled {

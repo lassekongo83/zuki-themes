@@ -118,7 +118,7 @@ StScrollBar {
   }
 
   StButton#vhandle, StButton#hhandle {
-    border-radius: 8px;
+    border-radius: 2px;
     background-color: mix($fg_color, $bg_color, 60%);
     //border: 3px solid transparent; //would be nice to margin or at least to transparent
     margin: 3px;
@@ -241,7 +241,7 @@ StScrollBar {
 
   .end-session-dialog-logout-icon {
     //border: 2px solid #8b8b8b;
-    border-radius: 5px;
+    border-radius: 2px;
     width: 48px;
     height: 48px;
     background-size: contain;
@@ -418,7 +418,7 @@ StScrollBar {
   }
 
   .polkit-dialog-user-icon {
-    border-radius: 5px;
+    border-radius: 2px;
     background-size: contain;
     width: 48px;
     height: 48px;
@@ -522,7 +522,7 @@ StScrollBar {
   .osd-monitor-label { font-size: 3em; }
   .level {
     height: 0.6em;
-    border-radius: 0.3em;
+    border-radius: 2px;
     background-color: transparentize(darken($osd_bg_color,15%),0.5);
     color: $osd_fg_color;
   }
@@ -544,7 +544,7 @@ StScrollBar {
 
   .switcher-list .item-box {
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 2px;
   }
 
   .switcher-list .item-box:outlined {
@@ -620,7 +620,7 @@ StScrollBar {
   color: $_bubble_fg_color;
   background-color: $_bubble_bg_color;
   border: 1px solid $_bubble_borders_color;
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 12px;
 }
 
@@ -758,7 +758,7 @@ StScrollBar {
     .datemenu-today-button,
     .world-clocks-button,
     .message-list-section-title {
-      border-radius: 4px;
+      border-radius: 2px;
       padding: .4em;
     }
 
@@ -808,7 +808,7 @@ StScrollBar {
       color: white;
       background-color: transparent;
       width: 32px;
-      border-radius: 4px;
+      border-radius: 2px;
       &:hover, &:focus { background-color: transparentize($fg_color,0.95); }
       &:active { background-color: transparentize($bg_color,0.95); }
     }
@@ -828,7 +828,7 @@ StScrollBar {
       width: 2.4em; height: 2.4em;
       padding: 0.1em;
       margin: 2px;
-      border-radius: 1.4em;
+      border-radius: 2px;
       &:hover,&:focus { background-color: lighten($bg_color,5%); }
       &:active {
         color: lighten($selected_fg_color,5%);
@@ -888,7 +888,7 @@ StScrollBar {
 
         .message-list-section-close > StIcon {
           icon-size: 16px;
-          border-radius: 8px;
+          border-radius: 2px;
           color: $bg_color;
           background-color: darken($fg_color,60%);
         }
@@ -902,7 +902,7 @@ StScrollBar {
         .message {
           background-color: lighten($bg_color,5%);
           &:hover,&:focus { background-color: lighten($bg_color,15%); }
-          border-radius: 3px;
+          border-radius: 2px;
         }
 
           .message-icon-bin {
@@ -1203,7 +1203,6 @@ StScrollBar {
       width: 24px;
       height: 24px;
     }
-
   }
 
   .dash-item-container > StWidget {
@@ -1218,29 +1217,6 @@ StScrollBar {
     text-align: center;
     -x-offset: 8px;
   }
-
-  // /* DASH TO DOCK EXTENSION */
-
-  // FIXME: Disabled because the position class isn't working.
-
-  // $dtd-bg: rgba(0, 0, 0, 0.6);
-
-  // #dashtodockContainer #dash {
-  // .left &,
-  // &:ltr {
-  //   box-shadow: inset 3px 0px 0px 0px $dtd-bg;
-  // }
-  // .right &,
-  // &:rtl {
-  //   box-shadow: inset -3px 0px 0px 0px $dtd-bg;
-  // }
-  // .bottom & {
-  //   box-shadow: inset 0px -3px 0px 0px $dtd-bg;
-  // }
-  // .top & {
-  //   box-shadow: inset 0px 3px 0px 0px $dtd-bg;
-  // }
-  // }
 
   /* App Vault/Grid */
   .icon-grid {
@@ -1318,7 +1294,7 @@ StScrollBar {
 
   %icon_tile {
     color: $osd_fg_color;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 6px;
     border: 1px solid transparent;
     transition-duration: 100ms;
@@ -1417,7 +1393,7 @@ StScrollBar {
     font-size: 11pt;
     width: 34em;
     margin: 5px;
-    border-radius: 6px;
+    border-radius: 2px;
     color: $_bubble_fg_color;
     background-color: $_bubble_bg_color;
     border: 1px solid $borders_color;
@@ -1436,8 +1412,8 @@ StScrollBar {
     .notification-button {
       padding: 4px 4px 5px;
       background-color: darken($_bubble_bg_color,5%);
-      &:first-child { border-radius: 0 0 0 6px; }
-      &:last-child { border-radius: 0 0 6px 0; }
+      &:first-child { border-radius: 0 0 0 2px; }
+      &:last-child { border-radius: 0 0 2px 0; }
       &:hover, &focus { background-color: darken($_bubble_bg_color,2%); }
     }
   }
@@ -1497,7 +1473,7 @@ StScrollBar {
 
     .hotplug-resident-mount {
       spacing: 8px;
-      border-radius: 4px;
+      border-radius: 2px;
       &:hover { background-color: transparentize($bg_color,0.7); }
     }
 
@@ -1517,7 +1493,7 @@ StScrollBar {
 
     .hotplug-resident-eject-button {
       padding: 7px;
-      border-radius: 5px;
+      border-radius: 2px;
       color: pink;
     }
 
@@ -1529,8 +1505,8 @@ $legacy_icon_size: 24px;
   background-color: $bg_color;
   border: 1px solid $borders_color;
   border-bottom-width: 0;
-  &:ltr { border-radius: 0 6px 0 0; border-left-width: 0; }
-  &:rtl { border-radius: 6px 0 0 0; border-right-width: 0; }
+  &:ltr { border-radius: 0 2px 0 0; border-left-width: 0; }
+  &:rtl { border-radius: 2px 0 0 0; border-right-width: 0; }
 }
 
 .legacy-tray-handle,
@@ -1590,13 +1566,13 @@ $legacy_icon_size: 24px;
   .keyboard-subkeys { //long press on a key popup
     color: white;
     padding: 5px;
-    -arrow-border-radius: 10px;
+    -arrow-border-radius: 2px;
     -arrow-background-color: transparentize($osd_bg_color, 0.3);
     -arrow-border-width: 2px;
     -arrow-border-color: $_bubble_borders_color;
-    -arrow-base: 20px;
-    -arrow-rise: 10px;
-    -boxpointer-gap: 5px;
+    -arrow-base: 0px;
+    -arrow-rise: 0px;
+    -boxpointer-gap: 1px;
   }
 
 // IBus Candidate Popup
@@ -1637,7 +1613,7 @@ $legacy_icon_size: 24px;
   background-size: contain;
   border: 2px solid $osd_fg_color;
   color: $osd_fg_color;
-  border-radius: 3px;
+  border-radius: 2px;
   &:hover {
     border-color: lighten($osd_fg_color,30%);
     color: lighten($osd_fg_color,30%);

@@ -176,8 +176,8 @@
     outline-color: transparentize($tc, 0.7);
     border-color: $btn-border;
     background-image: linear-gradient(to bottom,
-                                  lighten($c,8%),
-                                  lighten($c,6%));
+                                  lighten($c,10%),
+                                  lighten($c,8%));
     box-shadow: $btn-shadow;
   }
 
