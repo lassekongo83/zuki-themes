@@ -197,3 +197,11 @@ style "xfce-notifyd-button" {
 }
 
 widget_class "XfceNotifyWindow.*.GtkButton*" style "xfce-notifyd-button"
+
+# Whiskermenu fix.
+style "whiskerfix"
+{
+	engine "murrine" {
+	}
+}
+widget "whiskermenu-window*" style "whiskerfix"
