@@ -161,7 +161,7 @@ style "murrine-default" {
 		separatorstyle		= 1			# 0 = Hard seperators 1 = Smooth seperators
 		sliderstyle		= 0			# 0 = nothing added, 1 = handles
 		stepperstyle		= 1			# 0 = standard, 1 = integrated stepper handles, 2 = unknown
-		progressbarstyle	= 1			# 0 = nothing, 1 = stripes, 2 = lines
+		progressbarstyle	= 0			# 0 = nothing, 1 = stripes, 2 = lines
 		shadow_shades		= {0.5, 0.0}		# gradient for shadows.		
 		textstyle		= 0			# 0 = normal text, 1 = inset. Very resource heavy!
 		toolbarstyle		= 2			# 0 = flat, 1 = glassy, 2 = gradient		
