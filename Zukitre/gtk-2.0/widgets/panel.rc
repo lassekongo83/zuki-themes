@@ -185,12 +185,8 @@ style "xfce-panel-image-style"
 class "XfcePanelImage" style "xfce-panel-image-style"
 
 # Whiskermenu fix.
-style "whiskerfix"
-{
-	engine "murrine" {
-	}
-}
-widget "whiskermenu-window*" style "whiskerfix"
+style "whiskerbuttonfix" = "button" {}
+widget "whiskermenu-window.*<GtkButton>" style "whiskerbuttonfix"
 
 # XFCE Notify Window
 
@@ -207,14 +203,14 @@ style "notify-window"
 
 style "notify-button"
 {
-    bg[NORMAL] = shade (1.05, @bg_color_dark)
-    bg[PRELIGHT] = shade (1.15, @bg_color_dark)
+    bg[NORMAL] = shade (1.25, @bg_color_dark)
+    bg[PRELIGHT] = shade (1.35, @bg_color_dark)
     bg[ACTIVE] = @selected_bg_color
     fg[NORMAL] = @text_color_dark
     fg[PRELIGHT] = @text_color_dark
     engine "murrine" {
-	border_shades = { 1.0, 1.0 }
-	shadow_shades = {1.0,1.0}
+	border_shades = { 0.7, 0.7 }
+	shadow_shades = {0.1,0.1}
         roundness = 1
     }
 }
@@ -252,7 +248,7 @@ style "notify-progressbar"
 
 class "XfceNotifyWindow" style "notify-window"
 widget "XfceNotifyWindow.*.summary" style "notify-summary"
-widget_class "XfceNotifyWindow.*<GtkButton>" style "notify-button"
+widget_class "XfceNotifyWindow.*<GtkButton>" style:highest "notify-button"
 widget_class "XfceNotifyWindow.*.<GtkLabel>" style "notify-text"
 widget_class "XfceNotifyWindow.*.<GtkProgress>" style "notify-progressbar"
 widget_class "XfceNotifyWindow.*.<GtkProgressBar>" style "notify-progressbar"

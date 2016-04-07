@@ -1971,7 +1971,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   .scale.slider,
   .scale.scale-has-marks-above.scale-has-marks-below.slider,
   .scale.vertical.scale-has-marks-above.scale-has-marks-below.slider {
-    background-color: #eaeaea;
+    background-color: #f0f0f0;
     border: 1px solid;
     border-radius: 50%;
     border-color: #a8a8a8; }
@@ -2031,9 +2031,9 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   .scale.scale-has-marks-above.scale-has-marks-below.trough,
   .scale.vertical.scale-has-marks-above.scale-has-marks-below.trough {
     margin: 10px;
-    border: 1px solid #b0b0b0;
+    border: 0px solid #b0b0b0;
     border-radius: 2px;
-    background-color: #c7c7c7; }
+    background-color: #bdbdbd; }
     .scale.trough.highlight,
     .scale.scale-has-marks-above.scale-has-marks-below.trough.highlight,
     .scale.vertical.scale-has-marks-above.scale-has-marks-below.trough.highlight {

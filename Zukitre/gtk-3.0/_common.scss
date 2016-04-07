@@ -1895,7 +1895,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   }
 
   &.slider {
-    background-color: lighten($bg_color,8%);
+    background-color: lighten($bg_color,10%);
     border: 1px solid;
     border-radius: 50%;
     border-color: darken($borders_color,3%);
@@ -1925,9 +1925,9 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   }
   &.trough {
     margin: 10px;
-    border: 1px solid $borders_color;
+    border: 0px solid $borders_color;
     border-radius: 2px;
-    background-color: mix($bg_color, $borders_color, 60%);
+    background-color: darken($bg_color, 10%);
     &.highlight {
       @include progressbar_fill;
       border-color: $selected_borders_color;
