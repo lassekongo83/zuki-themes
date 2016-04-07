@@ -3137,6 +3137,11 @@ GtkColorSwatch {
   background-origin: content-box;
   background-position: right center; }
 
+/* Various fixes */
+.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); }
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */

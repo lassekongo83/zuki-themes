@@ -3089,3 +3089,9 @@ GtkVolumeButton.button {
     @include undershoot(right);
   }
 }
+
+/* Various fixes */
+.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
+    color: white;
+    text-shadow: 1px 1px 2px transparentize(black, 0.2);
+}
