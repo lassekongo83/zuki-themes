@@ -1080,7 +1080,7 @@ StScrollBar {
 /* OVERVIEW */
 
 #overview {
-  spacing: 24px; //
+  spacing: 24px;
 }
 
 .overview-controls {
@@ -1109,9 +1109,9 @@ StScrollBar {
     spacing: 25px;
     color: $osd_fg_color;
     background-color: transparentize($osd_bg_color,0.2);
-    border-radius: 0px;
+    border-radius: 2px;
     padding: 4px 12px;
-    -shell-caption-spacing: 0px;
+    -shell-caption-spacing: 2px;
     &:hover { background-color: $selected_bg_color; color: $selected_fg_color; }
   }
 

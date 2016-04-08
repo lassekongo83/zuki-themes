@@ -989,9 +989,9 @@ StScrollBar {
   spacing: 25px;
   color: #eeeeee;
   background-color: rgba(43, 49, 55, 0.8);
-  border-radius: 0px;
+  border-radius: 2px;
   padding: 4px 12px;
-  -shell-caption-spacing: 0px; }
+  -shell-caption-spacing: 2px; }
   .window-caption:hover {
     background-color: #3399ff;
     color: #ffffff; }
