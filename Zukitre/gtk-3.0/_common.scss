@@ -1681,7 +1681,7 @@ column-header.button.dnd { // for treeview-like derive widgets
 
     &:hover { background-color: mix($fg_color, $bg_color, 80%); }
 
-    &:prelight:active { background-color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));}
+    &:prelight:active { background-color: if($variant=='light', mix($fg_color, $bg_color, 80%), mix($fg_color, $bg_color, 80%));}
 
     &:insensitive {
       background-color: transparent;
