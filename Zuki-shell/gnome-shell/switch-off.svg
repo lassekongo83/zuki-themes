@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="30.360737"
+     inkscape:cx="3.3071656"
      inkscape:cy="4.9175172"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,31 +58,26 @@
      id="layer1"
      transform="translate(-507.85714,-508.93363)">
     <g
-       transform="translate(199.85711,-323.42855)"
-       id="switch-dark"
-       inkscape:label="#g5960">
-      <g
-         id="g5839">
-        <rect
-           ry="12.000002"
-           y="832.36218"
-           x="308.00003"
-           height="24.000004"
-           width="52.000008"
-           id="rect6973"
-           style="opacity:1;fill:#646464;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-        <circle
-           r="10.000001"
-           cy="844.36218"
-           cx="320.00003"
-           id="circle6977"
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-        <path
-           style="fill:#ffffff;fill-opacity:1;stroke:none"
-           d="m 351.00001,848.36217 -2,0 -2,-2 -2,2 -2,0 0,-2 2,-2 -2,-2 0,-2.00001 2,0 2,2.00001 2,-2.00001 2,0 0,2.00001 -2,2 2,2 z"
-           id="path7035"
-           inkscape:connector-curvature="0" />
-      </g>
+       id="g5225">
+      <rect
+         style="opacity:1;fill:#57636e;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect6973"
+         width="52.000008"
+         height="24.000004"
+         x="507.85715"
+         y="508.93362"
+         ry="12.000002" />
+      <circle
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle6977"
+         cx="519.85712"
+         cy="520.93365"
+         r="10.000001" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path7035"
+         d="m 550.85712,524.93362 -2,0 -2,-2 -2,2 -2,0 0,-2 2,-2 -2,-2 0,-2.00001 2,0 2,2.00001 2,-2.00001 2,0 0,2.00001 -2,2 2,2 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
     </g>
   </g>
 </svg>

@@ -111,12 +111,12 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="7.0664301"
-     inkscape:cy="15.757595"
+     inkscape:zoom="22.627416"
+     inkscape:cx="0.035833865"
+     inkscape:cy="10.561856"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1412"
      inkscape:window-height="821"
      inkscape:window-x="184"
@@ -124,7 +124,7 @@
      inkscape:window-maximized="0"
      borderlayer="true"
      inkscape:showpageshadow="false"
-     inkscape:snap-nodes="false"
+     inkscape:snap-nodes="true"
      inkscape:snap-bbox="true"
      showborder="true">
     <inkscape:grid
@@ -160,24 +160,32 @@
        x="342.29913"
        y="521.58435" />
     <g
-       id="g4170"
-       transform="translate(-6.2634583,-1.9566677)">
+       id="g8453"
+       transform="translate(18,-8.0000026)">
       <rect
-         style="opacity:1;fill:#b4b4b4;fill-opacity:0.94117647;stroke:none;stroke-opacity:1"
-         id="rect4246"
+         style="opacity:1;fill:#000000;fill-opacity:0.0627451;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect5743"
          width="20"
          height="20"
-         x="348.76346"
-         y="525.31885"
-         ry="2.0000174" />
+         x="324.5"
+         y="531.36218"
+         ry="2.9999974" />
       <rect
-         ry="1.0000174"
-         y="526.31885"
-         x="349.76346"
+         ry="2.0001194"
+         y="532.36206"
+         x="325.49988"
          height="18"
          width="18"
-         id="rect6144"
-         style="opacity:1;fill:#757575;fill-opacity:1;stroke:none;stroke-width:1.20000005;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         id="rect5745"
+         style="opacity:1;fill:#15181b;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#434f5a;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="rect5747"
+         width="16"
+         height="16"
+         x="326.5"
+         y="533.36218"
+         ry="0.99999738" />
     </g>
   </g>
 </svg>

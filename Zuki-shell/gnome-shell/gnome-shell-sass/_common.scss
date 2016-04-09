@@ -56,7 +56,7 @@ stage {
 }
 
 .modal-dialog-linked-button {
-  border-right-width: 1px;
+  border-right-width: 0px;
   @include button(normal);
   &:hover { @include button(hover); }
   &:insensitive { @include button(insensitive); }
