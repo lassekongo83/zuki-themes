@@ -4,6 +4,7 @@
 
 @function _widget_edge($c:$borders_edge) {
 // outer highlight "used" on most widgets
+  @if $c == none { @return none; }
   @return 0 1px $c;
 }
 
@@ -37,14 +38,13 @@
 // normal, focus, insensitive, backdrop, backdrop-insensitive, osd, osd-focus, osd-backdrop;
 //
 
-  background-color: transparent;
-  background-color: $base_color;
   $_blank_edge: if($edge == none, none, 0 0px transparentize($edge,1));
   $_entry_edge: if($edge == none, none, _widget_edge($edge));
 
   @if $t==normal {
     color: $text_color;
     border-color: $borders_color;
+    background-color: $base_color;
   }
   @if $t==focus {
     border-color: entry_focus_border($fc);
@@ -61,7 +61,7 @@
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: 0 1px black;
-    icon-shadow: 0 1px black;
+    -gtk-icon-shadow: 0 1px black;
   }
   @if $t==osd-focus {
     color: $osd_text_color;
@@ -69,7 +69,7 @@
     background-image: linear-gradient(to bottom, transparentize(opacify($osd_borders_color, 1), 0.5));
     background-clip: padding-box;
     text-shadow: 0 1px black;
-    icon-shadow: 0 1px black;
+    -gtk-icon-shadow: 0 1px black;
   }
   @if $t==osd-insensitive {
     color: $osd_insensitive_fg_color;
@@ -78,7 +78,7 @@
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
   }
 }
 
@@ -88,7 +88,7 @@
                                                          // the border from the
                                                          // base color
 
-@function _text_shadow_color ($tc:$fg_color, $bg:$bg_color) {
+@function _text_shadow_color ($tc: $fg_color, $bg: $bg_color) {
 //
 // calculate the color of text shadows
 //
@@ -96,8 +96,22 @@
 // $bg is the background color
 //
   $_lbg: lightness($bg)/100%;
-  @if lightness($tc)<50% { @return transparentize(white,1-$_lbg/($_lbg*1.3)); }
-  @else { @return transparentize(black,$_lbg*0.8); }
+  @if lightness($tc)<50% { @return transparentize(white, 1-$_lbg/($_lbg*1.3)); }
+  @else { @return transparentize(black, $_lbg*0.8); }
+}
+
+@function _button_hilight_color($c) {
+//
+// calculate the right top hilight color for buttons
+//
+// $c: base color;
+//
+  @if lightness($c)>95% { @return white; }
+  @else if lightness($c)>90% { @return transparentize(white, 0.2); }
+  @else if lightness($c)>80% { @return transparentize(white, 0.4); }
+  @else if lightness($c)>50% { @return transparentize(white, 0.6); }
+  @else if lightness($c)>40% { @return transparentize(white, 0.8); }
+  @else { @return transparentize(white, 0.95); }
 }
 
 @mixin _button_text_shadow ($tc:$fg_color, $bg:$bg_color) {
@@ -113,11 +127,11 @@
 
   @if lightness($tc)<50% {
     text-shadow: 0 1px $_shadow;
-    icon-shadow: 0 1px $_shadow;
+    -gtk-icon-shadow: 0 1px $_shadow;
   }
   @else {
     text-shadow: 0 -1px $_shadow;
-    icon-shadow: 0 -1px $_shadow;
+    -gtk-icon-shadow: 0 1px $_shadow;
   }
 }
 
@@ -167,8 +181,21 @@
     background-color: lighten($c,10%);
     box-shadow: $btn-shadow;
   }
+  @if $t==normal-alt { // FIXME: What is this?
+  // normal button alternative look
+    color: $tc;
+    outline-color: transparentize($tc, 0.7);
+    border-color: $btn-border;
+    background-color: lighten($c,10%);
+    box-shadow: $btn-shadow;
+  }
 
   @else if $t==hover {
+  // hovered button
+    color: $tc;
+    background-color: lighten($c,13%);
+  }
+  @else if $t==hover-alt {
   // hovered button
     color: $tc;
     background-color: lighten($c,13%);
@@ -195,7 +222,7 @@
     border-color: $btn-border-i;
     background-color: $_bg;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     box-shadow: none;
     // white with 0 alpha to avoid an ugly transition, since no color means
     // black with 0 alpha
@@ -227,7 +254,7 @@
     background-clip: padding-box;
     box-shadow: inset 0 1px transparentize(white, 0.9);
     text-shadow: 0 1px black;
-    icon-shadow: 0 1px black;
+    -gtk-icon-shadow: 0 1px black;
     outline-color: transparentize($osd_fg_color, 0.7);
   }
   @else if $t==osd-hover {
@@ -241,7 +268,7 @@
     background-clip: padding-box;
     box-shadow: inset 0 1px transparentize(white, 0.9);
     text-shadow: 0 1px black;
-    icon-shadow: 0 1px black;
+    -gtk-icon-shadow: 0 1px black;
     outline-color: transparentize($osd_fg_color, 0.7);
   }
   @else if $t==osd-active {
@@ -254,7 +281,7 @@
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     outline-color: transparentize($osd_fg_color, 0.7);
   }
   @else if $t==osd-insensitive {
@@ -265,7 +292,7 @@
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
   }
   @else if $t==undecorated {
   // reset
@@ -277,7 +304,7 @@
                       $_blank_edge);
 
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
   }
 }
 
@@ -305,12 +332,6 @@
     }
   }
   @else { box-shadow: none; }
-}
-
-@mixin progressbar_fill($d:horizontal) {
-  $dir: if($d==vertical,right,bottom);
-  background-image: linear-gradient(to $dir, $selected_bg_color 2px,
-                                             lighten($selected_bg_color,6%));
 }
 
 @mixin headerbar_fill($c:$bg_color, $tc:lighten($c,4%), $bc:transparentize($top_hilight, 0.7), $hc:transparentize($top_hilight, 0.4)) {
@@ -447,5 +468,7 @@
   background-repeat: $_gradient_repeat;
   background-origin: content-box;
   background-position: $_bg_pos;
+  border: none;
+  box-shadow: none;
 }
 
