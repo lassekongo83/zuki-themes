@@ -1,6 +1,7 @@
 # Zuki Themes
 
 Zuki themes for Gnome, XFCE and more.
+Go to master branch if you need the Gnome 3.20 version: https://github.com/lassekongo83/zuki-themes/tree/master
 
 ## Requirements
 
@@ -33,7 +34,7 @@ If your distribution isn't listed, please check the requirements yourself.
 
 1. Download the theme: https://github.com/lassekongo83/zuki-themes/archive/master.zip
 2. Open the zip in your archive manager and extract the theme folders inside `zuki-themes-master` to `~/.themes` (if you’re the only user) or `/usr/share/themes` (if there are more users). It should look like this for example: `~/.themes/Zukitre`
-3. If you use `Gnome Shell` you need `gnome-tweak-tool` installed. Open `gnome-tweak-tool` and go to `Appearance` and select the themes you want to use. (You may also need to activate the `User themes` extension under `Extensions`.)
+3. If you use Gnome Shell you need `gnome-tweak-tool` installed. Open `gnome-tweak-tool` and go to `Appearance` and select the themes you want to use. (You may also need to activate the `User themes` extension under `Extensions`.)
   * XFCE users can change the themes in `Settings > Appearance` and `Settings > Window Manager`
 
 #### Other installation options
@@ -42,7 +43,7 @@ There are currently no other way to install the theme. Help wanted to create a M
 
 ## Troubleshooting
 
-If you have a GTK/Gnome version newer or older than 3.18 the theme may not work properly. Gnome 3.20+ support will probably arrive later.
+If you have a GTK/Gnome version older than 3.18 the theme may not work properly.
 
 ## Bug reporting
 
@@ -51,12 +52,9 @@ When submitting a bug it would be helpful if you could provide me with a screens
 
 ## Other stuff
 
-Older version (no longer supported) for GTK 3.14 can be found here: https://github.com/lassekongo83/zuki-themes/releases
+Older unsupported version for GTK 3.14 can be found here: https://github.com/lassekongo83/zuki-themes/releases
 
 Zukiwi has been abandoned and won't get updated any more.
 
 ##### Todo list
-  * Fix Zukitwo assets to something better.
-  * Fix some issues with the Zukitwo gtk2 theme.
-  * Update to GTK 3.20 eventually. Main development focus is at the moment on Ubuntu 16.04 LTS and Debian Stretch. Will have to keep a virtual machine with ArchLinux to develop for newer releases.
-  * Whatever else I've forgotten.
+  * Squish bugs.
