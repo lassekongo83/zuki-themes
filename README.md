@@ -69,7 +69,7 @@ Older unsupported version for GTK 3.14 can be found here: https://github.com/las
 Zukiwi has been abandoned and won't get updated any more.
 
 ##### Todo list
-  * Fix scrollbar hover size.
+  * Squish bugs.
   * Try to get rid of nautilus specific fixes and use a global fix.
   * Port Zukitwo to 3.20.
   * Whatever else I've forgotten.

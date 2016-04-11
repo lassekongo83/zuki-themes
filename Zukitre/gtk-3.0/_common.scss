@@ -12,9 +12,6 @@ $button_transition: all 200ms $ease-out-quad;
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: $error_color;
 
-  -GtkCheckButton-indicator-size: 16;
-  -GtkCheckMenuItem-indicator-size: 16;
-
   // The size for scrollbars. The slider is 2px smaller, but we keep it
   // up so that the whole area is sensitive to button presses for the
   // slider. The stepper button is larger in both directions, the slider
@@ -45,7 +42,6 @@ $button_transition: all 200ms $ease-out-quad;
 
   -gtk-secondary-caret-color: $selected_bg_color
 }
-
 
 /***************
  * Base States *
@@ -109,8 +105,6 @@ textview border {
   background-color: mix($bg_color, $base_color, 50%);
   background-image: image(transparentize(black, 0.8)); // HACK: the border node just draws background so,
   background-repeat: no-repeat;                        // using a background-image to draw the border
-
-  &:backdrop { background-color: mix($backdrop_bg_color, $backdrop_base_color, 50%); }
 
   &.bottom {
     background-size: 100% 1px;
@@ -442,6 +436,11 @@ button {
       -gtk-icon-effect: highlight;
     }
 
+    &:active:hover,
+    &:checked:hover {
+      @include button(hoveractive);
+    }
+
     &:active,
     &:checked {
       @include button(active);
@@ -503,7 +502,7 @@ button {
     &.image-button { min-width: 32px; }
 
     color: $osd_fg_color;
-    border-radius: 5px;
+    border-radius: 1px;
     outline-color: transparentize($osd_fg_color, 0.7);  //FIXME: define a color var?
 
     @include button(osd);
@@ -730,8 +729,7 @@ button {
 }
 
 // More inline toolbar buttons
-toolbar.inline-toolbar toolbutton,
-toolbar.inline-toolbar toolbutton:backdrop {
+toolbar.inline-toolbar toolbutton {
   > button.flat { @extend %linked_middle; }
   &:first-child > button.flat { @extend %linked:first-child; }
   &:last-child > button.flat { @extend %linked:last-child; }
@@ -1236,7 +1234,6 @@ searchbar,
     border-color: $backdrop_borders_color;
     background-color: $backdrop_dark_fill;
     box-shadow: none;
-    transition: $backdrop_transition;
   }
 }
 
@@ -1996,8 +1993,6 @@ notebook {
         }
 
         tab {
-          //margin-top: -1px; // Ugly border hack
-          //margin-bottom: 1px; // Ugly border hack
           margin-left: 0px;
           margin-right: 0px;
 
@@ -2064,7 +2059,7 @@ scrollbar {
     min-width: 13px;
     min-height: 13px;
     margin: -1px;
-    border: 0px solid transparent;
+    border: 1px solid transparent; // Needs to be at a minimum of one pixel or hovering will resize the scrollbar
     border-radius: 0px;
     background-clip: padding-box;
     background-color: $scrollbar_slider_color;
@@ -2969,7 +2964,7 @@ list {
 }
 
 row {
-  transition: all 150ms $ease-out-quad;
+  transition: none;
 
   &:hover { transition: none; }
 
@@ -3085,6 +3080,7 @@ messagedialog { // Message Dialog styling
     border-style: none;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    @include ssd_fill;
   }
 
   &.csd { // rounded bottom border styling for csd version
@@ -3635,15 +3631,15 @@ decoration {
 .ssd .titlebar {
     border-width: 0;
     @include ssd_fill;
+    padding: 2px 4px;
 }
 
 headerbar,
 .titlebar {
-
   &.default-decoration button.titlebutton { // no vertical padding for ssd buttons
     padding: 0 4px;                        // already handled by the titlebar-padding
     min-width: 0;
-    min-height: 0;
+    min-height: 20px;
     margin: 0;
   }
 
@@ -3670,11 +3666,12 @@ headerbar,
       &:backdrop { opacity: 1; }
     }
     // Load png assets for each button
+    $suffix: if($variant == 'light', '', '-dark');
     @each $k in ('close','maximize', 'minimize') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover') {
 
-        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
-                                                     url('assets/titlebutton-#{$k}#{$m}@2.png')); }
+        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$suffix}.png'),
+                                                     url('assets/titlebutton-#{$k}#{$m}#{$suffix}@2.png')); }
       }
     }
   }
@@ -3684,7 +3681,8 @@ headerbar,
 
 %selected_items {
   background-color: $selected_bg_color;
-
+  &:backdrop { background-color: darken($backdrop_dark_fill, 10%); }
+  
   @at-root %nobg_selected_items, & {
     color: $selected_fg_color;
 
