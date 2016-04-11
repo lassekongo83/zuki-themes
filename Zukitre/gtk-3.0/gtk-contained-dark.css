@@ -157,7 +157,7 @@ entry {
   padding-right: 8px;
   border: 1px solid;
   border-radius: 1px;
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: none;
   color: white;
   border-color: #090b0c;
   background-color: #434f5a; }
@@ -1339,7 +1339,7 @@ toolbar {
   toolbar.osd {
     padding: 13px;
     border: none;
-    border-radius: 5px;
+    border-radius: 1px;
     background-color: rgba(38, 38, 38, 0.7); }
     toolbar.osd.left, toolbar.osd.right, toolbar.osd.top, toolbar.osd.bottom {
       border-radius: 0; }
@@ -1364,12 +1364,6 @@ searchbar,
 .location-bar {
   border-width: 0 0 1px;
   padding: 3px; }
-
-searchbar {
-  border-top: 1px solid #090b0c; }
-
-.searchbar-container {
-  margin-top: -1px; }
 
 .inline-toolbar, searchbar,
 .location-bar {
@@ -1706,7 +1700,7 @@ menubar,
   menubar > menuitem,
   .menubar > menuitem {
     min-height: 16px;
-    padding: 4px 8px;
+    padding: 2px 8px;
     border: 1px solid;
     border-color: transparent; }
     menubar > menuitem:hover,
@@ -3318,10 +3312,10 @@ placessidebar row {
       background-color: #4e9a06; }
 
 placesview .server-list-button > image {
-  transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: none;
   -gtk-icon-transform: rotate(0turn); }
 placesview .server-list-button:checked > image {
-  transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: none;
   -gtk-icon-transform: rotate(-0.5turn); }
 placesview row.activatable:hover {
   background-color: transparent; }
@@ -3678,7 +3672,7 @@ popover.background radiobutton:selected,
   entry selection:backdrop, modelbutton.flat:backdrop:selected, popover.background checkbutton:backdrop:selected,
   popover.background radiobutton:backdrop:selected,
   .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected {
-    background-color: #0a0b0c; }
+    background-color: rgba(51, 153, 255, 0.6); }
   row:selected label, label:selected, .view:selected, iconview:selected,
   .view text:selected,
   iconview text:selected,

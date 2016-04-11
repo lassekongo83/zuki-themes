@@ -239,7 +239,7 @@ entry {
     padding-right: 8px;
     border: 1px solid;
     border-radius: 1px;
-    transition: all 200ms $ease-out-quad;
+    transition: none;
 
     @include entry(normal);
 
@@ -1178,7 +1178,7 @@ toolbar {
   &.osd {
     padding: 13px;
     border: none;
-    border-radius: 5px;
+    border-radius: 1px;
     background-color: $osd_bg_color;
 
     &.left,
@@ -1628,7 +1628,7 @@ menubar,
 
   > menuitem {
     min-height: 16px;
-    padding: 4px 8px;
+    padding: 2px 8px;
     border: 1px solid;
     border-color: transparent;
 
@@ -3256,12 +3256,12 @@ placessidebar {
 
 placesview {
   .server-list-button > image {
-    transition: 200ms $ease-out-quad;
+    transition: none;
     -gtk-icon-transform: rotate(0turn);
   }
 
   .server-list-button:checked > image {
-    transition: 200ms $ease-out-quad;
+    transition: none;
     -gtk-icon-transform: rotate(-0.5turn);
   }
 
@@ -3681,7 +3681,7 @@ headerbar,
 
 %selected_items {
   background-color: $selected_bg_color;
-  &:backdrop { background-color: darken($backdrop_dark_fill, 10%); }
+  &:backdrop { background-color: transparentize($selected_bg_color, 0.4); } // FIXME: Expecting transition or something???
   
   @at-root %nobg_selected_items, & {
     color: $selected_fg_color;
