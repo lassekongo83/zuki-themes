@@ -283,13 +283,9 @@
 
 @mixin trough($flat:false, $c:$bg_color, $tc:$fg_color, $noedge:false) {
   color: mix($tc,$bg_color,80%);
-  @if $flat { background-image: linear-gradient(to bottom,$c); }
+  @if $flat { background-color: lighten($c,10%); }
   @else {
-    background-image: linear-gradient(to bottom,
-                                      mix(black,$c,15%) 5%,
-                                      mix(black,$c,10%) 20%,
-                                      mix(black,$c,10%) 90%,
-                                      $c);
+    background-color: lighten($c,10%);
   }
 
   border-color: if($c!=$bg_color, _border_color($c), $border_color);
