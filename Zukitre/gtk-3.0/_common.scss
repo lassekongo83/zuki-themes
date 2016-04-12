@@ -1229,12 +1229,6 @@ searchbar,
   border-color: $borders_color;
   $_bg: mix($bg_color, $borders_color, 70%);
   background-color: $_bg;
-
-  &:backdrop {
-    border-color: $backdrop_borders_color;
-    background-color: $backdrop_dark_fill;
-    box-shadow: none;
-  }
 }
 
 /***************
@@ -2965,7 +2959,6 @@ list {
 
 row {
   transition: none;
-
   &:hover { transition: none; }
 
   &.activatable {
@@ -3682,7 +3675,7 @@ headerbar,
 %selected_items {
   background-color: $selected_bg_color;
   &:backdrop { background-color: transparentize($selected_bg_color, 0.4); } // FIXME: Expecting transition or something???
-  
+
   @at-root %nobg_selected_items, & {
     color: $selected_fg_color;
 

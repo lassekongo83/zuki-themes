@@ -1377,11 +1377,6 @@ searchbar,
   border-style: solid;
   border-color: #b0b0b0;
   background-color: #cbcbcb; }
-  .inline-toolbar:backdrop, searchbar:backdrop,
-  .location-bar:backdrop {
-    border-color: #b4b4b4;
-    background-color: #cacaca;
-    box-shadow: none; }
 
 /***************
  * Header bars *
