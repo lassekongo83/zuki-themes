@@ -1812,10 +1812,15 @@ menuitem radio {
 popover.background {
   padding: 2px;
   border-radius: 3px;
-  background-color: #d6d6d6;
+  background-color: #e7e7e7;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
   .csd popover.background, popover.background {
     border: 1px solid #b0b0b0; }
+  popover.background modelbutton.flat:hover, popover.background checkbutton:hover,
+  popover.background radiobutton:hover, popover.background.menuitem.button.flat:hover {
+    background-color: #3399ff;
+    color: #ffffff;
+    border-radius: 0; }
   popover.background > list,
   popover.background > .view,
   popover.background > iconview,
