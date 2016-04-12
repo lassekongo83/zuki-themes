@@ -3353,6 +3353,7 @@ infobar { border-style: none; }
     &:checked { @include button(active, $selected_bg_color, $selected_fg_color, none); }
 
     &:disabled { @include button(insensitive,$selected_bg_color,$selected_fg_color,none); }
+    & label:disabled { color: transparentize(white, 0.3); }
   }
 
   label:selected { &:focus, &:hover, & { background-color: darken($selected_bg_color, 10%); }}
@@ -3594,6 +3595,7 @@ decoration {
     border: none;
     @include ssd_fill;
   }
+
   .csd.popup & {
     border-radius: 0;
     box-shadow: 0 1px 2px transparentize(black, 0.8),

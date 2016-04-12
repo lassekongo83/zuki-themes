@@ -3419,6 +3419,11 @@ infobar {
       .warning button:disabled > .label,
       .error button:disabled > .label {
         color: inherit; }
+    .info button label:disabled,
+    .question button label:disabled,
+    .warning button label:disabled,
+    .error button label:disabled {
+      color: rgba(255, 255, 255, 0.7); }
   .info label:selected:focus, .info label:selected:hover, .info label:selected,
   .question label:selected:focus,
   .question label:selected:hover,
