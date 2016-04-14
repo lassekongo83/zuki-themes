@@ -180,6 +180,19 @@
     box-shadow: inset 0px 0px 0px 1px $selected_bg_color;
   }
 
+  @if $t==focushover {
+  //
+  // focused hover button
+  //
+    $_bg: if($c!=$osd_bg_color, transparentize($c, 0.5),
+                          $osd_bg_color);
+    background-color: lighten($selected_bg_color, 5%);
+    color: $osd_fg_color;
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
+    box-shadow: inset 0px 0px 0px 1px lighten($selected_bg_color, 5%);
+  }
+
   @else if $t==active {
   //
   // active osd button
