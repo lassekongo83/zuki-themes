@@ -48,6 +48,12 @@ stage {
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
     box-shadow: inset 0px 0px 0px 1px #215d9c; }
+  .button:focus:hover {
+    background-color: #256ab1;
+    color: #eeeeec;
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
+    box-shadow: inset 0px 0px 0px 1px #256ab1; }
   .button:insensitive {
     color: gray;
     border-color: rgba(0, 0, 0, 0.7);
@@ -99,6 +105,12 @@ stage {
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
     box-shadow: inset 0px 0px 0px 1px #215d9c; }
+  .modal-dialog-linked-button:focus:hover {
+    background-color: #256ab1;
+    color: #eeeeec;
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
+    box-shadow: inset 0px 0px 0px 1px #256ab1; }
   .modal-dialog-linked-button:first-child {
     border-radius: 0px 0px 0px 2px; }
   .modal-dialog-linked-button:last-child {
@@ -450,7 +462,7 @@ StScrollBar {
     .popup-menu .popup-inactive-menu-item:insensitive {
       color: rgba(255, 255, 255, 0.5); }
   .popup-menu.panel-menu {
-    -boxpointer-gap: 1px;
+    -boxpointer-gap: 0px;
     margin-bottom: 1.75em; }
 
 .popup-menu-ornament {
@@ -1001,7 +1013,7 @@ StScrollBar {
 .search-entry {
   width: 320px;
   padding: 7px 9px;
-  border-radius: 3px;
+  border-radius: 2px;
   border-color: transparent;
   color: #eeeeec;
   background-color: white;
