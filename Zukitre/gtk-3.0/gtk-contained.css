@@ -2016,8 +2016,9 @@ scrollbar {
   background-color: #eeeeee;
   border-width: 0; }
   * {
-    -GtkScrollbar-has-backward-stepper: false;
-    -GtkScrollbar-has-forward-stepper: false; }
+    -GtkScrollbar-has-backward-stepper: true;
+    -GtkScrollbar-has-forward-stepper: true;
+    -GtkRange-stepper-size: 14px; }
   scrollbar.top {
     border-bottom: 0px solid #b0b0b0; }
   scrollbar.bottom {
@@ -2027,8 +2028,8 @@ scrollbar {
   scrollbar.right {
     border-left: 0px solid #b0b0b0; }
   scrollbar slider {
-    min-width: 13px;
-    min-height: 13px;
+    min-width: 14px;
+    min-height: 14px;
     margin: -1px;
     border: 1px solid transparent;
     border-radius: 0px;
@@ -2041,8 +2042,8 @@ scrollbar {
     scrollbar slider:disabled {
       background-color: transparent; }
   scrollbar.fine-tune slider {
-    min-width: 13px;
-    min-height: 13px; }
+    min-width: 14px;
+    min-height: 14px; }
   scrollbar.fine-tune.horizontal slider {
     border-width: 0px 0px; }
   scrollbar.fine-tune.vertical slider {
@@ -2053,30 +2054,27 @@ scrollbar {
     background-color: transparent; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
       margin: 0;
-      min-width: 13px;
-      min-height: 13px;
+      min-width: 14px;
+      min-height: 14px;
       background-color: #2c2c2c;
       border: 0px solid white; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
-      min-width: 13px;
-      min-height: 13px;
-      background-color: #2c2c2c;
+      min-width: 14px;
+      min-height: 14px;
       background-clip: padding-box;
-      border-radius: 100%;
-      border: 0px solid white;
-      -gtk-icon-source: none; }
+      border: 1px solid transparent; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
       margin: 0 0px;
       min-width: 40px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
       margin: 0px;
-      min-width: 13px; }
+      min-width: 14px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
       margin: 0px 0;
       min-height: 40px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
-      margin: 2px 1px;
-      min-height: 13px; }
+      margin: -1px;
+      min-height: 14px; }
   scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
     opacity: 0.8; }
   scrollbar.horizontal slider {
@@ -2085,8 +2083,8 @@ scrollbar {
     min-height: 40px; }
   scrollbar button {
     padding: 0;
-    min-width: 13px;
-    min-height: 13px;
+    min-width: 14px;
+    min-height: 14px;
     border-style: none;
     border-radius: 0;
     transition-property: min-height, min-width, color;
@@ -3927,7 +3925,7 @@ UnityDecoration {
 
 UnityPanelWidget,
 .unity-panel {
-  background-color: #2b3137;
+  background-color: #273238;
   color: white;
   box-shadow: none; }
 
@@ -3957,7 +3955,7 @@ XfceHeading,
   text-shadow: none; }
 
 .xfce4-panel {
-  background-color: #2b3137;
+  background-color: #273238;
   color: white;
   font: normal; }
 
@@ -3987,7 +3985,7 @@ XfceHeading,
   text-shadow: none; }
 
 #pulseaudio-button {
-  background-color: #2b3137;
+  background-color: #273238;
   color: #ffffff;
   border-radius: 0;
   border-style: none;

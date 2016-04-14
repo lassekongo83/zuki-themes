@@ -2039,11 +2039,13 @@ notebook {
  **************/
 scrollbar {
   $_slider_min_length: 40px;
+  $_scrollbar_size: 14px;
 
   // disable steppers
   @at-root * {
-    -GtkScrollbar-has-backward-stepper: false;
-    -GtkScrollbar-has-forward-stepper: false;
+    -GtkScrollbar-has-backward-stepper: true;
+    -GtkScrollbar-has-forward-stepper: true;
+    -GtkRange-stepper-size: $_scrollbar_size;
   }
 
   background-color: $scrollbar_bg_color;
@@ -2057,8 +2059,8 @@ scrollbar {
 
   // slider
   slider {
-    min-width: 13px;
-    min-height: 13px;
+    min-width: $_scrollbar_size;
+    min-height: $_scrollbar_size;
     margin: -1px;
     border: 1px solid transparent; // Needs to be at a minimum of one pixel or hovering will resize the scrollbar
     border-radius: 0px;
@@ -2074,8 +2076,8 @@ scrollbar {
 
   &.fine-tune {
     slider {
-      min-width: 13px;
-      min-height: 13px;
+      min-width: $_scrollbar_size;
+      min-height: $_scrollbar_size;
     }
 
     &.horizontal slider { border-width: 0px 0px; }
@@ -2090,20 +2092,20 @@ scrollbar {
 
       slider {
         margin: 0;
-        min-width: 13px;
-        min-height: 13px;
+        min-width: $_scrollbar_size;
+        min-height: $_scrollbar_size;
         background-color: $fg_color;
         border: 0px solid if($variant == 'light', white, black);
       }
 
       button {
-        min-width: 13px;
-        min-height: 13px;
-        background-color: $fg_color;
+        min-width: $_scrollbar_size;
+        min-height: $_scrollbar_size;
+        // background-color: $fg_color;
         background-clip: padding-box;
-        border-radius: 100%;
-        border: 0px solid if($variant == 'light', white, black);
-        -gtk-icon-source: none;
+        // border-radius: 100%;
+        border: 1px solid transparent;
+        // -gtk-icon-source: none;   
       }
 
       &.horizontal {
@@ -2114,7 +2116,7 @@ scrollbar {
 
         button {
           margin: 0px;
-          min-width: 13px;
+          min-width: $_scrollbar_size;
         }
       }
 
@@ -2125,8 +2127,8 @@ scrollbar {
         }
 
         button {
-          margin: 2px 1px;
-          min-height: 13px;
+          margin: -1px;
+          min-height: $_scrollbar_size;
         }
       }
     }
@@ -2142,8 +2144,8 @@ scrollbar {
   // button styling
   button {
     padding: 0;
-    min-width: 13px;
-    min-height: 13px;
+    min-width: $_scrollbar_size;
+    min-height: $_scrollbar_size;
     border-style: none;
     border-radius: 0;
     transition-property: min-height, min-width, color;
