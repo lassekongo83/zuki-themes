@@ -1617,10 +1617,10 @@ column-header.button.dnd { // for treeview-like derive widgets
  **************/
 
 .scrollbar {
-  -GtkRange-slider-width: 13;
+  -GtkRange-slider-width: 14;
   -GtkRange-trough-border: 0;
-  -GtkScrollbar-has-backward-stepper: false;
-  -GtkScrollbar-has-forward-stepper: false;
+  -GtkScrollbar-has-backward-stepper: true;
+  -GtkScrollbar-has-forward-stepper: true;
   -GtkScrollbar-min-slider-length: 42; // minimum size for the slider.
                                        // sadly can't be in '.slider'
                                        // where it belongs
@@ -1632,13 +1632,15 @@ column-header.button.dnd { // for treeview-like derive widgets
 
   .button {
     border: none;
+    box-shadow: none;
+    background-color: $scrollbar_bg_color;
   }
 
   &.overlay-indicator {
     &:not(.dragging):not(.hovering) { // Overlay scrolling indicator
       opacity: 0.4;
 
-      -GtkRange-slider-width: 13px;
+      -GtkRange-slider-width: 14px;
 
       .slider {
         margin: 0;
@@ -2246,10 +2248,9 @@ GtkScrolledWindow {
   @extend %osd;
   padding: 10px;
   border: none;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 2px 2px;
   background-color: $osd_bg_color;
-  background-image: linear-gradient(to bottom, transparentize(black, 0.8),
-                                               transparent 2px);
+  background-image: none;
   background-clip: padding-box;
   .button {
     @include button(osd);
@@ -3026,6 +3027,13 @@ GtkVolumeButton.button {
 
 /* Various fixes */
 .nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
-    color: white;
-    text-shadow: 1px 1px 2px transparentize(black, 0.2);
+  color: white;
+  text-shadow: 1px 1px 2px transparentize(black, 0.2);
+}
+
+.floating-bar { /* Makes the floating-bar less annoying */
+  background-color: $base_color;
+  &.bottom.left { border-top-right-radius: 2px; }
+  &.bottom.right { border-top-left-radius: 2px; }
+  font-size: smaller;
 }

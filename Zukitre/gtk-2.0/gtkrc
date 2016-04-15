@@ -18,7 +18,6 @@ gtk_color_scheme = "bg_color_dark:#273238\ntext_color_dark:#dee2e5" # Dark color
 gtk_color_scheme = "panel_bg_color:#273238\npanel_fg_color:#dee2e5" # Panel colors
 
 ### EXTERNAL FILES ###
-include "widgets/scrollbar.rc"  	# Scrollbar styling
 include "widgets/panel.rc"			# Panel styling
 include "widgets/bars.rc"  			# Toolbar and menubar styling
 include "widgets/buttons.rc"  		# Button styling
@@ -55,10 +54,10 @@ style "murrine-default" {
 
 	GtkImage	::x-ayatana-indicator-dynamic	= 1
 
-	GtkScrollbar	::has-backward-stepper		= 0  
-	GtkScrollbar	::has-forward-stepper		= 0
+	GtkScrollbar	::has-backward-stepper		= 1  
+	GtkScrollbar	::has-forward-stepper		= 1
 	GtkScrollbar	::min-slider-length		= 42
-	GtkScrollbar	::slider-width			= 13
+	GtkScrollbar	::slider-width			= 14
 	GtkScrollbar	::trough-border			= 0
 	GtkScrollbar	::activate-slider		= 1
 
@@ -69,7 +68,7 @@ style "murrine-default" {
 
 	GtkRange	::trough-border			= 0
 	GtkRange	::slider-width			= 11
-	GtkRange	::stepper-size			= 0
+	GtkRange	::stepper-size			= 14
 	GtkRange	::stepper_spacing		= 0
 	GtkRange	::trough-under-steppers		= 0
 
@@ -433,131 +432,28 @@ style "murrine-scale" = "murrine-wider" {
 	bg[INSENSITIVE]	= shade (0.95, @bg_color)
 	
 	engine "murrine" {
-		roundness	= 7
-		contrast	= .8
-		border_shades	= {1.0, 1.0}
-		trough_shades	= {1.06, 1.16}
+		contrast = 1.0
+		lightborder_shade = 1.2
+		roundness = 7
+		border_shades = {1.0, 1.0}
+		trough_shades = {1.0, 1.0}
 	}
 }
 
-style "pixmap-scale" {
-	engine "pixmap" {
-	image
-		{
-			function	= BOX
-			detail		= "trough"
-			file		= "widgets/Scale/trough-horizontal.png"
-			border		= { 2, 2, 0, 0 }
-			stretch		= TRUE
-			orientation	= HORIZONTAL
-		}
-	image
-		{
-			function	= BOX
-			detail		= "trough"
-			file		= "widgets/Scale/trough-vertical.png"
-			border		= { 0, 0, 2, 2 }
-			stretch		= TRUE
-			orientation	= VERTICAL
-		}
-
-# Horizontal
-
-	image
-		{
-			function	= SLIDER
-			state           = NORMAL
-			file		= "widgets/Others/null.png"
-			border		= { 0, 0, 0, 0 }
-			stretch		= FALSE
-			overlay_file	= "widgets/Scale/slider.png"
-			overlay_stretch	= FALSE
-			orientation	= HORIZONTAL
-		}
-	image
-		{
-			function	= SLIDER
-			state           = PRELIGHT
-			file		= "widgets/Others/null.png"
-			border		= { 0, 0, 0, 0 }
-			stretch		= FALSE
-			overlay_file	= "widgets/Scale/slider-hover.png"
-			overlay_stretch	= FALSE
-			orientation	= HORIZONTAL
-		}
-	image
-		{
-			function	= SLIDER
-			state           = INSENSITIVE
-			file		= "widgets/Others/null.png"
-			border		= { 0, 0, 0, 0 }
-			stretch		= FALSE
-			overlay_file	= "widgets/Scale/slider-ins.png"
-			overlay_stretch	= FALSE
-			orientation	= HORIZONTAL
-		}
-
-# Vertical
-
-	image
-		{
-			function	= SLIDER
-			state           = NORMAL
-			file		= "widgets/Others/null.png"
-			border		= { 0, 0, 0, 0 }
-			stretch		= FALSE
-			overlay_file	= "widgets/Scale/slider.png"
-			overlay_stretch	= FALSE
-			orientation	= VERTICAL
-		}
-	image
-		{
-			function	= SLIDER
-			state           = PRELIGHT
-			file		= "widgets/Others/null.png"
-			border		= { 0, 0, 0, 0 }
-			stretch		= FALSE
-			overlay_file	= "widgets/Scale/slider-hover.png"
-			overlay_stretch	= FALSE
-			orientation	= VERTICAL
-		}
-	image
-		{
-			function	= SLIDER
-			state           = INSENSITIVE
-			file		= "widgets/Others/null.png"
-			border		= { 0, 0, 0, 0 }
-			stretch		= FALSE
-			overlay_file	= "widgets/Scale/slider-ins.png"
-			overlay_stretch	= FALSE
-			orientation	= VERTICAL
-		}
-
-# Function below removes ugly boxes
-	image
-		{
-			function	= BOX
-			file        	= "widgets/Others/null.png"
-			border      	= { 3, 3, 3, 3 }
-			stretch         = TRUE
-		}
-
+style "murrine-scrollbar" {
+	bg[NORMAL]	= mix (0.4, @fg_color, @bg_color)
+	bg[SELECTED] = mix (0.6, @fg_color, @bg_color)
+	bg[ACTIVE]	= mix (0.6, @fg_color, @bg_color)
+	bg[PRELIGHT] = mix (0.6, @fg_color, @bg_color)
+	
+	engine "murrine" {
+		roundness = 0
+		border_shades = {1.0, 1.0}
+		contrast = 0.0
+		gradient_shades = {1.0,1.0,1.0,1.0}
+        trough_shades = {1.0, 1.0}
 	}
 }
-
-#style "murrine-scrollbar" {
-#	bg[NORMAL]	= shade (0.90, @bg_color)
-#	bg[SELECTED]	= shade (0.6, @base_color)
-#	bg[ACTIVE]	= shade (1.0, @bg_color)
-#	bg[PRELIGHT]	= shade (1.0, @bg_color)
-#	
-#	engine "murrine" {
-#		roundness	= 8
-#		border_shades	= {0.80, 0.80}
-#		contrast	= 0.0
-#		gradient_shades	= {1.0,1.0,1.0,1.0}
-#	}
-#}
 
 style "murrine-sidebar" {
 	xthickness = 0
@@ -641,13 +537,13 @@ class "GtkIconView"	style "murrine-default"
 class "GtkToolbar"	style "murrine-toolbar"
 
 class "GtkSpinButton"	style "murrine-spinbutton"
-class "GtkScale"	style "pixmap-scale"
-class "GtkVScale"	style "pixmap-scale"
-class "GtkHScale"	style "pixmap-scale"
+class "GtkScale"	style "murrine-scale"
+class "GtkVScale"	style "murrine-scale"
+class "GtkHScale"	style "murrine-scale"
 
-#class "GtkScrollbar"	style "murrine-scrollbar"
-#class "GtkVScrollbar"	style "murrine-scrollbar"
-#class "GtkHScrollbar"	style "murrine-scrollbar"
+class "GtkScrollbar"	style "murrine-scrollbar"
+class "GtkVScrollbar"	style "murrine-scrollbar"
+class "GtkHScrollbar"	style "murrine-scrollbar"
 
 widget "*ToggleSwitch*"	style "murrine-toggleswitch"
 

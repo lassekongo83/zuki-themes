@@ -17,16 +17,16 @@ $top_hilight: $borders_edge;
 
 $menu_color: if($variant == 'light', $base_color, mix($bg_color, $base_color, 20%));
 
-$scrollbar_bg_color: #eeeeee;
+$scrollbar_bg_color: darken($base_color, 4%);
 
 $warning_color: #ffca28;
 $error_color: #e53935;
 $success_color: if($variant == 'light', #9ccc65, darken(#9ccc65,10%));
 $destructive_color: if($variant == 'light', #ef5350, darken(#ef5350,10%));
 
-$osd_fg_color: #eeeeee;
+$osd_fg_color: #dee2e5;
 $osd_text_color: white;
-$osd_bg_color: transparentize(#262626, 0.3);
+$osd_bg_color: transparentize(#273238, 0.3);
 $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
 $osd_borders_color: transparentize(black, 0.3);
