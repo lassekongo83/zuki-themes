@@ -1383,7 +1383,7 @@ searchbar,
  ***************/
 .titlebar:not(headerbar),
 headerbar {
-  padding: 0 7px;
+  padding: 0 4px;
   min-height: 38px;
   border-width: 0 0 1px;
   border-style: solid;
@@ -1550,8 +1550,8 @@ headerbar entry,
 headerbar spinbutton,
 headerbar separator,
 headerbar button {
-  margin-top: 6px;
-  margin-bottom: 6px; }
+  margin-top: 4px;
+  margin-bottom: 4px; }
 
 .titlebar {
   border-top-left-radius: 3px;
