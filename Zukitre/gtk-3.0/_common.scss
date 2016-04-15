@@ -2115,7 +2115,7 @@ scrollbar {
         }
 
         button {
-          margin: 0px;
+          margin: -1px;
           min-width: $_scrollbar_size;
         }
       }
@@ -2174,17 +2174,45 @@ scrollbar {
   // button icons
   &.vertical {
     button {
-      &.down { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
+      @each $s,$as in ('',''),
+                      (':disabled','-insensitive') {
+        &.up#{$s} {
+            $_url: 'assets/scrollarrow-up#{$as}#{$asset_suffix}';
+            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                      url('#{$_url}@2.png'));
+        }
 
-      &.up { -gtk-icon-source: -gtk-icontheme('pan-up-symbolic'); }
+        &.down#{$s} {
+            $_url: 'assets/scrollarrow-down#{$as}#{$asset_suffix}';
+            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                      url('#{$_url}@2.png'));
+        }
+    }
+      
+      //&.down { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
+      //&.up { -gtk-icon-source: -gtk-icontheme('pan-up-symbolic'); }
     }
   }
 
   &.horizontal {
     button {
-      &.down { -gtk-icon-source: -gtk-icontheme('pan-right-symbolic'); }
+      @each $s,$as in ('',''),
+                      (':disabled','-insensitive') {
+        &.up#{$s} {
+            $_url: 'assets/scrollarrow-left#{$as}#{$asset_suffix}';
+            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                      url('#{$_url}@2.png'));
+        }
 
-      &.up { -gtk-icon-source: -gtk-icontheme('pan-left-symbolic'); }
+        &.down#{$s} {
+            $_url: 'assets/scrollarrow-right#{$as}#{$asset_suffix}';
+            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                      url('#{$_url}@2.png'));
+        }
+    }
+      
+      //&.down { -gtk-icon-source: -gtk-icontheme('pan-right-symbolic'); }
+      //&.up { -gtk-icon-source: -gtk-icontheme('pan-left-symbolic'); }
     }
   }
 }

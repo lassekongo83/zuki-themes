@@ -2013,7 +2013,7 @@ notebook {
  * Scrollbars *
  **************/
 scrollbar {
-  background-color: #eeeeee;
+  background-color: #ededed;
   border-width: 0; }
   * {
     -GtkScrollbar-has-backward-stepper: true;
@@ -2067,7 +2067,7 @@ scrollbar {
       margin: 0 0px;
       min-width: 40px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
-      margin: 0px;
+      margin: -1px;
       min-width: 14px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
       margin: 0px 0;
@@ -2119,14 +2119,22 @@ scrollbar {
       text-shadow: none;
       -gtk-icon-shadow: none;
       color: rgba(112, 112, 112, 0.2); }
-  scrollbar.vertical button.down {
-    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
   scrollbar.vertical button.up {
-    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-  scrollbar.horizontal button.down {
-    -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+    -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-up.png"), url("assets/scrollarrow-up@2.png")); }
+  scrollbar.vertical button.down {
+    -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-down.png"), url("assets/scrollarrow-down@2.png")); }
+  scrollbar.vertical button.up:disabled {
+    -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-up-insensitive.png"), url("assets/scrollarrow-up-insensitive@2.png")); }
+  scrollbar.vertical button.down:disabled {
+    -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-down-insensitive.png"), url("assets/scrollarrow-down-insensitive@2.png")); }
   scrollbar.horizontal button.up {
-    -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+    -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-left.png"), url("assets/scrollarrow-left@2.png")); }
+  scrollbar.horizontal button.down {
+    -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-right.png"), url("assets/scrollarrow-right@2.png")); }
+  scrollbar.horizontal button.up:disabled {
+    -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-left-insensitive.png"), url("assets/scrollarrow-left-insensitive@2.png")); }
+  scrollbar.horizontal button.down:disabled {
+    -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-right-insensitive.png"), url("assets/scrollarrow-right-insensitive@2.png")); }
 
 treeview ~ scrollbar.vertical {
   border-top: 1px solid #b0b0b0;
@@ -3123,7 +3131,7 @@ scrolledwindow undershoot.right {
 scrolledwindow junction {
   border-color: transparent;
   border-image: linear-gradient(to bottom, #b0b0b0 1px, transparent 1px) 0 0 0 1/0 1px stretch;
-  background-color: #eeeeee; }
+  background-color: #ededed; }
   scrolledwindow junction:dir(rtl) {
     border-image-slice: 0 1 0 0; }
 
