@@ -2997,10 +2997,9 @@ row {
   @extend %osd;
 
   padding: 10px;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 2px 2px;
   background-color: $osd_bg_color;
-  background-image: linear-gradient(to bottom, transparentize(black, 0.8),
-                                               transparent 2px);
+  background-image: none;
   background-clip: padding-box;
 
   button { @extend %osd_button; }
@@ -3670,12 +3669,11 @@ headerbar,
       &:backdrop { opacity: 1; }
     }
     // Load png assets for each button
-    $suffix: if($variant == 'light', '', '-dark');
     @each $k in ('close','maximize', 'minimize') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover') {
 
-        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$suffix}.png'),
-                                                     url('assets/titlebutton-#{$k}#{$m}#{$suffix}@2.png')); }
+        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}.png'),
+                                                     url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}@2.png')); }
       }
     }
   }
@@ -3799,4 +3797,11 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
 .nautilus-window notebook,
 .nautilus-window notebook > stack:not(:only-child) searchbar {
   background-color: $base_color;
+}
+
+.floating-bar { /* Makes the floating-bar less annoying */
+  background-color: $base_color;
+  &.bottom.left { border-top-right-radius: 2px; }
+  &.bottom.right { border-top-left-radius: 2px; }
+  font-size: smaller;
 }
