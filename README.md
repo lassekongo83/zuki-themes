@@ -71,5 +71,4 @@ Zukiwi has been abandoned and won't get updated any more.
 ##### Todo list
   * Squish bugs.
   * Try to get rid of nautilus specific fixes and use a global fix.
-  * Port Zukitwo to 3.20.
   * Whatever else I've forgotten.
