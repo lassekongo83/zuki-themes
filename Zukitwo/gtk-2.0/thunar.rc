@@ -1,0 +1,46 @@
+# ========================
+# THUNAR SPECIFIC SETTINGS
+# ========================
+
+style "thunar-location" {
+	ThunarLocationButtons::spacing = 0
+}
+
+style "thunar-handle" {
+	GtkPaned::handle-size = 1
+	engine "pixmap" {
+		image { function = HANDLE file = "/widgets/Others/handle.png" stretch = TRUE border = { 0, 0, 0, 0 } }
+	}
+}
+
+style "thunar-statusbar" {
+	bg[NORMAL] = @base_color
+
+	engine "pixmap"	{
+		image {
+			function	= RESIZE_GRIP
+			recolorable	= FALSE
+			detail		= "statusbar"
+			overlay_file	= "/widgets/Others/null.png"
+			overlay_border	= {0,0,0,0 }
+			overlay_stretch	= FALSE
+		}
+        }
+}
+
+style "thunar-sidepane" {
+	GtkTreeView::odd_row_color = @bg_color
+	GtkTreeView::even_row_color = @bg_color
+}
+
+style "thunar-frame" {
+	xthickness = 0
+	ythickness = 0
+}
+
+widget_class "*ThunarWindow*.<GtkScrolledWindow>" style "thunar-frame"
+widget_class "*ThunarLocationButtons*" style "thunar-location"
+widget_class "*ThunarShortcutsView*" style "thunar-sidepane"
+widget_class "*ThunarTreeView*" style "thunar-sidepane"
+widget_class "*ThunarWindow*.<GtkHPaned>" style "thunar-handle"
+widget_class "*ThunarStatusbar*" style "thunar-statusbar"

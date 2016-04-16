@@ -238,7 +238,7 @@ entry {
     padding-left: 8px;
     padding-right: 8px;
     border: 1px solid;
-    border-radius: 1px;
+    border-radius: 3px;
     transition: none;
 
     @include entry(normal);
@@ -418,7 +418,7 @@ button {
     min-width: 16px;
     padding: 3px 6px;
     border: 1px solid;
-    border-radius: 1px;
+    border-radius: 3px;
 
     @include button(normal);
 
@@ -792,8 +792,8 @@ $btn-shadow-right:
 %linked {
   @extend %linked_middle;
   &:first-child {
-    border-top-left-radius: 1px;
-    border-bottom-left-radius: 1px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     border-left-width: 1px;
     border-right-width: 0;
     box-shadow: $btn-shadow-left;
@@ -803,8 +803,8 @@ $btn-shadow-right:
     &:checked:hover { @include button(hoveractive); }
   }
   &:last-child {
-    border-top-right-radius: 1px;
-    border-bottom-right-radius: 1px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     border-right-style: solid;
     border-left-width: 0;
     border-right-width: 1px;
@@ -815,7 +815,7 @@ $btn-shadow-right:
     &:checked:hover { @include button(hoveractive); }
   }
   &:only-child {
-    border-radius: 1px;
+    border-radius: 3px;
     border-style: solid;
     border-width: 1px;
     &:active { @include button(active); }
@@ -834,16 +834,16 @@ $btn-shadow-right:
 %linked_vertical{
   @extend %linked_vertical_middle;
   &:first-child {
-    border-top-left-radius: 1px;
-    border-top-right-radius: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
   }
   &:last-child {
-    border-bottom-left-radius: 1px;
-    border-bottom-right-radius: 1px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     border-style: solid;
   }
   &:only-child {
-    border-radius: 1px;
+    border-radius: 3px;
     border-style: solid;
   }
 }
@@ -1162,8 +1162,10 @@ combobox {
 %toolbar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
-  background-color: darken($bg_color,5%); // Same as tab header
-  box-shadow: inset 0 2px transparentize($borders_color,0.65);
+  background-image: linear-gradient(to bottom,
+                                darken($bg_color,6%),
+                                $bg_color);
+  box-shadow: inset 0 1px transparentize($borders_color,0.65);
 }
 
 toolbar {
@@ -1178,7 +1180,7 @@ toolbar {
   &.osd {
     padding: 13px;
     border: none;
-    border-radius: 1px;
+    border-radius: 3px;
     background-color: $osd_bg_color;
 
     &.left,
@@ -1379,15 +1381,15 @@ headerbar {
 }
 
 .titlebar {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 
 headerbar {
   separator:first-child + &, // tackles the paned container case
-  &:first-child { border-top-left-radius: 3px; }
+  &:first-child { border-top-left-radius: 7px; }
 
-  &:last-child { border-top-right-radius: 3px; }
+  &:last-child { border-top-right-radius: 7px; }
 }
 
 .titlebar:not(headerbar) {
@@ -1623,17 +1625,16 @@ menubar,
   > menuitem {
     min-height: 16px;
     padding: 2px 8px;
-    border: 1px solid;
+    border: 0px solid;
     border-color: transparent;
 
     &:hover { //Seems like it :hover even with keyboard focus
-      border: 1px solid;
-      border-color: $borders_color;
-      background-color: $base_color;
+      border: 0px solid;      
+      border-color: transparent;
+      background-image: linear-gradient(to bottom,
+                                    $bg_color,
+                                    darken($bg_color,10%));
       color: $fg_color;
-      border-radius: 2px;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
     }
 
     &:disabled {
@@ -1791,8 +1792,10 @@ notebook {
     padding: 1px;
     border-color: $borders_color;
     border-width: 1px;
-    background-color: darken($bg_color, 5%);
-    box-shadow: inset 0 2px transparentize($borders_color,0.65);
+    background-image: linear-gradient(to bottom,
+                                  darken($bg_color,6%),
+                                  $bg_color);
+    box-shadow: inset 0 1px transparentize($borders_color,0.65);
 
     &.top, &.bottom { padding-left: 0; padding-right: 0; }
     &.left, &.right { padding-top: 0; padding-bottom: 0; }
@@ -1809,6 +1812,7 @@ notebook {
             box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 1px $borders_color;
             background-color: $base_color;
             border-width: 0;
+            border-radius: 4px 4px 0 0;
           }
         }
       }
@@ -1824,6 +1828,7 @@ notebook {
             box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 -1px $borders_color;
             background-color: $base_color;
             border-width: 0;
+            border-radius: 0 0 4px 4px;
           }
         }
       }
@@ -2039,12 +2044,33 @@ notebook {
  **************/
 scrollbar {
   $_slider_min_length: 40px;
-  $_scrollbar_size: 14px;
+  $_scrollbar_size: 13px;
 
+  // disable steppers
   @at-root * {
-    -GtkScrollbar-has-backward-stepper: true;
-    -GtkScrollbar-has-forward-stepper: true;
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
     -GtkRange-stepper-size: $_scrollbar_size;
+  }
+
+  &.vertical {
+    background-image: if($variant=='light', 
+        linear-gradient(to right,
+                    darken($scrollbar_bg_color,4%),
+                    $scrollbar_bg_color), 
+        linear-gradient(to right,
+                    darken($base_color,8%),
+                    darken($base_color,6%)));
+  }
+
+  &.horizontal {
+    background-image: if($variant=='light', 
+        linear-gradient(to bottom,
+                    darken($scrollbar_bg_color,4%),
+                    $scrollbar_bg_color), 
+        linear-gradient(to bottom,
+                    darken($base_color,8%),
+                    darken($base_color,6%)));
   }
 
   background-color: $scrollbar_bg_color;
@@ -2060,15 +2086,37 @@ scrollbar {
   slider {
     min-width: $_scrollbar_size;
     min-height: $_scrollbar_size;
-    margin: -1px;
-    border: 1px solid transparent; // Needs to be at a minimum of one pixel or hovering will resize the scrollbar
-    border-radius: 0px;
+    margin: 0px;
+    border: 1px solid if($variant=='light', darken($bg_color,26%), black);
+    border-radius: 20px;
     background-clip: padding-box;
-    background-color: $scrollbar_slider_color;
+    background-image: if($variant=='light', 
+        linear-gradient(to right,
+                    darken($bg_color,10%),
+                    darken($bg_color,12%)), 
+        linear-gradient(to right,
+                    lighten($base_color,10%),
+                    lighten($base_color,12%)));
 
-    &:hover { background-color: $scrollbar_slider_hover_color; }
+    &:hover {
+    background-image: if($variant=='light', 
+        linear-gradient(to right,
+                    darken($bg_color,12%),
+                    darken($bg_color,16%)), 
+        linear-gradient(to right,
+                    lighten($base_color,12%),
+                    lighten($base_color,16%)));
+    }
 
-    &:hover:active { background-color: $scrollbar_slider_hover_color; }
+    &:hover:active { 
+    background-image: if($variant=='light', 
+        linear-gradient(to right,
+                    darken($bg_color,12%),
+                    darken($bg_color,16%)), 
+        linear-gradient(to right,
+                    lighten($base_color,12%),
+                    lighten($base_color,16%)));
+    }
 
     &:disabled { background-color: transparent; }
   }
@@ -2079,14 +2127,13 @@ scrollbar {
       min-height: $_scrollbar_size;
     }
 
-    &.horizontal slider { border-width: 0px 0px; }
-    &.vertical slider { border-width: 0px 0px; }
+    &.horizontal slider { border-width: 1px; }
+    &.vertical slider { border-width: 1px; }
   }
 
   &.overlay-indicator {
     &:not(.dragging):not(.hovering) {
       border-color: transparent;
-      opacity: 0.4;
       background-color: transparent;
 
       slider {
@@ -2094,7 +2141,7 @@ scrollbar {
         min-width: $_scrollbar_size;
         min-height: $_scrollbar_size;
         background-color: $fg_color;
-        border: 0px solid if($variant == 'light', white, black);
+        border: 1px solid if($variant=='light', darken($bg_color,26%), black);
       }
 
       button {
@@ -2114,7 +2161,7 @@ scrollbar {
         }
 
         button {
-          margin: -1px;
+          margin: 0px;
           min-width: $_scrollbar_size;
         }
       }
@@ -2126,14 +2173,11 @@ scrollbar {
         }
 
         button {
-          margin: -1px;
+          margin: 0px;
           min-height: $_scrollbar_size;
         }
       }
     }
-
-    &.dragging,
-    &.hovering { opacity: 0.8; }
   }
 
   &.horizontal slider { min-width: $_slider_min_length; }
@@ -2173,45 +2217,15 @@ scrollbar {
   // button icons
   &.vertical {
     button {
-      @each $s,$as in ('',''),
-                      (':disabled','-insensitive') {
-        &.up#{$s} {
-            $_url: 'assets/scrollarrow-up#{$as}#{$asset_suffix}';
-            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
-                                      url('#{$_url}@2.png'));
-        }
-
-        &.down#{$s} {
-            $_url: 'assets/scrollarrow-down#{$as}#{$asset_suffix}';
-            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
-                                      url('#{$_url}@2.png'));
-        }
-    }
-      
-      //&.down { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
-      //&.up { -gtk-icon-source: -gtk-icontheme('pan-up-symbolic'); }
+      &.down { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
+      &.up { -gtk-icon-source: -gtk-icontheme('pan-up-symbolic'); }
     }
   }
 
   &.horizontal {
-    button {
-      @each $s,$as in ('',''),
-                      (':disabled','-insensitive') {
-        &.up#{$s} {
-            $_url: 'assets/scrollarrow-left#{$as}#{$asset_suffix}';
-            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
-                                      url('#{$_url}@2.png'));
-        }
-
-        &.down#{$s} {
-            $_url: 'assets/scrollarrow-right#{$as}#{$asset_suffix}';
-            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
-                                      url('#{$_url}@2.png'));
-        }
-    }
-      
-      //&.down { -gtk-icon-source: -gtk-icontheme('pan-right-symbolic'); }
-      //&.up { -gtk-icon-source: -gtk-icontheme('pan-left-symbolic'); }
+    button {  
+      &.down { -gtk-icon-source: -gtk-icontheme('pan-right-symbolic'); }
+      &.up { -gtk-icon-source: -gtk-icontheme('pan-left-symbolic'); }
     }
   }
 }
@@ -3590,7 +3604,7 @@ colorchooser .popover.osd { border-radius: 5px; }
  *********************/
 
 decoration {
-  border-radius: 3px 3px 0 0;
+  border-radius: 7px 7px 0 0;
   // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
@@ -3624,7 +3638,7 @@ decoration {
 
   // server-side decorations as used by mutter
   .ssd {
-    border-radius: 2px 2px 0 0;
+    border-radius: 7px 7px 0 0;
     box-shadow: 0 0 0 1px $_wm_border; //just doing borders, wm draws actual shadows
     &.maximized { border-radius: 0; }
     border: none;
@@ -3697,7 +3711,7 @@ headerbar,
     }
     // Load png assets for each button
     @each $k in ('close','maximize', 'minimize') {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover') {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':backdrop:hover','-hover-backdrop'), (':hover','-hover'), (':active','-active') {
 
         &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}.png'),
                                                      url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}@2.png')); }
