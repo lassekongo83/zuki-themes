@@ -205,6 +205,7 @@ assistant {
 statusbar,
 .statusbar {
   font-size: smaller;
+  & button { padding: 0; min-height: 16px; }
 }
 
 /*********************
@@ -2301,15 +2302,17 @@ switch {
                                       url("assets/#{$a}#{$as}-dark@2.png"));
       }
     }
-    // the borders of checks and radios are
-    // too similar in luminosity to the selected background color, hence
-    // we need special casing.
-    .view #{$w}#{$s}:selected,
-    treeview.#{$w}#{$s}:selected,
-    row:selected #{$w}#{$s},
-    infobar #{$w}#{$s} {
-      -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}-selected.png"),
-                                    url("assets/#{$a}#{$as}-selected@2.png"));
+    @if $variant == 'light' {
+      // the borders of checks and radios are
+      // too similar in luminosity to the selected background color, hence
+      // we need special casing.
+      .view #{$w}#{$s}:selected,
+      treeview.#{$w}#{$s}:selected,
+      row:selected #{$w}#{$s},
+      infobar #{$w}#{$s} {
+        -gtk-icon-source: -gtk-scaled(url("assets/selected-#{$a}#{$as}#{$asset_suffix}.png"),
+                                      url("assets/selected-#{$a}#{$as}#{$asset_suffix}@2.png"));
+      }
     }
   }
 }
