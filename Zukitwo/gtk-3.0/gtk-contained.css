@@ -1438,7 +1438,11 @@ column-header .button, column-header .button:hover, column-header .button:active
   .popover .button.flat:hover,
   .popover .sidebar-button.button:hover {
     text-shadow: none;
-    transition: none; }
+    transition: none;
+    border-radius: 0; }
+  .popover .button.flat:hover, .popover .sidebar-button.button:hover {
+    background-color: #3399ff;
+    color: #ffffff; }
 
 /*****************
  * Notebooks and *

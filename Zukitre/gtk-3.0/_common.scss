@@ -1410,6 +1410,12 @@ column-header.button.dnd { // for treeview-like derive widgets
   .button.flat:hover {
     text-shadow: none;
     transition: none;
+    border-radius: 0;
+  }
+
+  .button.flat:hover {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
   }
 
   &.osd { @extend %osd; }
