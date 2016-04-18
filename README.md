@@ -51,7 +51,7 @@ If your distribution isn't listed, please check the requirements yourself.
 
 #### Other installation options
 
-There are currently no other way to install the theme. Help wanted to create a Makefile etc. I have 0 knowledge in that area.
+ArchLinux users can get it on AUR: https://aur.archlinux.org/packages/zuki-themes-git/ (Not maintained by me!)
 
 ## Troubleshooting
 
