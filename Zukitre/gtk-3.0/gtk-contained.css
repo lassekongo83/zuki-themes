@@ -2016,22 +2016,22 @@ notebook {
 /**************
  * Scrollbars *
  **************/
-scrollbar {
+scrollbar, .scrollbar {
   background-color: #ededed;
   border-width: 0; }
   * {
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true;
     -GtkRange-stepper-size: 14px; }
-  scrollbar.top {
+  scrollbar.top, .scrollbar.top {
     border-bottom: 0px solid #b0b0b0; }
-  scrollbar.bottom {
+  scrollbar.bottom, .scrollbar.bottom {
     border-top: 0px solid #b0b0b0; }
-  scrollbar.left {
+  scrollbar.left, .scrollbar.left {
     border-right: 0px solid #b0b0b0; }
-  scrollbar.right {
+  scrollbar.right, .scrollbar.right {
     border-left: 0px solid #b0b0b0; }
-  scrollbar slider {
+  scrollbar slider, scrollbar .slider, .scrollbar slider, .scrollbar .slider {
     min-width: 14px;
     min-height: 14px;
     margin: -1px;
@@ -2039,53 +2039,53 @@ scrollbar {
     border-radius: 0px;
     background-clip: padding-box;
     background-color: #707070; }
-    scrollbar slider:hover {
+    scrollbar slider:hover, scrollbar .slider:hover, .scrollbar slider:hover, .scrollbar .slider:hover {
       background-color: #4e4e4e; }
-    scrollbar slider:hover:active {
+    scrollbar slider:hover:active, scrollbar .slider:hover:active, .scrollbar slider:hover:active, .scrollbar .slider:hover:active {
       background-color: #4e4e4e; }
-    scrollbar slider:disabled {
+    scrollbar slider:disabled, scrollbar .slider:disabled, .scrollbar slider:disabled, .scrollbar .slider:disabled {
       background-color: transparent; }
-  scrollbar.fine-tune slider {
+  scrollbar.fine-tune slider, .scrollbar.fine-tune slider {
     min-width: 14px;
     min-height: 14px; }
-  scrollbar.fine-tune.horizontal slider {
+  scrollbar.fine-tune.horizontal slider, .scrollbar.fine-tune.horizontal slider {
     border-width: 0px 0px; }
-  scrollbar.fine-tune.vertical slider {
+  scrollbar.fine-tune.vertical slider, .scrollbar.fine-tune.vertical slider {
     border-width: 0px 0px; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+  scrollbar.overlay-indicator:not(.dragging):not(.hovering), .scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
     border-color: transparent;
     opacity: 0.4;
     background-color: transparent; }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider, scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider, .scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider, .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider {
       margin: 0;
       min-width: 14px;
       min-height: 14px;
       background-color: #2c2c2c;
       border: 0px solid white; }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering) button, scrollbar.overlay-indicator:not(.dragging):not(.hovering) .button, .scrollbar.overlay-indicator:not(.dragging):not(.hovering) button, .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .button {
       min-width: 14px;
       min-height: 14px;
       background-clip: padding-box;
       border: 1px solid transparent; }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider, .scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
       margin: 0 0px;
       min-width: 40px; }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button, scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal .button, .scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button, .scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal .button {
       margin: -1px;
       min-width: 14px; }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider, .scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
       margin: 0px 0;
       min-height: 40px; }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button, scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical .button, .scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button, .scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical .button {
       margin: -1px;
       min-height: 14px; }
-  scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
+  scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering, .scrollbar.overlay-indicator.dragging, .scrollbar.overlay-indicator.hovering {
     opacity: 0.8; }
-  scrollbar.horizontal slider {
+  scrollbar.horizontal slider, .scrollbar.horizontal slider {
     min-width: 40px; }
-  scrollbar.vertical slider {
+  scrollbar.vertical slider, .scrollbar.vertical slider {
     min-height: 40px; }
-  scrollbar button {
+  scrollbar button, scrollbar .button, .scrollbar button, .scrollbar .button {
     padding: 0;
     min-width: 14px;
     min-height: 14px;
@@ -2099,7 +2099,7 @@ scrollbar {
     text-shadow: none;
     -gtk-icon-shadow: none;
     color: #707070; }
-    scrollbar button:hover {
+    scrollbar button:hover, scrollbar .button:hover, .scrollbar button:hover, .scrollbar .button:hover {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
@@ -2107,7 +2107,7 @@ scrollbar {
       text-shadow: none;
       -gtk-icon-shadow: none;
       color: #4e4e4e; }
-    scrollbar button:active, scrollbar button:checked {
+    scrollbar button:active, scrollbar button:checked, scrollbar .button:active, scrollbar .button:checked, .scrollbar button:active, .scrollbar button:checked, .scrollbar .button:active, .scrollbar .button:checked {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
@@ -2115,7 +2115,7 @@ scrollbar {
       text-shadow: none;
       -gtk-icon-shadow: none;
       color: #0080ff; }
-    scrollbar button:disabled {
+    scrollbar button:disabled, scrollbar .button:disabled, .scrollbar button:disabled, .scrollbar .button:disabled {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
@@ -2123,21 +2123,21 @@ scrollbar {
       text-shadow: none;
       -gtk-icon-shadow: none;
       color: rgba(112, 112, 112, 0.2); }
-  scrollbar.vertical button.up {
+  scrollbar.vertical button.up, scrollbar.vertical .button.up, .scrollbar.vertical button.up, .scrollbar.vertical .button.up {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-up.png"), url("assets/scrollarrow-up@2.png")); }
-  scrollbar.vertical button.down {
+  scrollbar.vertical button.down, scrollbar.vertical .button.down, .scrollbar.vertical button.down, .scrollbar.vertical .button.down {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-down.png"), url("assets/scrollarrow-down@2.png")); }
-  scrollbar.vertical button.up:disabled {
+  scrollbar.vertical button.up:disabled, scrollbar.vertical .button.up:disabled, .scrollbar.vertical button.up:disabled, .scrollbar.vertical .button.up:disabled {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-up-insensitive.png"), url("assets/scrollarrow-up-insensitive@2.png")); }
-  scrollbar.vertical button.down:disabled {
+  scrollbar.vertical button.down:disabled, scrollbar.vertical .button.down:disabled, .scrollbar.vertical button.down:disabled, .scrollbar.vertical .button.down:disabled {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-down-insensitive.png"), url("assets/scrollarrow-down-insensitive@2.png")); }
-  scrollbar.horizontal button.up {
+  scrollbar.horizontal button.up, scrollbar.horizontal .button.up, .scrollbar.horizontal button.up, .scrollbar.horizontal .button.up {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-left.png"), url("assets/scrollarrow-left@2.png")); }
-  scrollbar.horizontal button.down {
+  scrollbar.horizontal button.down, scrollbar.horizontal .button.down, .scrollbar.horizontal button.down, .scrollbar.horizontal .button.down {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-right.png"), url("assets/scrollarrow-right@2.png")); }
-  scrollbar.horizontal button.up:disabled {
+  scrollbar.horizontal button.up:disabled, scrollbar.horizontal .button.up:disabled, .scrollbar.horizontal button.up:disabled, .scrollbar.horizontal .button.up:disabled {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-left-insensitive.png"), url("assets/scrollarrow-left-insensitive@2.png")); }
-  scrollbar.horizontal button.down:disabled {
+  scrollbar.horizontal button.down:disabled, scrollbar.horizontal .button.down:disabled, .scrollbar.horizontal button.down:disabled, .scrollbar.horizontal .button.down:disabled {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-right-insensitive.png"), url("assets/scrollarrow-right-insensitive@2.png")); }
 
 treeview ~ scrollbar.vertical {

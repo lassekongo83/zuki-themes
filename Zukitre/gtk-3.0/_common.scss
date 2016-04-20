@@ -2038,7 +2038,7 @@ notebook {
 /**************
  * Scrollbars *
  **************/
-scrollbar {
+scrollbar, .scrollbar {
   $_slider_min_length: 40px;
   $_scrollbar_size: 14px;
 
@@ -2058,7 +2058,7 @@ scrollbar {
   &.right { border-left: 0px solid $borders_color; }
 
   // slider
-  slider {
+  slider, .slider {
     min-width: $_scrollbar_size;
     min-height: $_scrollbar_size;
     margin: -1px;
@@ -2090,7 +2090,7 @@ scrollbar {
       opacity: 0.4;
       background-color: transparent;
 
-      slider {
+      slider, .slider {
         margin: 0;
         min-width: $_scrollbar_size;
         min-height: $_scrollbar_size;
@@ -2098,7 +2098,7 @@ scrollbar {
         border: 0px solid if($variant == 'light', white, black);
       }
 
-      button {
+      button, .button {
         min-width: $_scrollbar_size;
         min-height: $_scrollbar_size;
         // background-color: $fg_color;
@@ -2114,7 +2114,7 @@ scrollbar {
           min-width: $_slider_min_length;
         }
 
-        button {
+        button, .button {
           margin: -1px;
           min-width: $_scrollbar_size;
         }
@@ -2126,7 +2126,7 @@ scrollbar {
           min-height: $_slider_min_length;
         }
 
-        button {
+        button, .button {
           margin: -1px;
           min-height: $_scrollbar_size;
         }
@@ -2142,7 +2142,7 @@ scrollbar {
   &.vertical slider { min-height: $_slider_min_length; }
 
   // button styling
-  button {
+  button, .button {
     padding: 0;
     min-width: $_scrollbar_size;
     min-height: $_scrollbar_size;
@@ -2173,7 +2173,7 @@ scrollbar {
 
   // button icons
   &.vertical {
-    button {
+    button, .button {
       @each $s,$as in ('',''),
                       (':disabled','-insensitive') {
         &.up#{$s} {
@@ -2195,7 +2195,7 @@ scrollbar {
   }
 
   &.horizontal {
-    button {
+    button, .button {
       @each $s,$as in ('',''),
                       (':disabled','-insensitive') {
         &.up#{$s} {
