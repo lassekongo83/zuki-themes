@@ -3700,7 +3700,7 @@ headerbar,
     }
     // Load png assets for each button
     @each $k in ('close','maximize', 'minimize') {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover') {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
 
         &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}.png'),
                                                      url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}@2.png')); }
