@@ -2128,8 +2128,8 @@ scrollbar, .scrollbar {
       min-height: $_scrollbar_size;
     }
 
-    &.horizontal slider { border-width: 1px; }
-    &.vertical slider { border-width: 1px; }
+    &.horizontal slider, &.horizontal .slider { border-width: 1px; }
+    &.vertical slider, &.vertical .slider { border-width: 1px; }
   }
 
   &.overlay-indicator {
@@ -2156,7 +2156,7 @@ scrollbar, .scrollbar {
       }
 
       &.horizontal {
-        slider {
+        slider, .slider {
           margin: 0 0px;
           min-width: $_slider_min_length;
         }
@@ -2168,7 +2168,7 @@ scrollbar, .scrollbar {
       }
 
       &.vertical {
-        slider {
+        slider, .slider {
           margin: 0px 0;
           min-height: $_slider_min_length;
         }
@@ -2181,9 +2181,9 @@ scrollbar, .scrollbar {
     }
   }
 
-  &.horizontal slider { min-width: $_slider_min_length; }
+  &.horizontal slider, &.horizontal .slider { min-width: $_slider_min_length; }
 
-  &.vertical slider { min-height: $_slider_min_length; }
+  &.vertical slider, &.vertical .slider { min-height: $_slider_min_length; }
 
   // button styling
   button, .button {

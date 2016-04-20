@@ -2075,13 +2075,13 @@ scrollbar, .scrollbar {
   }
 
   &.fine-tune {
-    slider {
+    slider, .slider {
       min-width: $_scrollbar_size;
       min-height: $_scrollbar_size;
     }
 
-    &.horizontal slider { border-width: 0px 0px; }
-    &.vertical slider { border-width: 0px 0px; }
+    &.horizontal slider, &.horizontal .slider { border-width: 0; }
+    &.vertical slider, &.vertical .slider { border-width: 0; }
   }
 
   &.overlay-indicator {
@@ -2109,7 +2109,7 @@ scrollbar, .scrollbar {
       }
 
       &.horizontal {
-        slider {
+        slider, .slider {
           margin: 0 0px;
           min-width: $_slider_min_length;
         }
@@ -2121,7 +2121,7 @@ scrollbar, .scrollbar {
       }
 
       &.vertical {
-        slider {
+        slider, .slider {
           margin: 0px 0;
           min-height: $_slider_min_length;
         }
@@ -2137,9 +2137,9 @@ scrollbar, .scrollbar {
     &.hovering { opacity: 0.8; }
   }
 
-  &.horizontal slider { min-width: $_slider_min_length; }
+  &.horizontal slider, &.horizontal .slider { min-width: $_slider_min_length; }
 
-  &.vertical slider { min-height: $_slider_min_length; }
+  &.vertical slider, &.vertical .slider { min-height: $_slider_min_length; }
 
   // button styling
   button, .button {
