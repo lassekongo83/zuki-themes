@@ -5,6 +5,16 @@ Zuki themes for Gnome, XFCE and more.
 Master branch is for Gnome 3.20.
 3.18 branch can be found here: https://github.com/lassekongo83/zuki-themes/tree/3.18
 
+##### Zukitre
+
+![Zukitre theme](zukitre.png?raw=true)
+
+##### Zukitwo
+
+![Zukitwo theme](zukitwo.png?raw=true)
+
+<sub>Screenshot Details: [Wallpaper](http://mustberesult.deviantart.com/art/Almora-212657321) | [Icons](https://github.com/numixproject/numix-icon-theme-circle) | Gnome-shell extensions: Dash to dock, Hide top bar. | Clock: [tint2](https://gist.github.com/lassekongo83/d9c432457599c4633280423c6a77c7be)</sub>
+
 ## Requirements
 
 * Gnome/GTK 3.18 or 3.20
