@@ -3445,6 +3445,7 @@ XfceHeading,
 
 #pulseaudio-button, #indicator-button {
   background-color: #2b3137;
+  background-image: none;
   color: white;
   border-radius: 0;
   border-style: none;
