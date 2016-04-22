@@ -3312,9 +3312,9 @@ UnityPanelWidget,
   border-bottom: none; }
 
 /*
-    XFCE GTK3 Styling
-    Note: If you wish to edit the theme for XFCE 4.12 or earlier you do it in the GTK-2.0 folder.
-    These styles are for experimental and future XFCE releases.
+  XFCE GTK3 Styling
+  Note: If you wish to edit the theme for XFCE 4.12 or earlier you do it in the GTK-2.0 folder.
+  These styles are for experimental and future XFCE releases.
 */
 CatfishWindow .pane-separator {
   background-color: #2d353d; }
@@ -3338,11 +3338,12 @@ XfceHeading,
   border-radius: 0;
   padding: 0 1px;
   color: white;
-  text-shadow: none; }
+  text-shadow: none;
+  background-image: none; }
 
 .xfce4-panel .button:active {
   background-image: none;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #191d20;
   border-style: none;
   color: white;
   transition: none; }
@@ -3350,7 +3351,8 @@ XfceHeading,
 .xfce4-panel .button:hover,
 .xfce4-panel .button:active:hover {
   border-style: none;
-  background-color: shade(#3399ff, 0.42);
+  background-image: none;
+  background-color: #343b42;
   color: white;
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1), inset 1px 0 rgba(255, 255, 255, 0.1), inset -1px 0 rgba(255, 255, 255, 0.1), inset 0 1px rgba(255, 255, 255, 0.1);
   transition: none; }

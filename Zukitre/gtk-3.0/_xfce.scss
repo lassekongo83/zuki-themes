@@ -1,69 +1,72 @@
 /*
-    XFCE GTK3 Styling
-    Note: If you wish to edit the theme for XFCE 4.12 or earlier you do it in the GTK-2.0 folder.
-    These styles are for experimental and future XFCE releases.
+  XFCE GTK3 Styling
+  Note: If you wish to edit the theme for XFCE 4.12 or earlier you do it in the GTK-2.0 folder.
+  These styles are for experimental and future XFCE releases.
 */
 
 
 CatfishWindow .pane-separator {
-    background-color: darken($base_color, 10%);
+  background-color: darken($base_color, 10%);
 }
 
 XfceHeading,
 .XfceHeading {
-    margin: 0;
-    padding: 0;
-    border-width: 0;
-    background-image: none;
-    background-color: $bg_color;
-    color: $text_color;
-    text-shadow: none;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-image: none;
+  background-color: $bg_color;
+  color: $text_color;
+  text-shadow: none;
 }
 
 .xfce4-panel {
-    background-color: $panel_bg;
-    color: $panel_fg;
-    font: normal;
+  background-color: $panel_bg;
+  color: $panel_fg;
+  font: normal;
 }
 
 .xfce4-panel .button {
-    border-radius: 0;
-    padding: 0 1px;
-    color: $panel_fg;
-    text-shadow: none;
+  border-radius: 0;
+  padding: 0 1px;
+  color: $panel_fg;
+  text-shadow: none;
+  background-image: none;
 }
 
 .xfce4-panel .button:active {
-    background-image: none;
-    background-color: transparentize($panel_fg, 0.7);
-    border-style: none;
-    color: $panel_fg;
-    transition: none;
+  background-image: none;
+  background-color: darken($panel_bg, 8%);
+  border-style: none;
+  color: $panel_fg;
+  transition: none;
 }
 
 .xfce4-panel .button:hover,
 .xfce4-panel .button:active:hover {
-    border-style: none;
-    background-color: shade($selected_bg_color, 0.42);
+  border-style: none;
+  background-image: none;
+  background-color: lighten($panel_bg, 4%);
 
-    color: $panel_fg;
+  color: $panel_fg;
 
-    box-shadow: inset 0 -1px transparentize(white, 0.9),
-                inset 1px 0 transparentize(white, 0.9),
-                inset -1px 0 transparentize(white, 0.9),
-                inset 0 1px transparentize(white, 0.9);
+  box-shadow: inset 0 -1px transparentize(white, 0.9),
+              inset 1px 0 transparentize(white, 0.9),
+              inset -1px 0 transparentize(white, 0.9),
+              inset 0 1px transparentize(white, 0.9);
 
-    transition: none;
+  transition: none;
 }
 
 .xfce4-panel .menu {
-    -gtk-image-effect: none;
-    text-shadow: none;
+  -gtk-image-effect: none;
+  text-shadow: none;
 }
 
 // Temporary fixes for certain XFCE applets using GTK3
 #pulseaudio-button, #indicator-button {
   background-color: $panel_bg;
+  background-image: none;
   color: $panel_fg;
   border-radius: 0;
   border-style: none;

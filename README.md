@@ -21,7 +21,6 @@ Go to master branch if you need the Gnome 3.20 version: https://github.com/lasse
 Main distributions that meet these requirements are
 
 * X/Ubuntu 16.04 LTS (**Older versions are not supported**)
-* Debian Testing (Stretch)
 * Fedora 23
 
 Derivatives of these distributions should work, as well.
