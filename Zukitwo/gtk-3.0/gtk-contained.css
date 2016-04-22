@@ -1562,9 +1562,13 @@ headerbar button {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px; }
 
-separator:first-child + headerbar, headerbar:first-child {
+.background:not(.tiled):not(.maximized) .titlebar:backdrop, .background:not(.tiled):not(.maximized) .titlebar {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px; }
+
+window:not(.tiled):not(.maximized) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized) separator:first-child + headerbar, window:not(.tiled):not(.maximized) headerbar:first-child:backdrop, window:not(.tiled):not(.maximized) headerbar:first-child {
   border-top-left-radius: 7px; }
-headerbar:last-child {
+window:not(.tiled):not(.maximized) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized) headerbar:last-child {
   border-top-right-radius: 7px; }
 
 window.csd > .titlebar:not(headerbar) {
@@ -3581,7 +3585,7 @@ decoration {
   margin: 10px; }
   decoration:backdrop {
     box-shadow: 0 1px 4px 1px transparent, 0 1px 2px 1px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.18); }
-  .fullscreen decoration, .tiled decoration {
+  .maximized decoration, .fullscreen decoration, .tiled decoration {
     border-radius: 0; }
   .popup decoration {
     box-shadow: none; }

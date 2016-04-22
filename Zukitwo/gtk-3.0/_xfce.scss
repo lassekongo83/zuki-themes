@@ -64,7 +64,7 @@ XfceHeading,
 // Temporary fixes for certain XFCE applets using GTK3
 #pulseaudio-button, #indicator-button {
   background-color: $panel_bg;
-  background-image: none; // Must be here or the applets will try to use a gtk2 pixmap. Very weird.
+  background-image: none;
   color: $panel_fg;
   border-radius: 0;
   border-style: none;

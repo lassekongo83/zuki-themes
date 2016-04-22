@@ -1384,11 +1384,18 @@ headerbar {
   border-top-right-radius: 3px;
 }
 
-headerbar {
-  separator:first-child + &, // tackles the paned container case
-  &:first-child { border-top-left-radius: 3px; }
+.background:not(.tiled):not(.maximized) .titlebar {
+  &:backdrop, & {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+}
 
-  &:last-child { border-top-right-radius: 3px; }
+headerbar {
+  window:not(.tiled):not(.maximized) separator:first-child + &, // tackles the paned container case
+  window:not(.tiled):not(.maximized) &:first-child { &:backdrop, & { border-top-left-radius: 3px; }}
+
+  window:not(.tiled):not(.maximized) &:last-child { &:backdrop, & { border-top-right-radius: 3px; }}
 }
 
 .titlebar:not(headerbar) {
@@ -3620,6 +3627,7 @@ decoration {
                 0 0 0 1px $_wm_border_backdrop;
   }
 
+  .maximized &,
   .fullscreen &,
   .tiled & { border-radius: 0; }
 
