@@ -62,10 +62,13 @@ XfceHeading,
 }
 
 // Temporary fixes for certain XFCE applets using GTK3
-#pulseaudio-button {
-    background-color: $panel_bg;
-    color: #ffffff;
-    border-radius: 0;
-    border-style: none;
-    box-shadow: none;
+#pulseaudio-button, #indicator-button {
+  background-color: $panel_bg;
+  color: $panel_fg;
+  border-radius: 0;
+  border-style: none;
+  box-shadow: none;
+  &:hover { background-color: lighten($panel_bg, 4%); }
+  &:active { background-color: darken($panel_bg, 8%); }
+  &:checked { background-color: darken($panel_bg, 8%); }
 }
