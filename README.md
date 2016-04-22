@@ -27,7 +27,6 @@ Main distributions that meet these requirements are
 
 GTK 3.18
 * X/Ubuntu 16.04 LTS (**Older versions are not supported**)
-* Debian Testing (Stretch)
 * Fedora 23
 
 GTK 3.20
