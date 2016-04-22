@@ -31,7 +31,7 @@ If your distribution isn't listed, please check the requirements yourself.
 
 #### Manual installation
 
-1. Download the theme: https://github.com/lassekongo83/zuki-themes/archive/master.zip
+1. Download the theme: https://github.com/lassekongo83/zuki-themes/archive/3.18.zip
 2. Open the zip in your archive manager and extract the theme folders inside `zuki-themes-master` to `~/.themes` (if you’re the only user) or `/usr/share/themes` (if there are more users). It should look like this for example: `~/.themes/Zukitre`
 3. If you use Gnome Shell you need `gnome-tweak-tool` installed. Open `gnome-tweak-tool` and go to `Appearance` and select the themes you want to use. (You may also need to activate the `User themes` extension under `Extensions`.)
   * XFCE users can change the themes in `Settings > Appearance` and `Settings > Window Manager`
