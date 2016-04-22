@@ -3411,9 +3411,15 @@ XfceHeading,
   -gtk-image-effect: none;
   text-shadow: none; }
 
-#pulseaudio-button {
+#pulseaudio-button, #indicator-button {
   background-color: #273238;
-  color: #ffffff;
+  color: white;
   border-radius: 0;
   border-style: none;
   box-shadow: none; }
+  #pulseaudio-button:hover, #indicator-button:hover {
+    background-color: #2f3d44; }
+  #pulseaudio-button:active, #indicator-button:active {
+    background-color: #161d20; }
+  #pulseaudio-button:checked, #indicator-button:checked {
+    background-color: #161d20; }
