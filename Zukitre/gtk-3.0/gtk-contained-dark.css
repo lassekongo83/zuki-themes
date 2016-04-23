@@ -55,11 +55,22 @@ iconview text,
 textview text {
   color: white;
   background-color: #546E7A; }
+  .view:hover, iconview:hover,
+  .view text:hover,
+  iconview text:hover,
+  textview text:hover {
+    background-color: #506974; }
   .view:selected, iconview:selected,
   .view text:selected,
   iconview text:selected,
   textview text:selected {
     border-radius: 0px; }
+  .view:backdrop, iconview:backdrop,
+  .view text:backdrop,
+  iconview text:backdrop,
+  textview text:backdrop {
+    color: #dde3e5;
+    background-color: #56717d; }
 
 textview border {
   background-color: #3e5059;
