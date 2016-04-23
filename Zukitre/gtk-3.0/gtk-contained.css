@@ -62,8 +62,13 @@
 .view {
   color: black;
   background-color: #F7F7F7; }
+  .view:hover {
+    background-color: #f2f2f2; }
   .view:selected, GtkCalendar:selected {
     border-radius: 0px; }
+  .view:backdrop {
+    color: #323232;
+    background-color: #fafafa; }
 
 .rubberband, GtkTreeView.view.rubberband, .content-view.rubberband {
   border: 1px solid #0080ff;
@@ -1633,6 +1638,9 @@ column-header .button, column-header .button:hover, column-header .button:active
       border: 0px solid white;
       background-clip: padding-box; }
     .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .trough {
+      border-style: none;
+      background-color: transparent; }
+    .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .button {
       border-style: none;
       background-color: transparent; }
     .scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical .slider {

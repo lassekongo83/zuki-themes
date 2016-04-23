@@ -62,8 +62,13 @@
 .view {
   color: white;
   background-color: #434f5a; }
+  .view:hover {
+    background-color: #3f4a54; }
   .view:selected, GtkCalendar:selected {
     border-radius: 0px; }
+  .view:backdrop {
+    color: #dadcdf;
+    background-color: #45525d; }
 
 .rubberband, GtkTreeView.view.rubberband, .content-view.rubberband {
   border: 1px solid #0080ff;

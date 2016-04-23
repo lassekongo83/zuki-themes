@@ -100,9 +100,14 @@ $asset_suffix: if($variant=='dark', '-dark', '');
 .view {
   color: $text_color;
   background-color: $base_color;
+  &:hover { background-color: darken($base_color, 2%); }
   &:selected {
     border-radius: 0px;
     @extend %selected_items;
+  }
+  &:backdrop { // Keep for now or selected backdrop color will behave bad when hovering.
+    color: $backdrop_text_color;
+    background-color: $backdrop_base_color;
   }
 }
 
@@ -1656,6 +1661,11 @@ column-header.button.dnd { // for treeview-like derive widgets
       }
 
       .trough {
+        border-style: none;
+        background-color: transparent;
+      }
+
+      .button {
         border-style: none;
         background-color: transparent;
       }
