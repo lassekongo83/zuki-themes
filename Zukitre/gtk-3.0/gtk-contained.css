@@ -69,8 +69,8 @@ textview text {
   .view text:backdrop,
   iconview text:backdrop,
   textview text:backdrop {
-    color: #323232;
-    background-color: #fafafa; }
+    color: #313131;
+    background-color: #F7F7F7; }
 
 textview border {
   background-color: #e7e7e7;
@@ -1754,7 +1754,7 @@ menu,
     border: none; }
   menu:backdrop,
   .menu:backdrop {
-    background-color: #fafafa; }
+    background-color: #F7F7F7; }
   menu menuitem,
   .menu menuitem {
     min-height: 16px;
@@ -2107,37 +2107,17 @@ scrollbar, .scrollbar {
     border-style: none;
     border-radius: 0;
     transition-property: min-height, min-width, color;
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0);
-    text-shadow: none;
-    -gtk-icon-shadow: none;
+    box-shadow: none;
     color: #707070; }
     scrollbar button:hover, scrollbar .button:hover, .scrollbar button:hover, .scrollbar .button:hover {
-      border-color: transparent;
-      background-color: transparent;
-      background-image: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0);
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      color: #4e4e4e; }
+      color: #4e4e4e;
+      box-shadow: none; }
     scrollbar button:active, scrollbar button:checked, scrollbar .button:active, scrollbar .button:checked, .scrollbar button:active, .scrollbar button:checked, .scrollbar .button:active, .scrollbar .button:checked {
-      border-color: transparent;
-      background-color: transparent;
-      background-image: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0);
-      text-shadow: none;
-      -gtk-icon-shadow: none;
+      box-shadow: none;
       color: #0080ff; }
     scrollbar button:disabled, scrollbar .button:disabled, .scrollbar button:disabled, .scrollbar .button:disabled {
-      border-color: transparent;
-      background-color: transparent;
-      background-image: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0);
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      color: rgba(112, 112, 112, 0.2); }
+      color: rgba(112, 112, 112, 0.2);
+      box-shadow: none; }
   scrollbar.vertical button.up, scrollbar.vertical .button.up, .scrollbar.vertical button.up, .scrollbar.vertical .button.up {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-up.png"), url("assets/scrollarrow-up@2.png")); }
   scrollbar.vertical button.down, scrollbar.vertical .button.down, .scrollbar.vertical button.down, .scrollbar.vertical .button.down {
@@ -3753,7 +3733,7 @@ popover.background radiobutton:selected,
     entry selection:backdrop, modelbutton.flat:backdrop:selected, popover.background checkbutton:backdrop:selected,
     popover.background radiobutton:backdrop:selected,
     .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected {
-      color: #fafafa; }
+      color: #F7F7F7; }
       row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected,
       .view text:backdrop:disabled:selected,
       iconview text:backdrop:disabled:selected,
@@ -3762,7 +3742,7 @@ popover.background radiobutton:selected,
       entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected, popover.background checkbutton:backdrop:disabled:selected,
       popover.background radiobutton:backdrop:disabled:selected,
       .menuitem.button.flat:backdrop:disabled:selected, row:backdrop:disabled:selected, calendar:backdrop:disabled:selected {
-        color: #6fb6fe; }
+        color: #6eb5fd; }
 
 .monospace {
   font: Monospace; }
@@ -3902,7 +3882,7 @@ widget base background color on backdrop windows */
 @define-color theme_unfocused_bg_color #d6d6d6;
 /*
 text widgets and the like base background color on backdrop windows */
-@define-color theme_unfocused_base_color #fafafa;
+@define-color theme_unfocused_base_color #F7F7F7;
 /*
 base background color of selections on backdrop windows */
 @define-color theme_unfocused_selected_bg_color #3399ff;

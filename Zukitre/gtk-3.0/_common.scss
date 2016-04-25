@@ -2113,11 +2113,8 @@ scrollbar, .scrollbar {
       button, .button {
         min-width: $_scrollbar_size;
         min-height: $_scrollbar_size;
-        // background-color: $fg_color;
         background-clip: padding-box;
-        // border-radius: 100%;
         border: 1px solid transparent;
-        // -gtk-icon-source: none;   
       }
 
       &.horizontal {
@@ -2161,25 +2158,20 @@ scrollbar, .scrollbar {
     border-style: none;
     border-radius: 0;
     transition-property: min-height, min-width, color;
-
-    @include button(undecorated);
-
+    box-shadow: none;
     color: $scrollbar_slider_color;
 
     &:hover {
-      @include button(undecorated);
-
       color: $scrollbar_slider_hover_color;
+      box-shadow: none;
     }
     &:active, &:checked {
-      @include button(undecorated);
-
+      box-shadow: none;
       color: $scrollbar_slider_active_color;
     }
     &:disabled {
-      @include button(undecorated);
-
       color: transparentize($scrollbar_slider_color, 0.8);
+      box-shadow: none;
     }
   }
 
@@ -2199,10 +2191,7 @@ scrollbar, .scrollbar {
             -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
                                       url('#{$_url}@2.png'));
         }
-    }
-      
-      //&.down { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
-      //&.up { -gtk-icon-source: -gtk-icontheme('pan-up-symbolic'); }
+      }
     }
   }
 
@@ -2221,10 +2210,7 @@ scrollbar, .scrollbar {
             -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
                                       url('#{$_url}@2.png'));
         }
-    }
-      
-      //&.down { -gtk-icon-source: -gtk-icontheme('pan-right-symbolic'); }
-      //&.up { -gtk-icon-source: -gtk-icontheme('pan-left-symbolic'); }
+      }
     }
   }
 }
