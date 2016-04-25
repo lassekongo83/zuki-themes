@@ -67,8 +67,8 @@
   .view:selected, GtkCalendar:selected {
     border-radius: 0px; }
   .view:backdrop {
-    color: #dadcdf;
-    background-color: #45525d; }
+    color: #d9dcde;
+    background-color: #434f5a; }
 
 .rubberband, GtkTreeView.view.rubberband, .content-view.rubberband {
   border: 1px solid #0080ff;
@@ -3237,7 +3237,7 @@ widget base background color on backdrop windows */
 @define-color theme_unfocused_bg_color #2b3137;
 /*
 text widgets and the like base background color on backdrop windows */
-@define-color theme_unfocused_base_color #45525d;
+@define-color theme_unfocused_base_color #434f5a;
 /*
 base background color of selections on backdrop windows */
 @define-color theme_unfocused_selected_bg_color #3399ff;
