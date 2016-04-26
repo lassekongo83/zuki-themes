@@ -1086,12 +1086,12 @@ spinbutton {
     }
 
     %top_button {
-      border-radius: 3px 3px 0 0;
+      border-radius: 1px 1px 0 0;
       border-style: solid solid none solid;
     }
 
     %bottom_button {
-      border-radius: 0 0 3px 3px;
+      border-radius: 0 0 1px 1px;
       border-style: none solid solid solid;
     }
   }
@@ -1810,7 +1810,10 @@ notebook {
     &.top, &.bottom { padding-left: 0; padding-right: 0; }
     &.left, &.right { padding-top: 0; padding-bottom: 0; }
 
-    tabs { margin: -1px; }
+    tabs { 
+      margin: -1px;
+      min-height: 28px;
+    }
 
     &.top {
       border-bottom-style: solid;
@@ -1819,7 +1822,7 @@ notebook {
         > tab {
           &:hover { box-shadow: none; }
           &:checked, &:checked:hover { 
-            box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 1px $borders_color;
+            box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 0px $borders_color;
             background-color: $base_color;
             border-width: 0;
           }
@@ -2483,6 +2486,7 @@ scale {
 
     border: 1px solid darken($borders_color, 3%);
     border-radius: 100%;
+    box-shadow: none;
 
     &:hover { @include button(hover-alt, $edge: $shadow_color); }
 
@@ -3824,7 +3828,7 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
 // Without this nautilus iconview grabs the bg_color
 .nautilus-window notebook,
 .nautilus-window notebook > stack:not(:only-child) searchbar {
-  background-color: $base_color;
+  @extend .view;
 }
 
 .floating-bar { /* Makes the floating-bar less annoying */

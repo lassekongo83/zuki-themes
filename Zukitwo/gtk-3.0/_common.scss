@@ -1813,7 +1813,10 @@ notebook {
     &.top, &.bottom { padding-left: 0; padding-right: 0; }
     &.left, &.right { padding-top: 0; padding-bottom: 0; }
 
-    tabs { margin: -1px; }
+    tabs { 
+      margin: -1px;
+      min-height: 28px;
+    }
 
     &.top {
       border-bottom-style: solid;
@@ -3852,7 +3855,7 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
 // Without this nautilus iconview grabs the bg_color
 .nautilus-window notebook,
 .nautilus-window notebook > stack:not(:only-child) searchbar {
-  background-color: $base_color;
+  @extend .view;
 }
 
 .floating-bar { /* Makes the floating-bar less annoying */

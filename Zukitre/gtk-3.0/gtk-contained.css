@@ -49,25 +49,37 @@
     background-color: #3399ff;
     color: #ffffff; }
 
-.view, iconview,
+.view, iconview, .nautilus-window notebook,
+.nautilus-window notebook > stack:not(:only-child) searchbar,
 .view text,
 iconview text,
+.nautilus-window notebook text,
+.nautilus-window notebook > stack:not(:only-child) searchbar text,
 textview text {
   color: black;
   background-color: #F7F7F7; }
-  .view:hover, iconview:hover,
+  .view:hover, iconview:hover, .nautilus-window notebook:hover,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:hover,
   .view text:hover,
   iconview text:hover,
+  .nautilus-window notebook text:hover,
+  .nautilus-window notebook > stack:not(:only-child) searchbar text:hover,
   textview text:hover {
     background-color: #f2f2f2; }
-  .view:selected, iconview:selected,
+  .view:selected, iconview:selected, .nautilus-window notebook:selected,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:selected,
   .view text:selected,
   iconview text:selected,
+  .nautilus-window notebook text:selected,
+  .nautilus-window notebook > stack:not(:only-child) searchbar text:selected,
   textview text:selected {
     border-radius: 0px; }
-  .view:backdrop, iconview:backdrop,
+  .view:backdrop, iconview:backdrop, .nautilus-window notebook:backdrop,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop,
   .view text:backdrop,
   iconview text:backdrop,
+  .nautilus-window notebook text:backdrop,
+  .nautilus-window notebook > stack:not(:only-child) searchbar text:backdrop,
   textview text:backdrop {
     color: #313131;
     background-color: #F7F7F7; }
@@ -1286,10 +1298,10 @@ spinbutton.vertical button {
   min-width: 32px;
   padding: 0; }
 spinbutton.vertical button.up {
-  border-radius: 3px 3px 0 0;
+  border-radius: 1px 1px 0 0;
   border-style: solid solid none solid; }
 spinbutton.vertical button.down {
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 1px 1px;
   border-style: none solid solid solid; }
 .osd spinbutton.vertical button:first-child {
   color: #dee2e5;
@@ -1843,6 +1855,8 @@ popover.background {
   popover.background > list,
   popover.background > .view,
   popover.background > iconview,
+  .nautilus-window popover.background > notebook,
+  .nautilus-window notebook > stack:not(:only-child) popover.background > searchbar,
   popover.background > toolbar {
     border-style: none;
     background-color: transparent; }
@@ -1872,7 +1886,8 @@ notebook {
       padding-top: 0;
       padding-bottom: 0; }
     notebook > header tabs {
-      margin: -1px; }
+      margin: -1px;
+      min-height: 28px; }
     notebook > header.top {
       border-bottom-style: solid; }
       notebook > header.top > tabs {
@@ -1880,7 +1895,7 @@ notebook {
         notebook > header.top > tabs > tab:hover {
           box-shadow: none; }
         notebook > header.top > tabs > tab:checked, notebook > header.top > tabs > tab:checked:hover {
-          box-shadow: inset 1px 0 #b0b0b0, inset -1px 0 #b0b0b0, inset 0 1px #b0b0b0;
+          box-shadow: inset 1px 0 #b0b0b0, inset -1px 0 #b0b0b0, inset 0 0px #b0b0b0;
           background-color: #F7F7F7;
           border-width: 0; }
     notebook > header.bottom {
@@ -2195,7 +2210,8 @@ treeview.check {
 .osd check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png")); }
 
-.view check:selected, iconview check:selected,
+.view check:selected, iconview check:selected, .nautilus-window notebook check:selected,
+.nautilus-window notebook > stack:not(:only-child) searchbar check:selected,
 treeview.check:selected,
 row:selected check,
 infobar check {
@@ -2208,7 +2224,7 @@ treeview.check:hover {
 .osd check:hover {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover-dark.png"), url("assets/checkbox-unchecked-hover-dark@2.png")); }
 
-.view check:hover:selected, iconview check:hover:selected,
+.view check:hover:selected, iconview check:hover:selected, .nautilus-window notebook check:hover:selected,
 treeview.check:hover:selected,
 row:selected check:hover,
 infobar check:hover {
@@ -2221,7 +2237,7 @@ treeview.check:disabled {
 .osd check:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png")); }
 
-.view check:disabled:selected, iconview check:disabled:selected,
+.view check:disabled:selected, iconview check:disabled:selected, .nautilus-window notebook check:disabled:selected,
 treeview.check:disabled:selected,
 row:selected check:disabled,
 infobar check:disabled {
@@ -2234,7 +2250,7 @@ treeview.check:indeterminate {
 .osd check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png")); }
 
-.view check:indeterminate:selected, iconview check:indeterminate:selected,
+.view check:indeterminate:selected, iconview check:indeterminate:selected, .nautilus-window notebook check:indeterminate:selected,
 treeview.check:indeterminate:selected,
 row:selected check:indeterminate,
 infobar check:indeterminate {
@@ -2247,7 +2263,7 @@ treeview.check:indeterminate:hover {
 .osd check:indeterminate:hover {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover-dark.png"), url("assets/checkbox-mixed-hover-dark@2.png")); }
 
-.view check:indeterminate:hover:selected, iconview check:indeterminate:hover:selected,
+.view check:indeterminate:hover:selected, iconview check:indeterminate:hover:selected, .nautilus-window notebook check:indeterminate:hover:selected,
 treeview.check:indeterminate:hover:selected,
 row:selected check:indeterminate:hover,
 infobar check:indeterminate:hover {
@@ -2260,7 +2276,7 @@ treeview.check:indeterminate:disabled {
 .osd check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
 
-.view check:indeterminate:disabled:selected, iconview check:indeterminate:disabled:selected,
+.view check:indeterminate:disabled:selected, iconview check:indeterminate:disabled:selected, .nautilus-window notebook check:indeterminate:disabled:selected,
 treeview.check:indeterminate:disabled:selected,
 row:selected check:indeterminate:disabled,
 infobar check:indeterminate:disabled {
@@ -2273,7 +2289,7 @@ treeview.check:checked {
 .osd check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
 
-.view check:checked:selected, iconview check:checked:selected,
+.view check:checked:selected, iconview check:checked:selected, .nautilus-window notebook check:checked:selected,
 treeview.check:checked:selected,
 row:selected check:checked,
 infobar check:checked {
@@ -2286,7 +2302,7 @@ treeview.check:checked:hover {
 .osd check:checked:hover {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover-dark.png"), url("assets/checkbox-checked-hover-dark@2.png")); }
 
-.view check:checked:hover:selected, iconview check:checked:hover:selected,
+.view check:checked:hover:selected, iconview check:checked:hover:selected, .nautilus-window notebook check:checked:hover:selected,
 treeview.check:checked:hover:selected,
 row:selected check:checked:hover,
 infobar check:checked:hover {
@@ -2299,7 +2315,7 @@ treeview.check:checked:disabled {
 .osd check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png")); }
 
-.view check:checked:disabled:selected, iconview check:checked:disabled:selected,
+.view check:checked:disabled:selected, iconview check:checked:disabled:selected, .nautilus-window notebook check:checked:disabled:selected,
 treeview.check:checked:disabled:selected,
 row:selected check:checked:disabled,
 infobar check:checked:disabled {
@@ -2312,7 +2328,8 @@ treeview.radio {
 .osd radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png")); }
 
-.view radio:selected, iconview radio:selected,
+.view radio:selected, iconview radio:selected, .nautilus-window notebook radio:selected,
+.nautilus-window notebook > stack:not(:only-child) searchbar radio:selected,
 treeview.radio:selected,
 row:selected radio,
 infobar radio {
@@ -2325,7 +2342,7 @@ treeview.radio:hover {
 .osd radio:hover {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-hover-dark.png"), url("assets/radio-unchecked-hover-dark@2.png")); }
 
-.view radio:hover:selected, iconview radio:hover:selected,
+.view radio:hover:selected, iconview radio:hover:selected, .nautilus-window notebook radio:hover:selected,
 treeview.radio:hover:selected,
 row:selected radio:hover,
 infobar radio:hover {
@@ -2338,7 +2355,7 @@ treeview.radio:disabled {
 .osd radio:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png")); }
 
-.view radio:disabled:selected, iconview radio:disabled:selected,
+.view radio:disabled:selected, iconview radio:disabled:selected, .nautilus-window notebook radio:disabled:selected,
 treeview.radio:disabled:selected,
 row:selected radio:disabled,
 infobar radio:disabled {
@@ -2351,7 +2368,7 @@ treeview.radio:indeterminate {
 .osd radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png")); }
 
-.view radio:indeterminate:selected, iconview radio:indeterminate:selected,
+.view radio:indeterminate:selected, iconview radio:indeterminate:selected, .nautilus-window notebook radio:indeterminate:selected,
 treeview.radio:indeterminate:selected,
 row:selected radio:indeterminate,
 infobar radio:indeterminate {
@@ -2364,7 +2381,7 @@ treeview.radio:indeterminate:hover {
 .osd radio:indeterminate:hover {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover-dark.png"), url("assets/radio-mixed-hover-dark@2.png")); }
 
-.view radio:indeterminate:hover:selected, iconview radio:indeterminate:hover:selected,
+.view radio:indeterminate:hover:selected, iconview radio:indeterminate:hover:selected, .nautilus-window notebook radio:indeterminate:hover:selected,
 treeview.radio:indeterminate:hover:selected,
 row:selected radio:indeterminate:hover,
 infobar radio:indeterminate:hover {
@@ -2377,7 +2394,7 @@ treeview.radio:indeterminate:disabled {
 .osd radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
 
-.view radio:indeterminate:disabled:selected, iconview radio:indeterminate:disabled:selected,
+.view radio:indeterminate:disabled:selected, iconview radio:indeterminate:disabled:selected, .nautilus-window notebook radio:indeterminate:disabled:selected,
 treeview.radio:indeterminate:disabled:selected,
 row:selected radio:indeterminate:disabled,
 infobar radio:indeterminate:disabled {
@@ -2390,7 +2407,7 @@ treeview.radio:checked {
 .osd radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
 
-.view radio:checked:selected, iconview radio:checked:selected,
+.view radio:checked:selected, iconview radio:checked:selected, .nautilus-window notebook radio:checked:selected,
 treeview.radio:checked:selected,
 row:selected radio:checked,
 infobar radio:checked {
@@ -2403,7 +2420,7 @@ treeview.radio:checked:hover {
 .osd radio:checked:hover {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover-dark.png"), url("assets/radio-checked-hover-dark@2.png")); }
 
-.view radio:checked:hover:selected, iconview radio:checked:hover:selected,
+.view radio:checked:hover:selected, iconview radio:checked:hover:selected, .nautilus-window notebook radio:checked:hover:selected,
 treeview.radio:checked:hover:selected,
 row:selected radio:checked:hover,
 infobar radio:checked:hover {
@@ -2416,17 +2433,19 @@ treeview.radio:checked:disabled {
 .osd radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
-.view radio:checked:disabled:selected, iconview radio:checked:disabled:selected,
+.view radio:checked:disabled:selected, iconview radio:checked:disabled:selected, .nautilus-window notebook radio:checked:disabled:selected,
 treeview.radio:checked:disabled:selected,
 row:selected radio:checked:disabled,
 infobar radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-checked-insensitive.png"), url("assets/selected-radio-checked-insensitive@2.png")); }
 
-.view.content-view.check:not(list), iconview.content-view.check:not(list) {
+.view.content-view.check:not(list), iconview.content-view.check:not(list), .nautilus-window notebook.content-view.check:not(list),
+.nautilus-window notebook > stack:not(:only-child) searchbar.content-view.check:not(list) {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode.png"), url("assets/checkbox-selectionmode@2.png"));
   background-color: transparent; }
 
-.view.content-view.check:checked:not(list), iconview.content-view.check:checked:not(list) {
+.view.content-view.check:checked:not(list), iconview.content-view.check:checked:not(list), .nautilus-window notebook.content-view.check:checked:not(list),
+.nautilus-window notebook > stack:not(:only-child) searchbar.content-view.check:checked:not(list) {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selectionmode.png"), url("assets/checkbox-checked-selectionmode@2.png"));
   background-color: transparent; }
 
@@ -2529,7 +2548,8 @@ scale {
     background-color: #f0f0f0;
     box-shadow: 1px 0 rgba(0, 0, 0, 0.08), 0 1px rgba(0, 0, 0, 0.08), -1px 0 rgba(0, 0, 0, 0.08), 0 -1px rgba(0, 0, 0, 0.08), inset 1px 0 rgba(255, 255, 255, 0.4), inset 0 1px rgba(255, 255, 255, 0.4), inset -1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px rgba(255, 255, 255, 0.4);
     border: 1px solid #a8a8a8;
-    border-radius: 100%; }
+    border-radius: 100%;
+    box-shadow: none; }
     scale slider:hover {
       color: #2c2c2c;
       background-color: #f7f7f7; }
@@ -3683,10 +3703,14 @@ headerbar button.titlebutton,
   .titlebar button.titlebutton.minimize:active {
     background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover.png"), url("assets/titlebutton-minimize-hover@2.png")); }
 
-.view:selected, iconview:selected,
+.view:selected, iconview:selected, .nautilus-window notebook:selected,
+.nautilus-window notebook > stack:not(:only-child) searchbar:selected,
 .view text:selected,
 iconview text:selected,
-textview text:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
+.nautilus-window notebook text:selected,
+.nautilus-window notebook > stack:not(:only-child) searchbar text:selected,
+textview text:selected, .view text selection:focus, iconview text selection:focus, .nautilus-window notebook text selection:focus, .view text selection, iconview text selection, .nautilus-window notebook text selection,
+.nautilus-window notebook > stack:not(:only-child) searchbar text selection,
 textview text selection:focus,
 textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
 entry selection:focus,
@@ -3694,19 +3718,25 @@ entry selection, modelbutton.flat:selected, popover.background checkbutton:selec
 popover.background radiobutton:selected,
 .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected {
   background-color: #3399ff; }
-  .view:backdrop:selected, iconview:backdrop:selected,
+  .view:backdrop:selected, iconview:backdrop:selected, .nautilus-window notebook:backdrop:selected,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected,
   .view text:backdrop:selected,
   iconview text:backdrop:selected,
-  textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop,
+  .nautilus-window notebook text:backdrop:selected,
+  textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, .nautilus-window notebook text selection:backdrop,
   textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, spinbutton:not(.vertical) selection:backdrop,
   entry selection:backdrop, modelbutton.flat:backdrop:selected, popover.background checkbutton:backdrop:selected,
   popover.background radiobutton:backdrop:selected,
   .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected {
     background-color: rgba(51, 153, 255, 0.6); }
-  row:selected label, label:selected, .view:selected, iconview:selected,
+  row:selected label, label:selected, .view:selected, iconview:selected, .nautilus-window notebook:selected,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:selected,
   .view text:selected,
   iconview text:selected,
-  textview text:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
+  .nautilus-window notebook text:selected,
+  .nautilus-window notebook > stack:not(:only-child) searchbar text:selected,
+  textview text:selected, .view text selection:focus, iconview text selection:focus, .nautilus-window notebook text selection:focus, .view text selection, iconview text selection, .nautilus-window notebook text selection,
+  .nautilus-window notebook > stack:not(:only-child) searchbar text selection,
   textview text selection:focus,
   textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
   entry selection:focus,
@@ -3715,28 +3745,34 @@ popover.background radiobutton:selected,
   .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3); }
-    row:selected label:disabled, label:disabled:selected, .view:disabled:selected, iconview:disabled:selected,
+    row:selected label:disabled, label:disabled:selected, .view:disabled:selected, iconview:disabled:selected, .nautilus-window notebook:disabled:selected,
+    .nautilus-window notebook > stack:not(:only-child) searchbar:disabled:selected,
     .view text:disabled:selected,
     iconview text:disabled:selected,
-    textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled,
+    .nautilus-window notebook text:disabled:selected,
+    textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled, .nautilus-window notebook text selection:disabled,
     textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled,
     entry selection:disabled, modelbutton.flat:disabled:selected, popover.background checkbutton:disabled:selected,
     popover.background radiobutton:disabled:selected,
     .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected {
       color: #99ccff; }
-    row:selected label:backdrop, label:backdrop:selected, .view:backdrop:selected, iconview:backdrop:selected,
+    row:selected label:backdrop, label:backdrop:selected, .view:backdrop:selected, iconview:backdrop:selected, .nautilus-window notebook:backdrop:selected,
+    .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected,
     .view text:backdrop:selected,
     iconview text:backdrop:selected,
-    textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop,
+    .nautilus-window notebook text:backdrop:selected,
+    textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, .nautilus-window notebook text selection:backdrop,
     textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, spinbutton:not(.vertical) selection:backdrop,
     entry selection:backdrop, modelbutton.flat:backdrop:selected, popover.background checkbutton:backdrop:selected,
     popover.background radiobutton:backdrop:selected,
     .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected {
       color: #ffffff; }
-      row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected,
+      row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected, .nautilus-window notebook:backdrop:disabled:selected,
+      .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:disabled:selected,
       .view text:backdrop:disabled:selected,
       iconview text:backdrop:disabled:selected,
-      textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled,
+      .nautilus-window notebook text:backdrop:disabled:selected,
+      textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled, .nautilus-window notebook text selection:backdrop:disabled,
       textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, label:disabled selection:backdrop, spinbutton:not(.vertical) selection:backdrop:disabled,
       entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected, popover.background checkbutton:backdrop:disabled:selected,
       popover.background radiobutton:backdrop:disabled:selected,
@@ -3826,10 +3862,6 @@ stackswitcher button.text-button.circular {
   border-top: 1px solid #b0b0b0; }
 .nautilus-window .searchbar-container {
   margin-top: -1px; }
-
-.nautilus-window notebook,
-.nautilus-window notebook > stack:not(:only-child) searchbar {
-  background-color: #F7F7F7; }
 
 .floating-bar {
   /* Makes the floating-bar less annoying */
