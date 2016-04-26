@@ -240,7 +240,7 @@ spinner {
 %entry,
 entry {
   %entry_basic, & {
-    min-height: 32px;
+    min-height: 24px;
     padding-left: 8px;
     padding-right: 8px;
     border: 1px solid;
@@ -422,7 +422,7 @@ button {
 
     min-height: 24px;
     min-width: 16px;
-    padding: 3px 6px;
+    padding: 1px 4px;
     border: 1px solid;
     border-radius: 3px;
 
@@ -2063,7 +2063,6 @@ scrollbar, .scrollbar {
   @at-root * {
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkRange-stepper-size: $_scrollbar_size;
   }
 
   &.vertical {

@@ -167,7 +167,7 @@ spinner {
  ****************/
 spinbutton:not(.vertical),
 entry {
-  min-height: 32px;
+  min-height: 24px;
   padding-left: 8px;
   padding-right: 8px;
   border: 1px solid;
@@ -382,7 +382,7 @@ notebook > header > tabs > arrow,
 button {
   min-height: 24px;
   min-width: 16px;
-  padding: 3px 6px;
+  padding: 1px 4px;
   border: 1px solid;
   border-radius: 3px;
   color: #eeeeee;
@@ -2024,8 +2024,7 @@ scrollbar, .scrollbar {
   border-width: 0; }
   * {
     -GtkScrollbar-has-backward-stepper: false;
-    -GtkScrollbar-has-forward-stepper: false;
-    -GtkRange-stepper-size: 13px; }
+    -GtkScrollbar-has-forward-stepper: false; }
   scrollbar.vertical, .scrollbar.vertical {
     background-image: linear-gradient(to right, #323a43, #364048); }
   scrollbar.horizontal, .scrollbar.horizontal {
