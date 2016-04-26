@@ -3755,7 +3755,7 @@ popover.background radiobutton:selected,
     entry selection:backdrop, modelbutton.flat:backdrop:selected, popover.background checkbutton:backdrop:selected,
     popover.background radiobutton:backdrop:selected,
     .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected {
-      color: #F7F7F7; }
+      color: #ffffff; }
       row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected,
       .view text:backdrop:disabled:selected,
       iconview text:backdrop:disabled:selected,
@@ -3764,7 +3764,7 @@ popover.background radiobutton:selected,
       entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected, popover.background checkbutton:backdrop:disabled:selected,
       popover.background radiobutton:backdrop:disabled:selected,
       .menuitem.button.flat:backdrop:disabled:selected, row:backdrop:disabled:selected, calendar:backdrop:disabled:selected {
-        color: #6eb5fd; }
+        color: #70b8ff; }
 
 .monospace {
   font: Monospace; }
