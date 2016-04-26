@@ -1895,7 +1895,7 @@ notebook {
         notebook > header.top > tabs > tab:hover {
           box-shadow: none; }
         notebook > header.top > tabs > tab:checked, notebook > header.top > tabs > tab:checked:hover {
-          box-shadow: inset 1px 0 #b0b0b0, inset -1px 0 #b0b0b0, inset 0 0px #b0b0b0;
+          box-shadow: inset 1px 0 #b0b0b0, inset -1px 0 #b0b0b0, inset 0 1px #b0b0b0;
           background-color: #F7F7F7;
           border-width: 0; }
     notebook > header.bottom {

@@ -1883,7 +1883,7 @@ notebook {
         notebook > header.top > tabs > tab:hover {
           box-shadow: none; }
         notebook > header.top > tabs > tab:checked, notebook > header.top > tabs > tab:checked:hover {
-          box-shadow: inset 1px 0 #080a0b, inset -1px 0 #080a0b, inset 0 0px #080a0b;
+          box-shadow: inset 1px 0 #080a0b, inset -1px 0 #080a0b, inset 0 1px #080a0b;
           background-color: #546E7A;
           border-width: 0; }
     notebook > header.bottom {

@@ -1822,7 +1822,7 @@ notebook {
         > tab {
           &:hover { box-shadow: none; }
           &:checked, &:checked:hover { 
-            box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 0px $borders_color;
+            box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 1px $borders_color;
             background-color: $base_color;
             border-width: 0;
           }
