@@ -437,6 +437,11 @@ button {
       transition: none;
     }
 
+    &.default { 
+      @include button(normal, $selected_bg_color, white);
+      &:hover { @include button(hover, $selected_bg_color, white); }
+    }
+
     &:hover {
       @include button(hover);
       -gtk-icon-effect: highlight;

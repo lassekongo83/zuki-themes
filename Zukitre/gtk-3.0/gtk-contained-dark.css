@@ -410,6 +410,17 @@ button {
     text-shadow: none;
     -gtk-icon-shadow: none;
     transition: none; }
+  notebook > header > tabs > arrow.default,
+  button.default {
+    color: white;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #0059b3;
+    background-color: #66b3ff;
+    box-shadow: 1px 0 rgba(0, 0, 0, 0.08), 0 1px rgba(0, 0, 0, 0.08), -1px 0 rgba(0, 0, 0, 0.08), 0 -1px rgba(0, 0, 0, 0.08), inset 1px 0 rgba(255, 255, 255, 0.06), inset 0 1px rgba(255, 255, 255, 0.06), inset -1px 0 rgba(255, 255, 255, 0.06), inset 0 -1px rgba(255, 255, 255, 0.06); }
+    notebook > header > tabs > arrow.default:hover,
+    button.default:hover {
+      color: white;
+      background-color: #75baff; }
   notebook > header > tabs > arrow:hover,
   button:hover {
     color: #dee2e5;
