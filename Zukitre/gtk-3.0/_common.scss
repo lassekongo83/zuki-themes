@@ -1980,6 +1980,7 @@ notebook {
 
       // colors the button like the label, overridden otherwise
       button.flat {
+        color: transparentize($fg_color,0.7);
         &:hover { color: currentColor; }
 
         padding: 0;
