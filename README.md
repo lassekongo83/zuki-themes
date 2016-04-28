@@ -1,8 +1,8 @@
 # Zuki Themes
 
-Zuki themes for Gnome, XFCE and more.
+Zuki themes for GNOME, Xfce and more.
 
-Master branch is for Gnome 3.20.
+Master branch is for GNOME 3.20.
 3.18 branch can be found here: https://github.com/lassekongo83/zuki-themes/tree/3.18
 
 ##### Zukitre
@@ -17,7 +17,7 @@ Master branch is for Gnome 3.20.
 
 ## Requirements
 
-* Gnome/GTK 3.18 or 3.20
+* GNOME/GTK 3.18 or 3.20
 * The murrine engine. This has different names depending on your distro.
   * `gtk2-engines-murrine` (Debian, Ubuntu)
   * `gtk-murrine-engine` (Fedora)
@@ -55,8 +55,8 @@ If your distribution isn't listed, please check the requirements yourself.
   * GTK 3.20: https://github.com/lassekongo83/zuki-themes/archive/master.zip
   * GTK 3.18: https://github.com/lassekongo83/zuki-themes/archive/3.18.zip
 2. Open the zip in your archive manager and extract the theme folders inside `zuki-themes-*` to `~/.themes` (if you’re the only user) or `/usr/share/themes` (if there are more users). It should look like this for example: `~/.themes/Zukitre`
-3. If you use Gnome Shell you need `gnome-tweak-tool` installed. Open `gnome-tweak-tool` and go to `Appearance` and select the themes you want to use. (You may also need to activate the `User themes` extension under `Extensions`.)
-  * XFCE users can change the themes in `Settings > Appearance` and `Settings > Window Manager`
+3. If you use GNOME Shell you need `gnome-tweak-tool` installed. Open `gnome-tweak-tool` and go to `Appearance` and select the themes you want to use. (You may also need to activate the `User themes` extension under `Extensions`.)
+  * Xfce users can change the themes in `Settings > Appearance` and `Settings > Window Manager`
 
 #### Other installation options
 
@@ -64,7 +64,7 @@ ArchLinux users can get it on AUR: https://aur.archlinux.org/packages/zuki-theme
 
 ## Troubleshooting
 
-If you have a GTK/Gnome version older than 3.18/3.20 the theme may not work properly. Same if you have XFCE older than 4.12.
+If you have a GTK/GNOME version older than 3.18/3.20 the theme may not work properly. Same if you have Xfce older than 4.12.
 
 ## Bug reporting
 
