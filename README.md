@@ -59,13 +59,13 @@ Extract the contents in the zip to `~/.themes` or `/usr/share/themes` with the f
 
 `Zukitre`
 
-  *`gtk-3.0`
-  *`gtk-2.0`
-  *`xfwm4`
+  * `gtk-3.0`
+  * `gtk-2.0`
+  * `xfwm4`
 
 `Zuki-shell`
 
-  *`gnome-shell`
+  * `gnome-shell`
 
 etc.
 
