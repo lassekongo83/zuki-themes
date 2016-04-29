@@ -150,7 +150,7 @@ style "murrine-default" {
 		listviewheaderstyle	= 1			# 0 = flat, 1 = glassy, 2 = raised
 		listviewstyle		= 1			# 0 = nothing, 1 = dotted
 		menubaritemstyle	= 0			# 0 = menuitem look, 1 = button look
-		menubarstyle		= 0			# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
+		menubarstyle		= 2			# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
 		menuitemstyle		= 0			# 0 = flat, 1 = glassy, 2 = striped
 		menustyle		= 0			# 0 = no vertical menu stripe, 1 = display vertical menu stripe
 		prelight_shade		= .95			# shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors		

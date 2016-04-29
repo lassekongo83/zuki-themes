@@ -1367,7 +1367,7 @@ column-header .button, column-header .button:hover, column-header .button:active
  *********/
 .menubar {
   -GtkWidget-window-dragging: true;
-  background-color: #2b3137;
+  background-image: linear-gradient(to bottom, #2b3137, #22272c);
   padding: 0px;
   box-shadow: inset 0 -1px #090b0c; }
   .menubar > .menuitem {
@@ -1375,7 +1375,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     border-color: rgba(9, 11, 12, 0); }
     .menubar > .menuitem:hover {
       border-color: #090b0c;
-      background-image: linear-gradient(to bottom, #2b3137, #15181a);
+      background-image: linear-gradient(to bottom, #2b3137, #0c0d0f);
       color: #eeeeee; }
     .menubar > .menuitem:insensitive {
       color: #8d9093;
