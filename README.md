@@ -58,12 +58,12 @@ Download the theme:
 Extract the contents in the zip to `~/.themes` or `/usr/share/themes` with the following folder structure:
 
 `Zukitre`
-  * `gtk-3.0`
-  * `gtk-2.0`
-  * `xfwm4`
+|_`gtk-3.0`
+|_`gtk-2.0`
+|_`xfwm4`
 
 `Zuki-shell`
-  * `gnome-shell`
+|_`gnome-shell`
 
 etc.
 
