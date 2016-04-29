@@ -291,6 +291,15 @@ GtkTextView {
     text-shadow: none;
     icon-shadow: none;
     transition: none; }
+  .button.default {
+    color: white;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #0059b3;
+    background-image: linear-gradient(to bottom, #66b3ff, #5cadff);
+    box-shadow: 1px 0 rgba(0, 0, 0, 0.08), 0 1px rgba(0, 0, 0, 0.08), -1px 0 rgba(0, 0, 0, 0.08), 0 -1px rgba(0, 0, 0, 0.08), inset 1px 0 rgba(255, 255, 255, 0.4), inset 0 1px rgba(255, 255, 255, 0.4), inset -1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px rgba(255, 255, 255, 0.4); }
+    .button.default:hover {
+      color: white;
+      background-image: linear-gradient(to bottom, #70b8ff, #6bb5ff); }
   .button:hover {
     color: #2c2c2c;
     background-image: linear-gradient(to bottom, whitesmoke, #f2f2f2);

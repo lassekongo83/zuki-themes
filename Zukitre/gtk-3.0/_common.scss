@@ -353,6 +353,10 @@ $_dot_color: if($variant=='light', $selected_bg_color,
     // in this case the duration is increased.
     transition: none;
   }
+  &.default { 
+    @include button(normal, $selected_bg_color, white);
+    &:hover { @include button(hover, $selected_bg_color, white); }
+  }
   &:hover {
     @include button(hover);
     -gtk-image-effect: highlight;
