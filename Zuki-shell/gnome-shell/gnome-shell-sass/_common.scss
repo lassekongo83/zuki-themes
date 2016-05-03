@@ -994,7 +994,6 @@ StScrollBar {
     border-radius: 32px; /* wish we could do 50% */
     padding: 13px;
     border: 1px solid transparentize($borders_color, .2);
-    background-color: transparentize(white, .8);
 
     &:hover, &:focus {
       background-color: transparentize(white, .7);
