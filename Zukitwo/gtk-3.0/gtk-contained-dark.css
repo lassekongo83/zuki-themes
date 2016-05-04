@@ -2912,7 +2912,7 @@ levelbar.vertical block {
 levelbar trough {
   border: 1px solid;
   padding: 2px;
-  border-radius: 3px;
+  border-radius: 8px;
   color: white;
   border-color: black;
   box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px rgba(0, 0, 0, 0.08), inset -1px 0 rgba(0, 0, 0, 0.08), inset 0 -1px rgba(0, 0, 0, 0.08);
@@ -2921,26 +2921,22 @@ levelbar.horizontal.discrete block {
   margin: 0 1px; }
 levelbar.vertical.discrete block {
   margin: 1px 0; }
-levelbar block:not(.empty) {
-  border: 1px solid #1a8cff;
-  background-color: #3399ff;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.1);
-  border-radius: 1px; }
-levelbar block.low {
-  border-color: #f4b800;
-  background-color: #ffca28; }
-levelbar block.high {
-  border-color: #0080ff;
-  background-color: #3399ff; }
-levelbar block.full {
-  border-color: #699833;
-  background-color: #83bf3f; }
-levelbar block.empty {
-  border: 1px solid #1a8cff;
-  border-radius: 1px;
-  background-color: transparent;
-  border-color: rgba(238, 238, 238, 0.1);
-  box-shadow: none; }
+levelbar block {
+  border: 1px solid;
+  border-radius: 4px; }
+  levelbar block.low {
+    border-color: #ffca28;
+    background-color: #ffca28; }
+  levelbar block.high, levelbar block:not(.empty) {
+    border-color: #3399ff;
+    background-color: #3399ff; }
+  levelbar block.full {
+    border-color: #83bf3f;
+    background-color: #83bf3f; }
+  levelbar block.empty {
+    background-color: transparent;
+    border-color: rgba(238, 238, 238, 0.1);
+    box-shadow: none; }
 
 /****************
  * Print dialog *

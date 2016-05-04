@@ -3021,7 +3021,7 @@ levelbar.vertical block {
 levelbar trough {
   border: 1px solid;
   padding: 2px;
-  border-radius: 3px;
+  border-radius: 0;
   color: black;
   border-color: #b0b0b0;
   background-color: #F7F7F7; }
@@ -3029,26 +3029,22 @@ levelbar.horizontal.discrete block {
   margin: 0 1px; }
 levelbar.vertical.discrete block {
   margin: 1px 0; }
-levelbar block:not(.empty) {
-  border: 1px solid #0080ff;
-  background-color: #3399ff;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.1);
-  border-radius: 1px; }
-levelbar block.low {
-  border-color: #f4b800;
-  background-color: #ffca28; }
-levelbar block.high {
-  border-color: #0080ff;
-  background-color: #3399ff; }
-levelbar block.full {
-  border-color: #83bf3f;
-  background-color: #9ccc65; }
-levelbar block.empty {
-  border: 1px solid #0080ff;
-  border-radius: 1px;
-  background-color: transparent;
-  border-color: rgba(44, 44, 44, 0.2);
-  box-shadow: none; }
+levelbar block {
+  border: 1px solid;
+  border-radius: 0; }
+  levelbar block.low {
+    border-color: #c19100;
+    background-color: #ffca28; }
+  levelbar block.high, levelbar block:not(.empty) {
+    border-color: #0066cc;
+    background-color: #3399ff; }
+  levelbar block.full {
+    border-color: #699833;
+    background-color: #9ccc65; }
+  levelbar block.empty {
+    background-color: transparent;
+    border-color: rgba(44, 44, 44, 0.2);
+    box-shadow: none; }
 
 /****************
  * Print dialog *
