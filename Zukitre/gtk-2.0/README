@@ -1,0 +1,4 @@
+How to edit the assets
+----------------------
+
+The assets are created in the assets.svg file and then rendered with ./render-assets.sh by fetching the object id name from assets.txt. If you're going to edit an image in inkscape make sure the object id is the same when you're saving. If you're going to create a new asset you need to add the object id in assets.txt.
