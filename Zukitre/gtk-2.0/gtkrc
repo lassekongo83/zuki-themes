@@ -546,25 +546,6 @@ style "hscale" = "scale"
 {
 }
 
-style "radiocheck"
-{
-    bg[NORMAL]      = shade (1.06, @bg_color)
-    bg[PRELIGHT]    = shade (1.06, @bg_color)
-    bg[ACTIVE]      = shade (0.85, @bg_color)
-    bg[SELECTED]    = @base_color
-    bg[INSENSITIVE] = shade (0.95, @bg_color)
-    text[PRELIGHT]  = shade (0.8, @selected_bg_color)
-    fg[ACTIVE]      = @fg_color
-    fg[INSENSITIVE] = mix (0.4, @fg_color, @bg_color)
-
-    engine "murrine"
-    {
-        border_shades     = { 0.9, 0.8 }
-        contrast          = 0.8
-        lightborder_shade = 1.5
-    }
-}
-
 style "toolbar"
 {
 	bg[NORMAL]	= @bg_color	
@@ -776,9 +757,6 @@ widget_class "*GtkVPaned" style "paned"
 
 widget_class "*<GtkProgress>"    style "progressbar"
 widget_class "*<GtkProgressBar>" style "progressbar"
-
-widget_class "*<GtkRadioButton>*" style "radiocheck"
-widget_class "*<GtkCheckButton>*" style "radiocheck"
 
 widget "*SidebarHandleLeft"	style "pixmap-sidebar-handle-left"
 widget "*SidebarContent"    style "sidebar"
