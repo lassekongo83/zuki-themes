@@ -244,6 +244,75 @@ widget "*indicator-button*" style "indicator"
 #widget "*XfceTasklist*"     style "window-buttons"
 widget "*XfceTasklist*"     style "theme-panel-buttons"
 
+# XFCE Notify Window
+
+style "notify-window"
+{
+    XfceNotifyWindow::summary-bold       = 1
+    XfceNotifyWindow::border-color       = @bg_color_dark
+    XfceNotifyWindow::border-color-hover = @bg_color_dark
+    XfceNotifyWindow::border-radius      = 0.0
+    XfceNotifyWindow::border-width       = 0.0
+    XfceNotifyWindow::border-width-hover = 0.0
+    
+    bg[NORMAL] = @bg_color_dark
+}
+
+style "notify-button"
+{
+    bg[NORMAL]   = shade (1.25, @bg_color_dark)
+    bg[PRELIGHT] = shade (1.35, @bg_color_dark)
+    bg[ACTIVE]   = @selected_bg_color
+    fg[NORMAL]   = @text_color_dark
+    fg[PRELIGHT] = @text_color_dark
+
+    engine "murrine" {
+        border_shades = {0.7, 0.7}
+        shadow_shades = {0.1,0.1}
+        roundness     = 0
+    }
+}
+
+style "notify-text"
+{
+    fg[NORMAL]   = @text_color_dark
+    fg[PRELIGHT] = @text_color_dark
+
+    GtkWidget::link-color = @link_color
+}
+
+style "notify-summary"
+{
+    font_name = "Bold"
+}
+
+style "notify-progressbar"
+{
+    GtkProgressBar::min-horizontal-bar-height = 4
+    xthickness   = 0
+    ythickness   = 0
+
+    fg[PRELIGHT] = @text_color_dark
+    bg[NORMAL]   = @bg_color_dark
+    bg[SELECTED] = @selected_bg_color
+    bg[ACTIVE]   = @selected_bg_color
+
+    engine "murrine" {
+        gradient_shades      = {1.0,1.0,1.0,1.0}
+        trough_shades        = {0.2, 0.2}
+        trough_border_shades = {0.2, 0.2}
+        roundness            = 0
+        contrast             = 1.0
+    }
+}
+
+class        "XfceNotifyWindow"                    style "notify-window"
+widget       "XfceNotifyWindow.*.summary"          style "notify-summary"
+widget_class "XfceNotifyWindow.*<GtkButton>"       style:highest "notify-button"
+widget_class "XfceNotifyWindow.*.<GtkLabel>"       style "notify-text"
+widget_class "XfceNotifyWindow.*.<GtkProgress>"    style:highest "notify-progressbar"
+widget_class "XfceNotifyWindow.*.<GtkProgressBar>" style:highest "notify-progressbar"
+
 style "xfce-panel-image-style"
 {
   # Fix the panel images to a default gtk icon size, is only works for
