@@ -1,0 +1,92 @@
+### This file styles Caja ###
+
+style "caja-window-base" { 
+    bg[NORMAL] = @base_color 
+}
+
+style "caja-sidebar" = "sidebar" {
+    GtkTreeView::horizontal_separator = 15
+    GtkTreeView::vertical_separator = 1
+    GtkPaned::handle-size = 1
+
+    text[NORMAL] = @fg_color
+    base[NORMAL] = mix (0.5, @bg_color, @base_color)
+
+    GtkTreeView::odd_row_color  = mix (0.5, @bg_color, @base_color)
+    GtkTreeView::even_row_color = mix (0.5, @bg_color, @base_color)
+
+    engine "murrine" {}
+}
+
+style "caja-view" {
+    xthickness = 0
+    ythickness = 0
+}
+
+style "caja-handle" {
+    GtkPaned::handle-size = 1
+    
+    engine "pixmap" {
+        image {
+            function    = HANDLE
+            recolorable = TRUE
+            file        = "assets/handle.png"
+            stretch     = TRUE
+            border      = {1,1,1,1}
+        }
+    }
+}
+
+style "caja-statusbar"
+{
+    xthickness = 0
+    engine "pixmap"
+    {
+        image
+        {
+        function        = RESIZE_GRIP
+        recolorable     = TRUE
+        state           = NORMAL
+        detail          = "statusbar"
+        overlay_file    = "assets/resize-grip.png"
+        overlay_border  = {0,0,0,0}
+        overlay_stretch = FALSE
+        }
+    }
+}
+
+style "caja-location"
+{
+    bg[NORMAL]  = mix (0.60, shade (1.05, @bg_color), @bg_color)
+}
+
+style "caja-pathbar"
+{    
+    #bg[NORMAL] = @bg_color
+}
+
+############################################
+# CAJA
+# Order of assignment is important
+#############################################
+
+widget_class "*CajaSidePane.*"                 style : highest "caja-sidebar"
+widget_class "*Caja*Places*Sidebar*"           style : highest "caja-sidebar"
+widget_class "*Caja*Side*.GtkWidget"           style : highest "caja-sidebar"
+widget_class "*Caja*Side*Title*"               style : highest "caja-sidebar"
+
+widget_class "*Caja*Scrollbar"                 style "scrollbar"
+widget_class "*CajaSidePane.*Scrollbar"        style:highest "scrollbar"    
+widget_class "*Caja*Statusbar*"                style "caja-statusbar"
+
+widget "*Caja*Splitter"                        style : highest "caja-handle"
+widget_class "*Caja*View*"                     style "caja-view"
+widget_class "*Caja*Notebook"                  style "notebook"
+
+widget_class "*Caja*<GtkTreeView>.<GtkButton>" style "treeview-header"
+widget_class "*Caja*<GtkCTree>.<GtkButton>"    style "treeview-header"
+widget_class "*Caja*<GtkList>.<GtkButton>"     style "treeview-header"
+widget_class "*Caja*<GtkCList>.<GtkButton>"    style "treeview-header"
+
+#widget_class "*CajaPathBar*"                   style "caja-pathbar" 
+widget "*.caja-extra-view-widget"              style : highest "caja-location"
