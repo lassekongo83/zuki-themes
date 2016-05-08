@@ -1,0 +1,93 @@
+style "button"
+{
+    xthickness = 3
+    ythickness = 3
+
+    engine "pixmap" 
+    {
+    image
+        {
+            function    = BOX
+            state       = NORMAL
+            file        = "assets/btn.png"
+            border      = { 4, 4, 4, 4 }
+            stretch     = TRUE
+        }
+    image
+        {
+            function    = BOX
+            recolorable = TRUE
+            shadow      = OUT
+            state       = PRELIGHT
+            file        = "assets/btn-hover.png"
+            border      = { 4, 4, 4, 4 }
+            stretch     = TRUE
+        }
+    image
+        {
+            function    = BOX
+            recolorable = TRUE
+            shadow      = IN
+            state       = PRELIGHT
+            file        = "assets/btn-active-hover.png"
+            border      = { 4, 4, 4, 4 }
+            stretch     = TRUE
+        }
+    image
+        {
+            function    = BOX
+            recolorable = TRUE
+            shadow      = IN
+            state       = ACTIVE
+            file        = "assets/btn-active.png"
+            border      = { 4, 4, 4, 4 }
+            stretch     = TRUE
+        }    
+    image 
+        {
+            function    = BOX
+            state       = INSENSITIVE
+            file        = "assets/btn-insensitive.png"
+            border      = { 4, 4, 4, 4 }
+            stretch     = TRUE
+        }
+    }
+}
+
+style "treeview-header"
+{
+    xthickness = 2
+    ythickness = 0
+
+    bg[NORMAL] = @base_color # Color for treeview headers.
+
+    engine "pixmap" {
+    image 
+        {
+            function = BOX
+            state    = NORMAL
+            file     = "assets/column-header.png"
+            border   = { 0, 1, 0, 1 }
+            stretch  = TRUE
+        }
+    image 
+        {
+            function = BOX
+            state    = PRELIGHT
+            file     = "assets/column-header-hover.png"
+            border   = { 0, 1, 0, 1 }
+            stretch  = TRUE
+        }
+    image 
+        {
+            function = BOX
+            state    = ACTIVE
+            file     = "assets/column-header-hover.png"
+            border   = { 0, 1, 0, 1 }
+            stretch  = TRUE
+        }
+    }
+}
+
+widget_class "*<GtkButton>"                style "button"
+widget_class "*<GtkTreeView>*<GtkButton>*" style:highest "treeview-header"

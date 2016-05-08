@@ -1702,7 +1702,7 @@ treeview.view {
       border-color: #3399ff; }
   treeview.view header button {
     color: #929292;
-    background-color: #F7F7F7;
+    background-image: #F7F7F7;
     font-weight: bold;
     text-shadow: none;
     box-shadow: none; }
@@ -1733,10 +1733,13 @@ treeview.view {
 treeview.view header button, treeview.view header button:hover, treeview.view header button:active {
   padding: 0 6px;
   border-radius: 0;
-  background-image: none;
+  background-image: linear-gradient(to bottom, #e3e3e3, #F7F7F7);
   text-shadow: none;
   border-style: none solid solid none;
-  border-color: #d6d6d6; }
+  border-color: #d6d6d6;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.04), inset 0 2px rgba(0, 0, 0, 0.04); }
+  treeview.view header button:hover {
+    background-image: linear-gradient(to bottom, #d8d8d8, #F7F7F7); }
   treeview.view header button:disabled {
     border-color: #d6d6d6;
     background-image: none; }

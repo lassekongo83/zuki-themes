@@ -1,0 +1,24 @@
+### Styles pluma. Removes the ugly frame etc. ###
+
+style "pluma-frame" {    
+    engine "pixmap" {
+        image {
+            function = SHADOW
+        }
+    }
+}
+
+style "pluma-statusbar" {    
+    ythickness = 0
+}
+
+style "pluma-notebook" = "notebook-bg" {
+    xthickness = 0 # Width of tabs and notebook borders.
+    ythickness = 1 # Height of tabs and notebook borders.
+}
+
+widget_class "*Pluma*.<GtkFrame>*"         style "pluma-frame"
+widget_class "*Pluma*.<GtkScrolledWindow>" style "thin"
+widget_class "*Pluma*.<GtkNotebook>"       style "pluma-notebook"
+widget_class "*Pluma*.<GtkArrow>*"         style:highest "default"
+widget_class "*Pluma*.<GtkStatusbar>*"     style "pluma-statusbar"
