@@ -4,8 +4,6 @@
   -GtkTextView-error-underline-color: #e53935;
   -GtkScrolledWindow-scrollbar-spacing: 0;
   -GtkToolItemGroup-expander-size: 11;
-  -GtkTreeView-expander-size: 11;
-  -GtkTreeView-horizontal-separator: 4;
   -GtkWidget-text-handle-width: 20;
   -GtkWidget-text-handle-height: 24;
   -GtkDialog-button-spacing: 4;
@@ -1631,13 +1629,15 @@ window.csd > .titlebar:not(headerbar) {
  * Tree Views *
  **************/
 treeview.view {
-  -GtkTreeView-grid-line-width: 0;
-  -GtkTreeView-grid-line-pattern: '';
-  -GtkTreeView-tree-line-width: 0;
-  -GtkTreeView-tree-line-pattern: '';
-  -GtkTreeView-expander-size: 16;
   border-left-color: #99a8b0;
   border-top-color: #273238; }
+  * {
+    -GtkTreeView-horizontal-separator: 4;
+    -GtkTreeView-grid-line-width: 1;
+    -GtkTreeView-grid-line-pattern: '';
+    -GtkTreeView-tree-line-width: 1;
+    -GtkTreeView-tree-line-pattern: '';
+    -GtkTreeView-expander-size: 16; }
   treeview.view:selected:focus, treeview.view:selected {
     border-radius: 0; }
   treeview.view:disabled {
