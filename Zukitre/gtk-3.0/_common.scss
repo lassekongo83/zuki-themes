@@ -379,6 +379,12 @@ treeview acceleditor > label {
 }
 
 treeview entry {
+  &:focus {
+    &:dir(rtl), &:dir(ltr) { // specificity bump hack
+      background-color: $base_color;
+    }
+  }
+
   &.flat, & {
     border-radius: 0;
     background-image: none;
