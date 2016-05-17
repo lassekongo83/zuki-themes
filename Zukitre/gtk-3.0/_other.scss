@@ -8,15 +8,12 @@
 
   &:hover {
     color: $panel_fg;
-    border: none;
-    background-image: none;
     background-color: lighten($panel_bg, 4%);
   }
-  &:active, &:checked, &:active:hover, &:checked:hover {
+  &:active, &:checked {
     color: $panel_fg;
-    border: none;
-    background-image: none;
     background-color: lighten($panel_bg, 8%);
+    &:hover { background-color: lighten($panel_bg, 9%); }
   }
 }
 
