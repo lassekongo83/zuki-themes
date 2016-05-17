@@ -1,0 +1,120 @@
+// Global panel button styles
+%panelbutton {
+  color: transparentize($panel_fg, 0.1);
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    color: $panel_fg;
+    border: none;
+    box-shadow: inset 1px 0 transparentize(white, 0.8),
+                inset -1px 0 transparentize(white, 0.8),
+                1px 0 transparentize(black, 0.8),
+                -1px 0 transparentize(black, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      lighten($panel_bg, 8%),
+                                      lighten($panel_bg, 4%));
+  }
+  &:active, &:checked, &:active:hover, &:checked:hover {
+    color: $panel_fg;
+    border: none;
+    background-image: linear-gradient(to bottom,
+                                      darken($panel_bg, 4%),
+                                      darken($panel_bg, 8%));
+    box-shadow: inset 1px 0 transparentize(black, 0.8),
+                inset -1px 0 transparentize(black, 0.8),
+                1px 0 transparentize(white, 0.8),
+                -1px 0 transparentize(white, 0.8);
+  }
+}
+
+/*
+  XFCE GTK3 Styling
+  Note: If you wish to edit the theme for XFCE 4.12 or earlier you do it in the GTK-2.0 folder.
+*/
+
+CatfishWindow .pane-separator {
+  background-color: darken($base_color, 10%);
+}
+
+XfceHeading,
+.XfceHeading {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-image: none;
+  background-color: $bg_color;
+  color: $text_color;
+  text-shadow: none;
+}
+
+.xfce4-panel {
+  background-color: $panel_bg;
+  color: $panel_fg;
+  font: normal;
+  
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  
+  button { @extend %panelbutton; }
+}
+
+.xfce4-panel menu {
+  -gtk-icon-effect: none;
+  text-shadow: none;
+}
+
+// Temporary fixes for certain XFCE applets using GTK3
+#pulseaudio-button, #indicator-button {
+  @extend %panelbutton;
+}
+
+/*
+  Mate/Gnome Flashback Panel
+*/
+.gnome-panel-menu-bar,
+.mate-panel-menu-bar {
+
+  &, menubar { background-color: $panel_bg; }
+
+  menubar,
+  #PanelApplet label,
+  #PanelApplet image { color: $panel_fg; }
+
+  // Panel buttons
+  button:not(#tasklist-button) {
+    @extend %panelbutton;
+  }
+
+  button,
+  #tasklist-button {
+    label, image { color: inherit; }
+  }
+
+  .wnck-pager {
+    color: mix($panel_fg, black, 50%);
+    background-color: darken($panel_bg, 10%);
+
+    &:hover {
+      background-color: lighten($panel_bg, 5%);
+    }
+
+    &:selected {
+      color: lighten($selected_bg_color, 20%);
+      background-color: $selected_bg_color;
+    }
+  }
+
+  na-tray-applet {
+    -NaTrayApplet-icon-padding: 0;
+    -NaTrayApplet-icon-size: 16px;
+  }
+}
+
+/* Caja */
+.caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
+.caja-notebook { border-top: 1px solid $borders_color; }
+.caja-side-pane .frame { border-width: 1px 0 0; }
+.caja-notebook .frame { border-width: 0 0 1px; }

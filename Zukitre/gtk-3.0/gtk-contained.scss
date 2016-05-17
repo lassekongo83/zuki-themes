@@ -11,6 +11,5 @@ $variant: 'light';
 @import 'common';
 @import 'colors-public';
 @import 'unity';
-@import 'xfce'; // Partly experimental
-@import 'lightdm'; // Untested
-
+@import 'other';
+@import 'lightdm';
