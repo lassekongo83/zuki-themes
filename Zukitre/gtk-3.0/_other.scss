@@ -8,25 +8,12 @@
 
   &:hover {
     color: $panel_fg;
-    border: none;
-    box-shadow: inset 1px 0 transparentize(white, 0.8),
-                inset -1px 0 transparentize(white, 0.8),
-                1px 0 transparentize(black, 0.8),
-                -1px 0 transparentize(black, 0.8);
-    background-image: linear-gradient(to bottom,
-                                      lighten($panel_bg, 8%),
-                                      lighten($panel_bg, 4%));
+    background-color: lighten($panel_bg, 4%);
   }
-  &:active, &:checked, &:active:hover, &:checked:hover {
+  &:active, &:checked {
     color: $panel_fg;
-    border: none;
-    background-image: linear-gradient(to bottom,
-                                      darken($panel_bg, 4%),
-                                      darken($panel_bg, 8%));
-    box-shadow: inset 1px 0 transparentize(black, 0.8),
-                inset -1px 0 transparentize(black, 0.8),
-                1px 0 transparentize(white, 0.8),
-                -1px 0 transparentize(white, 0.8);
+    background-color: lighten($panel_bg, 8%);
+    &:hover { background-color: lighten($panel_bg, 9%); }
   }
 }
 
