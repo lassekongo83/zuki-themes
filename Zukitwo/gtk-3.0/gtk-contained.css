@@ -83,21 +83,7 @@ textview text {
     background-color: #F7F7F7; }
 
 textview border {
-  background-color: #e7e7e7;
-  background-image: image(rgba(0, 0, 0, 0.2));
-  background-repeat: no-repeat; }
-  textview border.bottom {
-    background-size: 100% 1px;
-    background-position: top; }
-  textview border.top {
-    background-size: 100% 1px;
-    background-position: bottom; }
-  textview border.left {
-    background-size: 1px 100%;
-    background-position: right; }
-  textview border.right {
-    background-size: 1px 100%;
-    background-position: left; }
+  background-color: #e7e7e7; }
 
 .rubberband,
 rubberband,
@@ -113,15 +99,17 @@ flowbox flowboxchild {
   flowbox flowboxchild:selected {
     outline-offset: -2px; }
 
-label.separator {
-  color: #2c2c2c; }
-label selection {
-  background-color: #3399ff;
-  color: #ffffff; }
-label:disabled {
-  color: #818181; }
-  label:disabled:backdrop {
-    color: #b0b0b0; }
+label {
+  caret-color: currentColor; }
+  label.separator {
+    color: #2c2c2c; }
+  label selection {
+    background-color: #3399ff;
+    color: #ffffff; }
+  label:disabled {
+    color: #818181; }
+    label:disabled:backdrop {
+      color: #b0b0b0; }
 
 .dim-label, label.separator, .titlebar:not(headerbar) .subtitle,
 headerbar .subtitle {
@@ -1591,6 +1579,9 @@ headerbar separator,
 headerbar button {
   margin-top: 4px;
   margin-bottom: 4px; }
+headerbar switch {
+  margin-top: 7px;
+  margin-bottom: 7px; }
 
 .titlebar {
   border-top-left-radius: 7px;
@@ -2671,256 +2662,228 @@ scale {
     min-width: 6px; }
   scale.vertical.fine-tune indicator {
     min-width: 3px; }
-  scale.color.horizontal slider:hover, scale.color.horizontal slider:disabled, scale.color.horizontal slider,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-before:not(.marks-after) slider {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above.png"), url("assets/slider-horz-scale-has-marks-above@2.png"));
-    background-color: transparent;
     min-height: 26px;
     min-width: 22px;
     margin-top: -14px;
     background-position: top;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.horizontal slider, scale.horizontal.fine-tune contents:last-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
     margin: -7px;
     margin-top: -11px; }
-  scale.color.horizontal slider:hover,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider:hover {
+  scale.horizontal.marks-before:not(.marks-after) slider:hover {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-hover.png"), url("assets/slider-horz-scale-has-marks-above-hover@2.png"));
-    background-color: transparent;
     min-height: 26px;
     min-width: 22px;
     margin-top: -14px;
     background-position: top;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.horizontal slider, scale.horizontal.fine-tune contents:last-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
     margin: -7px;
     margin-top: -11px; }
-  scale.color.horizontal slider:active,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider:active {
+  scale.horizontal.marks-before:not(.marks-after) slider:active {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-active.png"), url("assets/slider-horz-scale-has-marks-above-active@2.png"));
-    background-color: transparent;
     min-height: 26px;
     min-width: 22px;
     margin-top: -14px;
     background-position: top;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.horizontal slider, scale.horizontal.fine-tune contents:last-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
     margin: -7px;
     margin-top: -11px; }
-  scale.color.horizontal slider:disabled,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider:disabled {
+  scale.horizontal.marks-before:not(.marks-after) slider:disabled {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-insensitive.png"), url("assets/slider-horz-scale-has-marks-above-insensitive@2.png"));
-    background-color: transparent;
     min-height: 26px;
     min-width: 22px;
     margin-top: -14px;
     background-position: top;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.horizontal slider, scale.horizontal.fine-tune contents:last-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
     margin: -7px;
     margin-top: -11px; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-after:not(.marks-before) slider {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below.png"), url("assets/slider-horz-scale-has-marks-below@2.png"));
-    background-color: transparent;
     min-height: 26px;
     min-width: 22px;
     margin-bottom: -14px;
     background-position: bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.horizontal.fine-tune contents:first-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
     margin: -7px;
     margin-bottom: -11px; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider:hover {
+  scale.horizontal.marks-after:not(.marks-before) slider:hover {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below-hover.png"), url("assets/slider-horz-scale-has-marks-below-hover@2.png"));
-    background-color: transparent;
     min-height: 26px;
     min-width: 22px;
     margin-bottom: -14px;
     background-position: bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.horizontal.fine-tune contents:first-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
     margin: -7px;
     margin-bottom: -11px; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider:active {
+  scale.horizontal.marks-after:not(.marks-before) slider:active {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below-active.png"), url("assets/slider-horz-scale-has-marks-below-active@2.png"));
-    background-color: transparent;
     min-height: 26px;
     min-width: 22px;
     margin-bottom: -14px;
     background-position: bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.horizontal.fine-tune contents:first-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
     margin: -7px;
     margin-bottom: -11px; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider:disabled {
+  scale.horizontal.marks-after:not(.marks-before) slider:disabled {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below-insensitive.png"), url("assets/slider-horz-scale-has-marks-below-insensitive@2.png"));
-    background-color: transparent;
     min-height: 26px;
     min-width: 22px;
     margin-bottom: -14px;
     background-position: bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.horizontal.fine-tune contents:first-child:not(:only-child) > trough > slider {
+  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
     margin: -7px;
     margin-bottom: -11px; }
-  scale.color.vertical:dir(rtl) slider:hover, scale.color.vertical:dir(rtl) slider:disabled, scale.color.vertical:dir(rtl) slider,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-before:not(.marks-after) slider {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above.png"), url("assets/slider-vert-scale-has-marks-above@2.png"));
-    background-color: transparent;
     min-height: 22px;
     min-width: 26px;
     margin-left: -14px;
     background-position: left bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.vertical:dir(rtl) slider, scale.vertical.fine-tune contents:last-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
     margin: -7px;
     margin-left: -11px; }
-  scale.color.vertical:dir(rtl) slider:hover,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider:hover {
+  scale.vertical.marks-before:not(.marks-after) slider:hover {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-hover.png"), url("assets/slider-vert-scale-has-marks-above-hover@2.png"));
-    background-color: transparent;
     min-height: 22px;
     min-width: 26px;
     margin-left: -14px;
     background-position: left bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.vertical:dir(rtl) slider, scale.vertical.fine-tune contents:last-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
     margin: -7px;
     margin-left: -11px; }
-  scale.color.vertical:dir(rtl) slider:active,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider:active {
+  scale.vertical.marks-before:not(.marks-after) slider:active {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-active.png"), url("assets/slider-vert-scale-has-marks-above-active@2.png"));
-    background-color: transparent;
     min-height: 22px;
     min-width: 26px;
     margin-left: -14px;
     background-position: left bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.vertical:dir(rtl) slider, scale.vertical.fine-tune contents:last-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
     margin: -7px;
     margin-left: -11px; }
-  scale.color.vertical:dir(rtl) slider:disabled,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider:disabled {
+  scale.vertical.marks-before:not(.marks-after) slider:disabled {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-insensitive.png"), url("assets/slider-vert-scale-has-marks-above-insensitive@2.png"));
-    background-color: transparent;
     min-height: 22px;
     min-width: 26px;
     margin-left: -14px;
     background-position: left bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.vertical:dir(rtl) slider, scale.vertical.fine-tune contents:last-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
     margin: -7px;
     margin-left: -11px; }
-  scale.color.vertical:dir(ltr) slider:hover, scale.color.vertical:dir(ltr) slider:disabled, scale.color.vertical:dir(ltr) slider,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-after:not(.marks-before) slider {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below.png"), url("assets/slider-vert-scale-has-marks-below@2.png"));
-    background-color: transparent;
     min-height: 22px;
     min-width: 26px;
     margin-right: -14px;
     background-position: right bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.vertical:dir(ltr) slider, scale.vertical.fine-tune contents:first-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
     margin: -7px;
     margin-right: -11px; }
-  scale.color.vertical:dir(ltr) slider:hover,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider:hover {
+  scale.vertical.marks-after:not(.marks-before) slider:hover {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below-hover.png"), url("assets/slider-vert-scale-has-marks-below-hover@2.png"));
-    background-color: transparent;
     min-height: 22px;
     min-width: 26px;
     margin-right: -14px;
     background-position: right bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.vertical:dir(ltr) slider, scale.vertical.fine-tune contents:first-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
     margin: -7px;
     margin-right: -11px; }
-  scale.color.vertical:dir(ltr) slider:active,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider:active {
+  scale.vertical.marks-after:not(.marks-before) slider:active {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below-active.png"), url("assets/slider-vert-scale-has-marks-below-active@2.png"));
-    background-color: transparent;
     min-height: 22px;
     min-width: 26px;
     margin-right: -14px;
     background-position: right bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.vertical:dir(ltr) slider, scale.vertical.fine-tune contents:first-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
     margin: -7px;
     margin-right: -11px; }
-  scale.color.vertical:dir(ltr) slider:disabled,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider:disabled {
+  scale.vertical.marks-after:not(.marks-before) slider:disabled {
     margin: -10px;
     border-style: none;
     border-radius: 0;
     background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below-insensitive.png"), url("assets/slider-vert-scale-has-marks-below-insensitive@2.png"));
-    background-color: transparent;
     min-height: 22px;
     min-width: 26px;
     margin-right: -14px;
     background-position: right bottom;
     background-repeat: no-repeat;
     box-shadow: none; }
-  scale.color.fine-tune.vertical:dir(ltr) slider, scale.vertical.fine-tune contents:first-child:not(:only-child) > trough > slider {
+  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
     margin: -7px;
     margin-right: -11px; }
   scale.color {
@@ -2936,7 +2899,7 @@ scale {
         background-position: 0 -3px;
         border-top-left-radius: 0;
         border-top-right-radius: 0; }
-      scale.color.horizontal slider:hover, scale.color.horizontal slider:disabled, scale.color.horizontal slider {
+      scale.color.horizontal slider:dir(ltr):hover, scale.color.horizontal slider:dir(ltr):backdrop, scale.color.horizontal slider:dir(ltr):disabled, scale.color.horizontal slider:dir(ltr):backdrop:disabled, scale.color.horizontal slider:dir(ltr), scale.color.horizontal slider:dir(rtl):hover, scale.color.horizontal slider:dir(rtl):backdrop, scale.color.horizontal slider:dir(rtl):disabled, scale.color.horizontal slider:dir(rtl):backdrop:disabled, scale.color.horizontal slider:dir(rtl) {
         margin-bottom: -15px;
         margin-top: 6px; }
     scale.color.vertical:dir(ltr) {
@@ -2946,7 +2909,7 @@ scale {
         background-position: 3px 0;
         border-bottom-right-radius: 0;
         border-top-right-radius: 0; }
-      scale.color.vertical:dir(ltr) slider:hover, scale.color.vertical:dir(ltr) slider:disabled, scale.color.vertical:dir(ltr) slider {
+      scale.color.vertical:dir(ltr) slider:hover, scale.color.vertical:dir(ltr) slider:backdrop, scale.color.vertical:dir(ltr) slider:disabled, scale.color.vertical:dir(ltr) slider:backdrop:disabled, scale.color.vertical:dir(ltr) slider {
         margin-left: -15px;
         margin-right: 6px; }
     scale.color.vertical:dir(rtl) {
@@ -2956,15 +2919,15 @@ scale {
         background-position: -3px 0;
         border-bottom-left-radius: 0;
         border-top-left-radius: 0; }
-      scale.color.vertical:dir(rtl) slider:hover, scale.color.vertical:dir(rtl) slider:disabled, scale.color.vertical:dir(rtl) slider {
+      scale.color.vertical:dir(rtl) slider:hover, scale.color.vertical:dir(rtl) slider:backdrop, scale.color.vertical:dir(rtl) slider:disabled, scale.color.vertical:dir(rtl) slider:backdrop:disabled, scale.color.vertical:dir(rtl) slider {
         margin-right: -15px;
         margin-left: 6px; }
-    scale.color.fine-tune.horizontal {
+    scale.color.fine-tune.horizontal:dir(ltr), scale.color.fine-tune.horizontal:dir(rtl) {
       padding: 0 0 12px 0; }
-      scale.color.fine-tune.horizontal trough {
+      scale.color.fine-tune.horizontal:dir(ltr) trough, scale.color.fine-tune.horizontal:dir(rtl) trough {
         padding-bottom: 7px;
         background-position: 0 -6px; }
-      scale.color.fine-tune.horizontal slider {
+      scale.color.fine-tune.horizontal:dir(ltr) slider, scale.color.fine-tune.horizontal:dir(rtl) slider {
         margin-bottom: -15px;
         margin-top: 6px; }
     scale.color.fine-tune.vertical:dir(ltr) {
@@ -3492,16 +3455,10 @@ infobar {
     .warning button label:disabled,
     .error button label:disabled {
       color: rgba(255, 255, 255, 0.7); }
-  .info label:selected:focus, .info label:selected:hover, .info label:selected,
-  .question label:selected:focus,
-  .question label:selected:hover,
-  .question label:selected,
-  .warning label:selected:focus,
-  .warning label:selected:hover,
-  .warning label:selected,
-  .error label:selected:focus,
-  .error label:selected:hover,
-  .error label:selected {
+  .info selection,
+  .question selection,
+  .warning selection,
+  .error selection {
     background-color: #0080ff; }
 
 /************

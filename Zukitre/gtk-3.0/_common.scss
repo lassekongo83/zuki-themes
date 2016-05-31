@@ -103,31 +103,7 @@ textview {
   }
 }
 
-textview border {
-  background-color: mix($bg_color, $base_color, 50%);
-  background-image: image(transparentize(black, 0.8)); // HACK: the border node just draws background so,
-  background-repeat: no-repeat;                        // using a background-image to draw the border
-
-  &.bottom {
-    background-size: 100% 1px;
-    background-position: top;
-  }
-
-  &.top {
-    background-size: 100% 1px;
-    background-position: bottom;
-  }
-
-  &.left {
-    background-size: 1px 100%;
-    background-position: right;
-  }
-
-  &.right {
-    background-size: 1px 100%;
-    background-position: left;
-  }
-}
+textview border { background-color: mix($bg_color, $base_color, 50%); }
 
 iconview { @extend .view; }
 
@@ -153,6 +129,8 @@ flowbox {
 }
 
 label {
+  caret-color: currentColor; // this shouldn't be needed.
+
   &.separator {
     @extend .dim-label;
 
@@ -1382,13 +1360,17 @@ headerbar {
 }
 
 headerbar {
-  // add vertical margins to headerbar entries, buttons and separators to avoid them spanning the whole height
+  // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
   entry,
   spinbutton,
   separator,
   button {
     margin-top: 4px;
     margin-bottom: 4px;
+  }
+  switch {
+    margin-top: 7px;
+    margin-bottom: 7px;
   }
 }
 
@@ -2417,7 +2399,6 @@ radio {
 
 scale {
   // sizing
-
   $_marks_lenght: 6px;
   $_marks_distance: 6px;
 
@@ -2430,6 +2411,7 @@ scale {
   highlight { margin: -1px; }
 
   // the slider is inside the trough, so to have make it bigger there's a negative margin
+  
   slider {
     min-height: 18px;
     min-width: 18px;
@@ -2573,15 +2555,15 @@ scale {
 
   @each $dir_class, $dir_infix in ('horizontal', 'horz'),
                                   ('vertical', 'vert') {
-    @each $marks_infix, $nth_child in ('scale-has-marks-above', ':last-child:not(:only-child)'),
-                                      ('scale-has-marks-below', ':first-child:not(:only-child)') {
+    @each $marks_infix, $marks_class in ('scale-has-marks-above', 'marks-before:not(.marks-after)'),
+                                        ('scale-has-marks-below', 'marks-after:not(.marks-before)') {
       @each $state, $state_infix in ('', ''),
-                               (':hover', '-hover'),
-                               (':active', '-active'),
-                               (':disabled', '-insensitive') {
-        &.#{$dir_class} {
-          %#{$marks_infix}-#{$dir_infix},
-          contents#{$nth_child} > trough > slider {
+                                    (':hover', '-hover'),
+                                    (':active', '-active'),
+                                    (':disabled', '-insensitive') {
+        &.#{$dir_class}.#{$marks_class} {
+
+          slider {
             &#{$state} {
               // an asymmetric slider asset is used here, so the margins are uneven, the smaller
               // margin is set on the point side.
@@ -2591,9 +2573,9 @@ scale {
               border-radius: 0;
 
               background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png'));
-              background-color: transparent;
 
               $_scale_slider_bg_pos: bottom;
+
               @if $dir_class == 'horizontal' {
                 min-height: 26px;
                 min-width: 22px;
@@ -2630,8 +2612,7 @@ scale {
             }
           }
 
-          @at-root %#{$marks_infix}-#{$dir_infix}-fine-tune,
-          &.fine-tune contents#{$nth_child} > trough > slider {
+          &.fine-tune slider {
             // bigger negative margins to make the trough grow here as well
             margin: -7px;
 
@@ -2672,11 +2653,11 @@ scale {
       }
 
       slider {
-        &:hover, &:disabled, & {
-          @extend %scale-has-marks-above-horz;
-
-          margin-bottom: -15px;
-          margin-top: 6px;
+        &:dir(ltr), &:dir(rtl) { // specificity bumb
+          &:hover, &:backdrop, &:disabled, &:backdrop:disabled, & {
+            margin-bottom: -15px;
+            margin-top: 6px;
+          }
         }
       }
     }
@@ -2693,9 +2674,7 @@ scale {
         }
 
         slider {
-          &:hover, &:disabled, & {
-            @extend %scale-has-marks-below-vert;
-
+          &:hover, &:backdrop, &:disabled, &:backdrop:disabled, & {
             margin-left: -15px;
             margin-right: 6px;
           }
@@ -2713,9 +2692,7 @@ scale {
         }
 
         slider {
-          &:hover, &:disabled, & {
-            @extend %scale-has-marks-above-vert;
-
+          &:hover, &:backdrop, &:disabled, &:backdrop:disabled, & {
             margin-right: -15px;
             margin-left: 6px;
           }
@@ -2725,18 +2702,18 @@ scale {
 
     &.fine-tune {
       &.horizontal {
-        padding: 0 0 12px 0;
+        &:dir(ltr), &:dir(rtl) { // specificity bump
+          padding: 0 0 12px 0;
 
-        trough {
-          padding-bottom: 7px;
-          background-position: 0 -6px;
-        }
+          trough {
+            padding-bottom: 7px;
+            background-position: 0 -6px;
+          }
 
-        slider {
-          @extend %scale-has-marks-above-horz-fine-tune;
-
-          margin-bottom: -15px;
-          margin-top: 6px;
+          slider {
+            margin-bottom: -15px;
+            margin-top: 6px;
+          }
         }
       }
 
@@ -2750,8 +2727,6 @@ scale {
           }
 
           slider {
-            @extend %scale-has-marks-below-vert-fine-tune;
-
             margin-left: -15px;
             margin-right: 6px;
           }
@@ -2766,8 +2741,6 @@ scale {
           }
 
           slider {
-            @extend %scale-has-marks-above-vert-fine-tune;
-
             margin-right: -15px;
             margin-left: 6px;
           }
@@ -3399,7 +3372,7 @@ infobar { border-style: none; }
     & label:disabled { color: transparentize(white, 0.3); }
   }
 
-  label:selected { &:focus, &:hover, & { background-color: darken($selected_bg_color, 10%); }}
+  selection { background-color: darken($selected_bg_color, 10%); }
 
   *:link { @extend %link_selected; }
 }
