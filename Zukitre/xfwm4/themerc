@@ -9,11 +9,11 @@ title_shadow_inactive=true
 
 #button_layout=O|HMC
 
-active_text_color=#2c2c2c
+active_text_color=#000000
 inactive_text_color=#999999
 inactive_text_shadow_color=#ffffff
 
-placement_ratio=20
+#placement_ratio=20
 shadow_delta_height=2
 shadow_delta_width=0
 shadow_delta_x=0
