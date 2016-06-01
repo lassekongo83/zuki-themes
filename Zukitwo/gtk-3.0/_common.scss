@@ -1664,7 +1664,8 @@ menubar,
 }
 
 menu,
-.menu {
+.menu,
+.context-menu {
   margin: 4px;
   padding: 2px 0px;
   background-color: $menu_color;
@@ -1704,6 +1705,9 @@ menu,
         margin-right: 10px;
       }
     }
+
+    // avoids labels color being overridden
+    label { &:dir(rtl), &:dir(ltr) { color: inherit; }}
   }
 
   // overflow arrows
