@@ -2577,6 +2577,7 @@ scale {
               border-radius: 0;
 
               background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png'));
+              background-color: transparent;
 
               $_scale_slider_bg_pos: bottom;
 
@@ -3794,23 +3795,6 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
 }
 
 /* Various fixes */
-.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
-  color: white;
-  text-shadow: 1px 1px 2px transparentize(black, 0.2);
-}
-
-.nautilus-window {
-  // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
-
-  searchbar { border-top: 1px solid $borders_color; }
-  .searchbar-container { margin-top: -1px; }
-}
-
-// Without this nautilus iconview grabs the bg_color
-.nautilus-window notebook,
-.nautilus-window notebook > stack:not(:only-child) searchbar {
-  @extend .view;
-}
 
 .floating-bar { /* Makes the floating-bar less annoying */
   background-color: $base_color;

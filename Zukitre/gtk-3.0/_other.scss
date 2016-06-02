@@ -105,3 +105,39 @@ XfceHeading,
 .caja-notebook { border-top: 1px solid $borders_color; }
 .caja-side-pane .frame { border-width: 1px 0 0; }
 .caja-notebook .frame { border-width: 0 0 1px; }
+
+/* Nautilus and nemo */
+.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
+  color: white;
+  text-shadow: 1px 1px 2px transparentize(black, 0.2);
+}
+
+.nautilus-window {
+  // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
+
+  searchbar { border-top: 1px solid $borders_color; }
+  .searchbar-container { margin-top: -1px; }
+}
+
+// Without this nautilus iconview grabs the bg_color
+.nautilus-window notebook,
+.nautilus-window notebook > stack:not(:only-child) searchbar {
+  @extend .view;
+}
+
+// Nemo is very ugly and needs special fixes. Damn cinnamon and their stupid "FrankenGnome" project. :-P
+.nemo-window {
+
+  .nemo-places-sidebar.frame { border-width: 0; }
+  notebook { @extend .view; }
+
+  // Rename entry
+  .nemo-window-pane widget.entry {
+    border: 1px solid;
+    border-radius: 3px;
+
+    @include entry(focus);
+
+    &:selected { &:focus, & { @extend %selected_items; }}
+  }
+}
