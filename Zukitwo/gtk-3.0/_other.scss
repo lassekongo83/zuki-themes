@@ -154,3 +154,26 @@ XfceHeading,
     &:selected { &:focus, & { @extend %selected_items; }}
   }
 }
+
+// Nemo is so bad that to be able to view changes made here you need to restart your desktop
+.places-treeview {
+  -NemoPlacesTreeView-disk-full-bg-color: $base_color;
+  -NemoPlacesTreeView-disk-full-fg-color: $selected_bg_color;
+  -NemoPlacesTreeView-disk-full-bar-width: 2px;
+  -NemoPlacesTreeView-disk-full-bar-radius: 1px;
+  -NemoPlacesTreeView-disk-full-bottom-padding: 1px;
+  -NemoPlacesTreeView-disk-full-max-length: 70px;
+
+  &:selected {
+    -NemoPlacesTreeView-disk-full-bg-color: $base_color;
+    -NemoPlacesTreeView-disk-full-fg-color: darken($selected_bg_color, 15%);
+  }
+}
+
+.nemo-window .sidebar .view {
+  background-color: mix($bg_color, $base_color, 50%);
+}
+
+.nemo-window .sidebar treeview .cell:selected {
+  @extend %selected_items;
+}
