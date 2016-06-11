@@ -487,7 +487,7 @@ StScrollBar {
     -arrow-background-color: $bg_color;
     -arrow-border-width: 1px;
     -arrow-border-color: transparentize($fg_color, .9);
-    -arrow-base: 0px;
+    -arrow-base: 64px; // 'popup-menu-arrow' base * 4
     -arrow-rise: 0px;
     -arrow-box-shadow: 0 0px 0px black; //dreaming. bug #689995
   }
@@ -697,7 +697,7 @@ StScrollBar {
     .app-menu-icon {
       width: 0;
       height: 0;
-      margin-left: 0px;
+      margin-left: 0px; // FIXME: Want to set these two at 4px, but only the left margin is working.
       margin-right: 0px;
     }
 
