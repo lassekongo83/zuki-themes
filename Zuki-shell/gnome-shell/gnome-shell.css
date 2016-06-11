@@ -475,7 +475,7 @@ StScrollBar {
   -arrow-background-color: #273238;
   -arrow-border-width: 1px;
   -arrow-border-color: rgba(222, 226, 229, 0.1);
-  -arrow-base: 0px;
+  -arrow-base: 64px;
   -arrow-rise: 0px;
   -arrow-box-shadow: 0 0px 0px black; }
 
