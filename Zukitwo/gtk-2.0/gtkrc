@@ -315,12 +315,17 @@ style "menubar-menuitem" {
     text[PRELIGHT] = @fg_color
     text[SELECTED] = @fg_color
 
-	engine "murrine" {
-        contrast        = .0 
-        roundness       = 0
-        border_shades   = { 1.0, 0.8 }
-        gradient_shades = {1.0, 1.0, 0.85, 0.85}
-	}
+    engine "pixmap" {
+        image
+        {
+            function    = BOX
+            recolorable = TRUE
+            state       = PRELIGHT
+            file        = "assets/menubar-menuitem.png"
+            border      = { 0, 0, 0, 2 }
+            stretch     = TRUE
+        }
+    }
 }
 
 style "separator-menu-item"
