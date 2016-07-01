@@ -248,7 +248,7 @@ entry {
 
     &:disabled { @include entry(insensitive); }
 
-    selection { &:focus, & { @extend %selected_items; }}
+    selection { @extend %selected_items; }
 
     // entry error and warning style
     @each $e_type, $e_color in (error, $error_color),
@@ -259,7 +259,7 @@ entry {
 
         &:focus { @include entry(focus, $e_color); }
 
-        &:selected { &:focus, & { background-color: $e_color; }}
+        selection { background-color: $e_color; }
       }
     }
 
@@ -3394,33 +3394,51 @@ paned {
 /**************
  * GtkInfoBar *
  **************/
-infobar { border-style: none; }
 
-.info,
-.question,
-.warning,
-.error {
-  background-color: $selected_bg_color;
-  color: $selected_fg_color;
-  text-shadow: 0 1px darken($selected_bg_color, 10%);
-  border-color: darken($selected_bg_color, 10%);
+infobar {
+  border-style: none;
 
-  button {
-    // FIXME: extend selection mode buttons
-    @include button(normal, $selected_bg_color, $selected_fg_color, none);
+  &.info,
+  &.question,
+  &.warning,
+  &.error {
+    &:backdrop, & {
+      label, & { color: $selected_fg_color; }
+      background-color: $selected_bg_color;
+      border-color: darken($selected_bg_color, 10%);
+    }
 
-    &:hover { @include button(hover, $selected_bg_color, $selected_fg_color, none); }
+    text-shadow: 0 1px darken($selected_bg_color, 10%);
 
-    &:active,
-    &:checked { @include button(active, $selected_bg_color, $selected_fg_color, none); }
+    &:backdrop { text-shadow: none; }
 
-    &:disabled { @include button(insensitive, $selected_bg_color, $selected_fg_color,none); }
-    & label:disabled { color: transparentize(white, 0.3); }
+    button {
+      // FIXME: extend selection mode buttons
+      @include button(normal, $selected_bg_color, $selected_fg_color, none);
+
+      &:hover { @include button(hover, $selected_bg_color, $selected_fg_color, none); }
+
+      &:active,
+      &:checked { @include button(active, $selected_bg_color, $selected_fg_color, none); }
+
+      &:disabled { @include button(insensitive,$selected_bg_color,$selected_fg_color,none); }
+
+      &:backdrop {
+        @include button(backdrop, $selected_bg_color, $selected_fg_color, none);
+        border-color: _border_color($selected_bg_color);
+
+        &:disabled {
+          @include button(backdrop-insensitive, $selected_bg_color,
+                          $selected_fg_color, none);
+          border-color: _border_color($selected_bg_color);
+        }
+      }
+    }
+
+    selection { background-color: darken($selected_bg_color, 10%); }
+
+    *:link { @extend %link_selected; }
   }
-
-  selection { background-color: darken($selected_bg_color, 10%); }
-
-  *:link { @extend %link_selected; }
 }
 
 /************
