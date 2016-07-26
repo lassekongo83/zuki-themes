@@ -3103,23 +3103,14 @@ calendar {
     border-radius: 3px; }
   calendar.header {
     border-bottom-color: rgba(0, 0, 0, 0.1); }
-    calendar.header:backdrop {
-      border-bottom-color: rgba(0, 0, 0, 0.1); }
   calendar.button {
     color: rgba(222, 226, 229, 0.45); }
     calendar.button:hover {
       color: #dee2e5; }
-    calendar.button:backdrop {
-      color: rgba(131, 138, 143, 0.45); }
     calendar.button:disabled {
       color: rgba(131, 138, 143, 0.45); }
   calendar.highlight {
     color: #838a8f; }
-    calendar.highlight:backdrop {
-      color: #465a65; }
-  calendar:backdrop {
-    color: #dde2e4;
-    border-color: #0b0e10; }
   calendar:indeterminate {
     color: alpha(currentColor,0.1); }
 

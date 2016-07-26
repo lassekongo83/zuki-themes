@@ -3243,23 +3243,14 @@ calendar {
     border-radius: 3px; }
   calendar.header {
     border-bottom-color: rgba(0, 0, 0, 0.1); }
-    calendar.header:backdrop {
-      border-bottom-color: rgba(0, 0, 0, 0.1); }
   calendar.button {
     color: rgba(44, 44, 44, 0.45); }
     calendar.button:hover {
       color: #2c2c2c; }
-    calendar.button:backdrop {
-      color: rgba(129, 129, 129, 0.45); }
     calendar.button:disabled {
       color: rgba(129, 129, 129, 0.45); }
   calendar.highlight {
     color: #818181; }
-    calendar.highlight:backdrop {
-      color: #b0b0b0; }
-  calendar:backdrop {
-    color: #313131;
-    border-color: #b4b4b4; }
   calendar:indeterminate {
     color: alpha(currentColor,0.1); }
 
