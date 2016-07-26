@@ -1090,7 +1090,7 @@ popover.background radiobutton,
 button:visited, button:link:hover, button:link:active, button:link:checked,
 button:visited:hover,
 button:visited:active,
-button:visited:checked, calendar.button, calendar.button:hover, calendar.button:disabled, .scale-popup button:hover {
+button:visited:checked, calendar.button, .scale-popup button:hover {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -3224,19 +3224,26 @@ calendar {
   calendar:selected {
     border-radius: 3px; }
   calendar.header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0; }
+    border-bottom-color: rgba(0, 0, 0, 0.1); }
+    calendar.header:backdrop {
+      border-bottom-color: rgba(0, 0, 0, 0.1); }
   calendar.button {
     color: rgba(44, 44, 44, 0.45); }
     calendar.button:hover {
       color: #2c2c2c; }
+    calendar.button:backdrop {
+      color: rgba(129, 129, 129, 0.45); }
     calendar.button:disabled {
       color: rgba(129, 129, 129, 0.45); }
-  calendar:indeterminate {
-    color: alpha(currentColor,0.55); }
   calendar.highlight {
-    font-size: smaller;
-    color: #2c2c2c; }
+    color: #818181; }
+    calendar.highlight:backdrop {
+      color: #b0b0b0; }
+  calendar:backdrop {
+    color: #313131;
+    border-color: #b4b4b4; }
+  calendar:indeterminate {
+    color: alpha(currentColor,0.1); }
 
 /***********
  * Dialogs *
