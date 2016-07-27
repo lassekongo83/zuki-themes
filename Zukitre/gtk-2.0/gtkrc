@@ -663,10 +663,6 @@ style "xfdesktop-icon-view"
 
     fg[NORMAL] = shade (0.9, @selected_fg_color)
     fg[ACTIVE] = @selected_fg_color
-
-    engine "murrine"
-    {
-    }
 }
 
 style "calendar"
