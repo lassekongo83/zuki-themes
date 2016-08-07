@@ -77,10 +77,14 @@ ArchLinux users can get it on AUR: https://aur.archlinux.org/packages/zuki-theme
 
 ## Troubleshooting & Bug reporting
 
-If you find a bug, please report it at https://github.com/lassekongo83/zuki-themes/issues
-When submitting a bug it would be helpful if you could provide me with a screenshot of the issue. Use a trusted and good image uploader like http://imgur.com for example. Don't use bad ones like ImageShack, PhotoBucket etc. **I do not want to enable JavaScript, cookies or browser plugins to be able to view an image!** Also include information about which version of GTK you're using. 
+**The issue tracker is for provable issues only:** You will have to make the case that the issue is really with the theme and not something else on your side. To make a case means to provide detailed steps so that anybody can reproduce the issue. Be sure to rule out that the issue is not caused by something specific on your side.
 
-I would also like it if you could be kind and keep support questions to forums, gnome-look.org or http://lassekongo83.deviantart.com as the issue tab here on GitHub is meant for bugs and feature requests.
+**Required information:**
+> 1. Your GTK+ version/theme version/Linux distribution.
+> 1. Does the same issue occur with other themes?
+> 1. Screenshot. (Use a host that don't require me to enable JavaScript, cookies or browser plugins to be able to view the image.)
+
+**Do not submit support questions to the issue tracker.** Contact me on [reddit](https://www.reddit.com/user/Frellwit/) or [deviantART](http://lassekongo83.deviantart.com) for that instead. (Don't always expect an answer though.) Public forums and subreddits could provide better support. Support questions in the issue tracker will be closed as invalid.
 
 ## Other stuff
 
