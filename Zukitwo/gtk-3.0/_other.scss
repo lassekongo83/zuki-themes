@@ -114,6 +114,8 @@ XfceHeading,
   }
 }
 
+// Application specific fixes should be avoided as much as possible! In some cases they are unavoidable.
+
 /* Caja */
 .caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
 .caja-notebook { border-top: 1px solid $borders_color; }
@@ -156,7 +158,7 @@ XfceHeading,
   }
 }
 
-// Nemo is so bad that to be able to view changes made here you need to restart your desktop or reload the theme
+// Nemo is so bad
 .places-treeview {
   -NemoPlacesTreeView-disk-full-bg-color: $base_color;
   -NemoPlacesTreeView-disk-full-fg-color: $selected_bg_color;

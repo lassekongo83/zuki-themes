@@ -382,9 +382,9 @@ treeview entry.flat, treeview entry {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#3399ff), to(transparent)); } }
 notebook > header > tabs > arrow,
 button {
-  min-height: 24px;
+  min-height: 20px;
   min-width: 16px;
-  padding: 1px 4px;
+  padding: 4px 4px;
   border: 1px solid;
   border-radius: 3px;
   color: #2c2c2c;
