@@ -545,7 +545,7 @@ style "hscale" = "scale"
 
 style "toolbar"
 {
-	bg[NORMAL]	= @bg_color	
+	bg[NORMAL] = @bg_color	
 
     engine "pixmap" {
     image 
@@ -554,6 +554,32 @@ style "toolbar"
             file     = "assets/toolbar.png"
             border   = { 0, 0, 4, 4 }
             stretch  = TRUE
+        }
+    image
+        {
+            function        = HANDLE
+            overlay_file    = "assets/handle.png"
+            overlay_stretch = FALSE
+            orientation     = HORIZONTAL
+        }
+    image
+        {
+            function        = HANDLE
+            overlay_file    = "assets/handle.png"
+            overlay_stretch = FALSE
+            orientation     = VERTICAL
+        }
+    image
+        {
+            function    = VLINE
+            recolorable = TRUE
+            file        = "assets/null.png"
+        }
+    image
+        {
+            function    = HLINE
+            recolorable = TRUE
+            file        = "assets/null.png"
         }
     }
 }
