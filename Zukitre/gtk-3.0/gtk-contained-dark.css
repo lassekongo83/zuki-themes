@@ -3395,8 +3395,8 @@ XfceHeading,
   border-width: 0 0 1px; }
 
 /* EOG */
-EogScrollView .image-button, EogScrollView GtkScaleButton.button,
-EogScrollView GtkVolumeButton.button, EogScrollView .header-bar .button.titlebutton, .header-bar EogScrollView .button.titlebutton,
-EogScrollView .titlebar .button.titlebutton,
-.titlebar EogScrollView .button.titlebutton {
+EogScrollView .osd.button.image-button, EogScrollView GtkScaleButton.osd.button,
+EogScrollView GtkVolumeButton.osd.button, EogScrollView .header-bar .osd.button.titlebutton, .header-bar EogScrollView .osd.button.titlebutton,
+EogScrollView .titlebar .osd.button.titlebutton,
+.titlebar EogScrollView .osd.button.titlebutton {
   border: none; }
