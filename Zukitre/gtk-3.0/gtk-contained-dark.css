@@ -1706,8 +1706,8 @@ column-header .button, column-header .button:hover, column-header .button:active
  * Switch *
  **********/
 GtkSwitch {
-  font: 1;
-  -GtkSwitch-slider-width: 52;
+  font-size: smaller;
+  -GtkSwitch-slider-width: 28;
   -GtkSwitch-slider-height: 24;
   outline-color: transparent; }
   GtkSwitch.trough, GtkSwitch.slider {
@@ -3393,3 +3393,10 @@ XfceHeading,
 
 .caja-notebook .frame {
   border-width: 0 0 1px; }
+
+/* EOG */
+EogScrollView .image-button, EogScrollView GtkScaleButton.button,
+EogScrollView GtkVolumeButton.button, EogScrollView .header-bar .button.titlebutton, .header-bar EogScrollView .button.titlebutton,
+EogScrollView .titlebar .button.titlebutton,
+.titlebar EogScrollView .button.titlebutton {
+  border: none; }

@@ -1844,8 +1844,8 @@ column-header.button.dnd { // for treeview-like derive widgets
  **********/
 
 GtkSwitch {
-  font: 1;
-  -GtkSwitch-slider-width: 52;
+  font-size: smaller;
+  -GtkSwitch-slider-width: 28;
   -GtkSwitch-slider-height: 24;
   outline-color: transparent;
 
