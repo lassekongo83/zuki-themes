@@ -4,7 +4,7 @@
 #panel_window {
   background-color: $panel_bg;
   color: $panel_fg;
-  font: bold;
+  //font-style: bold;
   box-shadow: none;
   border-style: none;
 
@@ -13,7 +13,7 @@
   menubar > menuitem {
     //background-color: transparent;
     color: $panel_fg;
-    font: bold;
+    //font-style: bold;
     box-shadow: none;
     border-style: none;
     &:active, &:checked, &:hover { 
@@ -27,14 +27,14 @@
 
     label { color: inherit; }
   }
-  menubar menu > menuitem { font: normal; }
+  menubar menu > menuitem { font-style: normal; }
 }
 
 // the login window
 #login_window,
 #shutdown_dialog,
 #restart_dialog {
-  font: normal;
+  font-style: normal;
   border-style: none;
   background-color: transparent;
   color: $fg_color;
@@ -94,7 +94,7 @@
 
 #login_window #user_combobox {
   color: $fg_color;
-  menu { font: normal; }
+  menu { font-style: normal; }
 }
 
 // the user's avatar box
@@ -122,5 +122,5 @@
 // the warning, in case a wrong password is entered or something else goes wrong according to PAM
 #greeter_infobar {
   border-bottom-width: 0;
-  font: bold;
+  //font-style: bold;
 }

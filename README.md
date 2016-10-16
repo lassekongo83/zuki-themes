@@ -2,8 +2,9 @@
 
 Zuki themes for GNOME, Xfce and more.
 
-Master branch is for GNOME 3.20.
-3.18 branch can be found here: https://github.com/lassekongo83/zuki-themes/tree/3.18
+Master branch is for GNOME 3.22.
+3.20 branch can be found here: https://github.com/lassekongo83/zuki-themes/tree/3.20
+3.18 branch can be found here: https://github.com/lassekongo83/zuki-themes/tree/3.18 (For Ubuntu 16.04 LTS and Linux Mint 18)
 
 ##### Zukitre
 
@@ -17,7 +18,7 @@ Master branch is for GNOME 3.20.
 
 ## Requirements
 
-* GNOME/GTK 3.18 or 3.20
+* GNOME/GTK 3.18, 3.20 or 3.22
 * The murrine engine. This has different names depending on your distro.
   * `gtk2-engines-murrine` (Debian, Ubuntu)
   * `gtk-murrine-engine` (Fedora)
@@ -33,26 +34,13 @@ Master branch is for GNOME 3.20.
   * `google-roboto-fonts` (Fedora)
   * `ttf-roboto` (ArchLinux AUR)
 
-Main distributions that meet these requirements are
-
-GTK 3.18
-* X/Ubuntu 16.04 LTS (**Older versions are not supported**)
-* Fedora 23
-
-GTK 3.20
-* ArchLinux
-* Fedora 24
-
-Derivatives of these distributions should work, as well.
-
-If your distribution isn't listed, please check the requirements yourself.
-
 ## Installation
 
 #### Manual installation
 
 Download the theme: 
-  * GTK 3.20: https://github.com/lassekongo83/zuki-themes/archive/master.zip
+  * GTK 3.22: https://github.com/lassekongo83/zuki-themes/archive/master.zip
+  * GTK 3.20: https://github.com/lassekongo83/zuki-themes/archive/3.20.zip
   * GTK 3.18: https://github.com/lassekongo83/zuki-themes/archive/3.18.zip (Download this if you use X/Ubuntu 16.04.)
 
 Extract the contents in the zip to `~/.themes` or `/usr/share/themes` with the following folder structure:

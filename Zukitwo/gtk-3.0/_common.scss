@@ -31,7 +31,7 @@ $button_transition: all 200ms $ease-out-quad;
   // to the adwaita engine: using real CSS properties is faster,
   // and we don't use any outlines for now.
 
-  outline-color: transparentize($fg_color, 0.7);
+  outline-color: gtkalpha(currentColor, 0.3);
   outline-style: dashed;
   outline-offset: -3px;
   outline-width: 1px;
@@ -319,7 +319,6 @@ entry {
     &:not(:disabled) + entry:not(:disabled),
     &:not(:disabled) + %entry:not(:disabled) {
       border-top-color: mix($borders_color, $base_color, 30%);
-      background-image: linear-gradient(to bottom, $base_color);
     }
 
     // brighter border between linked insensitive entries
@@ -649,6 +648,12 @@ button {
     }
   }
 
+  // hide separators
+  &.font,
+  &.file { separator { background-color: transparent; }}
+
+  &.font { > box > box > label { font-weight: bold; }}
+
   //inline-toolbar buttons
   .inline-toolbar &, .inline-toolbar &:backdrop {
     border-radius: 1px;
@@ -865,7 +870,7 @@ modelbutton.flat,
 
   &:selected { @extend %selected_items; }
 
-  // FIXME: remove the following when the checks/radios rewrite lands
+  // FIXME: Not needed in Adwaita any longer
   check:last-child,
   radio:last-child { margin-left: 8px; }
 
@@ -892,8 +897,16 @@ button.color {
     @if $variant == 'light' {
       box-shadow: 0 1px _text_shadow_color();
 
+      .osd & { box-shadow: none; }
+    }
+  }
+
+  @if $variant == 'light' {
+    .osd &, & {
       &:disabled,
-      &:backdrop { box-shadow: none; }
+      &:backdrop,
+      &:active,
+      &:checked { colorswatch:only-child { box-shadow: none; }}
     }
   }
 }
@@ -901,6 +914,7 @@ button.color {
 /*********
  * Links *
  *********/
+%link,
 *:link {
   color: $link_color;
 
@@ -911,7 +925,7 @@ button.color {
   }
 
   &:hover {
-    color: lighten($link_color, 10%);
+    color: lighten($link_color,10%);
 
     *:selected & { color: mix($selected_fg_color, $selected_bg_color, 90%); }
   }
@@ -945,7 +959,11 @@ button:visited {
     text-shadow: none;
   }
 
-  > label { text-decoration-line: underline; }
+  > label {
+    @extend %link;
+
+    text-decoration-line: underline;
+  }
 }
 
 /*****************
@@ -1329,7 +1347,8 @@ headerbar {
     .selection-menu {
       &:backdrop, & {
         border-color: transparentize($selected_bg_color, 1);
-        background-image: linear-gradient(to bottom, transparentize($selected_bg_color, 1));
+        background-color: transparentize($selected_bg_color, 1);
+        background-image: none;
         box-shadow: none;
         padding-left: 10px;
         padding-right: 10px;
@@ -1565,7 +1584,7 @@ treeview.view {
       @extend %column_header_button;
 
       color: $_column_header_color;
-      background-image: $base_color;
+      background-color: $base_color;
       font-weight: bold;
       text-shadow: none;
       box-shadow: none;
@@ -1800,6 +1819,7 @@ popover.background {
 
   list separator { margin: 0px; }
 
+  //FIXME: May not be needed any more
   checkbutton,
   radiobutton { @extend modelbutton.flat; }
 }
@@ -2267,7 +2287,7 @@ treeview ~ scrollbar.vertical {
  **********/
 
 switch {
-  font: 1;
+  font-size: 0px;
 
   min-width: 52px;
   min-height: 24px;
@@ -2684,7 +2704,7 @@ scale {
     min-width: 0;
 
     trough {
-      background-image: linear-gradient(to top, $borders_color);
+      background-image: image($borders_color);
       background-repeat: no-repeat;
     }
 
@@ -3763,7 +3783,7 @@ headerbar,
   }
 }
 
-.monospace { font: Monospace; }
+.monospace { font-family: Monospace; }
 
 /**********************
  * Touch Copy & Paste *
