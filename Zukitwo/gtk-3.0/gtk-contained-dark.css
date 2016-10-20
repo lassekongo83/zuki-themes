@@ -843,6 +843,11 @@ button:backdrop {
 .primary-toolbar
 button {
   -gtk-icon-shadow: none; }
+button.circular {
+  border-radius: 9999px;
+  -gtk-outline-radius: 9999px; }
+  button.circular label {
+    padding: 0; }
 
 .stack-switcher >
 button.needs-attention > label,
@@ -3744,12 +3749,6 @@ cursor-handle {
 .context-menu {
   font: initial; }
 
-button.circular {
-  border-radius: 20px;
-  -gtk-outline-radius: 20px; }
-  button.circular label {
-    padding: 0; }
-
 .keycap {
   min-width: 20px;
   min-height: 25px;
@@ -4047,3 +4046,31 @@ XfceHeading,
 .nemo-window .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar,
 .nautilus-window notebook > stack:not(:only-child) .nemo-window .sidebar searchbar, .nemo-window .sidebar notebook {
   background-color: #374049; }
+
+/* Firefox */
+window.background > widget > menubar {
+  color: #eeeeee; }
+  window.background > widget > menubar:hover {
+    color: #eeeeee; }
+  window.background > widget > menubar:disabled {
+    color: #8d9093; }
+  window.background > widget > menubar arrow {
+    color: #eeeeee; }
+    window.background > widget > menubar arrow:hover {
+      color: #eeeeee; }
+    window.background > widget > menubar arrow:disabled {
+      color: #8d9093; }
+
+window.background > menu > menuitem > label:disabled {
+  color: #8d9093; }
+
+window.background > window.background > menu > separator {
+  color: rgba(9, 11, 12, 0.5); }
+
+window.background > widget > frame {
+  color: rgba(0, 0, 0, 0.2); }
+
+window.background > widget > checkbutton > check,
+window.background > widget > radiobutton > radio {
+  margin: 0;
+  padding: 0; }
