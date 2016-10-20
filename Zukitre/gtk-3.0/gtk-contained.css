@@ -381,23 +381,7 @@ GtkTextView {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    outline-color: rgba(222, 226, 229, 0.3);
-    border-radius: 0;
-    border-left-style: none; }
-    .osd .button:dir(rtl) {
-      border-radius: 0;
-      border-right-style: none;
-      border-left-style: solid; }
-    .osd .button:first-child {
-      border-radius: 2px 0 0 2px;
-      border-left-style: solid; }
-    .osd .button:last-child {
-      border-radius: 0 2px 2px 0; }
-      .osd .button:last-child:dir(rtl) {
-        border-right-style: solid; }
-    .osd .button:only-child {
-      border-radius: 2px;
-      border-style: solid; }
+    outline-color: rgba(222, 226, 229, 0.3); }
     .osd .button:hover {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
@@ -706,7 +690,7 @@ GtkTextView {
     .inline-toolbar GtkToolButton > .button:insensitive:active > .label, .inline-toolbar GtkToolButton > .button:insensitive:checked > .label {
       color: inherit; }
 
-.inline-toolbar.toolbar GtkToolButton > .button.flat, .inline-toolbar GtkToolButton > .button.flat, .inline-toolbar.search-bar GtkToolButton > .button.flat, .inline-toolbar.location-bar GtkToolButton > .button.flat, .inline-toolbar.toolbar GtkToolButton > .sidebar-button.button, .inline-toolbar GtkToolButton > .sidebar-button.button, .inline-toolbar.search-bar GtkToolButton > .sidebar-button.button, .inline-toolbar.location-bar GtkToolButton > .sidebar-button.button, .linked:not(.vertical) > .entry, .osd .button:hover, .osd .button:active, .osd .button:checked, .osd .button:insensitive, .osd .button.suggested-action, .osd .button.suggested-action:hover, .osd .button.suggested-action:active, .osd .button.suggested-action:checked, .osd .button.suggested-action:insensitive, .osd .button.destructive-action, .osd .button.destructive-action:hover, .osd .button.destructive-action:active, .osd .button.destructive-action:checked, .osd .button.destructive-action:insensitive, .inline-toolbar .button, .linked > .button, .linked > .button:hover, .linked > .button:active, .linked > .button:checked, .linked > GtkComboBox > .the-button-in-the-combobox:dir(ltr), .linked > GtkComboBox > .the-button-in-the-combobox:dir(rtl),
+.inline-toolbar.toolbar GtkToolButton > .button.flat, .inline-toolbar GtkToolButton > .button.flat, .inline-toolbar.search-bar GtkToolButton > .button.flat, .inline-toolbar.location-bar GtkToolButton > .button.flat, .inline-toolbar.toolbar GtkToolButton > .sidebar-button.button, .inline-toolbar GtkToolButton > .sidebar-button.button, .inline-toolbar.search-bar GtkToolButton > .sidebar-button.button, .inline-toolbar.location-bar GtkToolButton > .sidebar-button.button, .linked:not(.vertical) > .entry, .osd .button, .osd .button:hover, .osd .button:active, .osd .button:checked, .osd .button:insensitive, .osd .button.suggested-action, .osd .button.suggested-action:hover, .osd .button.suggested-action:active, .osd .button.suggested-action:checked, .osd .button.suggested-action:insensitive, .osd .button.destructive-action, .osd .button.destructive-action:hover, .osd .button.destructive-action:active, .osd .button.destructive-action:checked, .osd .button.destructive-action:insensitive, .inline-toolbar .button, .linked > .button, .linked > .button:hover, .linked > .button:active, .linked > .button:checked, .linked > GtkComboBox > .the-button-in-the-combobox:dir(ltr), .linked > GtkComboBox > .the-button-in-the-combobox:dir(rtl),
 .linked > GtkComboBoxText > .the-button-in-the-combobox:dir(ltr),
 .linked > GtkComboBoxText > .the-button-in-the-combobox:dir(rtl) {
   border-radius: 0;
@@ -741,7 +725,7 @@ GtkTextView {
     color: #2c2c2c;
     background-color: #bdbdbd; }
 
-.linked:not(.vertical) > .entry:first-child, .osd .button:first-child:hover, .osd .button:first-child:active, .osd .button:first-child:checked, .osd .button:first-child:insensitive, .osd .button.suggested-action:first-child, .osd .button.destructive-action:first-child, .inline-toolbar .button:first-child, .linked > .button:first-child, .inline-toolbar.toolbar GtkToolButton:first-child > .button.flat, .inline-toolbar GtkToolButton:first-child > .button.flat, .inline-toolbar.search-bar GtkToolButton:first-child > .button.flat, .inline-toolbar.location-bar GtkToolButton:first-child > .button.flat, .inline-toolbar.toolbar GtkToolButton:first-child > .sidebar-button.button, .inline-toolbar GtkToolButton:first-child > .sidebar-button.button, .inline-toolbar.search-bar GtkToolButton:first-child > .sidebar-button.button, .inline-toolbar.location-bar GtkToolButton:first-child > .sidebar-button.button, .linked > GtkComboBox:first-child > .the-button-in-the-combobox,
+.linked:not(.vertical) > .entry:first-child, .osd .button:first-child, .osd .button.suggested-action:first-child:hover, .osd .button.suggested-action:first-child:active, .osd .button.suggested-action:first-child:checked, .osd .button.suggested-action:first-child:insensitive, .osd .button.destructive-action:first-child:hover, .osd .button.destructive-action:first-child:active, .osd .button.destructive-action:first-child:checked, .osd .button.destructive-action:first-child:insensitive, .inline-toolbar .button:first-child, .linked > .button:first-child, .inline-toolbar.toolbar GtkToolButton:first-child > .button.flat, .inline-toolbar GtkToolButton:first-child > .button.flat, .inline-toolbar.search-bar GtkToolButton:first-child > .button.flat, .inline-toolbar.location-bar GtkToolButton:first-child > .button.flat, .inline-toolbar.toolbar GtkToolButton:first-child > .sidebar-button.button, .inline-toolbar GtkToolButton:first-child > .sidebar-button.button, .inline-toolbar.search-bar GtkToolButton:first-child > .sidebar-button.button, .inline-toolbar.location-bar GtkToolButton:first-child > .sidebar-button.button, .linked > GtkComboBox:first-child > .the-button-in-the-combobox,
 .linked > GtkComboBoxText:first-child > .the-button-in-the-combobox {
   border-top-left-radius: 1px;
   border-bottom-left-radius: 1px;
@@ -770,7 +754,7 @@ GtkTextView {
   .linked > GtkComboBoxText:first-child > .the-button-in-the-combobox:checked:hover {
     color: #2c2c2c;
     background-color: #bdbdbd; }
-.linked:not(.vertical) > .entry:last-child, .osd .button:last-child:hover, .osd .button:last-child:active, .osd .button:last-child:checked, .osd .button:last-child:insensitive, .osd .button.suggested-action:last-child, .osd .button.destructive-action:last-child, .inline-toolbar .button:last-child, .linked > .button:last-child, .inline-toolbar.toolbar GtkToolButton:last-child > .button.flat, .inline-toolbar GtkToolButton:last-child > .button.flat, .inline-toolbar.search-bar GtkToolButton:last-child > .button.flat, .inline-toolbar.location-bar GtkToolButton:last-child > .button.flat, .inline-toolbar.toolbar GtkToolButton:last-child > .sidebar-button.button, .inline-toolbar GtkToolButton:last-child > .sidebar-button.button, .inline-toolbar.search-bar GtkToolButton:last-child > .sidebar-button.button, .inline-toolbar.location-bar GtkToolButton:last-child > .sidebar-button.button, .linked > GtkComboBox:last-child > .the-button-in-the-combobox,
+.linked:not(.vertical) > .entry:last-child, .osd .button:last-child, .osd .button.suggested-action:last-child:hover, .osd .button.suggested-action:last-child:active, .osd .button.suggested-action:last-child:checked, .osd .button.suggested-action:last-child:insensitive, .osd .button.destructive-action:last-child:hover, .osd .button.destructive-action:last-child:active, .osd .button.destructive-action:last-child:checked, .osd .button.destructive-action:last-child:insensitive, .inline-toolbar .button:last-child, .linked > .button:last-child, .inline-toolbar.toolbar GtkToolButton:last-child > .button.flat, .inline-toolbar GtkToolButton:last-child > .button.flat, .inline-toolbar.search-bar GtkToolButton:last-child > .button.flat, .inline-toolbar.location-bar GtkToolButton:last-child > .button.flat, .inline-toolbar.toolbar GtkToolButton:last-child > .sidebar-button.button, .inline-toolbar GtkToolButton:last-child > .sidebar-button.button, .inline-toolbar.search-bar GtkToolButton:last-child > .sidebar-button.button, .inline-toolbar.location-bar GtkToolButton:last-child > .sidebar-button.button, .linked > GtkComboBox:last-child > .the-button-in-the-combobox,
 .linked > GtkComboBoxText:last-child > .the-button-in-the-combobox {
   border-top-right-radius: 1px;
   border-bottom-right-radius: 1px;
@@ -800,7 +784,7 @@ GtkTextView {
   .linked > GtkComboBoxText:last-child > .the-button-in-the-combobox:checked:hover {
     color: #2c2c2c;
     background-color: #bdbdbd; }
-.linked:not(.vertical) > .entry:only-child, .osd .button:only-child:hover, .osd .button:only-child:active, .osd .button:only-child:checked, .osd .button:only-child:insensitive, .osd .button.suggested-action:only-child, .osd .button.destructive-action:only-child, .inline-toolbar .button:only-child, .linked > .button:only-child, .inline-toolbar.toolbar GtkToolButton:only-child > .button.flat, .inline-toolbar GtkToolButton:only-child > .button.flat, .inline-toolbar.search-bar GtkToolButton:only-child > .button.flat, .inline-toolbar.location-bar GtkToolButton:only-child > .button.flat, .inline-toolbar.toolbar GtkToolButton:only-child > .sidebar-button.button, .inline-toolbar GtkToolButton:only-child > .sidebar-button.button, .inline-toolbar.search-bar GtkToolButton:only-child > .sidebar-button.button, .inline-toolbar.location-bar GtkToolButton:only-child > .sidebar-button.button, .linked > GtkComboBox:only-child > .the-button-in-the-combobox,
+.linked:not(.vertical) > .entry:only-child, .osd .button:only-child, .osd .button.suggested-action:only-child:hover, .osd .button.suggested-action:only-child:active, .osd .button.suggested-action:only-child:checked, .osd .button.suggested-action:only-child:insensitive, .osd .button.destructive-action:only-child:hover, .osd .button.destructive-action:only-child:active, .osd .button.destructive-action:only-child:checked, .osd .button.destructive-action:only-child:insensitive, .inline-toolbar .button:only-child, .linked > .button:only-child, .inline-toolbar.toolbar GtkToolButton:only-child > .button.flat, .inline-toolbar GtkToolButton:only-child > .button.flat, .inline-toolbar.search-bar GtkToolButton:only-child > .button.flat, .inline-toolbar.location-bar GtkToolButton:only-child > .button.flat, .inline-toolbar.toolbar GtkToolButton:only-child > .sidebar-button.button, .inline-toolbar GtkToolButton:only-child > .sidebar-button.button, .inline-toolbar.search-bar GtkToolButton:only-child > .sidebar-button.button, .inline-toolbar.location-bar GtkToolButton:only-child > .sidebar-button.button, .linked > GtkComboBox:only-child > .the-button-in-the-combobox,
 .linked > GtkComboBoxText:only-child > .the-button-in-the-combobox {
   border-radius: 1px;
   border-style: solid;

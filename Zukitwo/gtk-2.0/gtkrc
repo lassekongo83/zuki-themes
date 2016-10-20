@@ -51,7 +51,7 @@ style "default"
     GtkProgressBar::min-vertical-bar-width     = 10
     GtkProgressBar::min-horizontal-bar-height  = 10
 
-    GtkRange::trough-border                    = 2
+    GtkRange::trough-border                    = 0
     GtkRange::slider-width                     = 9
     GtkRange::stepper-size                     = 13
     GtkRange::stepper_spacing                  = 0

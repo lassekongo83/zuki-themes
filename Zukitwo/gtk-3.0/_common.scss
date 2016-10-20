@@ -403,31 +403,8 @@ $_dot_color: if($variant=='light', $selected_bg_color,
   //overlay / OSD style
   .osd & {
     @include button(osd);
-    // there's a problem with sass which prevents it to extend the linked
-    // placeholder as expected, it should just be "@extend %linked;", the
-    // placeholder is basically replicated here
-    //
-    // Workaround START
-    border-radius: 0;
-    border-left-style: none;
-    &:dir(rtl) {
-      border-radius: 0;
-      border-right-style: none;
-      border-left-style: solid
-    }
-    &:first-child {
-      border-radius: 3px 0 0 3px;
-      border-left-style: solid;
-    }
-    &:last-child {
-      border-radius: 0 3px 3px 0;
-      &:dir(rtl) { border-right-style: solid; }
-    }
-    &:only-child {
-      border-radius: 3px;
-      border-style: solid;
-    }
-    // Workaround END
+    @extend %linked;
+    
     &:hover {
       @include button(osd-hover);
       @extend %linked;
