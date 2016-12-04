@@ -20,8 +20,8 @@ shadow_delta_x=0
 shadow_delta_y=-10
 shadow_opacity=50
 
-resize_opacity=100
-move_opacity=100
-popup_opacity=100
-show_frame_shadow=true
-show_popup_shadow=false
+#resize_opacity=100
+#move_opacity=100
+#popup_opacity=100
+#show_frame_shadow=true
+#show_popup_shadow=false
