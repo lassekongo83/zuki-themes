@@ -422,6 +422,77 @@ StScrollBar {
   width: 48px;
   height: 48px; }
 
+/* Audio selection dialog */
+.audio-device-selection-dialog {
+  spacing: 30px; }
+
+.audio-selection-content {
+  spacing: 20px;
+  padding: 24px; }
+
+.audio-selection-title {
+  font-weight: bold;
+  text-align: center; }
+
+.audio-selection-box {
+  spacing: 20px; }
+
+.audio-selection-device {
+  border: 1px solid rgba(222, 226, 229, 0.2);
+  border-radius: 12px; }
+  .audio-selection-device:active, .audio-selection-device:hover, .audio-selection-device:focus {
+    background-color: #3399ff; }
+
+.audio-selection-device-box {
+  padding: 20px;
+  spacing: 20px; }
+
+.audio-selection-device-icon {
+  icon-size: 64px; }
+
+/* Access Dialog */
+.access-dialog {
+  spacing: 30px; }
+
+.access-dialog-main-layout {
+  padding: 12px 20px 0;
+  spacing: 12px; }
+
+.access-dialog-content {
+  max-width: 28em;
+  spacing: 20px; }
+
+.access-dialog-icon {
+  min-width: 48px;
+  icon-size: 48px; }
+
+.access-dialog-title {
+  font-weight: bold; }
+
+.access-dialog-subtitle {
+  color: #6d7e8a;
+  font-weight: bold; }
+
+/* Geolocation Dialog */
+.geolocation-dialog {
+  spacing: 30px; }
+
+.geolocation-dialog-main-layout {
+  spacing: 12px; }
+
+.geolocation-dialog-content {
+  spacing: 20px; }
+
+.geolocation-dialog-icon {
+  icon-size: 48px; }
+
+.geolocation-dialog-title {
+  font-weight: bold; }
+
+.geolocation-dialog-reason {
+  color: #6d7e8a;
+  font-weight: bold; }
+
 /* Network Agent Dialog */
 .network-dialog-secret-table {
   spacing-rows: 15px;
@@ -511,6 +582,14 @@ StScrollBar {
     background-color: rgba(8, 10, 11, 0.5);
     color: #dee2e5; }
 
+/* Pad OSD */
+.pad-osd-window {
+  padding: 32px;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.combo-box-label {
+  width: 15em; }
+
 /* App Switcher */
 .switcher-popup {
   padding: 8px;
@@ -552,6 +631,10 @@ StScrollBar {
   font-size: 34pt;
   width: 96px;
   height: 96px; }
+
+/* Window Cycler */
+.cycler-highlight {
+  border: 5px solid #3399ff; }
 
 /* Workspace Switcher */
 .workspace-switcher-group {
@@ -746,7 +829,7 @@ StScrollBar {
   border-radius: 2px; }
   .calendar-day-base:hover, .calendar-day-base:focus {
     background-color: #313f47; }
-  .calendar-day-base:active {
+  .calendar-day-base:active, .calendar-day-base:selected {
     color: white;
     background-color: #3399ff;
     border-color: transparent; }
@@ -838,8 +921,25 @@ StScrollBar {
   padding: 8px;
   font-size: .9em; }
 
+.message-media-control {
+  padding: 6px; }
+  .message-media-control:last-child:ltr {
+    padding-right: 18px; }
+  .message-media-control:last-child:rtl {
+    padding-left: 18px; }
+
+.media-message-cover-icon {
+  icon-size: 32px; }
+  .media-message-cover-icon.fallback {
+    color: #3c4d56;
+    background-color: #273238;
+    border: 2px solid #273238;
+    border-radius: 2px;
+    icon-size: 16px;
+    padding: 8px; }
+
 #panel #panelActivities.panel-button > * {
-  background-image: url("activities.svg");
+  background-image: url("activities.png") !important;
   background-position: center top;
   width: 24px;
   height: 24px;
@@ -856,7 +956,7 @@ StScrollBar {
   border-bottom-width: 1px;
   border-color: transparent; }
   #panel #panelActivities.panel-button:active > *, #panel #panelActivities.panel-button:overview > *, #panel #panelActivities.panel-button:focus > *, #panel #panelActivities.panel-button:checked > * {
-    background-image: url("activities-active.svg"); }
+    background-image: url("activities-active.png"); }
 
 .system-switch-user-submenu-icon.user-icon {
   icon-size: 20px;
