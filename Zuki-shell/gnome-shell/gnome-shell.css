@@ -939,7 +939,7 @@ StScrollBar {
     padding: 8px; }
 
 #panel #panelActivities.panel-button > * {
-  background-image: url("activities.png") !important;
+  background-image: url("activities.svg");
   background-position: center top;
   width: 24px;
   height: 24px;
@@ -956,7 +956,7 @@ StScrollBar {
   border-bottom-width: 1px;
   border-color: transparent; }
   #panel #panelActivities.panel-button:active > *, #panel #panelActivities.panel-button:overview > *, #panel #panelActivities.panel-button:focus > *, #panel #panelActivities.panel-button:checked > * {
-    background-image: url("activities-active.png"); }
+    background-image: url("activities-active.svg"); }
 
 .system-switch-user-submenu-icon.user-icon {
   icon-size: 20px;

@@ -1063,7 +1063,7 @@ StScrollBar {
 #panel #panelActivities.panel-button {
 
   > * {
-    background-image: url("activities.png") !important;
+    background-image: url("activities.svg");
     background-position: center top;
     width: 24px;
     height: 24px;
@@ -1082,7 +1082,7 @@ StScrollBar {
     border-bottom-width: 1px;
     border-color: transparent;
 
-    > * { background-image: url("activities-active.png"); }
+    > * { background-image: url("activities-active.svg"); }
   }
 }
 
