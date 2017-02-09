@@ -85,6 +85,14 @@ textview text {
   textview text:backdrop {
     color: #dde2e4;
     background-color: #546E7A; }
+    .view:backdrop:disabled, iconview:backdrop:disabled, .nautilus-window notebook:backdrop:disabled,
+    .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:disabled, .nemo-window notebook:backdrop:disabled,
+    .view text:backdrop:disabled,
+    iconview text:backdrop:disabled,
+    .nautilus-window notebook text:backdrop:disabled,
+    .nemo-window notebook text:backdrop:disabled,
+    textview text:backdrop:disabled {
+      color: #465a65; }
 
 textview border {
   background-color: #3e5059; }
@@ -1622,13 +1630,16 @@ headerbar switch {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
 
-.background:not(.tiled):not(.maximized) .titlebar:backdrop, .background:not(.tiled):not(.maximized) .titlebar {
+.background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar:backdrop, .background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
 
-window:not(.tiled):not(.maximized) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized) separator:first-child + headerbar, window:not(.tiled):not(.maximized) headerbar:first-child:backdrop, window:not(.tiled):not(.maximized) headerbar:first-child {
+window:not(.tiled):not(.maximized):not(.solid-csd) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) separator:first-child + headerbar, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:first-child {
   border-top-left-radius: 3px; }
-window:not(.tiled):not(.maximized) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized) headerbar:last-child {
+window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:last-child {
+  border-top-right-radius: 3px; }
+window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:first-child, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:last-child {
+  border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
 
 window.csd > .titlebar:not(headerbar) {
@@ -2931,6 +2942,8 @@ progressbar {
     progressbar.osd progress {
       border-style: none;
       border-radius: 0; }
+  progressbar trough.empty progress {
+    all: unset; }
 
 /*************
  * Level Bar *

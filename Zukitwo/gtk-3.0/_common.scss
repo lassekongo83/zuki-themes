@@ -91,6 +91,7 @@ $button_transition: all 200ms $ease-out-quad;
   &:backdrop { // Keep for now or selected backdrop color will behave bad when hovering.
     color: $backdrop_text_color;
     background-color: $backdrop_base_color;
+    &:disabled { color: $backdrop_insensitive_color; }
   }
 }
 
@@ -1407,18 +1408,25 @@ headerbar {
   border-top-right-radius: 7px;
 }
 
-.background:not(.tiled):not(.maximized) .titlebar {
+.background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar {
   &:backdrop, & {
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
   }
 }
 
-headerbar {
-  window:not(.tiled):not(.maximized) separator:first-child + &, // tackles the paned container case
-  window:not(.tiled):not(.maximized) &:first-child { &:backdrop, & { border-top-left-radius: 7px; }}
-
-  window:not(.tiled):not(.maximized) &:last-child { &:backdrop, & { border-top-right-radius: 7px; }}
+headerbar { // headerbar border rounding
+  window:not(.tiled):not(.maximized):not(.solid-csd) separator:first-child + &, // tackles the paned container case
+  window:not(.tiled):not(.maximized):not(.solid-csd) &:first-child { &:backdrop, & { border-top-left-radius: 7px; }}
+  window:not(.tiled):not(.maximized):not(.solid-csd) &:last-child { &:backdrop, & { border-top-right-radius: 7px; }}
+  window:not(.tiled):not(.maximized):not(.solid-csd) stack & { // tackles the stacked headerbars case
+    &:first-child, &:last-child {
+      &:backdrop, & {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+      }
+    }
+  }
 }
 
 .titlebar:not(headerbar) {
@@ -2891,6 +2899,8 @@ progressbar {
       border-radius: 0;
     }
   }
+
+  trough.empty progress { all: unset; } // makes the progress indicator disappear, when the fraction is 0
 }
 
 /*************
