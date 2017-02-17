@@ -1967,8 +1967,7 @@ notebook {
       padding-top: 0;
       padding-bottom: 0; }
     notebook > header tabs {
-      margin: -1px;
-      min-height: 28px; }
+      margin: -1px; }
     notebook > header.top {
       border-bottom-style: solid; }
       notebook > header.top > tabs {
@@ -2149,7 +2148,7 @@ scrollbar {
     border: 1px solid transparent;
     border-radius: 0px;
     background-clip: padding-box;
-    background-color: #707070; }
+    background-color: #818181; }
     scrollbar slider:hover {
       background-color: #4e4e4e; }
     scrollbar slider:hover:active {
@@ -2204,7 +2203,7 @@ scrollbar {
     border-radius: 0;
     transition-property: min-height, min-width, color;
     box-shadow: none;
-    color: #707070; }
+    color: #818181; }
     scrollbar button:hover {
       color: #4e4e4e;
       box-shadow: none; }
@@ -2212,7 +2211,7 @@ scrollbar {
       box-shadow: none;
       color: #0080ff; }
     scrollbar button:disabled {
-      color: rgba(112, 112, 112, 0.2);
+      color: rgba(129, 129, 129, 0.2);
       box-shadow: none; }
   scrollbar.vertical button.up {
     -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-up.png"), url("assets/scrollarrow-up@2.png")); }
