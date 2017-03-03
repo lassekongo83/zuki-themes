@@ -93,6 +93,16 @@ textview text {
     .nemo-window notebook text:backdrop:disabled,
     textview text:backdrop:disabled {
       color: #4d5762; }
+  .view:disabled, iconview:disabled, .nautilus-window notebook:disabled,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:disabled, .nemo-window notebook:disabled,
+  .view text:disabled,
+  iconview text:disabled,
+  .nautilus-window notebook text:disabled,
+  .nautilus-window notebook > stack:not(:only-child) searchbar text:disabled,
+  .nemo-window notebook text:disabled,
+  textview text:disabled {
+    color: #8d9093;
+    background-color: #353d45; }
 
 textview border {
   background-color: #374049; }
@@ -106,10 +116,21 @@ treeview.view rubberband,
   background-color: rgba(0, 128, 255, 0.2); }
 
 flowbox flowboxchild {
-  padding: 3px;
-  border-radius: 2px; }
+  padding: 3px; }
   flowbox flowboxchild:selected {
     outline-offset: -2px; }
+
+.content-view .tile {
+  margin: 2px;
+  background-color: black;
+  border-radius: 0;
+  padding: 0; }
+  .content-view .tile:backdrop {
+    background-color: #38424b; }
+  .content-view .tile:active, .content-view .tile:selected {
+    background-color: #3399ff; }
+  .content-view .tile:disabled {
+    background-color: #353d45; }
 
 label {
   caret-color: currentColor; }
@@ -2415,14 +2436,26 @@ treeview.radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
 .view.content-view.check:not(list), iconview.content-view.check:not(list), .nautilus-window notebook.content-view.check:not(list),
-.nautilus-window notebook > stack:not(:only-child) searchbar.content-view.check:not(list), .nemo-window notebook.content-view.check:not(list) {
+.nautilus-window notebook > stack:not(:only-child) searchbar.content-view.check:not(list), .nemo-window notebook.content-view.check:not(list),
+.content-view .tile check:not(list) {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode-dark.png"), url("assets/checkbox-selectionmode-dark@2.png"));
-  background-color: transparent; }
+  background-color: transparent;
+  min-width: 40px;
+  min-height: 40px;
+  background-image: none;
+  transition: none;
+  box-shadow: none; }
 
 .view.content-view.check:checked:not(list), iconview.content-view.check:checked:not(list), .nautilus-window notebook.content-view.check:checked:not(list),
-.nautilus-window notebook > stack:not(:only-child) searchbar.content-view.check:checked:not(list), .nemo-window notebook.content-view.check:checked:not(list) {
+.nautilus-window notebook > stack:not(:only-child) searchbar.content-view.check:checked:not(list), .nemo-window notebook.content-view.check:checked:not(list),
+.content-view .tile check:checked:not(list) {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selectionmode-dark.png"), url("assets/checkbox-checked-selectionmode-dark@2.png"));
-  background-color: transparent; }
+  background-color: transparent;
+  min-width: 40px;
+  min-height: 40px;
+  background-image: none;
+  transition: none;
+  box-shadow: none; }
 
 checkbutton.text-button, radiobutton.text-button {
   padding: 2px 0;
@@ -3026,6 +3059,10 @@ frame > border,
   frame > border:backdrop,
   .frame:backdrop {
     border-color: #0c0f10; }
+
+frame.flat > border,
+.frame.flat {
+  border-style: none; }
 
 actionbar > revealer > box {
   padding: 6px;
