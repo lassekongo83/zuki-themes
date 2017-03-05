@@ -4192,34 +4192,6 @@ XfceHeading,
 .nautilus-window notebook > stack:not(:only-child) .nemo-window .sidebar searchbar, .nemo-window .sidebar notebook {
   background-color: #e7e7e7; }
 
-/* Firefox */
-window.background > widget > menubar {
-  color: #2c2c2c; }
-  window.background > widget > menubar:hover {
-    color: #2c2c2c; }
-  window.background > widget > menubar:disabled {
-    color: #818181; }
-  window.background > widget > menubar arrow {
-    color: #2c2c2c; }
-    window.background > widget > menubar arrow:hover {
-      color: #2c2c2c; }
-    window.background > widget > menubar arrow:disabled {
-      color: #818181; }
-
-window.background > menu > menuitem > label:disabled {
-  color: #818181; }
-
-window.background > window.background > menu > separator {
-  color: rgba(176, 176, 176, 0.5); }
-
-window.background > widget > frame {
-  color: rgba(0, 0, 0, 0.2); }
-
-window.background > widget > checkbutton > check,
-window.background > widget > radiobutton > radio {
-  margin: 0;
-  padding: 0; }
-
 /* Lightdm styling */
 #panel_window {
   background-color: #273238;

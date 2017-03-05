@@ -4095,31 +4095,3 @@ XfceHeading,
 .nemo-window .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar,
 .nautilus-window notebook > stack:not(:only-child) .nemo-window .sidebar searchbar, .nemo-window .sidebar notebook {
   background-color: #374049; }
-
-/* Firefox */
-window.background > widget > menubar {
-  color: #eeeeee; }
-  window.background > widget > menubar:hover {
-    color: #eeeeee; }
-  window.background > widget > menubar:disabled {
-    color: #8d9093; }
-  window.background > widget > menubar arrow {
-    color: #eeeeee; }
-    window.background > widget > menubar arrow:hover {
-      color: #eeeeee; }
-    window.background > widget > menubar arrow:disabled {
-      color: #8d9093; }
-
-window.background > menu > menuitem > label:disabled {
-  color: #8d9093; }
-
-window.background > window.background > menu > separator {
-  color: rgba(9, 11, 12, 0.5); }
-
-window.background > widget > frame {
-  color: rgba(0, 0, 0, 0.2); }
-
-window.background > widget > checkbutton > check,
-window.background > widget > radiobutton > radio {
-  margin: 0;
-  padding: 0; }
