@@ -49,6 +49,10 @@ XfceHeading,
   button { @extend %panelbutton; }
 }
 
+.xfce4-panel frame > border {
+  border-style: none;
+}
+
 .xfce4-panel menu {
   -gtk-icon-effect: none;
   text-shadow: none;
