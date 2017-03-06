@@ -3006,6 +3006,8 @@ frame > border,
   &:backdrop { border-color: $backdrop_borders_color; }
 }
 
+frame.flat > border { border-style: none; }
+
 actionbar > revealer >  box {
   padding: 6px;
   border-top: 1px solid $borders_color;

@@ -3184,6 +3184,9 @@ frame > border,
   .frame:backdrop {
     border-color: #b4b4b4; }
 
+frame.flat > border {
+  border-style: none; }
+
 actionbar > revealer > box {
   padding: 6px;
   border-top: 1px solid #b0b0b0; }
