@@ -861,7 +861,9 @@ StScrollBar {
 
     .datemenu-today-button,
     .world-clocks-button,
-    .message-list-section-title {
+    .weather-button,
+    .message-list-section-title, // FIXME: Remove this one eventually.
+    .events-section-title {
       border-radius: 2px;
       padding: .4em;
     }
@@ -876,7 +878,9 @@ StScrollBar {
 
     .datemenu-today-button,
     .world-clocks-button,
-    .message-list-section-title {
+    .weather-button,
+    .message-list-section-title, // FIXME: Remove this one eventually.
+    .events-section-title {
       &:hover,&:focus { background-color: lighten($bg_color,5%); }
       &:active {
         color: lighten($selected_fg_color,5%);
@@ -892,13 +896,19 @@ StScrollBar {
     }
 
     .world-clocks-header,
-    .message-list-section-title {
+    .weather-header,
+    .message-list-section-title, // FIXME: Remove this one eventually.
+    .events-section-title {
       color: darken($fg_color,40%);
       font-weight: bold;
     }
 
     .world-clocks-grid {
       spacing-rows: 0.4em;
+    }
+    
+    .weather-box {
+      spacing: 0.4em;
     }
 
     .calendar-month-label {
@@ -977,15 +987,22 @@ StScrollBar {
         width: 31.5em;
       }
 
+        .message-list-clear-button.button {
+          background-color: transparent;
+          &:hover,&:focus { background-color: lighten($bg_color,5%); }
+          margin: 1.5em 1.5em 0;
+        }
+
         .message-list-sections {
-          spacing: 1.5em;
+          spacing: 1em;
         }
 
         .message-list-section,
         .message-list-section-list {
-          spacing: 0.7em;
+          spacing: 0.4em;
         }
 
+        // FIXME: Remove eventually.
         .message-list-section-title-box {
           spacing: 0.4em;
         }
@@ -1002,29 +1019,31 @@ StScrollBar {
         .message-list-section-close:focus > StIcon {
           background-color: darken($fg_color,40%);
         }
-
+        // END REMOVE FIXME
+        
         .message {
-          background-color: lighten($bg_color,5%);
-          &:hover,&:focus { background-color: lighten($bg_color,15%); }
+          &:hover,&:focus { background-color: lighten($bg_color,5%); }
           border-radius: 2px;
         }
 
           .message-icon-bin {
-            padding: 8px 0px 8px 8px;
-            &:rtl { padding: 8px 8px 8px 0px; }
+            padding: 10px 3px 10px 10px;
+            &:rtl { padding: 10px 10px 10px 3px; }
           }
 
           .message-icon-bin > StIcon {
-            icon-size: 32px;
+            color: darken($fg_color,20%);
+            icon-size: 16px;
+            -st-icon-style: symbolic;
           }
 
           .message-secondary-bin {
-            &:ltr { padding-left: 8px; }
-            &:rtl { padding-right: 8px; }
+            padding: 0 12px;
           }
 
-          .message-secondary-bin {
+          .message-secondary-bin > .event-time {
             color: darken($fg_color,40%);
+            font-size: 0.7em;
           }
 
           .message-secondary-bin > StIcon {
@@ -1032,24 +1051,24 @@ StScrollBar {
           }
 
           .message-title {
-            font-weight: bold;
-            font-size: 1.1em;
+            color: darken($fg_color,5%);
           }
 
           .message-content {
-            padding: 8px;
-            font-size: .9em;
+            padding: 10px;
+            color: darken($fg_color,20%);
           }
           
           .message-media-control {
-            padding: 6px;
+            padding: 12px;
 
             &:last-child:ltr { padding-right: 18px; }
             &:last-child:rtl { padding-left: 18px; }
+            &:insensitive { color: darken($fg_color,40%); }
           }
 
           .media-message-cover-icon {
-            icon-size: 32px;
+            icon-size: 48px !important;
             &.fallback {
               color: lighten($bg_color,10%);
               background-color: $bg_color;

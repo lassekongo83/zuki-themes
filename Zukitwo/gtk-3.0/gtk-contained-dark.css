@@ -3060,10 +3060,6 @@ frame > border,
   .frame:backdrop {
     border-color: #0c0f10; }
 
-frame.flat > border,
-.frame.flat {
-  border-style: none; }
-
 actionbar > revealer > box {
   padding: 6px;
   border-top: 1px solid #090b0c; }
