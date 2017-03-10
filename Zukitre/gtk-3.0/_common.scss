@@ -2381,7 +2381,7 @@ switch {
   }
 }
 
-checkbutton.text-button, radiobutton.text-button {
+checkbutton, radiobutton {
     // this is for a nice focus on check and radios text
     &.text-button {
       padding: 2px 0;

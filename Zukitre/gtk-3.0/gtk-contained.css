@@ -2565,12 +2565,12 @@ infobar radio:checked:disabled {
   box-shadow: none;
   border-width: 0; }
 
-checkbutton.text-button.text-button, radiobutton.text-button.text-button {
+checkbutton.text-button, radiobutton.text-button {
   padding: 2px 0;
   outline-offset: 0; }
-checkbutton.text-button label:not(:only-child):first-child, radiobutton.text-button label:not(:only-child):first-child {
+checkbutton label:not(:only-child):first-child, radiobutton label:not(:only-child):first-child {
   margin-left: 4px; }
-checkbutton.text-button label:not(:only-child):last-child, radiobutton.text-button label:not(:only-child):last-child {
+checkbutton label:not(:only-child):last-child, radiobutton label:not(:only-child):last-child {
   margin-right: 4px; }
 
 check,
