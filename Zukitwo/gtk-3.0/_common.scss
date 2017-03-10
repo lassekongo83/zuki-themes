@@ -2419,10 +2419,11 @@ switch {
     background-image: none;
     transition: none;
     box-shadow: none;
+    border-width: 0;
   }
 }
 
-checkbutton, radiobutton {
+checkbutton.text-button, radiobutton.text-button {
     // this is for a nice focus on check and radios text
     &.text-button {
       padding: 2px 0;

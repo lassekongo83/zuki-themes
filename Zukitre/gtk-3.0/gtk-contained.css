@@ -2550,7 +2550,8 @@ infobar radio:checked:disabled {
   min-height: 40px;
   background-image: none;
   transition: none;
-  box-shadow: none; }
+  box-shadow: none;
+  border-width: 0; }
 
 .view.content-view.check:checked:not(list), iconview.content-view.check:checked:not(list), .nautilus-window notebook.content-view.check:checked:not(list),
 .nautilus-window notebook > stack:not(:only-child) searchbar.content-view.check:checked:not(list), .nemo-window notebook.content-view.check:checked:not(list),
@@ -2561,14 +2562,15 @@ infobar radio:checked:disabled {
   min-height: 40px;
   background-image: none;
   transition: none;
-  box-shadow: none; }
+  box-shadow: none;
+  border-width: 0; }
 
-checkbutton.text-button, radiobutton.text-button {
+checkbutton.text-button.text-button, radiobutton.text-button.text-button {
   padding: 2px 0;
   outline-offset: 0; }
-checkbutton label:not(:only-child):first-child, radiobutton label:not(:only-child):first-child {
+checkbutton.text-button label:not(:only-child):first-child, radiobutton.text-button label:not(:only-child):first-child {
   margin-left: 4px; }
-checkbutton label:not(:only-child):last-child, radiobutton label:not(:only-child):last-child {
+checkbutton.text-button label:not(:only-child):last-child, radiobutton.text-button label:not(:only-child):last-child {
   margin-right: 4px; }
 
 check,
