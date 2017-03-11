@@ -1840,6 +1840,12 @@ menu,
   .menu:backdrop,
   .context-menu:backdrop {
     background-color: #3e4953; }
+  menu .separator:not(label), .csd menu .separator:not(label),
+  .menu .separator:not(label), .csd
+  .menu .separator:not(label),
+  .context-menu .separator:not(label), .csd
+  .context-menu .separator:not(label) {
+    color: #333c44; }
   menu menuitem,
   .menu menuitem,
   .context-menu menuitem {

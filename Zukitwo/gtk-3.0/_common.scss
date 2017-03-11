@@ -1724,6 +1724,11 @@ menu,
 
   &:backdrop { background-color: $backdrop_menu_color; }
 
+  // Firefox workaround
+  .separator:not(label),
+  .csd & .separator:not(label) { color: darken($menu_color, 5%); }
+  // Firefox workaround end
+
   menuitem {
     min-height: 16px;
     min-width: 40px;
