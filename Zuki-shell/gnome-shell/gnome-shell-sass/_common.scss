@@ -623,6 +623,9 @@ StScrollBar {
 .pad-osd-window {
     padding: 32px;
     background-color: transparentize(black, 0.2);
+    
+  .pad-osd-title-box { spacing: 12px; }
+  .pad-osd-title-menu-box { spacing: 6px; }
 }
 
 .combo-box-label {
@@ -858,6 +861,13 @@ StScrollBar {
 
     .datemenu-calendar-column { spacing: 0.5em; }
     .datemenu-displays-section { padding-bottom: 3em; }
+    .datemenu-displays-box { spacing: 1em; }
+
+    .datemenu-calendar-column {
+      border: 0 solid lighten($bg_color,5%);
+      &:ltr { border-left-width: 1px; }
+      &:rtl { border-right-width: 1px; }
+    }
 
     .datemenu-today-button,
     .world-clocks-button,
@@ -1044,6 +1054,9 @@ StScrollBar {
           .message-secondary-bin > .event-time {
             color: darken($fg_color,40%);
             font-size: 0.7em;
+            /* HACK: the label should be baseline-aligned with a 1em label,
+                     fake this with some bottom padding */
+            padding-bottom: 0.13em;
           }
 
           .message-secondary-bin > StIcon {
@@ -1061,9 +1074,11 @@ StScrollBar {
           
           .message-media-control {
             padding: 12px;
+            color: darken($fg_color, 20%);
 
             &:last-child:ltr { padding-right: 18px; }
             &:last-child:rtl { padding-left: 18px; }
+            &:hover { color: $fg_color; }
             &:insensitive { color: darken($fg_color,40%); }
           }
 
