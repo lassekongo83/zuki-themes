@@ -21,7 +21,7 @@ UnityDecoration {
   -UnityDecoration-title-fade: 35px;
   -UnityDecoration-title-alignment: 0.0;
 
-  &.top {
+  .top {
     border: 1px solid $borders_color;
     border-bottom-width: 0;
     border-radius: 3px 3px 0 0;
@@ -37,8 +37,8 @@ UnityDecoration {
       color: $backdrop_fg_color;
     }
   }
-  &.left, &.right, &.bottom,
-  &.left:backdrop, &.right:backdrop, &.bottom:backdrop {
+  .left, .right, .bottom,
+  .left:backdrop, .right:backdrop, .bottom:backdrop {
     background-color: $bg_color;
   }
 }

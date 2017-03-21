@@ -3939,7 +3939,7 @@ UnityDecoration {
   -UnityDecoration-title-indent: 10px;
   -UnityDecoration-title-fade: 35px;
   -UnityDecoration-title-alignment: 0.0; }
-  UnityDecoration.top {
+  UnityDecoration .top {
     border: 1px solid #090b0c;
     border-bottom-width: 0;
     border-radius: 3px 3px 0 0;
@@ -3947,10 +3947,11 @@ UnityDecoration {
     background-color: #2b3137;
     color: white;
     box-shadow: inset 0 1px rgba(238, 238, 238, 0); }
-    UnityDecoration.top:backdrop {
+    UnityDecoration .top:backdrop {
       border-bottom-width: 0;
       color: #8d9093; }
-  UnityDecoration.left, UnityDecoration.right, UnityDecoration.bottom, UnityDecoration.left:backdrop, UnityDecoration.right:backdrop, UnityDecoration.bottom:backdrop {
+  UnityDecoration .left, UnityDecoration .right, UnityDecoration .bottom,
+  UnityDecoration .left:backdrop, UnityDecoration .right:backdrop, UnityDecoration .bottom:backdrop {
     background-color: #2b3137; }
 
 UnityPanelWidget,
