@@ -1883,78 +1883,62 @@ notebook {
       //min-height: 28px;
     }
 
-    &.top {
-      border-bottom-style: solid;
-      > tabs {
-        margin-bottom: -2px;
-        > tab {
-          &:hover { box-shadow: none; }
-          &:checked, &:checked:hover { 
-            box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 1px $borders_color;
-            background-color: $base_color;
-            border-width: 0;
-            border-radius: 4px 4px 0 0;
+    @each $_pos in (top), (right), (bottom), (left) {
+    
+      &.#{$_pos} {
+        @if $_pos==top { border-bottom-style: solid; }
+        @else if $_pos==bottom { border-top-style: solid; }
+        @else if $_pos==right { border-left-style: solid; }
+        @else if $_pos==left { border-right-style: solid; }
+        > tabs {
+          @if $_pos==top { margin-bottom: -2px; }
+          @else if $_pos==bottom { margin-top: -2px; }
+          @else if $_pos==right { margin-left: -2px; }
+          @else if $_pos==left { margin-right: -2px; }
+          > tab {
+            &:hover { box-shadow: none; }
+            &:checked, &:checked:hover {
+              background-color: $base_color;
+              border-width: 0;
+              @if $_pos==top {
+                box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 1px $borders_color;
+                border-radius: 4px 4px 0 0;
+              }
+              @else if $_pos==bottom {
+                box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 -1px $borders_color;
+                border-radius: 0 0 4px 4px;
+              }
+              @else if $_pos==left {
+                box-shadow: inset 0 1px $borders_color, inset 0 -1px $borders_color, inset 0 1px $borders_color;
+                border-radius: 4px 0 0 4px;
+              }
+              @else if $_pos==right {
+                box-shadow: inset 0 1px $borders_color, inset 0 -1px $borders_color, inset 0 -1px $borders_color;
+                border-radius: 0 4px 4px 0;
+              }
+            }
           }
         }
       }
-    }
 
-    &.bottom {
-      border-top-style: solid;
-      > tabs {
-        margin-top: -2px;
-        > tab {
-          &:hover { box-shadow: inset 0 3px $borders_color; }
-          &:checked, &:checked:hover { 
-            box-shadow: inset 1px 0 $borders_color, inset -1px 0 $borders_color, inset 0 -1px $borders_color;
-            background-color: $base_color;
-            border-width: 0;
-            border-radius: 0 0 4px 4px;
-          }
+      &.#{$_pos} > tabs > arrow {
+        @if $_pos==top { 
+          @extend %notebook_vert_arrows;
+          border-top-style: none;
+        }
+        @else if $_pos==bottom {
+          @extend %notebook_vert_arrows;
+          border-bottom-style: none;      
+        }
+        @else if $_pos==left {
+          @extend %notebook_horz_arrows;
+          border-left-style: none;
+        }
+        @else if $_pos==right {
+          @extend %notebook_horz_arrows;
+          border-right-style: none;
         }
       }
-    }
-
-    &.left {
-      border-right-style: solid;
-      > tabs {
-        margin-right: -2px;
-        > tab {
-          &:hover { box-shadow: inset -3px 0 $borders_color; }
-          &:checked, &:checked:hover { 
-            box-shadow: inset 0 1px $borders_color, inset 0 -1px $borders_color, inset 0 1px $borders_color;
-            background-color: $base_color;
-            border-width: 0;
-          }
-        }
-      }
-    }
-
-    &.right {
-      border-left-style: solid;
-      > tabs {
-        margin-left: -2px;
-        > tab {
-          &:hover { box-shadow: inset 3px 0 $borders_color; }
-          &:checked, &:checked:hover { 
-            box-shadow: inset 0 1px $borders_color, inset 0 -1px $borders_color, inset 0 -1px $borders_color;
-            background-color: $base_color;
-            border-width: 0;
-          }
-        }
-      }
-    }
-
-    &.top > tabs > arrow {
-      @extend %notebook_vert_arrows;
-
-      border-top-style: none;
-    }
-
-    &.bottom > tabs > arrow {
-      @extend %notebook_vert_arrows;
-
-      border-bottom-style: none;
     }
 
     @at-root %notebook_vert_arrows {
@@ -1966,18 +1950,6 @@ notebook {
       &.down { -gtk-icon-source: -gtk-icontheme('pan-start-symbolic'); }
 
       &.up { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic'); }
-    }
-
-    &.left > tabs > arrow {
-      @extend %notebook_horz_arrows;
-
-      border-left-style: none;
-    }
-
-    &.right > tabs > arrow {
-      @extend %notebook_horz_arrows;
-
-      border-right-style: none;
     }
 
     @at-root %notebook_horz_arrows {
