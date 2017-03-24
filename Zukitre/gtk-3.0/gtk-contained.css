@@ -1851,12 +1851,6 @@ menu,
   .menu:backdrop,
   .context-menu:backdrop {
     background-color: #F7F7F7; }
-  menu .separator:not(label), .csd menu .separator:not(label),
-  .menu .separator:not(label), .csd
-  .menu .separator:not(label),
-  .context-menu .separator:not(label), .csd
-  .context-menu .separator:not(label) {
-    color: #eaeaea; }
   menu menuitem,
   .menu menuitem,
   .context-menu menuitem {
@@ -4159,6 +4153,13 @@ XfceHeading,
 .mate-panel-menu-bar na-tray-applet {
   -NaTrayApplet-icon-padding: 0;
   -NaTrayApplet-icon-size: 16px; }
+
+menu .separator:not(label), .csd menu .separator:not(label),
+.menu .separator:not(label), .csd
+.menu .separator:not(label),
+.context-menu .separator:not(label), .csd
+.context-menu .separator:not(label) {
+  color: #eaeaea; }
 
 /* Caja */
 .caja-notebook {

@@ -107,6 +107,14 @@ XfceHeading,
 
 // Application specific fixes should be avoided as much as possible! In some cases they are unavoidable.
 
+// Firefox
+menu,
+.menu,
+.context-menu {
+  .separator:not(label),
+  .csd & .separator:not(label) { color: darken($menu_color, 5%); }
+}
+
 /* Caja */
 .caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
 .caja-notebook { border-top: 1px solid $borders_color; }
