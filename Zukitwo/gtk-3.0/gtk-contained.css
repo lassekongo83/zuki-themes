@@ -1730,16 +1730,20 @@ GtkSwitch {
       background-position: left center; }
 
 GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch.png"), url("assets/switch@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch.png"), url("assets/switch@2.png"));
+  font-size: 0; }
 
 GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active.png"), url("assets/switch-active@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active.png"), url("assets/switch-active@2.png"));
+  font-size: 0; }
 
 GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive.png"), url("assets/switch-insensitive@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-insensitive.png"), url("assets/switch-insensitive@2.png"));
+  font-size: 0; }
 
 GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive.png"), url("assets/switch-active-insensitive@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-insensitive.png"), url("assets/switch-active-insensitive@2.png"));
+  font-size: 0; }
 
 /*************************
  * Check and Radio items *

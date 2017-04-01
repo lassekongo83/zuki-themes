@@ -1849,6 +1849,7 @@ GtkSwitch {
   
   GtkSwitch.trough#{$k} {
     background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
+    font-size: 0;
   }
 }
 
