@@ -2321,12 +2321,12 @@ switch {
     background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
   }
 
-  row:#{selected switch}#{$k},
-  #{infobar switch}#{$k} {
-    background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
-  }
+// FIXME: Create assets
+//  row:#{selected switch}#{$k},
+//  #{infobar switch}#{$k} {
+//    background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
+//  }
 
-// FIXME: Create assets.
 //  headerbar switch#{$k},
 //  .primary-toolbar switch#{$k} {
 //    background-image: -gtk-scaled(url("assets/switch#{$l}-header.png"),url("assets/switch#{$l}-header@2.png"));
