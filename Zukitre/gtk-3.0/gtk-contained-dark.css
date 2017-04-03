@@ -4101,8 +4101,7 @@ menu .separator:not(label), .csd menu .separator:not(label),
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border: solid rgba(0, 0, 0, 0.1);
-  border-width: 1px 1px 0 1px;
-  box-shadow: inset 0 -1px rgba(222, 226, 229, 0), 1px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(0, 0, 0, 0.3), 0 -1px rgba(0, 0, 0, 0.3), 2px 0 rgba(0, 0, 0, 0.1), -2px 0 rgba(0, 0, 0, 0.1), 0 -2px rgba(0, 0, 0, 0.1); }
+  border-width: 1px 1px 0 1px; }
 
 #content_frame button {
   color: #dee2e5;
@@ -4137,8 +4136,7 @@ menu .separator:not(label), .csd menu .separator:not(label),
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border: solid rgba(0, 0, 0, 0.1);
-  border-width: 1px;
-  box-shadow: inset 0 2px rgba(8, 10, 11, 0.35), 1px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(0, 0, 0, 0.3), 0 1px rgba(0, 0, 0, 0.3), 2px 0 rgba(0, 0, 0, 0.1), -2px 0 rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.1); }
+  border-width: 1px; }
 
 #buttonbox_frame button {
   color: #dee2e5;
