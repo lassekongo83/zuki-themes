@@ -699,7 +699,7 @@ StScrollBar {
     color: transparent;
     width: 0; }
   #panel #panelLeft, #panel #panelCenter {
-    spacing: 4px; }
+    spacing: 0px; }
   #panel .panel-corner {
     -panel-corner-radius: 0px;
     -panel-corner-background-color: black;
@@ -718,9 +718,7 @@ StScrollBar {
     color: white; }
     #panel .panel-button .app-menu-icon {
       width: 0;
-      height: 0;
-      margin-left: 0px;
-      margin-right: 0px; }
+      height: 0; }
     #panel .panel-button:hover {
       color: white;
       background-color: rgba(255, 255, 255, 0.1); }
@@ -1008,7 +1006,8 @@ StScrollBar {
 
 #appMenu {
   spinner-image: url("process-working.svg");
-  spacing: 4px; }
+  spacing: 4px;
+  padding-right: 8px; }
   #appMenu .label-shadow {
     color: transparent; }
 

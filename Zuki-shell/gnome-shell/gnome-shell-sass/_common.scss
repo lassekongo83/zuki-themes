@@ -766,7 +766,7 @@ StScrollBar {
   .panel-button .popup-menu-arrow { color: transparent; width: 0; } // Removes the litte arrow
 
   #panelLeft, #panelCenter { // spacing between activities<>app menu and such
-    spacing: 4px;
+    spacing: 0px;
   }
 
   .panel-corner {
@@ -792,18 +792,9 @@ StScrollBar {
     font-weight: bold;
     color: white;
 
-    //.app-menu-icon {
-    //  -st-icon-style: symbolic;
-    //  margin-left: 4px;
-    //  margin-right: 4px;
-      //dimensions of the icon are hardcoded
-    //}
-
     .app-menu-icon {
       width: 0;
       height: 0;
-      margin-left: 0px; // FIXME: Want to set these two at 4px, but only the left margin is working.
-      margin-right: 0px;
     }
 
     &:hover {
@@ -1134,6 +1125,7 @@ StScrollBar {
   #appMenu {
     spinner-image: url("process-working.svg");
     spacing: 4px;
+    padding-right: 8px;
 
     .label-shadow { color: transparent; }
   }
