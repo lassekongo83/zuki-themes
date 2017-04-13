@@ -712,6 +712,18 @@ style "pixmap-sidebar-handle-left" {
     }
 }
 
+style "null" {
+
+  engine "pixmap" {
+
+    image {
+    function = BOX
+    file = "assets/null.png"
+    stretch = TRUE
+    }
+  }
+}
+
 ###############################################################################
 # The following part of the gtkrc applies the different styles to the widgets.
 ###############################################################################
@@ -842,6 +854,9 @@ widget_class "*<GtkListItem>*"        style "fg-is-text-color-workaround"
 # Only match GtkCList and not the parent widgets, because that would also change the headers.
 widget_class "*<GtkCList>"        style "fg-is-text-color-workaround"
 widget_class "*<EelEditableLabel>"    style "fg-is-text-color-workaround"
+
+# Eclipse/SWT
+widget "*swt-toolbar-flat"  style "null"
 
 # EXTERNAL FILES
 include "panel.rc"
