@@ -192,3 +192,8 @@ menu,
 .nemo-window .sidebar treeview .cell:selected {
   @extend %selected_items;
 }
+
+// EoG fix - https://github.com/lassekongo83/zuki-themes/issues/113
+button:last-child {
+  &.osd.image-button { border-right-style: none; }
+}

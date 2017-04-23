@@ -763,43 +763,33 @@ $btn-shadow-middle:
     0 1px $shadow-color,
     0px 0 $shadow-color,
     0 -1px $shadow-color,
-    inset 0px 0 $inset-color, 
-    inset 0 1px $inset-color, 
-    inset 0px 0 $inset-color, 
+    inset 0px 0 $inset-color,
+    inset 0 1px $inset-color,
+    inset 0px 0 $inset-color,
     inset 0 -1px $inset-color;
-$btn-shadow-middle-vert: 
-    1px 0 $shadow-color,
-    0 0px $shadow-color,
-    1px 0 $shadow-color,
-    0 0px $shadow-color,
-    inset 1px 0 $inset-color, 
-    inset 0 0px $inset-color, 
-    inset -1px 0 $inset-color, 
-    inset 0 0px $inset-color;
-$btn-shadow-left: 
+$btn-shadow-left:
     0px 0 $shadow-color,
     0 1px $shadow-color,
     -1px 0 $shadow-color,
     0 -1px $shadow-color,
-    inset 1px 0 $inset-color, 
-    inset 0 1px $inset-color, 
-    inset 0px 0 $inset-color, 
+    inset 1px 0 $inset-color,
+    inset 0 1px $inset-color,
+    inset 0px 0 $inset-color,
     inset 0 -1px $inset-color;
-$btn-shadow-right: 
+$btn-shadow-right:
     1px 0 $shadow-color,
     0 1px $shadow-color,
     0px 0 $shadow-color,
     0 -1px $shadow-color,
-    inset 0px 0 $inset-color, 
-    inset 0 1px $inset-color, 
-    inset -1px 0 $inset-color, 
+    inset 0px 0 $inset-color,
+    inset 0 1px $inset-color,
+    inset -1px 0 $inset-color,
     inset 0 -1px $inset-color;
 
 %linked_middle {
   border-radius: 0;
   border-right-style: none;
-  border-right-width: 0;
-  border-left-width: 0;
+  border-left-style: none;
   box-shadow: $btn-shadow-middle;
   // FIXME: Figure out how this looks on colored titlebars.
   &:active { @include button(active); }
@@ -813,8 +803,8 @@ $btn-shadow-right:
   &:first-child {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    border-left-width: 1px;
-    border-right-width: 0;
+    border-left-style: solid;
+    border-right-style: none;
     box-shadow: $btn-shadow-left;
     &:active { @include button(active); }
     &:checked { @include button(active); }
@@ -824,9 +814,8 @@ $btn-shadow-right:
   &:last-child {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    border-left-style: none;
     border-right-style: solid;
-    border-left-width: 0;
-    border-right-width: 1px;
     box-shadow: $btn-shadow-right;
     &:active { @include button(active); }
     &:checked { @include button(active); }
@@ -847,19 +836,21 @@ $btn-shadow-right:
 %linked_vertical_middle {
   border-style: solid solid none solid;
   border-radius: 0;
-  box-shadow: $btn-shadow-middle-vert;
+  box-shadow: none;
 }
 
-%linked_vertical{
+%linked_vertical {
   @extend %linked_vertical_middle;
   &:first-child {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    box-shadow: none;
   }
   &:last-child {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    border-style: solid;
+    border-bottom-style: solid;
+    box-shadow: none;
   }
   &:only-child {
     border-radius: 3px;

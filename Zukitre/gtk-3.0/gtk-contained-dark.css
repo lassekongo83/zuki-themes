@@ -940,8 +940,7 @@ button:checked, .linked >
 button:backdrop, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
   border-radius: 0;
   border-right-style: none;
-  border-right-width: 0;
-  border-left-width: 0;
+  border-left-style: none;
   box-shadow: 0px 0 rgba(0, 0, 0, 0.08), 0 1px rgba(0, 0, 0, 0.08), 0px 0 rgba(0, 0, 0, 0.08), 0 -1px rgba(0, 0, 0, 0.08), inset 0px 0 rgba(255, 255, 255, 0.06), inset 0 1px rgba(255, 255, 255, 0.06), inset 0px 0 rgba(255, 255, 255, 0.06), inset 0 -1px rgba(255, 255, 255, 0.06); }
   toolbar.inline-toolbar toolbutton > button.flat:active, .linked:not(.vertical) > spinbutton:active:not(.vertical), .linked:not(.vertical) >
   entry:active, .inline-toolbar
@@ -980,8 +979,8 @@ button:first-child, .linked >
 button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo {
   border-top-left-radius: 1px;
   border-bottom-left-radius: 1px;
-  border-left-width: 1px;
-  border-right-width: 0;
+  border-left-style: solid;
+  border-right-style: none;
   box-shadow: 0px 0 rgba(0, 0, 0, 0.08), 0 1px rgba(0, 0, 0, 0.08), -1px 0 rgba(0, 0, 0, 0.08), 0 -1px rgba(0, 0, 0, 0.08), inset 1px 0 rgba(255, 255, 255, 0.06), inset 0 1px rgba(255, 255, 255, 0.06), inset 0px 0 rgba(255, 255, 255, 0.06), inset 0 -1px rgba(255, 255, 255, 0.06); }
   .linked:not(.vertical) > spinbutton:first-child:active:not(.vertical), .linked:not(.vertical) >
   entry:first-child:active, .inline-toolbar
@@ -1019,9 +1018,8 @@ button:last-child, .linked >
 button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo {
   border-top-right-radius: 1px;
   border-bottom-right-radius: 1px;
+  border-left-style: none;
   border-right-style: solid;
-  border-left-width: 0;
-  border-right-width: 1px;
   box-shadow: 1px 0 rgba(0, 0, 0, 0.08), 0 1px rgba(0, 0, 0, 0.08), 0px 0 rgba(0, 0, 0, 0.08), 0 -1px rgba(0, 0, 0, 0.08), inset 0px 0 rgba(255, 255, 255, 0.06), inset 0 1px rgba(255, 255, 255, 0.06), inset -1px 0 rgba(255, 255, 255, 0.06), inset 0 -1px rgba(255, 255, 255, 0.06); }
   .linked:not(.vertical) > spinbutton:last-child:active:not(.vertical), .linked:not(.vertical) >
   entry:last-child:active, .inline-toolbar
@@ -1100,19 +1098,21 @@ button:checked, .linked.vertical >
 button:backdrop, .linked.vertical > combobox > box > button.combo {
   border-style: solid solid none solid;
   border-radius: 0;
-  box-shadow: 1px 0 rgba(0, 0, 0, 0.08), 0 0px rgba(0, 0, 0, 0.08), 1px 0 rgba(0, 0, 0, 0.08), 0 0px rgba(0, 0, 0, 0.08), inset 1px 0 rgba(255, 255, 255, 0.06), inset 0 0px rgba(255, 255, 255, 0.06), inset -1px 0 rgba(255, 255, 255, 0.06), inset 0 0px rgba(255, 255, 255, 0.06); }
+  box-shadow: none; }
 
 .linked.vertical > spinbutton:first-child:not(.vertical), .linked.vertical >
 entry:first-child, .linked.vertical >
 button:first-child, .linked.vertical > combobox:first-child > box > button.combo {
   border-top-left-radius: 1px;
-  border-top-right-radius: 1px; }
+  border-top-right-radius: 1px;
+  box-shadow: none; }
 .linked.vertical > spinbutton:last-child:not(.vertical), .linked.vertical >
 entry:last-child, .linked.vertical >
 button:last-child, .linked.vertical > combobox:last-child > box > button.combo {
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
-  border-style: solid; }
+  border-bottom-style: solid;
+  box-shadow: none; }
 .linked.vertical > spinbutton:only-child:not(.vertical), .linked.vertical >
 entry:only-child, .linked.vertical >
 button:only-child, .linked.vertical > combobox:only-child > box > button.combo {
@@ -4062,6 +4062,9 @@ menu .separator:not(label), .csd menu .separator:not(label),
 .nemo-window .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar,
 .nautilus-window notebook > stack:not(:only-child) .nemo-window .sidebar searchbar, .nemo-window .sidebar notebook {
   background-color: #3e5059; }
+
+button:last-child.osd.image-button {
+  border-right-style: none; }
 
 /* Lightdm styling */
 #panel_window {
