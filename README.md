@@ -3,8 +3,11 @@
 Zuki themes for GNOME, Xfce and more.
 
 Master branch is for GNOME 3.24 (Should work with 3.20 and 3.22 as well.)
+
 [3.22 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.22)
+
 [3.20 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.20)
+
 [3.18 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.18) (For Ubuntu 16.04 LTS and Linux Mint 18)
 
 ##### Zukitre
