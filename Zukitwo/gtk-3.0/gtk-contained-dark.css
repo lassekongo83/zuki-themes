@@ -111,7 +111,8 @@ textview border {
 rubberband,
 flowbox rubberband,
 treeview.view rubberband,
-.content-view rubberband {
+.content-view rubberband,
+.content-view .rubberband {
   border: 1px solid #0080ff;
   background-color: rgba(0, 128, 255, 0.2); }
 
@@ -405,9 +406,9 @@ treeview entry.flat, treeview entry {
  ***********/
 @keyframes needs_attention {
   from {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.01, to(#80bfff), to(transparent)); }
+    background-image: radial-gradient(farthest-side, #80bfff 0%, rgba(128, 191, 255, 0) 0%); }
   to {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#3399ff), to(transparent)); } }
+    background-image: radial-gradient(farthest-side, #80bfff 95%, rgba(128, 191, 255, 0)); } }
 notebook > header > tabs > arrow,
 button {
   min-height: 20px;
@@ -883,7 +884,7 @@ button.needs-attention > label,
 .stack-switcher >
 button.needs-attention > image, stacksidebar row.needs-attention > label {
   animation: needs_attention 150ms ease-in;
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#80bfff), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.45, to(rgba(0, 0, 0, 0.84627)), to(transparent));
+  background-image: radial-gradient(farthest-side, #80bfff 96%, rgba(128, 191, 255, 0)), radial-gradient(farthest-side, rgba(0, 0, 0, 0.84627) 95%, transparent);
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
   background-position: right 3px, right 2px; }
@@ -3060,7 +3061,7 @@ actionbar > revealer > box {
 scrolledwindow viewport.frame {
   border-style: none; }
 scrolledwindow overshoot.top {
-  background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(black), to(transparent)), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: radial-gradient(farthest-side at top, black 85%, transparent), radial-gradient(farthest-side at top, #eeeeee, rgba(238, 238, 238, 0));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3068,7 +3069,7 @@ scrolledwindow overshoot.top {
   border: none;
   box-shadow: none; }
 scrolledwindow overshoot.bottom {
-  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(black), to(transparent)), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: radial-gradient(farthest-side at bottom, black 85%, transparent), radial-gradient(farthest-side at bottom, #eeeeee, rgba(238, 238, 238, 0));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -3076,7 +3077,7 @@ scrolledwindow overshoot.bottom {
   border: none;
   box-shadow: none; }
 scrolledwindow overshoot.left {
-  background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(black), to(transparent)), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: radial-gradient(farthest-side at left, black 85%, transparent), radial-gradient(farthest-side at left, #eeeeee, rgba(238, 238, 238, 0));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: left center;
@@ -3084,7 +3085,7 @@ scrolledwindow overshoot.left {
   border: none;
   box-shadow: none; }
 scrolledwindow overshoot.right {
-  background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(black), to(transparent)), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: radial-gradient(farthest-side at right, black 85%, transparent), radial-gradient(farthest-side at right, #eeeeee, rgba(238, 238, 238, 0));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: right center;
