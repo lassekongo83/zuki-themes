@@ -3185,7 +3185,7 @@ actionbar > revealer > box {
 scrolledwindow viewport.frame {
   border-style: none; }
 scrolledwindow overshoot.top {
-  background-image: radial-gradient(farthest-side at top, #969696 85%, rgba(150, 150, 150, 0)), radial-gradient(farthest-side at top, #2c2c2c, rgba(44, 44, 44, 0));
+  background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(#969696), to(rgba(150, 150, 150, 0))), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(44, 44, 44, 0.07)), to(rgba(44, 44, 44, 0)));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3193,7 +3193,7 @@ scrolledwindow overshoot.top {
   border: none;
   box-shadow: none; }
 scrolledwindow overshoot.bottom {
-  background-image: radial-gradient(farthest-side at bottom, #969696 85%, rgba(150, 150, 150, 0)), radial-gradient(farthest-side at bottom, #2c2c2c, rgba(44, 44, 44, 0));
+  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#969696), to(rgba(150, 150, 150, 0))), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(44, 44, 44, 0.07)), to(rgba(44, 44, 44, 0)));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -3201,7 +3201,7 @@ scrolledwindow overshoot.bottom {
   border: none;
   box-shadow: none; }
 scrolledwindow overshoot.left {
-  background-image: radial-gradient(farthest-side at left, #969696 85%, rgba(150, 150, 150, 0)), radial-gradient(farthest-side at left, #2c2c2c, rgba(44, 44, 44, 0));
+  background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(#969696), to(rgba(150, 150, 150, 0))), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(44, 44, 44, 0.07)), to(rgba(44, 44, 44, 0)));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: left center;
@@ -3209,7 +3209,7 @@ scrolledwindow overshoot.left {
   border: none;
   box-shadow: none; }
 scrolledwindow overshoot.right {
-  background-image: radial-gradient(farthest-side at right, #969696 85%, rgba(150, 150, 150, 0)), radial-gradient(farthest-side at right, #2c2c2c, rgba(44, 44, 44, 0));
+  background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(#969696), to(rgba(150, 150, 150, 0))), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(44, 44, 44, 0.07)), to(rgba(44, 44, 44, 0)));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: right center;
