@@ -3,9 +3,9 @@
 Zuki themes for GNOME, Xfce and more.
 
 Master branch is for GNOME 3.24 (Should work with 3.20 and 3.22 as well.)
-3.22 branch can be found here: https://github.com/lassekongo83/zuki-themes/tree/3.22
-3.20 branch can be found here: https://github.com/lassekongo83/zuki-themes/tree/3.20
-3.18 branch can be found here: https://github.com/lassekongo83/zuki-themes/tree/3.18 (For Ubuntu 16.04 LTS and Linux Mint 18)
+[3.22 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.22)
+[3.20 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.20)
+[3.18 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.18) (For Ubuntu 16.04 LTS and Linux Mint 18)
 
 ##### Zukitre
 
@@ -19,7 +19,7 @@ Master branch is for GNOME 3.24 (Should work with 3.20 and 3.22 as well.)
 
 ## Requirements
 
-* GNOME/GTK 3.18, 3.20 or 3.22
+* GNOME/GTK 3.18 - 3.24+
 * The murrine engine. This has different names depending on your distro.
   * `gtk2-engines-murrine` (Debian, Ubuntu)
   * `gtk-murrine-engine` (Fedora)
@@ -39,10 +39,11 @@ Master branch is for GNOME 3.24 (Should work with 3.20 and 3.22 as well.)
 
 #### Manual installation
 
-Download the theme: 
-  * GTK 3.22: https://github.com/lassekongo83/zuki-themes/archive/master.zip
-  * GTK 3.20: https://github.com/lassekongo83/zuki-themes/archive/3.20.zip
-  * GTK 3.18: https://github.com/lassekongo83/zuki-themes/archive/3.18.zip (Download this if you use X/Ubuntu 16.04.)
+Download the theme:
+  * [GTK 3.24](https://github.com/lassekongo83/zuki-themes/archive/master.zip)
+  * [GTK 3.22](https://github.com/lassekongo83/zuki-themes/archive/3.22.zip)
+  * [GTK 3.20](https://github.com/lassekongo83/zuki-themes/archive/3.20.zip)
+  * [GTK 3.18](https://github.com/lassekongo83/zuki-themes/archive/3.18.zip) (Download this if you use X/Ubuntu 16.04.)
 
 Extract the contents in the zip to `~/.themes` or `/usr/share/themes` with the following folder structure:
 
@@ -83,5 +84,5 @@ Zukiwi has been abandoned and won't get updated any more.
 
 ##### Todo list
   * Squish bugs.
-  * Try to get rid of nautilus specific fixes and use a global fix.
+  * Try to get rid of application specific fixes and use global fixes.
   * Whatever else I've forgotten.
