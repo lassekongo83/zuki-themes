@@ -400,6 +400,34 @@ treeview entry.flat, treeview entry {
   treeview entry.flat:focus, treeview entry:focus {
     border-color: #3399ff; }
 
+.entry-tag {
+  padding: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-style: none;
+  color: #546E7A;
+  background-color: #99a8b0; }
+  :dir(ltr) .entry-tag {
+    margin-left: 8px;
+    margin-right: -5px; }
+  :dir(rtl) .entry-tag {
+    margin-left: -5px;
+    margin-right: 8px; }
+  .entry-tag:hover {
+    background-color: #b6c1c6; }
+  :backdrop .entry-tag {
+    color: #546E7A;
+    background-color: #6c7c85; }
+  .entry-tag.button {
+    background-color: transparent;
+    color: rgba(84, 110, 122, 0.7); }
+  :not(:backdrop) .entry-tag.button:hover {
+    border: 1px solid #99a8b0;
+    color: #546E7A; }
+  :not(:backdrop) .entry-tag.button:active {
+    background-color: #99a8b0;
+    color: rgba(84, 110, 122, 0.7); }
+
 /***********
  * Buttons *
  ***********/
@@ -1623,8 +1651,12 @@ headerbar {
         -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
         color: rgba(255, 255, 255, 0.5);
         -gtk-icon-shadow: none; }
-  .tiled .titlebar:not(headerbar), .maximized .titlebar:not(headerbar), .tiled
+  .tiled .titlebar:backdrop:not(headerbar), .tiled .titlebar:not(headerbar), .maximized .titlebar:backdrop:not(headerbar), .maximized .titlebar:not(headerbar), .fullscreen .titlebar:backdrop:not(headerbar), .fullscreen .titlebar:not(headerbar), .tiled
+  headerbar:backdrop, .tiled
   headerbar, .maximized
+  headerbar:backdrop, .maximized
+  headerbar, .fullscreen
+  headerbar:backdrop, .fullscreen
   headerbar {
     border-radius: 0; }
   .default-decoration.titlebar:not(headerbar),
@@ -1656,11 +1688,11 @@ headerbar switch {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
 
-window:not(.tiled):not(.maximized):not(.solid-csd) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) separator:first-child + headerbar, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:first-child {
-  border-top-left-radius: 3px; }
-window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:last-child {
-  border-top-right-radius: 3px; }
-window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:first-child, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:last-child {
+window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) separator:first-child + headerbar, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) headerbar:first-child {
+  border-top-left-radius: 7px; }
+window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) headerbar:last-child {
+  border-top-right-radius: 7px; }
+window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:first-child, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:last-child {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
 
@@ -1767,8 +1799,6 @@ treeview.view {
     treeview.view header button:active {
       color: #dee2e5;
       transition: none; }
-  treeview.view header button:last-child:backdrop, treeview.view header button:last-child {
-    border-right-style: none; }
   treeview.view button.dnd:active, treeview.view button.dnd:selected, treeview.view button.dnd:hover, treeview.view button.dnd,
   treeview.view header.button.dnd:active,
   treeview.view header.button.dnd:selected,
@@ -1794,6 +1824,8 @@ treeview.view header button, treeview.view header button:hover, treeview.view he
   treeview.view header button:disabled {
     border-color: #273238;
     background-image: none; }
+  treeview.view header button:last-child:backdrop, treeview.view header button:last-child {
+    border-right-style: none; }
 
 /*********
  * Menus *
