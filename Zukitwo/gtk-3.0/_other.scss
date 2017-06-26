@@ -201,8 +201,8 @@ button:last-child {
 // Evolution - https://github.com/lassekongo83/zuki-themes/issues/119
 .table-header {
   @extend %column_header_button;
-  padding: 4px;
+  padding: 4px 0 4px 0;
   min-height: 24px;
 }
 
-.switcher-visible *> .frame { border-width: 0; }
+.switcher-visible *> .frame { border-width: 1px 0 1px 0; }

@@ -1790,6 +1790,6 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 
 button:last-child.osd.image-button { border-right-style: none; }
 
-.table-header { padding: 4px; min-height: 24px; }
+.table-header { padding: 4px 0 4px 0; min-height: 24px; }
 
-.switcher-visible * > .frame { border-width: 0; }
+.switcher-visible * > .frame { border-width: 1px 0 1px 0; }
