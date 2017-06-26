@@ -2122,7 +2122,7 @@ notebook {
  **************/
 scrollbar {
   $_slider_min_length: 40px;
-  $_scrollbar_size: 13px;
+  $_scrollbar_size: 11px;
 
   // disable steppers
   @at-root * {
