@@ -3897,11 +3897,20 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
   padding: 0;
 }
 
-/* Various fixes */
+// Floating bar
 
-.floating-bar { /* Makes the floating-bar less annoying */
-  background-color: $base_color;
-  &.bottom.left { border-top-right-radius: 2px; }
-  &.bottom.right { border-top-left-radius: 2px; }
+.floating-bar {
+  background-color: $bg_color;
+  font-size: smaller;
+  &.bottom.left {
+    border-top-right-radius: 2px;
+    border-top: 1px solid $borders_color;
+    border-right: 1px solid $borders_color;
+  }
+  &.bottom.right {
+    border-top-left-radius: 2px;
+    border-top: 1px solid $borders_color;
+    border-left: 1px solid $borders_color;
+  }
   font-size: smaller;
 }

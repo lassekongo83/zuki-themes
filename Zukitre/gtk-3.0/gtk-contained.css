@@ -1678,12 +1678,11 @@ stackswitcher button.text-button { min-width: 100px; }
 
 stackswitcher button.circular, stackswitcher button.text-button.circular { min-width: 32px; min-height: 32px; padding: 0; }
 
-/* Various fixes */
-.floating-bar { /* Makes the floating-bar less annoying */ background-color: #F7F7F7; font-size: smaller; }
+.floating-bar { background-color: #d6d6d6; font-size: smaller; }
 
-.floating-bar.bottom.left { border-top-right-radius: 2px; }
+.floating-bar.bottom.left { border-top-right-radius: 2px; border-top: 1px solid #b0b0b0; border-right: 1px solid #b0b0b0; }
 
-.floating-bar.bottom.right { border-top-left-radius: 2px; }
+.floating-bar.bottom.right { border-top-left-radius: 2px; border-top: 1px solid #b0b0b0; border-left: 1px solid #b0b0b0; }
 
 /* GTK NAMED COLORS ---------------- use responsibly! */
 /*
