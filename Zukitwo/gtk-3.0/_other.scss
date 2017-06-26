@@ -197,3 +197,12 @@ menu,
 button:last-child {
   &.osd.image-button { border-right-style: none; }
 }
+
+// Evolution - https://github.com/lassekongo83/zuki-themes/issues/119
+.table-header {
+  @extend %column_header_button;
+  padding: 4px;
+  min-height: 24px;
+}
+
+.switcher-visible *> .frame { border-width: 0; }

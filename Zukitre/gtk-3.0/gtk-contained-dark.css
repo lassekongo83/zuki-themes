@@ -636,11 +636,11 @@ treeview.view header button:active { color: #dee2e5; transition: none; }
 
 treeview.view button.dnd:active, treeview.view button.dnd:selected, treeview.view button.dnd:hover, treeview.view button.dnd, treeview.view header.button.dnd:active, treeview.view header.button.dnd:selected, treeview.view header.button.dnd:hover, treeview.view header.button.dnd { padding: 0 6px; transition: none; background-image: none; background-color: #3399ff; color: #546E7A; border-radius: 0; border-style: none; box-shadow: inset 0 0 0 1px #546E7A; text-shadow: none; }
 
-treeview.view header button, treeview.view header button:hover, treeview.view header button:active { padding: 0 6px; border-radius: 0; background-image: none; text-shadow: none; border-style: none solid solid none; border-color: #273238; }
+treeview.view header button, treeview.view header button:hover, treeview.view header button:active, .table-header { padding: 0 6px; border-radius: 0; background-image: none; text-shadow: none; border-style: none solid solid none; border-color: #273238; }
 
-treeview.view header button:disabled { border-color: #273238; background-image: none; }
+treeview.view header button:disabled, .table-header:disabled { border-color: #273238; background-image: none; }
 
-treeview.view header button:last-child:backdrop, treeview.view header button:last-child { border-right-style: none; }
+treeview.view header button:last-child:backdrop, .table-header:last-child:backdrop, treeview.view header button:last-child, .table-header:last-child { border-right-style: none; }
 
 /********* Menus * */
 menubar, .menubar { -GtkWidget-window-dragging: true; padding: 0px; box-shadow: inset 0 -1px #080a0b; }
@@ -1789,6 +1789,10 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 .nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar .nautilus-window notebook, .nautilus-window .nemo-window .sidebar notebook, .nemo-window .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar, .nautilus-window notebook > stack:not(:only-child) .nemo-window .sidebar searchbar, .nemo-window .sidebar notebook { background-color: #3e5059; }
 
 button:last-child.osd.image-button { border-right-style: none; }
+
+.table-header { padding: 4px; min-height: 24px; }
+
+.switcher-visible * > .frame { border-width: 0; }
 
 /* Lightdm styling */
 #panel_window { background-color: #273238; color: white; box-shadow: none; border-style: none; }
