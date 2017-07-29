@@ -1821,6 +1821,14 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 
 .nautilus-window .searchbar-container { margin-top: -1px; }
 
+.disk-space-display { border-style: solid; border-width: 2px; }
+
+.disk-space-display.unknown { background-color: #a3a3a3; border-color: #8a8a8a; }
+
+.disk-space-display.used { background-color: #3399ff; border-color: #0066cc; }
+
+.disk-space-display.free { background-color: #d6d6d6; border-color: #a3a3a3; }
+
 .nemo-window .nemo-places-sidebar.frame { border-width: 0; }
 
 .nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 3px; border-color: #3399ff; }
