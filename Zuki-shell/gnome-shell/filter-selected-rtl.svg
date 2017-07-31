@@ -13,8 +13,8 @@
    height="20"
    id="svg10003"
    version="1.1"
-   inkscape:version="0.48.1 r9760"
-   sodipodi:docname="filter-selected-ltr.svg">
+   inkscape:version="0.92.1 r"
+   sodipodi:docname="filter-selected-rtl.svg">
   <defs
      id="defs10005">
     <inkscape:perspective
@@ -40,16 +40,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.5"
-     inkscape:cx="32.363636"
+     inkscape:cx="-13.363637"
      inkscape:cy="10.181818"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:document-units="px"
      inkscape:grid-bbox="true"
-     inkscape:window-width="1440"
-     inkscape:window-height="839"
+     inkscape:window-width="1600"
+     inkscape:window-height="828"
      inkscape:window-x="0"
-     inkscape:window-y="26"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata10008">

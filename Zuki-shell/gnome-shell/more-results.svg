@@ -14,7 +14,7 @@
    height="16"
    id="svg12430"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.92.1 r"
    sodipodi:docname="more-results.svg">
   <defs
      id="defs12432" />
@@ -26,17 +26,17 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="90.509668"
-     inkscape:cx="6.5009792"
+     inkscape:cx="3.7222705"
      inkscape:cy="8.3589595"
      inkscape:document-units="px"
      inkscape:current-layer="g14642-3-0"
      showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1440"
-     inkscape:window-height="840"
+     inkscape:window-width="1600"
+     inkscape:window-height="828"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
