@@ -625,17 +625,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .list-search-results { spacing: 3px; }
 
-.search-section-separator { -gradient-height: 1px; -gradient-start: rgba(255, 255, 255, 0); -gradient-end: rgba(255, 255, 255, 0.1); -margin-horizontal: 1.5em; height: 1px; }
+.search-section-separator { height: 2px; background-color: rgba(255, 255, 255, 0.2); }
 
-.list-search-result-content { spacing: 12px; padding: 12px; }
+.list-search-result-content { spacing: 30px; }
 
-.list-search-result-title { font-size: 1.5em; color: #d0d5da; }
+.list-search-result-title { color: #d0d5da; spacing: 12px; }
 
-.list-search-result-description { color: #b3bcc3; }
+.list-search-result-description { color: rgba(179, 188, 195, 0.5); }
+
+.list-search-provider-details { width: 150px; color: #d0d5da; margin-top: 0.24em; }
+
+.list-search-provider-content { spacing: 20px; }
 
 .search-provider-icon { padding: 15px; }
-
-.search-provider-icon-more { width: 16px; height: 16px; background-image: url("more-results.svg"); }
 
 /* DASHBOARD */
 #dash { font-size: 9pt; color: #dee2e5; background-color: transparent; padding: 4px 0; border: 0px solid rgba(128, 128, 128, 0); border-left: 0px; border-radius: 0px; }
@@ -883,9 +885,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .login-dialog-user-selection-box { padding: 100px 0px; }
 
-.login-dialog-user-selection-box .login-dialog-not-listed-label { padding-left: 2px; }
+.login-dialog-not-listed-label { padding-left: 2px; }
 
-.login-dialog-not-listed-button:focus .login-dialog-user-selection-box .login-dialog-not-listed-label, .login-dialog-not-listed-button:hover .login-dialog-user-selection-box .login-dialog-not-listed-label { color: #dee2e5; }
+.login-dialog-not-listed-button:focus .login-dialog-not-listed-label, .login-dialog-not-listed-button:hover .login-dialog-not-listed-label { color: #dee2e5; }
 
 .login-dialog-not-listed-label { font-size: 90%; font-weight: bold; color: #8897a2; padding-top: 1em; }
 
@@ -893,7 +895,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .login-dialog-user-list { spacing: 12px; padding: .2em; width: 23em; }
 
-.login-dialog-user-list:expanded .login-dialog-user-list-item:focus { background-color: #3399ff; color: #ffffff; }
+.login-dialog-user-list:expanded .login-dialog-user-list-item:selected { background-color: #3399ff; color: #ffffff; }
 
 .login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in { border-right: 2px solid #3399ff; }
 
