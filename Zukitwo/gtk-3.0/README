@@ -5,7 +5,6 @@ Summary
 * To be able to use the latest/adequate version of sass, install sassc
 * The configure script will detect whether or not you have sassc installed;
   if you do, it will regenerate the CSS every time you modify the SCSS files.
-* You can also use the included parse-sass.sh script to do it manually.
 
 How to tweak the theme
 ----------------------
