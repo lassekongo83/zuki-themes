@@ -1396,7 +1396,7 @@ headerbar {
         padding-left: 10px;
         padding-right: 10px;
 
-        GtkArrow { -GtkArrow-arrow-scaling: 1; }
+        arrow { -GtkArrow-arrow-scaling: 1; }
 
         .arrow {
           -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
@@ -1409,6 +1409,10 @@ headerbar {
 
   // squared corners when the window is maximized, tiled, or fullscreen
   .tiled &,
+  .tiled-top &,
+  .tiled-right &,
+  .tiled-bottom &,
+  .tiled-left &,
   .maximized &,
   .fullscreen & {
     &:backdrop, & {
@@ -1449,22 +1453,56 @@ headerbar {
   border-top-right-radius: 3px;
 }
 
-.background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar {
+.background .titlebar {
   &:backdrop, & {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
   }
 }
 
+.background.tiled .titlebar,
+.background.tiled-top .titlebar,
+.background.tiled-right .titlebar,
+.background.tiled-bottom .titlebar,
+.background.tiled-left .titlebar,
+.background.maximized .titlebar,
+.background.solid-csd .titlebar {
+  &:backdrop, & {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
 headerbar { // headerbar border rounding
-  window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) separator:first-child + &, // tackles the paned container case
-  window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) &:first-child { &:backdrop, & { border-top-left-radius: 3px; }}
-  window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) &:last-child { &:backdrop, & { border-top-right-radius: 3px; }}
-  window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack & { // tackles the stacked headerbars case
+
+  window separator:first-child + &,
+  window &:first-child { &:backdrop, & { border-top-left-radius: 3px; }}
+  window &:last-child { &:backdrop, & { border-top-right-radius: 3px; }}
+
+  window stack & { // tackles the stacked headerbars case
     &:first-child, &:last-child {
       &:backdrop, & {
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
+      }
+    }
+  }
+
+  window.tiled &,
+  window.tiled-top &,
+  window.tiled-right &,
+  window.tiled-bottom &,
+  window.tiled-left &,
+  window.maximized &,
+  window.fullscreen &,
+  window.solid-csd & {
+    &, &:backdrop {
+      &,
+      &:first-child,
+      &:last-child,
+      &:only-child {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
       }
     }
   }
@@ -1729,7 +1767,7 @@ menubar,
 menu,
 .menu,
 .context-menu {
-  margin: 4px;
+  margin: 4px; // see https://bugzilla.gnome.org/show_bug.cgi?id=591258
   padding: 2px 0px;
   background-color: $menu_color;
   border: 1px solid $borders_color; // adds borders in a non composited env
@@ -3239,6 +3277,8 @@ stacksidebar {
 
 $_placesidebar_icons_opacity: 0.7;
 
+row image.sidebar-icon { opacity: $_placesidebar_icons_opacity; } // dim the sidebar icons
+
 placessidebar {
   > viewport.frame { border-style: none; }
 
@@ -3532,16 +3572,28 @@ colorswatch {
     }
   }
 
-  &.dark overlay {
-    color: $selected_fg_color;
+  &.dark {
+    outline-color: transparentize(white, 0.4);
 
-    &:hover { border-color: if($variant == 'light', transparentize(black, 0.2), $borders_color); }
+    overlay {
+      color: white;
+
+      &:hover { border-color: if($variant == 'light', transparentize(black, 0.2), $borders_color); }
+
+      &:backdrop { color: transparentize(white, 0.5); }
+    }
   }
 
-  &.light overlay {
-    color: $text_color;
+  &.light {
+    outline-color: transparentize(black, 0.4);
 
-    &:hover { border-color: if($variant == 'light', transparentize(black, 0.5), $borders_color); }
+    overlay {
+      color: black;
+
+      &:hover { border-color: if($variant == 'light', transparentize(black, 0.5), $borders_color); }
+
+      &:backdrop { color: transparentize(black, 0.5); }
+    }
   }
 
   &:drop(active) {
@@ -3664,7 +3716,11 @@ decoration {
 
   .maximized &,
   .fullscreen &,
-  .tiled & { border-radius: 0; }
+  .tiled &,
+  .tiled-top &,
+  .tiled-right &,
+  .tiled-bottom &,
+  .tiled-left & { border-radius: 0; }
 
   .popup & { box-shadow: none; }
 
@@ -3844,6 +3900,54 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
   min-width: 32px;
   min-height: 32px;
   padding: 0;
+}
+
+/*********
+ * Emoji *
+ ********/
+
+popover.emoji-picker { padding-left: 0; padding-right: 0; }
+
+button.emoji-section {
+  border-color: transparent;
+  border-width: 3px;
+  border-style: none none solid;
+  border-radius: 0;
+
+  margin: 2px 4px 2px 4px;
+  padding: 3px 0 0;
+  min-width: 32px;
+  min-height: 28px;
+
+  /* reset props inherited from the button style */
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+
+  outline-offset: -5px;
+
+  &:backdrop:not(:checked) { border-color: transparent; }
+  &:hover { border-color: $borders_color; }
+  &:checked { border-color: $selected_bg_color; }
+
+  label {
+    padding: 0;
+
+    opacity: 0.55;
+  }
+
+  &:hover label { opacity: 0.775; }
+  &:checked label { opacity: 1; }
+}
+
+.emoji {
+  font-size: x-large;
+  padding: 6px;
+  border-radius: 6px;
+
+  :hover {
+    background: $selected_bg_color;
+  }
 }
 
 // Floating bar

@@ -548,11 +548,11 @@ searchbar, .location-bar { border-width: 0 0 1px; padding: 3px; }
 
 .selection-mode.titlebar:not(headerbar) .selection-menu:backdrop, .selection-mode.titlebar:not(headerbar) .selection-menu, headerbar.selection-mode .selection-menu:backdrop, headerbar.selection-mode .selection-menu { border-color: rgba(51, 153, 255, 0); background-color: rgba(51, 153, 255, 0); background-image: none; box-shadow: none; padding-left: 10px; padding-right: 10px; }
 
-.selection-mode.titlebar:not(headerbar) .selection-menu:backdrop GtkArrow, .selection-mode.titlebar:not(headerbar) .selection-menu GtkArrow, headerbar.selection-mode .selection-menu:backdrop GtkArrow, headerbar.selection-mode .selection-menu GtkArrow { -GtkArrow-arrow-scaling: 1; }
+.selection-mode.titlebar:not(headerbar) .selection-menu:backdrop arrow, .selection-mode.titlebar:not(headerbar) .selection-menu arrow, headerbar.selection-mode .selection-menu:backdrop arrow, headerbar.selection-mode .selection-menu arrow { -GtkArrow-arrow-scaling: 1; }
 
 .selection-mode.titlebar:not(headerbar) .selection-menu:backdrop .arrow, .selection-mode.titlebar:not(headerbar) .selection-menu .arrow, headerbar.selection-mode .selection-menu:backdrop .arrow, headerbar.selection-mode .selection-menu .arrow { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); color: rgba(255, 255, 255, 0.5); -gtk-icon-shadow: none; }
 
-.tiled .titlebar:backdrop:not(headerbar), .tiled .titlebar:not(headerbar), .maximized .titlebar:backdrop:not(headerbar), .maximized .titlebar:not(headerbar), .fullscreen .titlebar:backdrop:not(headerbar), .fullscreen .titlebar:not(headerbar), .tiled headerbar:backdrop, .tiled headerbar, .maximized headerbar:backdrop, .maximized headerbar, .fullscreen headerbar:backdrop, .fullscreen headerbar { border-radius: 0; }
+.tiled .titlebar:backdrop:not(headerbar), .tiled .titlebar:not(headerbar), .tiled-top .titlebar:backdrop:not(headerbar), .tiled-top .titlebar:not(headerbar), .tiled-right .titlebar:backdrop:not(headerbar), .tiled-right .titlebar:not(headerbar), .tiled-bottom .titlebar:backdrop:not(headerbar), .tiled-bottom .titlebar:not(headerbar), .tiled-left .titlebar:backdrop:not(headerbar), .tiled-left .titlebar:not(headerbar), .maximized .titlebar:backdrop:not(headerbar), .maximized .titlebar:not(headerbar), .fullscreen .titlebar:backdrop:not(headerbar), .fullscreen .titlebar:not(headerbar), .tiled headerbar:backdrop, .tiled headerbar, .tiled-top headerbar:backdrop, .tiled-top headerbar, .tiled-right headerbar:backdrop, .tiled-right headerbar, .tiled-bottom headerbar:backdrop, .tiled-bottom headerbar, .tiled-left headerbar:backdrop, .tiled-left headerbar, .maximized headerbar:backdrop, .maximized headerbar, .fullscreen headerbar:backdrop, .fullscreen headerbar { border-radius: 0; }
 
 .default-decoration.titlebar:not(headerbar), headerbar.default-decoration { padding: 4px; min-height: 28px; }
 
@@ -564,13 +564,17 @@ headerbar switch { margin-top: 7px; margin-bottom: 7px; }
 
 .titlebar { border-top-left-radius: 7px; border-top-right-radius: 7px; }
 
-.background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar:backdrop, .background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar { border-top-left-radius: 7px; border-top-right-radius: 7px; }
+.background .titlebar:backdrop, .background .titlebar { border-top-left-radius: 7px; border-top-right-radius: 7px; }
 
-window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) separator:first-child + headerbar, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) headerbar:first-child { border-top-left-radius: 7px; }
+.background.tiled .titlebar:backdrop, .background.tiled .titlebar, .background.tiled-top .titlebar:backdrop, .background.tiled-top .titlebar, .background.tiled-right .titlebar:backdrop, .background.tiled-right .titlebar, .background.tiled-bottom .titlebar:backdrop, .background.tiled-bottom .titlebar, .background.tiled-left .titlebar:backdrop, .background.tiled-left .titlebar, .background.maximized .titlebar:backdrop, .background.maximized .titlebar, .background.solid-csd .titlebar:backdrop, .background.solid-csd .titlebar { border-top-left-radius: 0; border-top-right-radius: 0; }
 
-window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) headerbar:last-child { border-top-right-radius: 7px; }
+window separator:first-child + headerbar:backdrop, window separator:first-child + headerbar, window headerbar:first-child:backdrop, window headerbar:first-child { border-top-left-radius: 7px; }
 
-window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:first-child, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:last-child { border-top-left-radius: 7px; border-top-right-radius: 7px; }
+window headerbar:last-child:backdrop, window headerbar:last-child { border-top-right-radius: 7px; }
+
+window stack headerbar:first-child:backdrop, window stack headerbar:first-child, window stack headerbar:last-child:backdrop, window stack headerbar:last-child { border-top-left-radius: 7px; border-top-right-radius: 7px; }
+
+window.tiled headerbar, window.tiled headerbar:first-child, window.tiled headerbar:last-child, window.tiled headerbar:only-child, window.tiled headerbar:backdrop, window.tiled headerbar:backdrop:first-child, window.tiled headerbar:backdrop:last-child, window.tiled headerbar:backdrop:only-child, window.tiled-top headerbar, window.tiled-top headerbar:first-child, window.tiled-top headerbar:last-child, window.tiled-top headerbar:only-child, window.tiled-top headerbar:backdrop, window.tiled-top headerbar:backdrop:first-child, window.tiled-top headerbar:backdrop:last-child, window.tiled-top headerbar:backdrop:only-child, window.tiled-right headerbar, window.tiled-right headerbar:first-child, window.tiled-right headerbar:last-child, window.tiled-right headerbar:only-child, window.tiled-right headerbar:backdrop, window.tiled-right headerbar:backdrop:first-child, window.tiled-right headerbar:backdrop:last-child, window.tiled-right headerbar:backdrop:only-child, window.tiled-bottom headerbar, window.tiled-bottom headerbar:first-child, window.tiled-bottom headerbar:last-child, window.tiled-bottom headerbar:only-child, window.tiled-bottom headerbar:backdrop, window.tiled-bottom headerbar:backdrop:first-child, window.tiled-bottom headerbar:backdrop:last-child, window.tiled-bottom headerbar:backdrop:only-child, window.tiled-left headerbar, window.tiled-left headerbar:first-child, window.tiled-left headerbar:last-child, window.tiled-left headerbar:only-child, window.tiled-left headerbar:backdrop, window.tiled-left headerbar:backdrop:first-child, window.tiled-left headerbar:backdrop:last-child, window.tiled-left headerbar:backdrop:only-child, window.maximized headerbar, window.maximized headerbar:first-child, window.maximized headerbar:last-child, window.maximized headerbar:only-child, window.maximized headerbar:backdrop, window.maximized headerbar:backdrop:first-child, window.maximized headerbar:backdrop:last-child, window.maximized headerbar:backdrop:only-child, window.fullscreen headerbar, window.fullscreen headerbar:first-child, window.fullscreen headerbar:last-child, window.fullscreen headerbar:only-child, window.fullscreen headerbar:backdrop, window.fullscreen headerbar:backdrop:first-child, window.fullscreen headerbar:backdrop:last-child, window.fullscreen headerbar:backdrop:only-child, window.solid-csd headerbar, window.solid-csd headerbar:first-child, window.solid-csd headerbar:last-child, window.solid-csd headerbar:only-child, window.solid-csd headerbar:backdrop, window.solid-csd headerbar:backdrop:first-child, window.solid-csd headerbar:backdrop:last-child, window.solid-csd headerbar:backdrop:only-child { border-top-left-radius: 0; border-top-right-radius: 0; }
 
 window.csd > .titlebar:not(headerbar) { padding: 0; background-color: transparent; background-image: none; border-style: none; border-color: transparent; box-shadow: none; }
 
@@ -1366,6 +1370,8 @@ stacksidebar row > label { padding-left: 6px; padding-right: 6px; }
 stacksidebar row.needs-attention > label { background-size: 6px 6px, 0 0; }
 
 /**************** File chooser * */
+row image.sidebar-icon { opacity: 0.7; }
+
 placessidebar > viewport.frame { border-style: none; }
 
 placessidebar row { min-height: 36px; padding: 0px; }
@@ -1482,13 +1488,21 @@ colorswatch.right, colorswatch:last-child:not(.bottom) { border-top-right-radius
 
 colorswatch.right overlay, colorswatch:last-child:not(.bottom) overlay { border-top-right-radius: 1px; border-bottom-right-radius: 1px; }
 
-colorswatch.dark overlay { color: #ffffff; }
+colorswatch.dark { outline-color: rgba(255, 255, 255, 0.6); }
+
+colorswatch.dark overlay { color: white; }
 
 colorswatch.dark overlay:hover { border-color: #090b0c; }
 
-colorswatch.light overlay { color: white; }
+colorswatch.dark overlay:backdrop { color: rgba(255, 255, 255, 0.5); }
+
+colorswatch.light { outline-color: rgba(0, 0, 0, 0.6); }
+
+colorswatch.light overlay { color: black; }
 
 colorswatch.light overlay:hover { border-color: #090b0c; }
+
+colorswatch.light overlay:backdrop { color: rgba(0, 0, 0, 0.5); }
 
 colorswatch:drop(active) { box-shadow: none; }
 
@@ -1534,7 +1548,7 @@ decoration { border-radius: 7px 7px 0 0; border-width: 0px; box-shadow: 0 1px 4p
 
 decoration:backdrop { box-shadow: 0 1px 4px 1px transparent, 0 1px 2px 1px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(9, 11, 12, 0.9); }
 
-.maximized decoration, .fullscreen decoration, .tiled decoration { border-radius: 0; }
+.maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration { border-radius: 0; }
 
 .popup decoration { box-shadow: none; }
 
@@ -1635,6 +1649,27 @@ cursor-handle.insertion-cursor:active:dir(ltr), cursor-handle.insertion-cursor:a
 stackswitcher button.text-button { min-width: 100px; }
 
 stackswitcher button.circular, stackswitcher button.text-button.circular { min-width: 32px; min-height: 32px; padding: 0; }
+
+/********* Emoji * */
+popover.emoji-picker { padding-left: 0; padding-right: 0; }
+
+button.emoji-section { border-color: transparent; border-width: 3px; border-style: none none solid; border-radius: 0; margin: 2px 4px 2px 4px; padding: 3px 0 0; min-width: 32px; min-height: 28px; /* reset props inherited from the button style */ background: none; box-shadow: none; text-shadow: none; outline-offset: -5px; }
+
+button.emoji-section:backdrop:not(:checked) { border-color: transparent; }
+
+button.emoji-section:hover { border-color: #090b0c; }
+
+button.emoji-section:checked { border-color: #3399ff; }
+
+button.emoji-section label { padding: 0; opacity: 0.55; }
+
+button.emoji-section:hover label { opacity: 0.775; }
+
+button.emoji-section:checked label { opacity: 1; }
+
+.emoji { font-size: x-large; padding: 6px; border-radius: 6px; }
+
+.emoji :hover { background: #3399ff; }
 
 .floating-bar { background-color: #2b3137; font-size: smaller; font-size: smaller; }
 
