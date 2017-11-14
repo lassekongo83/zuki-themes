@@ -345,7 +345,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 /* Tiled window previews */
 .tile-preview { background-color: rgba(51, 153, 255, 0.5); border: 1px solid #3399ff; }
 
-.tile-preview-left.on-primary { border-radius: 0px 0px 0 0; }
+.tile-preview-left.on-primary { border-radius: 0px 0 0 0; }
 
 .tile-preview-right.on-primary { border-radius: 0 0px 0 0; }
 
@@ -548,7 +548,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .popup-menu-icon { icon-size: 1.09em; }
 
-.window-close { background-image: url("close-window.svg"); background-size: 32px; height: 32px; width: 32px; }
+.window-close { background-image: url("close-window.svg"); background-size: 32px; height: 32px; width: 32px; -shell-close-overlap: 16px; }
 
 .window-close:hover { background-image: url("close-window-hover.svg"); }
 
@@ -701,6 +701,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .workspace-thumbnails { visible-width: 32px; spacing: 11px; padding: 8px; border-radius: 2px 0 0 2px; }
 
 .workspace-thumbnails:rtl { border-radius: 0 2px 2px 0; }
+
+.workspace-thumbnails .placeholder { background-image: url("dash-placeholder.svg"); background-size: contain; height: 24px; }
 
 .workspace-thumbnail-indicator { border: 2px solid #3399ff; padding: 1px; }
 

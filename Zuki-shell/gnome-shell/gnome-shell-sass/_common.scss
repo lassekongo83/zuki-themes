@@ -706,12 +706,12 @@ StScrollBar {
 
 /* Tiled window previews */
 .tile-preview {
-  background-color: transparentize($selected_bg_color,0.5);
+  background-color: transparentize($selected_bg_color, 0.5);
   border: 1px solid $selected_bg_color;
 }
 
   .tile-preview-left.on-primary {
-    border-radius: $panel-corner-radius $panel-corner-radius 0 0;
+    border-radius: $panel-corner-radius 0 0 0;
   }
 
   .tile-preview-right.on-primary {
@@ -1148,6 +1148,8 @@ StScrollBar {
   background-size: 32px;
   height: 32px;
   width: 32px;
+  -shell-close-overlap: 16px;
+
   &:hover { background-image: url("close-window-hover.svg"); }
   &:active { background-image: url("close-window-hover.svg"); }
 }
@@ -1466,8 +1468,13 @@ StScrollBar {
     spacing: 11px;
     padding: 8px;
     border-radius: 2px 0 0 2px;
-    //border-width: 1px 0 1px 1px; //fixme: can't have non unoform borders :(
     &:rtl { border-radius: 0 2px 2px 0;}
+
+    .placeholder {
+      background-image: url("dash-placeholder.svg");
+      background-size: contain;
+      height: 24px;
+    }
   }
   .workspace-thumbnail-indicator {
     border: 2px solid $selected_bg_color;
