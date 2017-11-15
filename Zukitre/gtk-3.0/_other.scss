@@ -212,3 +212,12 @@ button:last-child {
 }
 
 .switcher-visible *> .frame { border-width: 1px 0 1px 0; }
+
+// Chromium - https://github.com/lassekongo83/zuki-themes/issues/127
+window.background.chromium {
+  background-color: $bg_color;
+  
+  button { // tab borders
+    border-color: $borders_color;
+  }
+}

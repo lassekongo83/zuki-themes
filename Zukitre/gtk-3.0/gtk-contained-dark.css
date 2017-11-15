@@ -1836,6 +1836,10 @@ button:last-child.osd.image-button { border-right-style: none; }
 
 .switcher-visible * > .frame { border-width: 1px 0 1px 0; }
 
+window.background.chromium { background-color: #273238; }
+
+window.background.chromium button { border-color: #080a0b; }
+
 /* Lightdm styling */
 #panel_window { background-color: #273238; color: white; box-shadow: none; border-style: none; }
 
