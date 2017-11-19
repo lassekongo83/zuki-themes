@@ -14,7 +14,7 @@
    viewBox="0 0 200 200"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="assets.svg">
   <defs
      id="defs4" />
@@ -26,16 +26,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="14.102079"
-     inkscape:cy="178.21641"
+     inkscape:cx="43.910386"
+     inkscape:cy="160.43035"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1600"
-     inkscape:window-height="821"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1869"
+     inkscape:window-height="926"
+     inkscape:window-x="51"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="false">
     <inkscape:grid
@@ -208,17 +208,16 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:79.62195587px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="93.204155"
        y="840.92865"
        id="text4309"
-       sodipodi:linespacing="125%"
        transform="scale(0.95639646,1.0455915)"><tspan
          sodipodi:role="line"
          id="tspan4311"
          x="93.204155"
          y="840.92865"
-         style="font-size:9.95274448px">pixels</tspan></text>
+         style="font-size:9.95274448px;line-height:1.25;font-family:sans-serif">pixels</tspan></text>
     <g
        id="resize-grip"
        inkscape:label="#g4319"
