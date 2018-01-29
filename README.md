@@ -2,15 +2,9 @@
 
 Zuki themes for GNOME, Xfce and more.
 
-Master branch is for gnome-shell 3.26. (GTK 3.22.x is the stable gtk+ 3 release. I recommend that you use the same version of the theme as the version of the package `gnome-shell` in your distribution's repository.)
+The master branch should work with GTK 3.22+.
 
-[3.24 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.24)
-
-[3.22 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.22) (Debian Stable version. Bug fixes only.)
-
-[3.20 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.20) (No longer supported.)
-
-[3.18 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.18) (For Ubuntu 16.04 LTS and Linux Mint 18)
+[3.18 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.18) (For Ubuntu 16.04 LTS and Linux Mint 18. No longer supported.)
 
 ##### Zukitre
 
