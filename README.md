@@ -2,10 +2,6 @@
 
 Zuki themes for GNOME, Xfce and more.
 
-The master branch should work with GTK 3.22+.
-
-[3.18 branch.](https://github.com/lassekongo83/zuki-themes/tree/3.18) (For Ubuntu 16.04 LTS and Linux Mint 18. No longer supported.)
-
 ##### Zukitre
 
 ![Zukitre theme](zukitre.png?raw=true)
@@ -18,7 +14,9 @@ The master branch should work with GTK 3.22+.
 
 ## Requirements
 
-* GNOME/GTK 3.18 - 3.24+
+The master branch should work with GTK 3.22+.
+
+* GNOME/GTK 3.18 - 3.26+
 * The murrine engine. This has different names depending on your distro.
   * `gtk2-engines-murrine` (Debian, Ubuntu)
   * `gtk-murrine-engine` (Fedora)
@@ -39,9 +37,7 @@ The master branch should work with GTK 3.22+.
 #### Manual installation
 
 Download the theme:
-  * [GTK 3.24](https://github.com/lassekongo83/zuki-themes/archive/master.zip)
-  * [GTK 3.22](https://github.com/lassekongo83/zuki-themes/archive/3.22.zip)
-  * [GTK 3.20](https://github.com/lassekongo83/zuki-themes/archive/3.20.zip)
+  * [GTK 3.22 or later](https://github.com/lassekongo83/zuki-themes/archive/master.zip) (Master branch.)
   * [GTK 3.18](https://github.com/lassekongo83/zuki-themes/archive/3.18.zip) (Download this if you use X/Ubuntu 16.04.)
 
 Extract the contents in the zip to `~/.themes` or `/usr/share/themes` with the following folder structure:
@@ -74,14 +70,3 @@ ArchLinux users can get it on AUR: https://aur.archlinux.org/packages/zuki-theme
 > 1. Screenshot. (Use a host that don't require me to enable JavaScript, cookies or browser plugins to be able to view the image.)
 
 **Do not submit support questions to the issue tracker.** Contact me on [reddit](https://www.reddit.com/user/Frellwit/) or [deviantART](http://lassekongo83.deviantart.com) for that instead. (Don't always expect an answer though.) Public forums and subreddits could provide better support. Support questions in the issue tracker will be closed as invalid.
-
-## Other stuff
-
-Older unsupported version for GTK 3.14 can be found here: https://github.com/lassekongo83/zuki-themes/releases
-
-Zukiwi has been abandoned and won't get updated any more.
-
-##### Todo list
-  * Squish bugs.
-  * Try to get rid of application specific fixes and use global fixes.
-  * Whatever else I've forgotten.
