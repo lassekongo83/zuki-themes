@@ -153,6 +153,25 @@ menu,
   @extend .view;
 }
 
+// Shouldn't be needed
+.disk-space-display {
+  border-style: solid;
+  border-width: 2px;
+
+  &.unknown {
+    background-color: darken($bg_color, 20%);
+    border-color: darken($bg_color, 30%);
+  }
+  &.used {
+    background-color: $selected_bg_color;
+    border-color: darken($selected_bg_color, 20%);
+  }
+  &.free {
+    background-color: $bg_color;
+    border-color: darken($bg_color, 20%);
+  }
+}
+
 // Nemo is very ugly and needs special fixes
 .nemo-window {
 
@@ -196,4 +215,22 @@ menu,
 // EoG fix - https://github.com/lassekongo83/zuki-themes/issues/113
 button:last-child {
   &.osd.image-button { border-right-style: none; }
+}
+
+// Evolution - https://github.com/lassekongo83/zuki-themes/issues/119
+.table-header {
+  @extend %column_header_button;
+  padding: 4px 0 4px 0;
+  min-height: 24px;
+}
+
+.switcher-visible *> .frame { border-width: 1px 0 1px 0; }
+
+// Chromium - https://github.com/lassekongo83/zuki-themes/issues/127
+window.background.chromium {
+  background-color: $bg_color;
+  
+  button { // tab borders
+    border-color: $borders_color;
+  }
 }

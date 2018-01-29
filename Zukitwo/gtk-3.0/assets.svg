@@ -15,7 +15,7 @@
    viewBox="0 0 600.00005 300.00001"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="assets.svg">
   <defs
      id="defs4">
@@ -733,14 +733,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="384.87942"
+     inkscape:cx="385.87942"
      inkscape:cy="268.9177"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1600"
-     inkscape:window-height="821"
+     inkscape:window-width="1920"
+     inkscape:window-height="922"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -759,7 +759,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
