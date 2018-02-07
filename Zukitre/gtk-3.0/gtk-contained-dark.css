@@ -1853,7 +1853,7 @@ window.background.chromium button { border-color: #080a0b; }
 
 #panel_window menubar menu > menuitem { font-style: normal; }
 
-#login_window, #shutdown_dialog, #restart_dialog { font-style: normal; border-style: none; background-color: transparent; color: #dee2e5; }
+#login_window, #shutdown_dialog, #restart_dialog { font-style: normal; border-style: none; background-color: #273238; color: #dee2e5; }
 
 #content_frame { padding-bottom: 14px; background-color: #273238; border-top-left-radius: 3px; border-top-right-radius: 3px; border: solid rgba(0, 0, 0, 0.1); border-width: 1px 1px 0 1px; }
 

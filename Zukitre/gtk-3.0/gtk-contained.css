@@ -1897,7 +1897,7 @@ window.background.chromium button { border-color: #b0b0b0; }
 
 #panel_window menubar menu > menuitem { font-style: normal; }
 
-#login_window, #shutdown_dialog, #restart_dialog { font-style: normal; border-style: none; background-color: transparent; color: #2c2c2c; }
+#login_window, #shutdown_dialog, #restart_dialog { font-style: normal; border-style: none; background-color: #d6d6d6; color: #2c2c2c; }
 
 #content_frame { padding-bottom: 14px; background-color: #d6d6d6; border-top-left-radius: 3px; border-top-right-radius: 3px; border: solid rgba(0, 0, 0, 0.1); border-width: 1px 1px 0 1px; }
 
