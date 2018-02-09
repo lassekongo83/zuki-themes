@@ -793,9 +793,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .magnifier-zoom-region.full-screen { border-width: 0; }
 
 /* On-screen Keyboard */
+.word-suggestions { font-size: 14pt; spacing: 12px; min-height: 20pt; }
+
 #keyboard { background-color: rgba(46, 52, 54, 0.7); }
 
-.keyboard-layout { spacing: 10px; padding: 10px; }
+.keyboard-layout, .key-container { spacing: 10px; padding: 10px; }
 
 .keyboard-row { spacing: 15px; }
 
@@ -808,6 +810,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .keyboard-key:active { color: white; border-color: rgba(0, 0, 0, 0.7); background-color: #222728; box-shadow: inset 0 0 black; text-shadow: none; icon-shadow: none; }
 
 .keyboard-key:grayed { background-color: #2e3436; color: #eeeeec; border-color: rgba(0, 0, 0, 0.7); }
+
+.keyboard-key.default-key { border-color: #2a76c6; }
+
+.keyboard-key.enter-key { border-color: #1a1a1a; }
 
 .keyboard-subkeys { color: white; padding: 5px; -arrow-border-radius: 2px; -arrow-background-color: rgba(46, 52, 54, 0.7); -arrow-border-width: 2px; -arrow-border-color: rgba(238, 238, 236, 0.2); -arrow-base: 0px; -arrow-rise: 0px; -boxpointer-gap: 1px; }
 

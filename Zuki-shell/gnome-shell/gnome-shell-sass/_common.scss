@@ -1629,12 +1629,17 @@ StScrollBar {
 
 //Keyboard
 /* On-screen Keyboard */
+.word-suggestions {
+    font-size: 14pt;
+    spacing: 12px;
+    min-height: 20pt;
+}
 
 #keyboard {
     background-color: transparentize($osd_bg_color, 0.3);
 }
 
-  .keyboard-layout {
+  .keyboard-layout, .key-container {
     spacing: 10px;
     padding: 10px;
   }
@@ -1657,6 +1662,12 @@ StScrollBar {
       background-color: $osd_bg_color;
       color: $osd_fg_color;
       border-color: $osd_borders_color;
+    }
+    &.default-key {
+      border-color: lighten($selected_bg_color, 10%);
+    }
+    &.enter-key {
+      border-color: lighten($borders-color, 10%);
     }
   }
 
