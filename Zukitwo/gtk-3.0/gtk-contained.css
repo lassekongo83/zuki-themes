@@ -1825,6 +1825,18 @@ XfceHeading, .XfceHeading { margin: 0; padding: 0; border-width: 0; background-i
 
 .xfce4-panel menu { -gtk-icon-effect: none; text-shadow: none; }
 
+.xfce4-panel menu button { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #919191; background-image: linear-gradient(to bottom, #f0f0f0, #eaeaea); box-shadow: 1px 0 rgba(0, 0, 0, 0.08), 0 1px rgba(0, 0, 0, 0.08), -1px 0 rgba(0, 0, 0, 0.08), 0 -1px rgba(0, 0, 0, 0.08), inset 1px 0 rgba(255, 255, 255, 0.4), inset 0 1px rgba(255, 255, 255, 0.4), inset -1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px rgba(255, 255, 255, 0.4); }
+
+.xfce4-panel menu button:hover { color: #2c2c2c; background-image: linear-gradient(to bottom, whitesmoke, #f2f2f2); }
+
+.xfce4-panel menu button:active, .xfce4-panel menu button:checked { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #919191; background-image: linear-gradient(to bottom, #bfbfbf, #c9c9c9); box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px rgba(0, 0, 0, 0.08), inset -1px 0 rgba(0, 0, 0, 0.08), inset 0 -1px rgba(0, 0, 0, 0.08); }
+
+.xfce4-panel menu button:active:hover, .xfce4-panel menu button:checked:hover { color: #2c2c2c; background-image: linear-gradient(to bottom, #bababa, #c4c4c4); }
+
+.xfce4-panel menu button:disabled { color: #818181; border-color: #b0b0b0; background-color: #e3e3e3; text-shadow: none; -gtk-icon-shadow: none; box-shadow: none; }
+
+.xfce4-panel menu button:disabled > .label { color: inherit; }
+
 /* Mate/Gnome Flashback Panel */
 .gnome-panel-menu-bar, .gnome-panel-menu-bar menubar, .mate-panel-menu-bar, .mate-panel-menu-bar menubar { background-color: #2b3137; }
 

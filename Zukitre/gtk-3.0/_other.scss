@@ -56,6 +56,16 @@ XfceHeading,
 .xfce4-panel menu {
   -gtk-icon-effect: none;
   text-shadow: none;
+  
+  // plano-theme #25
+  button {
+    @include button(normal);
+    &:hover { @include button(hover); }
+    &:active, &:checked { @include button(active); }
+    &:active:hover, &:checked:hover { @include button(hoveractive); }
+    &.default { @include button(focus); }
+    &:disabled { @include button(insensitive); }
+  }
 }
 
 // Temporary fixes for certain XFCE applets using GTK3
