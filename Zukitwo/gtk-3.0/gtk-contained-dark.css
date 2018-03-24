@@ -481,7 +481,7 @@ combobox arrow { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); min-heig
 combobox:drop(active) { box-shadow: none; }
 
 /************ Toolbars * */
-toolbar, .inline-toolbar, searchbar, .location-bar { -GtkWidget-window-dragging: true; padding: 4px; background-image: linear-gradient(to bottom, #1e2226, #2b3137); box-shadow: inset 0 1px rgba(9, 11, 12, 0.35); }
+toolbar, .inline-toolbar, searchbar > revealer > box, .location-bar { -GtkWidget-window-dragging: true; padding: 4px; background-image: linear-gradient(to bottom, #1e2226, #2b3137); box-shadow: inset 0 1px rgba(9, 11, 12, 0.35); }
 
 toolbar { padding: 4px 3px 3px 4px; }
 
@@ -495,13 +495,15 @@ toolbar.horizontal separator { margin: 0 7px 1px 6px; }
 
 toolbar.vertical separator { margin: 6px 1px 7px 0; }
 
-toolbar:not(.inline-toolbar):not(.osd) switch, toolbar:not(.inline-toolbar):not(.osd) scale, toolbar:not(.inline-toolbar):not(.osd) entry, toolbar:not(.inline-toolbar):not(.osd) spinbutton, toolbar:not(.inline-toolbar):not(.osd) button { margin-right: 1px; margin-bottom: 1px; }
+toolbar:not(.inline-toolbar):not(.osd) > *:not(.toggle):not(.popup) > * { margin-right: 1px; margin-bottom: 1px; }
 
 .inline-toolbar { padding: 3px; border-width: 0 1px 1px; border-radius: 0  0 1px 1px; }
 
-searchbar, .location-bar { border-width: 0 0 1px; padding: 3px; }
+searchbar > revealer > box, .location-bar { border-width: 0 0 1px; padding: 3px; }
 
-.inline-toolbar, searchbar, .location-bar { border-style: solid; border-color: #090b0c; background-color: #21262a; }
+searchbar > revealer > box { margin: -6px; padding: 6px; }
+
+.inline-toolbar, searchbar > revealer > box, .location-bar { border-style: solid; border-color: #090b0c; background-color: #21262a; }
 
 /*************** Header bars * */
 .titlebar:not(headerbar), headerbar { padding: 0 4px; min-height: 38px; border-width: 0 0 1px; border-style: solid; border-color: #090b0c; background-image: linear-gradient(to bottom, #384048, #2b3137); box-shadow: inset 0 1px rgba(238, 238, 238, 0), inset 0 -1px rgba(238, 238, 238, 0); }
