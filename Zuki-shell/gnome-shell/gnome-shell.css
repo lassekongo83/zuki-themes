@@ -352,7 +352,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .tile-preview-left.tile-preview-right.on-primary { border-radius: 0px 0px 0 0; }
 
 /* TOP BAR */
-#panel { background-color: rgba(0, 0, 0, 0.6); font-weight: bold; height: 1.86em; box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15); }
+#panel { background-color: rgba(0, 0, 0, 0.4); font-weight: bold; height: 2em; box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15); }
 
 #panel.unlock-screen, #panel.login-screen, #panel.lock-screen { background-color: transparent; }
 
