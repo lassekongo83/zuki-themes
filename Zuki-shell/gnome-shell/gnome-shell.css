@@ -368,7 +368,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel .panel-button { -natural-hpadding: 12px; -minimum-hpadding: 6px; font-weight: bold; color: white; }
 
-#panel .panel-button .app-menu-icon { width: 0; height: 0; }
+#panel .panel-button .app-menu-icon { -st-icon-style: symbolic; margin-left: 4px; margin-right: 4px; }
 
 #panel .panel-button:hover { color: white; background-color: rgba(255, 255, 255, 0.1); }
 
@@ -524,7 +524,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .system-switch-user-submenu-icon.default-icon { icon-size: 16px; padding: 0 4px; }
 
-#appMenu { spinner-image: url("process-working.svg"); spacing: 4px; padding-right: 8px; }
+#appMenu { spinner-image: url("process-working.svg"); spacing: 4px; }
 
 #appMenu .label-shadow { color: transparent; }
 

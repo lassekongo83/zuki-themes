@@ -766,8 +766,10 @@ StScrollBar {
     color: white;
 
     .app-menu-icon {
-      width: 0;
-      height: 0;
+      -st-icon-style: symbolic;
+      margin-left: 4px;
+      margin-right: 4px;
+      //dimensions of the icon are hardcoded
     }
 
     &:hover {
@@ -1098,7 +1100,6 @@ StScrollBar {
   #appMenu {
     spinner-image: url("process-working.svg");
     spacing: 4px;
-    padding-right: 8px;
 
     .label-shadow { color: transparent; }
   }
