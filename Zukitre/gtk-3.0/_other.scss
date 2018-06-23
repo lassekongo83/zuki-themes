@@ -131,7 +131,7 @@ menu,
 .caja-side-pane .frame { border-width: 1px 0 0; }
 .caja-notebook .frame { border-width: 0 0 1px; }
 
-// Desktop icons FIXME: Remove legacy nautilus stuff after
+// Desktop icons FIXME: Remove legacy nautilus stuff after Ubuntu 18.04 LTS ends support
 .nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
   color: white;
   text-shadow: 1px 1px 2px transparentize(black, 0.2);
@@ -147,7 +147,6 @@ menu,
   notebook > stack:not(:only-child) searchbar { @extend .view; }
 }
 
-// Shouldn't be needed
 .disk-space-display {
   border-style: solid;
   border-width: 2px;

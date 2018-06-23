@@ -1823,7 +1823,6 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 
 .caja-notebook .frame { border-width: 0 0 1px; }
 
-/* Nautilus and nemo */
 .nautilus-desktop.nautilus-canvas-item, .caja-desktop, .nemo-desktop.nemo-canvas-item { color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); }
 
 .nautilus-window searchbar { border-top: 1px solid #090b0c; }
