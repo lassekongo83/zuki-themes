@@ -1867,7 +1867,6 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 
 .caja-notebook .frame { border-width: 0 0 1px; }
 
-/* Nautilus and nemo */
 .nautilus-desktop.nautilus-canvas-item, .caja-desktop, .nemo-desktop.nemo-canvas-item { color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); }
 
 .nautilus-window searchbar { border-top: 1px solid #b0b0b0; }
@@ -1893,12 +1892,6 @@ window.background.chromium { background-color: #d6d6d6; }
 window.background.chromium button { border-color: #b0b0b0; }
 
 .thunar .standard-view { border-width: 0; }
-
-.thunar .sidebar .view, .thunar .sidebar iconview, .thunar .sidebar .nautilus-window notebook, .nautilus-window .thunar .sidebar notebook, .thunar .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar, .nautilus-window notebook > stack:not(:only-child) .thunar .sidebar searchbar { background-color: #e7e7e7; }
-
-.thunar .sidebar .view:selected, .thunar .sidebar iconview:selected, .thunar .sidebar .nautilus-window notebook:selected, .nautilus-window .thunar .sidebar notebook:selected, .thunar .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .nautilus-window notebook > stack:not(:only-child) .thunar .sidebar searchbar:selected { background-color: #3399ff; }
-
-.thunar .sidebar .view:selected:backdrop, .thunar .sidebar iconview:selected:backdrop, .thunar .sidebar .nautilus-window notebook:selected:backdrop, .nautilus-window .thunar .sidebar notebook:selected:backdrop, .thunar .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar:selected:backdrop, .nautilus-window notebook > stack:not(:only-child) .thunar .sidebar searchbar:selected:backdrop { background-color: rgba(51, 153, 255, 0.6); }
 
 .thunar toolbar { border-bottom: 1px solid #b0b0b0; }
 

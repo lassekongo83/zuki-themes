@@ -152,15 +152,12 @@ menu,
 
 .nautilus-window {
   // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
-
   searchbar { border-top: 1px solid $borders_color; }
   .searchbar-container { margin-top: -1px; }
-}
-
-// Without this nautilus iconview grabs the bg_color
-.nautilus-window notebook,
-.nautilus-window notebook > stack:not(:only-child) searchbar {
-  @extend .view;
+  
+  // Without this nautilus iconview grabs the bg_color
+  notebook,
+  notebook > stack:not(:only-child) searchbar { @extend .view; }
 }
 
 // Shouldn't be needed
@@ -199,22 +196,11 @@ button:last-child {
 // Chromium - https://github.com/lassekongo83/zuki-themes/issues/127
 window.background.chromium {
   background-color: $bg_color;
-  
-  button { // tab borders
-    border-color: $borders_color;
-  }
+  button { border-color: $borders_color; } // tab borders
 }
 
 // Thunar
 .thunar {
   .standard-view { border-width: 0; }
-  .sidebar .view {
-    background-color: mix($bg_color, $base_color, 50%);
-    &:selected {
-      background-color: $selected_bg_color;
-      &:backdrop { background-color: transparentize($selected_bg_color, 0.4); }
-    }
-  }
-
   toolbar { border-bottom: 1px solid $borders_color; }
 }
