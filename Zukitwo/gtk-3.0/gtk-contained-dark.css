@@ -1850,10 +1850,10 @@ window.background.chromium button { border-color: #090b0c; }
 
 .thunar .standard-view { border-width: 0; }
 
-.thunar sidebar .view, .thunar sidebar iconview, .thunar sidebar .nautilus-window notebook, .nautilus-window .thunar sidebar notebook, .thunar sidebar .nautilus-window notebook > stack:not(:only-child) searchbar, .nautilus-window notebook > stack:not(:only-child) .thunar sidebar searchbar { background-color: #374049; }
+.thunar .sidebar .view, .thunar .sidebar iconview, .thunar .sidebar .nautilus-window notebook, .nautilus-window .thunar .sidebar notebook, .thunar .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar, .nautilus-window notebook > stack:not(:only-child) .thunar .sidebar searchbar { background-color: #374049; }
 
-.thunar sidebar .view:selected, .thunar sidebar iconview:selected, .thunar sidebar .nautilus-window notebook:selected, .nautilus-window .thunar sidebar notebook:selected, .thunar sidebar .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .nautilus-window notebook > stack:not(:only-child) .thunar sidebar searchbar:selected { background-color: #3399ff; }
+.thunar .sidebar .view:selected, .thunar .sidebar iconview:selected, .thunar .sidebar .nautilus-window notebook:selected, .nautilus-window .thunar .sidebar notebook:selected, .thunar .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .nautilus-window notebook > stack:not(:only-child) .thunar .sidebar searchbar:selected { background-color: #3399ff; }
 
-.thunar sidebar .view:selected:backdrop, .thunar sidebar iconview:selected:backdrop, .thunar sidebar .nautilus-window notebook:selected:backdrop, .nautilus-window .thunar sidebar notebook:selected:backdrop, .thunar sidebar .nautilus-window notebook > stack:not(:only-child) searchbar:selected:backdrop, .nautilus-window notebook > stack:not(:only-child) .thunar sidebar searchbar:selected:backdrop { background-color: rgba(51, 153, 255, 0.6); }
+.thunar .sidebar .view:selected:backdrop, .thunar .sidebar iconview:selected:backdrop, .thunar .sidebar .nautilus-window notebook:selected:backdrop, .nautilus-window .thunar .sidebar notebook:selected:backdrop, .thunar .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar:selected:backdrop, .nautilus-window notebook > stack:not(:only-child) .thunar .sidebar searchbar:selected:backdrop { background-color: rgba(51, 153, 255, 0.6); }
 
 .thunar toolbar { border-bottom: 1px solid #090b0c; }

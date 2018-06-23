@@ -195,7 +195,7 @@ window.background.chromium {
 // Thunar
 .thunar {
   .standard-view { border-width: 0; }
-  sidebar .view {
+  .sidebar .view {
     background-color: mix($bg_color, $base_color, 50%);
     &:selected {
       background-color: $selected_bg_color;
