@@ -193,9 +193,15 @@ window.background.chromium {
 }
 
 // Thunar
-.thunar .standard-view { border-width: 0; }
-.thunar .sidebar .view { 
-  background-color: mix($bg_color, $base_color, 50%);
-  &:selected { @extend %selected_items; }
+.thunar {
+  .standard-view { border-width: 0; }
+  sidebar .view {
+    background-color: mix($bg_color, $base_color, 50%);
+    &:selected {
+      background-color: $selected_bg_color;
+      &:backdrop { background-color: transparentize($selected_bg_color, 0.4); }
+    }
+  }
+
+  toolbar { border-bottom: 1px solid $borders_color; }
 }
-.thunar toolbar { border-bottom: 1px solid $borders_color; }
