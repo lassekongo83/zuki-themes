@@ -203,3 +203,16 @@ window.background.chromium {
   .standard-view { border-width: 0; }
   toolbar { border-bottom: 1px solid $borders_color; }
 }
+
+// Nemo
+.nemo-window {
+  // Rename entry
+  .nemo-window-pane widget.entry {
+    border: 1px solid;
+    border-radius: 3px;
+
+    @include entry(focus);
+
+    &:selected { &:focus, & { @extend %selected_items; }}
+  }
+}
