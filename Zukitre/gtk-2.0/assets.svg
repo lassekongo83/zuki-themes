@@ -14,7 +14,7 @@
    viewBox="0 0 200 200"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="assets.svg">
   <defs
      id="defs4" />
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="43.910386"
-     inkscape:cy="160.43035"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="42.196609"
+     inkscape:cy="149.32525"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1869"
+     inkscape:window-width="1857"
      inkscape:window-height="926"
-     inkscape:window-x="51"
+     inkscape:window-x="63"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="false">
@@ -121,14 +121,6 @@
          d="m 54,858.36216 0,8 8,0 0,-8 -8,0 z m 1,1 6,0 0,6 -6,0 0,-6 z"
          id="path4211" />
     </g>
-    <rect
-       y="872.36218"
-       x="5"
-       height="6"
-       width="1"
-       id="panel-btn-hover"
-       style="opacity:1;fill:#ffffff;fill-opacity:0.1254902;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
-       inkscape:label="#rect4225" />
     <g
        id="btn"
        inkscape:label="#g6379">
@@ -285,22 +277,6 @@
          id="rect4256"
          style="opacity:1;fill:#e3e3e3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
     </g>
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:0.1882353;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
-       id="panel-btn-active"
-       width="1"
-       height="6"
-       x="9"
-       y="872.36218"
-       inkscape:label="#rect4262" />
-    <rect
-       y="872.36218"
-       x="13"
-       height="6"
-       width="1"
-       id="panel-btn-active-hover"
-       style="opacity:1;fill:#ffffff;fill-opacity:0.25098041;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
-       inkscape:label="#rect4282" />
     <rect
        inkscape:label="#rect4323"
        y="855.36218"

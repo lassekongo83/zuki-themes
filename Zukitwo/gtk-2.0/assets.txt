@@ -18,9 +18,6 @@ radio-checked-insensitive
 column-header
 column-header-hover
 handle
-panel-btn-active
-panel-btn-active-hover
-panel-btn-hover
 resize-grip
 menubar-menuitem
 null

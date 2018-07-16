@@ -1,351 +1,161 @@
-style "theme-panel" = "dark"
-{
-    xthickness     = 1
+style "theme-panel" {
+  xthickness = 1
+  ythickness = 0
 
-    bg[NORMAL]     = @panel_bg_color
-    bg[ACTIVE]     = shade (0.6, @panel_bg_color)
-    bg[PRELIGHT]   = shade (1.2, @panel_bg_color)
-    bg[SELECTED]   = shade (0.6, @panel_bg_color)
+  bg[NORMAL]   = @panel_bg_color
+  bg[ACTIVE]   = shade (0.4, @panel_bg_color)
+  bg[PRELIGHT] = shade (1.22, @panel_bg_color)
+  bg[SELECTED] = shade (0.4, @panel_bg_color)
 
-    fg[NORMAL]     = @panel_fg_color
-    fg[PRELIGHT]   = @panel_fg_color
-    fg[ACTIVE]     = @panel_fg_color
-    fg[SELECTED]   = @panel_fg_color
+  fg[NORMAL]   = @panel_fg_color
+  fg[PRELIGHT] = @selected_fg_color
+  fg[ACTIVE]   = @selected_fg_color
+  fg[SELECTED] = @selected_fg_color
 
-    text[NORMAL]   = @panel_fg_color
-    text[PRELIGHT] = @panel_fg_color
-    text[ACTIVE]   = @panel_fg_color
-    text[SELECTED] = @panel_fg_color
+  text[NORMAL]   = @panel_fg_color
+  text[PRELIGHT] = @panel_fg_color
+  text[ACTIVE]   = @panel_fg_color
+  text[SELECTED] = @panel_fg_color
 
-    engine "murrine" {
-        contrast = 0.0
-    }
+  engine "murrine" {
+    reliefstyle     = 0
+    glazestyle      = 0
+    glow_shade      = 1.0
+    highlight_shade = 1.0
+    roundness       = 0
+    gradient_shades = {1.0,1.0,1.0,1.0}
+    textstyle       = 0
+    contrast        = 0.0
+  }
+}
+
+style "theme-panel-progressbar" {
+  bg[ACTIVE] = @selected_bg_color
 }
 
 style "panelbar" {
+  fg[NORMAL] = @panel_fg_color
+  fg[ACTIVE] = @panel_fg_color
+  fg[PRELIGHT] = @panel_fg_color
+  fg[SELECTED] = @selected_fg_color
 
-    fg[NORMAL]   = @panel_fg_color
-    fg[ACTIVE]   = @panel_fg_color
-    fg[PRELIGHT] = @panel_fg_color
-    fg[SELECTED] = @selected_fg_color
+  bg[SELECTED] = @selected_bg_color
 
-    bg[SELECTED] = @selected_bg_color
-
-    engine "murrine" {}
+  engine "murrine" {}
 }
 
-style "theme-panel-buttons" {
+style "panelbuttons" {
+  xthickness = 4
+  ythickness = 0
 
-    xthickness = 4
-    ythickness = 0
-
-    engine "murrine" {
-        textstyle = 0
-    }
+  engine "murrine" {
+    textstyle = 0
+  }
 }
 
-style "theme-panel-buttons"
-{
-    GtkButton::child-displacement-x = 0
-    GtkButton::child-displacement-y = 0
-    engine "pixmap" {
-        image {
-            function    = BOX
-            recolorable = TRUE
-            state       = NORMAL
-        }
-        image {
-            function    = BOX
-            recolorable = TRUE
-            state       = PRELIGHT
-            shadow      = OUT
-            file        = "assets/panel-btn-hover.png"
-            border      = { 2, 2, 0, 0 }
-            stretch     = TRUE
-        }
-        image {
-            function    = BOX
-            recolorable = TRUE
-            state       = PRELIGHT
-            shadow      = IN
-            file        = "assets/panel-btn-active-hover.png"
-            border      = { 2, 2, 0, 0 }
-            stretch     = TRUE
-        }
-        image {
-            function    = BOX
-            recolorable = TRUE
-            state       = ACTIVE
-            file        = "assets/panel-btn-active.png"
-            border      = { 2, 2, 0, 0 }
-            stretch     = TRUE
-        }
-        image {
-            function    = BOX
-            recolorable = TRUE
-            state       = SELECTED
-            file        = "assets/panel-btn-active.png"
-            border      = { 2, 2, 0, 0 }
-            stretch     = TRUE
-        }
-        image {
-            function    = BOX
-            recolorable = TRUE
-            state       = INSENSITIVE
-        }
-        image {
-            function        = ARROW
-            recolorable     = TRUE
-            arrow_direction = DOWN
-        }
-    }
+style "theme-panel-text" {
+  fg[NORMAL]   = @panel_fg_color
+  fg[PRELIGHT] = @selected_fg_color
+  fg[ACTIVE]   = @panel_fg_color
+
+  text[NORMAL]   = @panel_fg_color
+  text[PRELIGHT] = @selected_fg_color
+  text[ACTIVE]   = @panel_fg_color
+
+  engine "murrine" {
+    textstyle  = 0
+    text_shade = 0.2
+  }
 }
 
-style "theme-panel-text"
-{
-    fg[NORMAL]     = @panel_fg_color
-    fg[PRELIGHT]   = @panel_fg_color
-    fg[ACTIVE]     = @panel_fg_color
+style "panel-entry" = "dark" {
+  fg[NORMAL]        = @text_color
+  fg[PRELIGHT]      = @text_color
+  fg[ACTIVE]        = @text_color
+  fg[SELECTED]      = @text_color
+  fg[INSENSITIVE]   = @text_color
 
-    text[NORMAL]   = @panel_fg_color
-    text[PRELIGHT] = @panel_fg_color
-    text[ACTIVE]   = @panel_fg_color
-
-    engine "murrine" {
-    }
+  text[NORMAL]      = @text_color
+  text[PRELIGHT]    = @text_color
+  text[ACTIVE]      = @text_color
+  text[SELECTED]    = @text_color
+  text[INSENSITIVE] = @text_color
 }
 
-style "panel-entry" = "dark"
-{
-    fg[NORMAL]        = @text_color
-    fg[PRELIGHT]      = @text_color
-    fg[ACTIVE]        = @text_color
-    fg[SELECTED]      = @text_color
-    fg[INSENSITIVE]   = @text_color
-
-    text[NORMAL]      = @text_color
-    text[PRELIGHT]    = @text_color
-    text[ACTIVE]      = @text_color
-    text[SELECTED]    = @text_color
-    text[INSENSITIVE] = @text_color
-
+style "theme-main-menu-text" = "theme-panel-text" {
+  fg[PRELIGHT] = @selected_fg_color
+  text[PRELIGHT] = @selected_fg_color
 }
 
-style "theme-main-menu-text" = "theme-panel-text"
-{
-    fg[PRELIGHT]   = "#ffffff"
-    text[PRELIGHT] = "#ffffff"
+style "workspace-switcher" = "theme-panel" {
+  bg[SELECTED] = @selected_bg_color
 }
 
-style "workspace-switcher" = "theme-panel"
-{
-    bg[SELECTED] = shade (0.8, @selected_bg_color)
+style "indicator" = "theme-panel" {
+  xthickness = 0
+  ythickness = 0
 }
 
-style "window-buttons" = "theme-panel"
-{
-    xthickness    = 3
-
-    bg[ACTIVE]   = shade (0.6, @panel_bg_color)
-    bg[PRELIGHT] = shade (1.2, @panel_bg_color)
-    bg[SELECTED] = shade (0.6, @panel_bg_color)
-
-    fg[NORMAL]   = shade (0.7, @base_color)
-    fg[ACTIVE]   = @base_color
-    fg[PRELIGHT] = @base_color
-
-    engine "murrine" {
-        contrast = 0.0
-    }
-}
-
-style "indicator" = "theme-panel"
-{
-    xthickness = 0
-    ythickness = 0
-}
-
-# Panel buttons
-widget       "*tasklist*"                         style "theme-panel-buttons"
-widget_class "*Xfce*Panel*.GtkToggleButton"       style "theme-panel-buttons"
-widget_class "*Xfce*NetkTasklist*GtkToggleButton" style "theme-panel-buttons"
-widget_class "*PanelToplevel*Button"              style "theme-panel-buttons"
-widget_class "*Panel*GtkToggleButton"             style "theme-panel-buttons"
-widget_class "*Xfce*Panel*Button*"                style "theme-panel-buttons"
-widget_class "*<XfceArrowButton>"                 style "theme-panel-buttons"
-widget_class "*<XfceActionsPlugin>*"              style "theme-panel-buttons"
-widget_class "*XfcePanelPlugin.GtkButton"         style "theme-panel-buttons"
-widget       "*dict*Applet*"                      style "theme-panel-buttons"
-widget_class "*Xfce*NetkTasklist*GtkToggleButton" style "theme-panel-buttons"
-widget_class "*Tasklist*"                         style:highest "theme-panel-buttons"
-widget_class "*LauncherPlugin*"                   style:highest "theme-panel-buttons"
-widget_class "*ActionsPlugin*"                    style:highest "theme-panel-buttons"
+widget       "*tasklist*"                             style "panelbuttons"
+widget_class "*Xfce*Panel*.GtkToggleButton"           style "panelbuttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panelbuttons"
+widget_class "*PanelToplevel*Button"                  style "panelbuttons"
+widget_class "*Panel*GtkToggleButton"                 style "panelbuttons"
+widget_class "*Xfce*Panel*Button*"                    style "panelbuttons"
+widget_class "*<XfceArrowButton>"                     style "panelbuttons"
+widget_class "*<XfceActionsPlugin>*"                  style "panelbuttons"
+widget_class "*XfcePanelPlugin.GtkButton"             style "panelbuttons"
+widget       "*dict*Applet*"                          style "panelbuttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panelbuttons"
+widget_class "*Tasklist*"                             style:highest "panelbuttons"
+widget_class "*LauncherPlugin*"                       style:highest "panelbuttons"
+widget_class "*ActionsPlugin*"                        style:highest "panelbuttons"
 
 # lxpanel and fbpanel
-widget "*.tclock.*"       style "theme-panel-buttons"
-widget "*.taskbar.*"      style "theme-panel-buttons"
-widget_class "*GtkBgbox*" style "theme-panel-buttons"
+widget "*.tclock.*"                                   style "panelbuttons"
+widget "*.taskbar.*"                                  style "panelbuttons"
+widget_class "*GtkBgbox*"                             style "panelbuttons"
 
-class "*Panel*MenuBar*"             style "panelbar"
-widget_class "*Panel*MenuBar*"      style "panelbar"
-widget_class "*Panel*MenuBar*Item*" style:highest "panelbar"
+class "*Panel*MenuBar*"                               style "panelbar"
+widget_class "*Panel*MenuBar*"                        style "panelbar"
+widget_class "*Panel*MenuBar*Item*"                   style:highest "panelbar"
 
-widget "*PanelWidget*"            style "theme-panel"
-widget "*PanelApplet*"            style "theme-panel"
-widget "*fast-user-switch*"       style "theme-panel"
-widget "*CPUFreq*Applet*"         style "theme-panel"
-class "PanelApp*"                 style "theme-panel"
-class "PanelToplevel*"            style "theme-panel"
-widget_class "*PanelToplevel*"    style "theme-panel"
-widget_class "*notif*"            style "theme-panel"
-widget_class "*Notif*"            style "theme-panel"
-widget_class "*Tray*"             style "theme-panel"
-widget_class "*tray*"             style "theme-panel"
-widget_class "*computertemp*"     style "theme-panel"
-widget_class "*Applet*Tomboy*"    style "theme-panel"
-widget_class "*Applet*Netstatus*" style "theme-panel"
+widget "*PanelWidget*"                                style "theme-panel"
+widget "*PanelApplet*"                                style "theme-panel"
+widget "*fast-user-switch*"                           style "theme-panel"
+widget "*CPUFreq*Applet*"                             style "theme-panel"
+class "PanelApp*"                                     style "theme-panel"
+class "PanelToplevel*"                                style "theme-panel"
+widget_class "*PanelToplevel*"                        style "theme-panel"
+widget_class "*notif*"                                style "theme-panel"
+widget_class "*Notif*"                                style "theme-panel"
+widget_class "*Tray*"                                 style "theme-panel" 
+widget_class "*tray*"                                 style "theme-panel"
+widget_class "*computertemp*"                         style "theme-panel"
+widget_class "*Applet*Tomboy*"                        style "theme-panel"
+widget_class "*Applet*Netstatus*"                     style "theme-panel"
 
 # Fixes for tooltip text in some apps.
-widget_class "*Notif*Beagle*"  style "theme-panel"
-widget_class "*Notif*Brasero*" style "theme-panel"
+widget_class "*Notif*Beagle*"                         style "theme-panel"
+widget_class "*Notif*Brasero*"                        style "theme-panel"
 
 # XFCE panel theming.
-widget "*Xfce*Panel*" style "theme-panel"
-class "*Xfce*Panel*"  style "theme-panel"
-widget "*WnckPager*"  style "workspace-switcher"
-widget "*TopMenu*"    style "theme-panel"
+widget "*Xfce*Panel*"                                 style "theme-panel"
+class  "*Xfce*Panel*"                                 style "theme-panel"
+widget "*Xfce*Panel*GtkProgressBar"                   style "theme-panel-progressbar"
+widget "*WnckPager*"                                  style "workspace-switcher"
+widget "*TopMenu*"                                    style "theme-panel"
+widget "*XfceTasklist*"                               style "panelbuttons"
 
 # Fix gtk-entries in the panel
-class "GtkEntry"                      style "combo"
-class "*SexyIconEntry*"               style:highest "combo" # fixes dict-plugin
-widget "*xfce4-verve-plugin*GtkEntry" style:highest "combo" # fixes verve-plugin
-widget "*bookmark*GtkEntry"           style "panel-entry"   # fixes smartbookmark-plugin
+widget "*bookmark*GtkEntry"                           style "panel-entry" # fixes smartbookmark-plugin
 
 # Make sure panel text color doesn't change
-widget_class "*Panel*MenuBar*"      style "theme-main-menu-text"
-widget_class "*Panel*<GtkMenuBar>*" style "theme-main-menu-text"
-widget "*.clock-applet-button.*"    style "theme-panel-text"
-widget "*PanelApplet*"              style "theme-panel-text"
+widget_class "*Panel*MenuBar*"                        style "theme-main-menu-text"
+widget_class "*Panel*<GtkMenuBar>*"                   style "theme-main-menu-text"
+widget "*.clock-applet-button.*"                      style "theme-panel-text"
+widget "*PanelApplet*"                                style "theme-panel-text"
 
 # Override general panel-style with specific plugin-styles
-widget "*indicator-applet*" style "indicator"
-widget "*indicator-button*" style "indicator"
-#widget "*XfceTasklist*"     style "window-buttons"
-widget "*XfceTasklist*"     style "theme-panel-buttons"
-
-# XFCE Notify Window
-
-style "notify-window"
-{
-    XfceNotifyWindow::summary-bold       = 1
-    XfceNotifyWindow::border-color       = @bg_color_dark
-    XfceNotifyWindow::border-color-hover = @bg_color_dark
-    XfceNotifyWindow::border-radius      = 7.0
-    XfceNotifyWindow::border-width       = 0.0
-    XfceNotifyWindow::border-width-hover = 0.0
-    
-    bg[NORMAL] = @bg_color_dark
-}
-
-style "notify-button"
-{
-    bg[NORMAL]   = shade (1.25, @bg_color_dark)
-    bg[PRELIGHT] = shade (1.35, @bg_color_dark)
-    bg[ACTIVE]   = @selected_bg_color
-    fg[NORMAL]   = @text_color_dark
-    fg[PRELIGHT] = @text_color_dark
-
-    engine "murrine" {
-        border_shades = { 0.7, 0.7 }
-        shadow_shades = {0.1,0.1}
-        roundness     = 2
-    }
-}
-
-style "notify-text"
-{
-    fg[NORMAL]   = @text_color_dark
-    fg[PRELIGHT] = @text_color_dark
-
-    GtkWidget::link-color = @link_color
-}
-
-style "notify-summary"
-{
-    font_name = "Bold"
-}
-
-style "notify-progressbar"
-{
-    GtkProgressBar::min-horizontal-bar-height = 4
-    xthickness   = 0
-    ythickness   = 0
-
-    fg[PRELIGHT] = @text_color_dark
-    bg[NORMAL]   = @bg_color_dark
-    bg[SELECTED] = @selected_bg_color
-    bg[ACTIVE]   = @selected_bg_color
-
-    engine "murrine" {
-        gradient_shades      = {1.0,1.0,1.0,1.0}
-        trough_shades        = {0.2, 0.2}
-        trough_border_shades = {0.2, 0.2}
-        roundness            = 0
-        contrast             = 1.0
-    }
-}
-
-class        "XfceNotifyWindow"                    style "notify-window"
-widget       "XfceNotifyWindow.*.summary"          style "notify-summary"
-widget_class "XfceNotifyWindow.*<GtkButton>"       style:highest "notify-button"
-widget_class "XfceNotifyWindow.*.<GtkLabel>"       style "notify-text"
-widget_class "XfceNotifyWindow.*.<GtkProgress>"    style:highest "notify-progressbar"
-widget_class "XfceNotifyWindow.*.<GtkProgressBar>" style:highest "notify-progressbar"
-
-style "xfce-panel-image-style"
-{
-  # Fix the panel images to a default gtk icon size, is only works for
-  # images below 32 pixels. You can for example use this when you have
-  # fuzzy launcher icons.
-  XfcePanelImage::force-gtk-icon-sizes = true
-}
-class "XfcePanelImage" style "xfce-panel-image-style"
-
-# The following removes the arrows from the panel
-
-style "panel-arrow-remove" {
-engine "pixmap" {
-    image {
-            function        = ARROW
-            recolorable     = TRUE
-            overlay_file    = "assets/null.png"
-            overlay_border  = {1,1,1,1}
-            overlay_stretch = FALSE
-            arrow_direction = UP
-        }
-    image {
-            function        = ARROW
-            recolorable     = TRUE
-            overlay_file    = "assets/null.png"
-            overlay_border  = {1,1,1,1}
-            overlay_stretch = FALSE
-            arrow_direction = DOWN
-        }
-    image
-        {
-            function        = HANDLE
-            overlay_file    = "assets/null.png"
-            overlay_stretch = FALSE
-            orientation     = VERTICAL
-        }
-    image
-        {
-            function        = HANDLE
-            overlay_file    = "assets/null.png"
-            overlay_stretch = FALSE
-            orientation     = HORIZONTAL
-        }
-    }
-}
-
-widget_class "*PanelToplevel*" style:highest "panel-arrow-remove"
+widget "*indicator-applet*"                           style "indicator"
+widget "*indicator-button*"                           style "indicator"
