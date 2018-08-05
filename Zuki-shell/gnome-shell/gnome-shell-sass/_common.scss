@@ -807,6 +807,13 @@ StScrollBar {
   }
 
   .screencast-indicator { color: $warning_color; }
+  .remote-access-indicator { color: $warning_color; }
+  
+  &.solid {
+    // Not a desired behavior in this theme. Let's use the normal panel bg.
+    background-color: transparentize(black,0.4);
+    transition-duration: 0ms;
+  }
 }
 
   // calendar popover
@@ -1114,6 +1121,7 @@ StScrollBar {
   }
 
   .system-menu-action {
+    -st-icon-style: symbolic;
     color: $fg_color;
     border-radius: 32px; /* wish we could do 50% */
     padding: 13px;

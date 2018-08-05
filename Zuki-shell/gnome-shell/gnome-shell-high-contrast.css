@@ -388,6 +388,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel .screencast-indicator { color: #f57900; }
 
+#panel .remote-access-indicator { color: #f57900; }
+
+#panel.solid { background-color: rgba(0, 0, 0, 0.6); transition-duration: 0ms; }
+
 #calendarArea { padding: 0.75em 1.0em; }
 
 .calendar { margin-bottom: 1em; }
@@ -536,7 +540,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:rtl { padding-right: 20px; margin-right: 1.09em; }
 
-.system-menu-action { color: #fff; border-radius: 32px; /* wish we could do 50% */ padding: 13px; border: 1px solid rgba(0, 0, 0, 0.8); }
+.system-menu-action { -st-icon-style: symbolic; color: #fff; border-radius: 32px; /* wish we could do 50% */ padding: 13px; border: 1px solid rgba(0, 0, 0, 0.8); }
 
 .system-menu-action:hover, .system-menu-action:focus { background-color: rgba(255, 255, 255, 0.3); color: #fff; border: none; padding: 14px; }
 
