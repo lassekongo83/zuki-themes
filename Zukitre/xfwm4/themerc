@@ -5,12 +5,12 @@ title_horizontal_offset=0
 title_vertical_offset_active=0
 title_vertical_offset_inactive=0
 #title_shadow_active=true
-title_shadow_inactive=true
+#title_shadow_inactive=true
 
 #button_layout=O|HMC
 
-active_text_color=#000000
-inactive_text_color=#999999
+active_text_color=#2c2c2c
+inactive_text_color=#818181
 inactive_text_shadow_color=#ffffff
 
 #placement_ratio=20
