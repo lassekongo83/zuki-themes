@@ -3859,6 +3859,20 @@ headerbar,
   }
 }
 
+// Unmaximize
+headerbar,
+.titlebar {
+  .maximized & {
+    button.titlebutton {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
+      {
+      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}#{$asset_suffix}.png'),
+                                                      url('assets/titlebutton-unmaximize#{$m}#{$asset_suffix}@2.png')); }
+      }
+    }
+  }
+}
+
 // catch all extend :)
 
 %selected_items {

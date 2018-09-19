@@ -45,8 +45,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="180.68611"
-     inkscape:cy="181.30713"
+     inkscape:cx="192.35822"
+     inkscape:cy="67.719079"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -251,10 +251,10 @@
          id="rect4138"
          style="opacity:1;fill:#d6d6d6;fill-opacity:0;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <rect
-         y="567.36212"
-         x="14"
-         height="10"
-         width="10"
+         y="562.36212"
+         x="9"
+         height="20.000029"
+         width="20"
          id="rect1170"
          style="fill:#d6d6d6;fill-opacity:1" />
       <g
@@ -285,10 +285,10 @@
        id="maximize-active"
        inkscape:label="#g1135">
       <rect
-         y="600.36212"
-         x="14"
-         height="10"
-         width="10"
+         y="595.36212"
+         x="9"
+         height="20.000029"
+         width="20"
          id="rect1127"
          style="fill:#d6d6d6;fill-opacity:1" />
       <rect
@@ -370,10 +370,10 @@
          x="5"
          y="622.36212" />
       <rect
-         y="632.36212"
-         x="14"
-         height="10"
-         width="10"
+         y="627.36212"
+         x="9"
+         height="20.000029"
+         width="20"
          id="rect1074"
          style="fill:#d6d6d6;fill-opacity:1" />
       <g
@@ -750,10 +750,10 @@
          id="rect990"
          style="opacity:1;fill:#d6d6d6;fill-opacity:0;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <rect
-         y="700.36212"
-         x="96"
-         height="10"
-         width="10"
+         y="695.36212"
+         x="91"
+         height="20.000029"
+         width="20"
          id="rect1146"
          style="fill:#d6d6d6;fill-opacity:1" />
       <g
@@ -1303,10 +1303,10 @@
       <rect
          style="fill:#d6d6d6;fill-opacity:1"
          id="rect1149"
-         width="10"
-         height="10"
-         x="14"
-         y="600.36212" />
+         width="20"
+         height="20.000029"
+         x="9"
+         y="595.36212" />
       <rect
          y="590.36212"
          x="5"
@@ -1352,10 +1352,10 @@
       <rect
          style="fill:#d6d6d6;fill-opacity:1"
          id="rect1182"
-         width="10"
-         height="10"
-         x="14"
-         y="567.36212" />
+         width="20"
+         height="20.000029"
+         x="9"
+         y="562.36212" />
       <g
          transform="translate(-183.00002,-198.00004)"
          id="g1190"
@@ -1470,10 +1470,10 @@
       <rect
          style="fill:#d6d6d6;fill-opacity:1"
          id="rect1133"
-         width="10"
-         height="10"
-         x="14"
-         y="632.36212" />
+         width="20"
+         height="20.000029"
+         x="9"
+         y="627.36212" />
       <g
          transform="translate(-135.00002,-133.00003)"
          id="g1142"
@@ -1516,10 +1516,10 @@
       <rect
          style="fill:#d6d6d6;fill-opacity:1"
          id="rect1167"
-         width="10"
-         height="10"
-         x="96"
-         y="700.36212" />
+         width="20"
+         height="20.000029"
+         x="91"
+         y="695.36212" />
       <g
          transform="matrix(3.7795276,0,0,3.7795276,67.000002,-303.15749)"
          id="g1177"
