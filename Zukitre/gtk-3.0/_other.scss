@@ -147,7 +147,7 @@ menu,
   notebook > stack:not(:only-child) searchbar { @extend .view; }
 
   // Remove the separator in the new 3.30 nautilus path-bar
-  .linked.path-bar .dim-label { color: transparent; }
+  .path-bar .dim-label { color: transparent; }
 }
 
 .disk-space-display {

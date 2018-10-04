@@ -1887,7 +1887,7 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 
 .nautilus-window .searchbar-container { margin-top: -1px; }
 
-.nautilus-window .linked.path-bar .dim-label, .nautilus-window .linked.path-bar label.separator, .nautilus-window .linked.path-bar .titlebar:not(headerbar) .subtitle, .titlebar:not(headerbar) .nautilus-window .linked.path-bar .subtitle, .nautilus-window .linked.path-bar headerbar .subtitle, headerbar .nautilus-window .linked.path-bar .subtitle { color: transparent; }
+.nautilus-window .path-bar .dim-label, .nautilus-window .path-bar label.separator, .nautilus-window .path-bar .titlebar:not(headerbar) .subtitle, .titlebar:not(headerbar) .nautilus-window .path-bar .subtitle, .nautilus-window .path-bar headerbar .subtitle, headerbar .nautilus-window .path-bar .subtitle { color: transparent; }
 
 .disk-space-display { border-style: solid; border-width: 2px; }
 
