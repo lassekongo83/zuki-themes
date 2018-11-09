@@ -314,7 +314,7 @@ button.circular { border-radius: 9999px; -gtk-outline-radius: 9999px; }
 
 button.circular label { padding: 0; }
 
-.stack-switcher > button.needs-attention > label, .stack-switcher > button.needs-attention > image, stacksidebar row.needs-attention > label { animation: needs_attention 150ms ease-in; background-image: radial-gradient(farthest-side, #80bfff 96%, rgba(128, 191, 255, 0)), radial-gradient(farthest-side, rgba(0, 0, 0, 0.846275) 95%, transparent); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; background-position: right 3px, right 2px; }
+.stack-switcher > button.needs-attention > label, .stack-switcher > button.needs-attention > image, stacksidebar row.needs-attention > label { animation: needs_attention 150ms ease-in; background-image: radial-gradient(farthest-side, #80bfff 96%, rgba(128, 191, 255, 0)), radial-gradient(farthest-side, rgba(0, 0, 0, 0.846275) 95%, rgba(0, 0, 0, 0)); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; background-position: right 3px, right 2px; }
 
 .stack-switcher > button.needs-attention > label:backdrop, .stack-switcher > button.needs-attention > image:backdrop, stacksidebar row.needs-attention > label:backdrop { background-size: 6px 6px, 0 0; }
 
@@ -588,7 +588,7 @@ window.tiled headerbar, window.tiled headerbar:first-child, window.tiled headerb
 
 window.csd > .titlebar:not(headerbar) { padding: 0; background-color: transparent; background-image: none; border-style: none; border-color: transparent; box-shadow: none; }
 
-.titlebar:not(headerbar) > separator { background-color: #090b0c; }
+.titlebar:not(headerbar) separator { background-color: #090b0c; }
 
 /************ Pathbars * */
 .path-bar button.text-button, .path-bar button.image-button, .path-bar button { padding-left: 4px; padding-right: 4px; }
@@ -1275,13 +1275,13 @@ actionbar > revealer > box:backdrop { border-color: #0d0f10; }
 
 scrolledwindow viewport.frame { border-style: none; }
 
-scrolledwindow overshoot.top { background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(black), to(transparent)), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 100% 5%, 100% 100%; background-repeat: no-repeat; background-position: center top; background-color: transparent; border: none; box-shadow: none; }
+scrolledwindow overshoot.top { background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 100% 5%, 100% 100%; background-repeat: no-repeat; background-position: center top; background-color: transparent; border: none; box-shadow: none; }
 
-scrolledwindow overshoot.bottom { background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(black), to(transparent)), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 100% 5%, 100% 100%; background-repeat: no-repeat; background-position: center bottom; background-color: transparent; border: none; box-shadow: none; }
+scrolledwindow overshoot.bottom { background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 100% 5%, 100% 100%; background-repeat: no-repeat; background-position: center bottom; background-color: transparent; border: none; box-shadow: none; }
 
-scrolledwindow overshoot.left { background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(black), to(transparent)), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 5% 100%, 100% 100%; background-repeat: no-repeat; background-position: left center; background-color: transparent; border: none; box-shadow: none; }
+scrolledwindow overshoot.left { background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 5% 100%, 100% 100%; background-repeat: no-repeat; background-position: left center; background-color: transparent; border: none; box-shadow: none; }
 
-scrolledwindow overshoot.right { background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(black), to(transparent)), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 5% 100%, 100% 100%; background-repeat: no-repeat; background-position: right center; background-color: transparent; border: none; box-shadow: none; }
+scrolledwindow overshoot.right { background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 5% 100%, 100% 100%; background-repeat: no-repeat; background-position: right center; background-color: transparent; border: none; box-shadow: none; }
 
 scrolledwindow undershoot.top { background-color: transparent; background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%); padding-top: 1px; background-size: 10px 0px; background-repeat: repeat-x; background-origin: content-box; background-position: center top; border: none; box-shadow: none; }
 
@@ -1670,6 +1670,13 @@ stackswitcher button.text-button { min-width: 100px; }
 
 stackswitcher button.circular, stackswitcher button.text-button.circular { min-width: 32px; min-height: 32px; padding: 0; }
 
+/************* App Icons * */
+/* Outline for low res icons */
+.lowres_icon { icon-shadow: 1px 1px rgba(0, 0, 0, 0.3), -1px -1px rgba(0, 0, 0, 0.3), -1px 1px rgba(0, 0, 0, 0.3), 1px -1px rgba(0, 0, 0, 0.3); }
+
+/* Drapshadow for large icons */
+.icon_dropshadow { icon-shadow: 0 2px 12px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.7); }
+
 /********* Emoji * */
 popover.emoji-picker { padding-left: 0; padding-right: 0; }
 
@@ -1759,7 +1766,7 @@ these colors are exported for the window manager and shouldn't be used in applic
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade(#eeeeee, 1.8);
 @define-color wm_unfocused_title #8d9093;
-@define-color wm_highlight transparent;
+@define-color wm_highlight rgba(0, 0, 0, 0);
 @define-color wm_borders_edge rgba(238, 238, 238, 0.1);
 @define-color wm_bg_a shade(#2b3137, 1.2);
 @define-color wm_bg_b #2b3137;

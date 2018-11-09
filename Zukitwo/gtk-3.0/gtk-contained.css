@@ -596,7 +596,7 @@ window.tiled headerbar, window.tiled headerbar:first-child, window.tiled headerb
 
 window.csd > .titlebar:not(headerbar) { padding: 0; background-color: transparent; background-image: none; border-style: none; border-color: transparent; box-shadow: none; }
 
-.titlebar:not(headerbar) > separator { background-color: #b0b0b0; }
+.titlebar:not(headerbar) separator { background-color: #b0b0b0; }
 
 /************ Pathbars * */
 .path-bar button.text-button, .path-bar button.image-button, .path-bar button { padding-left: 4px; padding-right: 4px; }
@@ -1713,6 +1713,13 @@ cursor-handle.insertion-cursor:active:dir(ltr), cursor-handle.insertion-cursor:a
 stackswitcher button.text-button { min-width: 100px; }
 
 stackswitcher button.circular, stackswitcher button.text-button.circular { min-width: 32px; min-height: 32px; padding: 0; }
+
+/************* App Icons * */
+/* Outline for low res icons */
+.lowres_icon { icon-shadow: 1px 1px rgba(0, 0, 0, 0.3), -1px -1px rgba(0, 0, 0, 0.3), -1px 1px rgba(0, 0, 0, 0.3), 1px -1px rgba(0, 0, 0, 0.3); }
+
+/* Drapshadow for large icons */
+.icon_dropshadow { icon-shadow: 0 2px 12px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.7); }
 
 /********* Emoji * */
 popover.emoji-picker { padding-left: 0; padding-right: 0; }
