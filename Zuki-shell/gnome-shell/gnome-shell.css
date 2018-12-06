@@ -64,7 +64,7 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover { backgro
 StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { background-color: #3399ff; }
 
 /* Slider */
-.slider { height: 1em; -slider-height: 0.3em; -slider-background-color: #394a52; -slider-border-color: #0e1214; -slider-active-background-color: #3399ff; -slider-active-border-color: #0080ff; -slider-border-width: 1px; -slider-handle-radius: 6px; }
+.slider { height: 1em; -barlevel-height: 0.3em; -barlevel-background-color: #394a52; -barlevel-border-color: #0e1214; -barlevel-active-background-color: #3399ff; -barlevel-active-border-color: #0073e6; -barlevel-overdrive-color: #d51010; -barlevel-overdrive-border-color: #a60c0c; -barlevel-overdrive-separator-width: 0.2em; -barlevel-border-width: 1px; -slider-handle-radius: 6px; -slider-height: 0.3em; -slider-background-color: #394a52; -slider-border-color: #0e1214; -slider-active-background-color: #3399ff; -slider-active-border-color: #0080ff; -slider-border-width: 1px; }
 
 /* Check Boxes */
 .check-box StBoxLayout { spacing: .8em; }
@@ -204,7 +204,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .prompt-dialog-info-label { font-size: 10pt; padding-bottom: 8px; }
 
-.hidden { color: transparent; }
+.hidden { color: rgba(0, 0, 0, 0); }
 
 .prompt-dialog-null-label { font-size: 10pt; padding-bottom: 8px; }
 
@@ -322,7 +322,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .switcher-list .separator { width: 1px; background: #0e1214; }
 
-.switcher-arrow { border-color: transparent; color: rgba(222, 226, 229, 0.8); }
+.switcher-arrow { border-color: rgba(0, 0, 0, 0); color: rgba(222, 226, 229, 0.8); }
 
 .switcher-arrow:highlighted { color: #dee2e5; }
 

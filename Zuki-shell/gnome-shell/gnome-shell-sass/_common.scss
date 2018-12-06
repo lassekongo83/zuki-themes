@@ -133,13 +133,24 @@ StScrollBar {
 
 .slider {
   height: 1em;
+  -barlevel-height: 0.3em;
+  -barlevel-background-color: $insensitive_bg_color; //background of the trough
+  -barlevel-border-color: $borders_color; //trough border color
+  -barlevel-active-background-color: $selected_bg_color; //active trough fill
+  -barlevel-active-border-color: darken($selected_bg_color,15%); //active trough border
+  -barlevel-overdrive-color: $destructive_color;
+  -barlevel-overdrive-border-color: darken($destructive_color,10%);
+  -barlevel-overdrive-separator-width: 0.2em;
+  -barlevel-border-width: 1px;
+  -slider-handle-radius: 6px;
+
+  // VERSION SPECIFIC (< 3.29.90)
   -slider-height: 0.3em;
   -slider-background-color: $insensitive_bg_color; //background of the trough
   -slider-border-color: $borders_color; //trough border color
   -slider-active-background-color: $selected_bg_color; //active trough fill
   -slider-active-border-color: darken($selected_bg_color,10%); //active trough border
   -slider-border-width: 1px;
-  -slider-handle-radius: 6px;
 }
 
 /* Check Boxes */
