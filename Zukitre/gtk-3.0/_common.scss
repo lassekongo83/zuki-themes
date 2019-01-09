@@ -2506,7 +2506,7 @@ radio {
   }
 
   // ...on selected list rows
-  row:selected & { &:disabled, & { border-color: $selected_borders_color; } }
+  row:selected &, menuitem:hover & { &:disabled, & { border-color: $selected_borders_color; } }
 
   // OSD
   .osd & {

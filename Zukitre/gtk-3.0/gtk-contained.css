@@ -1073,7 +1073,7 @@ scale highlight, progressbar progress { border: 1px solid #007eff; border-radius
 
 scale highlight:disabled, progressbar progress:disabled { background-color: transparent; border-color: transparent; }
 
-row:selected scale highlight:disabled, scale row:selected highlight:disabled, row:selected progressbar progress:disabled, progressbar row:selected progress:disabled, row:selected scale highlight, scale row:selected highlight, row:selected progressbar progress, progressbar row:selected progress { border-color: #007eff; }
+row:selected scale highlight:disabled, scale row:selected highlight:disabled, row:selected progressbar progress:disabled, progressbar row:selected progress:disabled, row:selected scale highlight, scale row:selected highlight, row:selected progressbar progress, progressbar row:selected progress, menuitem:hover scale highlight:disabled, scale menuitem:hover highlight:disabled, menuitem:hover progressbar progress:disabled, progressbar menuitem:hover progress:disabled, menuitem:hover scale highlight, scale menuitem:hover highlight, menuitem:hover progressbar progress, progressbar menuitem:hover progress { border-color: #007eff; }
 
 .osd scale highlight, scale .osd highlight, .osd progressbar progress, progressbar .osd progress { border-color: rgba(0, 0, 0, 0.7); }
 
