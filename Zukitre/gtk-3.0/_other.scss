@@ -68,6 +68,36 @@ XfceHeading,
   }
 }
 
+// Xfwm4's alt-tab dialog, aka "tabwin"
+#xfwm-tabwin {
+  padding: 12px;
+  background-image: none;
+  background-color: transparentize(black, 0.2);
+  color: shade($selected_fg_color, 0.65);
+  text-shadow: 0px 1px transparentize(black, 0.2);
+  border-radius: 4px;
+  // Set the application icon- and preview-size to 64px
+  -XfwmTabwinWidget-icon-size: 64px;
+  -XfwmTabwinWidget-preview-size: 64px;
+
+  button {
+    background-image: none;
+    color: $selected_fg_color;
+    font-weight: bold;
+    text-shadow: 0px 1px transparentize(black, 0.2);
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+
+    &:active, &:checked, &:active:hover, &:checked:hover {
+      background-color: $selected_bg_color;
+    }
+    &:hover {
+      background-color: $selected_bg_color;
+    }
+  }
+}
+
 // Temporary fixes for certain XFCE applets using GTK3
 #pulseaudio-button, #indicator-button {
   @extend %panelbutton;

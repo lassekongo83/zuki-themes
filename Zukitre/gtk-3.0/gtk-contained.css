@@ -1872,6 +1872,14 @@ XfceHeading, .XfceHeading { margin: 0; padding: 0; border-width: 0; background-i
 
 .xfce4-panel menu button:disabled > .label { color: inherit; }
 
+#xfwm-tabwin { padding: 12px; background-image: none; background-color: rgba(0, 0, 0, 0.8); color: shade(#ffffff, 0.65); text-shadow: 0px 1px rgba(0, 0, 0, 0.8); border-radius: 4px; -XfwmTabwinWidget-icon-size: 64px; -XfwmTabwinWidget-preview-size: 64px; }
+
+#xfwm-tabwin button { background-image: none; color: #ffffff; font-weight: bold; text-shadow: 0px 1px rgba(0, 0, 0, 0.8); border: none; border-radius: 2px; box-shadow: none; }
+
+#xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover { background-color: #3399ff; }
+
+#xfwm-tabwin button:hover { background-color: #3399ff; }
+
 /* Mate/Gnome Flashback Panel */
 .gnome-panel-menu-bar, .gnome-panel-menu-bar menubar, .mate-panel-menu-bar, .mate-panel-menu-bar menubar { background-color: #273238; }
 

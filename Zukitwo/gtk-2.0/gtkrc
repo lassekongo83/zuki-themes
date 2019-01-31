@@ -584,18 +584,18 @@ style "xfwm-tabwin"
     Xfwm4TabwinWidget::listview-icon-size = 16
     Xfwm4TabwinWidget::preview-size       = 512
     Xfwm4TabwinWidget::alpha              = 0.8
-    Xfwm4TabwinWidget::border-radius      = 10
+    Xfwm4TabwinWidget::border-radius      = 7
 
     bg[NORMAL]   = shade (0.35, @bg_color_dark)
     bg[ACTIVE]   = shade (0.65, @selected_bg_color)
     bg[PRELIGHT] = shade (0.85, @selected_bg_color)
-    bg[SELECTED] = shade (0.45, @bg_color_dark)
+    bg[SELECTED] = shade (0.45, @selected_bg_color)
     fg[NORMAL]   = shade (0.8, @base_color)
     fg[ACTIVE]   = @base_color
     fg[PRELIGHT] = @base_color
 
     engine "murrine" {
-        roundness         = 6
+        roundness         = 4
         contrast          = 0.8
         highlight_shade   = 1.00
         lightborder_shade = 1.0
