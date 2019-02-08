@@ -244,11 +244,6 @@ entry {
       &.right { padding-left: 6px; padding-right: 0; }
     }
 
-    undershoot {
-      &.left { @include undershoot(left); }
-      &.right { @include undershoot(right); }
-    }
-
     &.flat {
       &:focus, &:backdrop, &:disabled, &:backdrop:disabled, & {
         min-height: 0;
@@ -1355,6 +1350,11 @@ headerbar {
       background-color: $selected_bg_color;
       background-image: none;
       box-shadow: inset 0 1px mix($top_hilight, $selected_bg_color, 60%);
+
+      label {
+        text-shadow: none;
+        color: $selected_fg_color; 
+      }
     }
 
     .subtitle:link { @extend *:link:selected;  }
@@ -1451,6 +1451,20 @@ headerbar {
       min-width: 24px;
       margin: 0;
       padding: 0;
+    }
+  }
+
+  separator.titlebutton { opacity: 0; } // hide the close button separator
+
+  .solid-csd & {
+    &:backdrop, & {
+      &:dir(rtl), &:dir(ltr) { // specificity bump
+        margin-left: -1px;
+        margin-right: -1px;
+        margin-top: -1px;
+        border-radius: 0;
+        box-shadow: none;
+      }
     }
   }
 }
@@ -1792,6 +1806,16 @@ menubar,
     border: 0px solid;
     border-color: transparent;
 
+    // remove padding and rounding from menubar submenus
+    menu {
+      border-radius: 0;
+      padding:0;
+      menu {
+        border-radius: 0;
+        padding:0;
+      }
+    }
+
     &:hover { //Seems like it :hover even with keyboard focus
       border: 0px solid;
       border-color: transparent;
@@ -1807,6 +1831,9 @@ menubar,
       box-shadow: none;
     }
   }
+
+  // remove padding and rounding from menubar submenu decoration
+  .csd.popup decoration {border-radius:0;}
 }
 
 menu,
@@ -1867,12 +1894,13 @@ menu,
     border-radius: 0;
 
     &.top {
-      margin-top: -6px;
+      margin-top: -2px;
       border-bottom: 1px solid mix($fg_color, $base_color, 10%);
       -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
     }
 
     &.bottom {
+      margin-top: 4px;
       margin-bottom: -6px;
       border-top: 1px solid mix($fg_color, $base_color, 10%);
       -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
@@ -2405,6 +2433,8 @@ switch {
     border: none;
     box-shadow: none;
   }
+
+  image { color: transparent; }
 }
 
 @each $k,$l in ('',''),
@@ -3108,17 +3138,6 @@ scrolledwindow {
     &.right {
       @include overshoot(right);
     }
-  }
-
-  // Overflow indication, works similarly to the overshoot, the size if fixed tho.
-  undershoot {
-    &.top { @include undershoot(top); }
-
-    &.bottom { @include undershoot(bottom); }
-
-    &.left { @include undershoot(left); }
-
-    &.right { @include undershoot(right); }
   }
 
   junction { // the small square between two scrollbars

@@ -86,10 +86,6 @@ spinbutton:not(.vertical) image.left, entry image.left { padding-left: 0; paddin
 
 spinbutton:not(.vertical) image.right, entry image.right { padding-left: 6px; padding-right: 0; }
 
-spinbutton:not(.vertical) undershoot.left, entry undershoot.left { background-color: transparent; background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%); padding-left: 1px; background-size: 0px 10px; background-repeat: repeat-y; background-origin: content-box; background-position: left center; border: none; box-shadow: none; }
-
-spinbutton:not(.vertical) undershoot.right, entry undershoot.right { background-color: transparent; background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%); padding-right: 1px; background-size: 0px 10px; background-repeat: repeat-y; background-origin: content-box; background-position: right center; border: none; box-shadow: none; }
-
 spinbutton.flat:focus:not(.vertical), spinbutton.flat:backdrop:not(.vertical), spinbutton.flat:disabled:not(.vertical), spinbutton.flat:backdrop:disabled:not(.vertical), spinbutton.flat:not(.vertical), entry.flat:focus, entry.flat:backdrop, entry.flat:disabled, entry.flat:backdrop:disabled, entry.flat { min-height: 0; padding: 2px; background-image: none; border-color: transparent; border-radius: 0; }
 
 spinbutton:focus:not(.vertical), entry:focus { border-color: #79bbff; }
@@ -524,6 +520,8 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 
 .selection-mode .titlebar:backdrop:not(headerbar), .selection-mode.titlebar:backdrop:not(headerbar), .selection-mode headerbar:backdrop, headerbar.selection-mode:backdrop { background-color: #3399ff; background-image: none; box-shadow: inset 0 1px rgba(65, 159, 254, 0.46); }
 
+.selection-mode .titlebar:backdrop:not(headerbar) label, .selection-mode.titlebar:backdrop:not(headerbar) label, .selection-mode headerbar:backdrop label, headerbar.selection-mode:backdrop label { text-shadow: none; color: #ffffff; }
+
 .selection-mode .titlebar:not(headerbar) button, .selection-mode.titlebar:not(headerbar) button, .selection-mode headerbar button, headerbar.selection-mode button { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); border-color: #0066cc; background-image: linear-gradient(to bottom, #66b3ff, #5cadff); box-shadow: 1px 0 rgba(0, 0, 0, 0.08), 0 1px rgba(0, 0, 0, 0.08), -1px 0 rgba(0, 0, 0, 0.08), 0 -1px rgba(0, 0, 0, 0.08), inset 1px 0 rgba(255, 255, 255, 0.06), inset 0 1px rgba(255, 255, 255, 0.06), inset -1px 0 rgba(255, 255, 255, 0.06), inset 0 -1px rgba(255, 255, 255, 0.06); }
 
 .selection-mode .titlebar:not(headerbar) button.flat, .selection-mode.titlebar:not(headerbar) button.flat, .selection-mode headerbar button.flat, headerbar.selection-mode button.flat { border-color: transparent; background-color: transparent; background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(238, 238, 238, 0); text-shadow: none; -gtk-icon-shadow: none; }
@@ -565,6 +563,10 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 .default-decoration.titlebar:not(headerbar), headerbar.default-decoration { padding: 4px; min-height: 28px; }
 
 .default-decoration.titlebar:not(headerbar) button.titlebutton, headerbar.default-decoration button.titlebutton { min-height: 24px; min-width: 24px; margin: 0; padding: 0; }
+
+.titlebar:not(headerbar) separator.titlebutton, headerbar separator.titlebutton { opacity: 0; }
+
+.solid-csd .titlebar:backdrop:dir(rtl):not(headerbar), .solid-csd .titlebar:backdrop:dir(ltr):not(headerbar), .solid-csd .titlebar:dir(rtl):not(headerbar), .solid-csd .titlebar:dir(ltr):not(headerbar), .solid-csd headerbar:backdrop:dir(rtl), .solid-csd headerbar:backdrop:dir(ltr), .solid-csd headerbar:dir(rtl), .solid-csd headerbar:dir(ltr) { margin-left: -1px; margin-right: -1px; margin-top: -1px; border-radius: 0; box-shadow: none; }
 
 headerbar entry, headerbar spinbutton, headerbar separator:not(.sidebar), headerbar button { margin-top: 4px; margin-bottom: 4px; }
 
@@ -663,9 +665,15 @@ menubar, .menubar { -GtkWidget-window-dragging: true; padding: 0px; box-shadow: 
 
 menubar > menuitem, .menubar > menuitem { min-height: 16px; padding: 2px 8px; border: 0px solid; border-color: transparent; }
 
+menubar > menuitem menu, .menubar > menuitem menu { border-radius: 0; padding: 0; }
+
+menubar > menuitem menu menu, .menubar > menuitem menu menu { border-radius: 0; padding: 0; }
+
 menubar > menuitem:hover, .menubar > menuitem:hover { border: 0px solid; border-color: transparent; background-image: linear-gradient(to bottom, #2b3137, #0c0d0f); color: #eeeeee; box-shadow: inset 0 -2px #3399ff; }
 
 menubar > menuitem:disabled, .menubar > menuitem:disabled { color: #8d9093; box-shadow: none; }
+
+menubar .csd.popup decoration, .menubar .csd.popup decoration { border-radius: 0; }
 
 menu, .menu, .context-menu { margin: 4px; padding: 2px 0px; background-color: #3e4953; border: 1px solid #090b0c; }
 
@@ -689,9 +697,9 @@ menu menuitem label:dir(rtl), menu menuitem label:dir(ltr), .menu menuitem label
 
 menu > arrow, .menu > arrow, .context-menu > arrow { border-color: transparent; background-color: transparent; background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(238, 238, 238, 0); text-shadow: none; -gtk-icon-shadow: none; min-height: 16px; min-width: 16px; padding: 4px; background-color: #3e4953; border-radius: 0; }
 
-menu > arrow.top, .menu > arrow.top, .context-menu > arrow.top { margin-top: -6px; border-bottom: 1px solid #545f69; -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+menu > arrow.top, .menu > arrow.top, .context-menu > arrow.top { margin-top: -2px; border-bottom: 1px solid #545f69; -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
 
-menu > arrow.bottom, .menu > arrow.bottom, .context-menu > arrow.bottom { margin-bottom: -6px; border-top: 1px solid #545f69; -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+menu > arrow.bottom, .menu > arrow.bottom, .context-menu > arrow.bottom { margin-top: 4px; margin-bottom: -6px; border-top: 1px solid #545f69; -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
 menu > arrow:hover, .menu > arrow:hover, .context-menu > arrow:hover { background-color: #545f69; }
 
@@ -912,6 +920,8 @@ switch { font-size: 0px; min-width: 52px; min-height: 24px; background-size: 52p
 switch slider { min-width: 1px; min-height: 1px; }
 
 switch, switch slider { outline-color: transparent; color: transparent; border: none; box-shadow: none; }
+
+switch image { color: transparent; }
 
 switch { background-image: -gtk-scaled(url("assets/switch-dark.png"), url("assets/switch-dark@2.png")); }
 
@@ -1282,14 +1292,6 @@ scrolledwindow overshoot.bottom { background-image: -gtk-gradient(radial, center
 scrolledwindow overshoot.left { background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 5% 100%, 100% 100%; background-repeat: no-repeat; background-position: left center; background-color: transparent; border: none; box-shadow: none; }
 
 scrolledwindow overshoot.right { background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0))); background-size: 5% 100%, 100% 100%; background-repeat: no-repeat; background-position: right center; background-color: transparent; border: none; box-shadow: none; }
-
-scrolledwindow undershoot.top { background-color: transparent; background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%); padding-top: 1px; background-size: 10px 0px; background-repeat: repeat-x; background-origin: content-box; background-position: center top; border: none; box-shadow: none; }
-
-scrolledwindow undershoot.bottom { background-color: transparent; background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%); padding-bottom: 1px; background-size: 10px 0px; background-repeat: repeat-x; background-origin: content-box; background-position: center bottom; border: none; box-shadow: none; }
-
-scrolledwindow undershoot.left { background-color: transparent; background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%); padding-left: 1px; background-size: 0px 10px; background-repeat: repeat-y; background-origin: content-box; background-position: left center; border: none; box-shadow: none; }
-
-scrolledwindow undershoot.right { background-color: transparent; background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%); padding-right: 1px; background-size: 0px 10px; background-repeat: repeat-y; background-origin: content-box; background-position: right center; border: none; box-shadow: none; }
 
 scrolledwindow junction { border-color: transparent; border-image: linear-gradient(to bottom, #090b0c 1px, transparent 1px) 0 0 0 1/0 1px stretch; background-color: #3a454e; }
 
