@@ -40,3 +40,6 @@ $backdrop_insensitive_color: lighten($backdrop_bg_color,15%);
 $backdrop_borders_color: mix($borders_color, $bg_color, 90%);
 $backdrop_dark_fill: mix($backdrop_borders_color,$backdrop_bg_color, 35%);
 
+//misc
+$close_button: red;
+$close_button_hover: red;
