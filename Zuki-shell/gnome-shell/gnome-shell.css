@@ -530,9 +530,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel #panelActivities.panel-button:active > *, #panel #panelActivities.panel-button:overview > *, #panel #panelActivities.panel-button:focus > *, #panel #panelActivities.panel-button:checked > * { background-image: url("activities-active.svg"); }
 
-.system-switch-user-submenu-icon.user-icon { icon-size: 20px; padding: 0 2px; }
-
-.system-switch-user-submenu-icon.default-icon { icon-size: 16px; padding: 0 4px; }
+.system-switch-user-submenu-icon { icon-size: 16px; padding: 0 4px; }
 
 #appMenu { spinner-image: url("process-working.svg"); spacing: 4px; }
 
