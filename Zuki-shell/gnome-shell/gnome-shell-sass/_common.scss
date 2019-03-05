@@ -277,8 +277,7 @@ StScrollBar {
   }
 
   .end-session-dialog-logout-icon {
-    //border: 2px solid #8b8b8b;
-    border-radius: 2px;
+    border-radius: 99px;
     width: 48px;
     height: 48px;
     background-size: contain;
@@ -438,7 +437,7 @@ StScrollBar {
   }
 
   .polkit-dialog-user-icon {
-    border-radius: 2px;
+    border-radius: 99px;
     background-size: contain;
     width: 48px;
     height: 48px;
@@ -518,6 +517,7 @@ StScrollBar {
 
   .popup-menu-arrow { } //defined globally in the TOP BAR
   .popup-sub-menu {
+    padding-bottom: 1px;
     background-color: darken($bg_color,2%);
     box-shadow: inset 0 -1px 0px lighten($borders_color,5%);
   }
@@ -1336,6 +1336,8 @@ StScrollBar {
 
   .search-section-separator { height: 2px; background-color: rgba(255, 255, 255, 0.2); }
 
+  .search-section:last-child .search-section-separator { background-color: transparent; }
+
   .list-search-result-content { spacing: 30px; }
   .list-search-result-title { color: darken($osd_fg_color,5%); spacing: 12px; }
   .list-search-result-description { color: transparentize(darken($osd_fg_color,15%), 0.5); }
@@ -1798,13 +1800,11 @@ StScrollBar {
 
 /* Auth Dialogs & Screen Shield */
 
-.framed-user-icon {
+.user-icon {
   background-size: contain;
-  border: 2px solid $osd_fg_color;
   color: $osd_fg_color;
-  border-radius: 2px;
+  border-radius: 99px;
   &:hover {
-    border-color: lighten($osd_fg_color,30%);
     color: lighten($osd_fg_color,30%);
   }
 }

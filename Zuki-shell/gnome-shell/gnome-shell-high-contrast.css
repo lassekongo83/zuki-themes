@@ -138,7 +138,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .end-session-dialog-warning:rtl { text-align: right; }
 
-.end-session-dialog-logout-icon { border-radius: 2px; width: 48px; height: 48px; background-size: contain; }
+.end-session-dialog-logout-icon { border-radius: 99px; width: 48px; height: 48px; background-size: contain; }
 
 .end-session-dialog-shutdown-icon { color: #fff; width: 48px; height: 48px; }
 
@@ -215,7 +215,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .polkit-dialog-user-root-label { color: #f57900; }
 
-.polkit-dialog-user-icon { border-radius: 2px; background-size: contain; width: 48px; height: 48px; }
+.polkit-dialog-user-icon { border-radius: 99px; background-size: contain; width: 48px; height: 48px; }
 
 /* Audio selection dialog */
 .audio-device-selection-dialog { spacing: 30px; }
@@ -256,7 +256,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 /* Popovers/Menus */
 .popup-menu { min-width: 15em; }
 
-.popup-menu .popup-sub-menu { background-color: black; box-shadow: inset 0 -1px 0px #0d0d0d; }
+.popup-menu .popup-sub-menu { padding-bottom: 1px; background-color: black; box-shadow: inset 0 -1px 0px #0d0d0d; }
 
 .popup-menu .popup-menu-content { padding: 1em 0em; }
 
@@ -634,6 +634,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .search-section-separator { height: 2px; background-color: rgba(255, 255, 255, 0.2); }
 
+.search-section:last-child .search-section-separator { background-color: transparent; }
+
 .list-search-result-content { spacing: 30px; }
 
 .list-search-result-title { color: #e2e2df; spacing: 12px; }
@@ -858,9 +860,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .candidate-page-button-icon { icon-size: 1em; }
 
 /* Auth Dialogs & Screen Shield */
-.framed-user-icon { background-size: contain; border: 2px solid #eeeeec; color: #eeeeec; border-radius: 2px; }
+.user-icon { background-size: contain; color: #eeeeec; border-radius: 99px; }
 
-.framed-user-icon:hover { border-color: white; color: white; }
+.user-icon:hover { color: white; }
 
 .login-dialog-banner-view { padding-top: 24px; max-width: 23em; }
 
