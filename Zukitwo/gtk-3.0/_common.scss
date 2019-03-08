@@ -2001,10 +2001,7 @@ notebook {
     &.top, &.bottom { padding-left: 0; padding-right: 0; }
     &.left, &.right { padding-top: 0; padding-bottom: 0; }
 
-    tabs { 
-      margin: -1px;
-      //min-height: 28px;
-    }
+    tabs { margin: 0px; }
 
     @each $_pos in (top), (right), (bottom), (left) {
     

@@ -747,7 +747,7 @@ notebook > header.top, notebook > header.bottom { padding-left: 0; padding-right
 
 notebook > header.left, notebook > header.right { padding-top: 0; padding-bottom: 0; }
 
-notebook > header tabs { margin: -1px; }
+notebook > header tabs { margin: 0px; }
 
 notebook > header.top { border-bottom-style: solid; }
 
