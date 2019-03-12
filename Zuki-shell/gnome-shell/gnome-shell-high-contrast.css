@@ -500,6 +500,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .message-icon-bin > StIcon { color: #cccccc; icon-size: 1.09em; -st-icon-style: symbolic; }
 
+.message-icon-bin > .fallback-window-icon { width: 1.09em; height: 1.09em; }
+
 .message-secondary-bin { padding: 0 0.82em; }
 
 .message-secondary-bin > .event-time { color: #999999; font-size: 0.7em; /* HACK: the label should be baseline-aligned with a 1em label, fake this with some bottom padding */ padding-bottom: 0.13em; }
@@ -558,7 +560,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .ripple-box:rtl { border-radius: 0 0 0 52px; }
 
-.popup-menu-arrow { width: 16px; height: 16px; }
+.popup-menu-arrow { icon-size: 1.09em; }
 
 .popup-menu-icon { icon-size: 1.09em; }
 

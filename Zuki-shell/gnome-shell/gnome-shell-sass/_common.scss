@@ -1057,6 +1057,11 @@ StScrollBar {
             -st-icon-style: symbolic;
           }
 
+          .message-icon-bin > .fallback-window-icon {
+            width: 1.09em;
+            height: 1.09em;
+          }
+
           .message-secondary-bin {
             padding: 0 0.82em;
           }
@@ -1188,7 +1193,7 @@ StScrollBar {
 .ripple-box:rtl { border-radius: 0 0 0 52px; } // just a simple change to the border radius position
 
 // not really top bar only
-.popup-menu-arrow { width: 16px; height: 16px; }
+.popup-menu-arrow { icon-size: 1.09em; }
 .popup-menu-icon { icon-size: 1.09em; }
 
 //close buttons
