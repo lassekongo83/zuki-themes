@@ -16,8 +16,6 @@ checkbox-mixed-hover-dark
 checkbox-unchecked-insensitive-dark
 checkbox-checked-insensitive-dark
 checkbox-mixed-insensitive-dark
-checkbox-checked-selectionmode
-checkbox-selectionmode
 radio-unchecked
 radio-unchecked-hover
 radio-checked
