@@ -1906,6 +1906,8 @@ window.background.chromium button { border-color: #080a0b; }
 
 .thunar toolbar { border-bottom: 1px solid #080a0b; }
 
+.thunar .shortcuts-pane { border-top: 0; }
+
 .nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 3px; border-color: #79bbff; }
 
 /* Lightdm styling */

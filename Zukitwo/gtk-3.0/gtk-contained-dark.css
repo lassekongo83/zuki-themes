@@ -1898,4 +1898,6 @@ window.background.chromium button { border-color: #090b0c; }
 
 .thunar toolbar { border-bottom: 1px solid #090b0c; }
 
+.thunar .shortcuts-pane { border-top: 0; }
+
 .nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 3px; border-color: #79bbff; }
