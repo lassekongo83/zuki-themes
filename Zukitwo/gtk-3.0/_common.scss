@@ -35,7 +35,7 @@ $button_transition: all 200ms $ease-out-quad;
   outline-style: dashed;
   outline-offset: -3px;
   outline-width: 1px;
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: 3px - 2;
 
   -gtk-secondary-caret-color: $selected_bg_color
 }
@@ -1370,7 +1370,9 @@ headerbar {
       &:hover { @include button(hover, $selected_bg_color, $selected_fg_color); }
 
       &:active,
-      &:checked { @include button(active, $selected_bg_color, $selected_fg_color); }
+      &:checked,
+      &.toggle:checked,
+      &.toggle:active { @include button(active, $selected_bg_color, $selected_fg_color); }
 
       &.flat { &:backdrop, &:disabled, &:backdrop:disabled { @include button(undecorated); }}
 
@@ -1482,8 +1484,8 @@ headerbar {
     margin-bottom: 4px;
   }
   switch {
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   &.titlebar headerbar:not(.titlebar) {
