@@ -16,7 +16,7 @@ Zuki themes for GNOME, Xfce and more.
 
 The master branch should work with GTK 3.22+.
 
-* GNOME/GTK 3.18 - 3.26+
+* GNOME/GTK 3.18 - 3.22+
 * The murrine engine. This has different names depending on your distro.
   * `gtk2-engines-murrine` (Debian, Ubuntu)
   * `gtk-murrine-engine` (Fedora)
