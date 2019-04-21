@@ -78,11 +78,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .check-box:focus:checked StBin { background-image: url("checkbox-focused.svg"); }
 
 /* Switches */
-.toggle-switch { width: 52px; height: 24px; background-size: contain; }
+.toggle-switch { width: 52px; height: 24px; background-size: contain; background-image: url("switch-off.svg"); }
 
-.toggle-switch-us, .toggle-switch-intl { background-image: url("switch-off.svg"); }
-
-.toggle-switch-us:checked, .toggle-switch-intl:checked { background-image: url("switch-on.svg"); }
+.toggle-switch:checked { background-image: url("switch-on.svg"); }
 
 /* links */
 .shell-link { color: #4a90d9; }
@@ -200,7 +198,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .prompt-dialog-password-box { spacing: 1em; padding-bottom: 1em; }
 
-.prompt-dialog-error-label { font-size: 10pt; color: #cc0000; padding-bottom: 8px; }
+.prompt-dialog-error-label { font-size: 10pt; color: #f57900; padding-bottom: 8px; }
 
 .prompt-dialog-info-label { font-size: 10pt; padding-bottom: 8px; }
 
@@ -560,6 +558,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .ripple-box:rtl { border-radius: 0 0 0 52px; }
 
+.select-area-rubberband { background-color: rgba(33, 93, 156, 0.3); border: 1px solid #215d9c; }
+
 .popup-menu-arrow { icon-size: 1.09em; }
 
 .popup-menu-icon { icon-size: 1.09em; }
@@ -710,9 +710,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .page-indicator:hover .page-indicator-icon { border-color: white; }
 
-.page-indicator:active .page-indicator-icon { border: none; margin: 2px; background-color: #fff; }
+.page-indicator:active .page-indicator-icon { border: none; margin: 2px; background-color: white; }
 
-.page-indicator:checked .page-indicator-icon, .page-indicator:checked:active { background-color: #fff; }
+.page-indicator:checked .page-indicator-icon, .page-indicator:checked:active .page-indicator-icon { background-color: white; }
 
 .app-well-app > .overview-icon.overview-icon-with-label, .grid-search-result .overview-icon.overview-icon-with-label { padding: 10px 8px 5px 8px; spacing: 4px; }
 
