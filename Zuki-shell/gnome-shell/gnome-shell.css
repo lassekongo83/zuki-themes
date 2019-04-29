@@ -292,7 +292,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .osd-window .osd-monitor-label { font-size: 3em; }
 
-.osd-window .level { height: 0.6em; border-radius: 2px; background-color: rgba(8, 10, 11, 0.5); color: #dee2e5; }
+.osd-window .level { height: 0.6em; -barlevel-height: 0.6em; -barlevel-background-color: rgba(8, 10, 11, 0.5); -barlevel-active-background-color: #dee2e5; -barlevel-overdrive-color: #d51010; -barlevel-overdrive-separator-width: 0.2em; }
+
+.osd-window .level-bar { background-color: #dee2e5; border-radius: 0.3em; }
 
 /* Pad OSD */
 .pad-osd-window { padding: 32px; background-color: rgba(0, 0, 0, 0.8); }
