@@ -1,0 +1,51 @@
+// When color definition differs for dark and light variant,
+// it gets @if ed depending on $variant
+
+$dark_bg_color: #2b2e30;
+$dark_fg_color: #f6f6f7;
+$dark_borders_color: #121517;
+
+$base_color: if($variant == 'light', #FFFFFF, #383b3d);
+$bg_color: if($variant == 'light', #e2e2e3, $dark_bg_color);
+$fg_color: if($variant == 'light', #3C3C3C, $dark_fg_color);
+
+$selected_fg_color: #ffffff;
+$selected_bg_color: if($variant == 'light', #3665b3, #4a79c7);
+$selected_borders_color: if($variant=='light', darken($selected_bg_color, 30%),
+                                               darken($selected_bg_color, 20%));
+$borders_color: if($variant =='light', darken($bg_color,30%), $dark_borders_color);
+$borders_edge: if($variant =='light', white, transparentize($fg_color, 0.9));
+$link_color: if($variant == 'light', darken($selected_bg_color,10%),
+                                     lighten($selected_bg_color,20%));
+$link_visited_color: if($variant == 'light', darken($selected_bg_color,20%),
+                                     lighten($selected_bg_color,10%));
+$top_hilight: $borders_edge;
+
+$warning_color: #f57900;
+$error_color: #ff8080;
+$success_color: if($variant =='light', #73d216, darken(#73d216,10%));
+$destructive_color: if($variant =='light', #ef2929, darken(#ef2929,10%));
+
+$osd_fg_color: $fg_color;
+$osd_bg_color: $borders_color;
+$osd_borders_color: transparentize(black, 0.3);
+$osd_outer_borders_color: transparentize(white, 0.9);
+
+$tooltip_borders_color: $osd_outer_borders_color;
+
+//insensitive state derived colors
+$insensitive_fg_color: mix($fg_color, $bg_color, 50%);
+$insensitive_bg_color: mix($bg_color, $base_color, 60%);
+$insensitive_borders_color: $borders_color;
+
+//colors for the backdrop state, derived from the main colors.
+$backdrop_base_color: $base_color;
+$backdrop_bg_color: $bg_color;
+$backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 80%);
+$backdrop_insensitive_color: if($variant =='light', darken($backdrop_bg_color,15%), lighten($backdrop_bg_color,15%));
+$backdrop_borders_color: mix($borders_color, $bg_color, 90%);
+$backdrop_dark_fill: mix($backdrop_borders_color,$backdrop_bg_color, 35%);
+
+//misc
+$close_button: #c75050;
+$close_button_hover: lighten($close_button, 5%);

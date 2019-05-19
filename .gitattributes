@@ -1,4 +1,4 @@
-.gitattributes export-ignore  
-.gitignore export-ignore
-zukitre.png export-ignore
+.gitattributes export-ignore
+.github export-ignore
 zukitwo.png export-ignore
+zukitre.png export-ignore

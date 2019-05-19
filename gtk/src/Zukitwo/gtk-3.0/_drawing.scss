@@ -1,0 +1,640 @@
+// Drawing mixins
+// generic drawing of more complex things
+
+@function _widget_edge($c:$borders_edge) {
+// outer highlight "used" on most widgets
+  @if $c == none { @return none; }
+  @else { @return 0 1px $c; }
+}
+
+@mixin _shadows($list...) {
+//
+// Helper mixin to stack up to box-shadows;
+//
+  $shadows: null;
+
+  @each $shadow in $list {
+    @if $shadow!=none { $shadows: $shadows, $shadow; }
+  }
+
+  box-shadow: $shadows;
+}
+
+// entries
+@function entry_focus_border($fc:$selected_bg_color) {
+  @if $variant == 'light' { @return $fc; }
+  @else { @return if($fc==$selected_bg_color, $selected_borders_color, darken($fc, 35%)); }
+}
+
+@function entry_focus_shadow($fs:$selected_bg_color) {
+  @if $variant == 'light' { @return 0 0 0 2px transparentize($fs, 0.85), inset 0 1px transparentize(black, 0.98), inset 0 2px transparentize(black, 0.98); }
+  @else { @return 0 0 0 2px transparentize($fs, 1.0), inset 0 1px transparentize(black, 0.98), inset 0 2px transparentize(black, 0.98); }
+}
+
+$entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transparentize(black, 0.98);
+
+@mixin entry($t, $fc:$selected_bg_color, $fs:$selected_bg_color, $edge: none, $dc: $dark_bg_color, $dfc: $dark_fg_color) {
+//
+// Entries drawing function
+//
+// $t: entry type
+// $fc: focus color
+// $fs: focus shadow
+// $dc: dark bg
+// $dfc: dark fg
+// $edge: set to none to not draw the bottom edge or specify a color to not
+//        use the default one
+//
+// possible $t values:
+// normal, focus, insensitive, backdrop, backdrop-insensitive, osd, osd-focus, osd-backdrop;
+//
+
+  $_blank_edge: if($edge == none, none, 0 0px transparentize($edge, 1));
+  $_entry_edge: if($edge == none, none, _widget_edge($edge));
+  $entry-inset: inset 1px 0 transparentize(black, 0.92), 
+                inset 0 1px transparentize(black, 0.92), 
+                inset -1px 0 transparentize(black, 0.92), 
+                inset 0 -1px transparentize(black, 0.92);
+  $entry-border: darken($borders_color, 8%);
+
+  @if $t==normal {
+    color: $text_color;
+    border-color: $entry-border;
+    box-shadow: $entry-inset;
+    background-image: linear-gradient(to bottom, darken($base_color, 6%), $base_color);
+  }
+  @if $t==focus {
+    border-color: entry_focus_border($fc);
+  }
+  @if $t==insensitive {
+    color: $insensitive_fg_color;
+    border-color: $borders_color;
+    background-color: $insensitive_bg_color;
+  }
+  @if $t==normal-header {
+    @if($dark_header=='true' or $variant=='dark') {
+      color: $dfc;
+      background-color: lighten($dc, 15%);
+      @include edges(normal-dark);
+    }
+    @else { @include entry(normal); }
+  }
+  @if $t==insensitive-header {
+    @if($dark_header=='true' or $variant=='dark') {
+      color: $dfc;
+      background-color: lighten($dark_base_color, 10%);
+      @include edges(disabled);
+    }
+    @else { @include entry(insensitive); }
+  }
+  @if $t==osd {
+    color: $osd_text_color;
+    border-color: $osd_borders_color;
+    background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+    background-clip: padding-box;
+    box-shadow: none;
+    text-shadow: 0 1px black;
+    -gtk-icon-shadow: 0 1px black;
+  }
+  @if $t==osd-focus {
+    color: $osd_text_color;
+    border-color: $selected_bg_color;
+    background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+    background-clip: padding-box;
+    text-shadow: 0 1px black;
+    -gtk-icon-shadow: 0 1px black;
+  }
+  @if $t==osd-insensitive {
+    color: $osd_insensitive_fg_color;
+    border-color: $osd_borders_color;
+    background-color: $osd_insensitive_bg_color;
+    background-clip: padding-box;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+  }
+}
+
+// buttons
+
+@function _text_shadow_color ($tc: $fg_color, $bg: $bg_color) {
+//
+// calculate the color of text shadows
+//
+// $tc is the text color
+// $bg is the background color
+//
+  $_lbg: lightness($bg)/100%;
+  @if lightness($tc)<50% { @return transparentize(white, 1-$_lbg/($_lbg*1.3)); }
+  @else { @return transparentize(black, $_lbg*0.8); }
+}
+
+@function _border_color($c, $dark_header: false) {
+  @if $dark_header == true { @return darken($c, 30%); }
+  @else { @return darken($c, 20%); }
+}
+
+// Buttons borders and shadows
+@mixin edges(
+    $s: normal, //state
+    $c: $bg_color,
+    $b: if($c!=$bg_color, _border_color($c), darken($borders_color, 12%)), //border
+    $bi: if($c!=$bg_color, _border_color($c), $insensitive_borders_color) //disabled border
+  ) {
+  @if $s == normal {
+    box-shadow: $shadow_normal;
+    border-color: $b;
+  }
+  @else if $s == normal-dark {
+    box-shadow: none;
+    border-color: $b;
+  }
+  @else if $s == hover {
+    box-shadow: $shadow_hover;
+    border-color: darken($b, 10%);
+  }
+  @else if $s == active {
+    box-shadow: $shadow_active;
+    border-color: $b;
+    border-top-color: darken($b, 10%);
+  }
+  @else if $s == active-dark {
+    box-shadow: $shadow_active;
+    border-color: $b;
+  }
+  @else if $s == focus {
+    border-color: if($variant == 'dark', transparentize($selected_bg_color, 0.5), $selected_bg_color);
+    //box-shadow: $shadow_focus;
+  }
+  @else if $s == focus-dark {
+    border-color: $selected_bg_color;
+    box-shadow: none;
+  }
+  @else if $s == disabled {
+    box-shadow: none;
+    border-color: $bi;
+  }
+}
+
+@mixin button($t, $c:$bg_color, $tc:$fg_color, $edge: $borders_edge, $dc: $dark_bg_color, $dfc: $dark_fg_color) {
+//
+// Button drawing function
+//
+// $t:    button type,
+// $c:    base button color for colored* types
+// $tc:   optional text color for colored* types
+// $edge: set to none to not draw the bottom edge or specify a color to not
+//        use the default one
+//
+// $dc:   dark color (for headerbars)
+// $dfc:  dark text color
+//
+// possible $t values:
+// normal, hover, active, insensitive, insensitive-active,
+// backdrop, backdrop-active, backdrop-insensitive, backdrop-insensitive-active,
+// osd, osd-hover, osd-active, osd-insensitive, osd-backdrop, undecorated
+//
+  $_button_edge: if($edge == none, none, _widget_edge($edge));
+  $_blank_edge: if($edge == none, none, _widget_edge(transparentize($edge, 1)));
+
+  @if $t==normal {
+  // normal button
+    color: $tc;
+    outline-color: transparentize($tc, 0.7);
+    background-image: linear-gradient(to bottom, lighten($c, 10%), lighten($c, 8%));
+    @include edges(normal);
+  }
+  @else if $t==hover {
+  // hovered button
+    color: $tc;
+    background-image: linear-gradient(to bottom, lighten($c, 12%), lighten($c, 11%));
+    @include edges(hover);
+  }
+  @else if $t==focus {
+  // focused button
+    color: $tc;
+    @include edges(focus);
+  }
+  @else if $t==active {
+  // pushed button
+    color: $tc;
+    outline-color: transparentize($tc, 0.7);
+    background-image: linear-gradient(to bottom, darken($c, 9%), darken($c, 5%));
+    @include edges(active);
+  }
+  @else if $t==hoveractive {
+  // pushed hovered button
+    color: $tc;
+    background-image: linear-gradient(to bottom, darken($c, 11%), darken($c, 7%));
+  }
+  @else if $t==insensitive {
+  // insensitive button
+    $_bg: if($c!=$bg_color, mix($c, $base_color, 85%), $insensitive_bg_color);
+
+    color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color);
+    @include edges(disabled);
+    background-color: $_bg;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+    // white with 0 alpha to avoid an ugly transition, since no color means
+    // black with 0 alpha
+    > .label { color: inherit; }
+  }
+  @else if $t==insensitive-active {
+  // insensitive pushed button
+    $_bg: if($c!=$bg_color, darken(mix($c, $base_color, 85%), 5%),
+                            $insensitive_bg_color);
+    $_bc: if($c!=$bg_color, _border_color($c), $insensitive_borders_color);
+    color: if($c!=$bg_color, mix($tc, $_bg, 60%), $insensitive_fg_color);
+    border-color: $_bc;
+    @include edges(disabled);
+    background-color: darken($c, 5%);
+    // white with 0 alpha to avoid an ugly transition, since no color means
+    // black with 0 alpha
+
+    > .label { color: inherit; }
+  }
+
+  // Header buttons
+  @else if $t==headerbutton-normal {
+  // normal header button
+    @if($dark_header=='true' or $variant=='dark') {
+      color: $dfc;
+      outline-color: transparentize($tc, 0.7);
+      background-image: none;
+      @include button(undecorated);
+    }
+    @else { @include button(undecorated); }
+  }
+  @else if $t==headerbutton-hover {
+  // hovered header button
+    @if($dark_header=='true' or $variant=='dark') {
+      color: $dfc;
+      background-color: lighten($dc, 18%);
+      @include edges(hover-dark);
+    }
+    @else {
+      @include button(hover);
+      &:hover:backdrop:not(.titlebutton) { color: $fg_color; }
+    }
+  }
+  @else if $t==headerbutton-active {
+  // active header button
+    @if($dark_header=='true' or $variant=='dark') {
+      color: $dfc;
+      background-color: darken($dc, 8%);
+      @include edges(active-dark);
+    }
+    @else {
+      @include button(active);
+      border-width: 1px;
+    }
+  }
+  @else if $t==headerbutton-hoveractive {
+  // active hovered header button
+    @if($dark_header=='true' or $variant=='dark') {
+      color: $dfc;
+      background-color: darken($dc, 12%);
+      @include edges(active-dark);
+    }
+    @else {
+      @include button(hoveractive);
+      &:hover:backdrop { color: $fg_color; }
+    }
+  }
+  @else if $t==headerbutton-focus {
+  // focus header button
+    @if($dark_header=='true' or $variant=='dark') {
+      color: $dfc;
+      background-color: $selected_bg_color;
+      @include edges(focus-dark);
+    }
+    @else { @include button(focus); }
+  }
+  @else if $t==headerbutton-disabled {
+  // disabled header button
+    background-color: transparent;
+    color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color);
+    @include button(disabled);
+  }
+
+  // osd buttons
+  @else if $t==osd {
+  // normal osd button
+    $_bg: if($c!=$bg_color, transparentize($c, 0.5),
+                            $osd_bg_color);
+    color: $osd_fg_color;
+    border-color: $osd_borders_color;
+    background-image: image($_bg);
+    background-clip: padding-box;
+    box-shadow: inset 0 1px transparentize(white, 0.9);
+    text-shadow: 0 1px black;
+    -gtk-icon-shadow: 0 1px black;
+    outline-color: transparentize($osd_fg_color, 0.7);
+  }
+  @else if $t==osd-hover {
+  // active osd button
+    $_bg: if($c!=$bg_color, transparentize($c, 0.3),
+                            lighten($osd_bg_color, 12%));
+    color: white;
+    border-color: $osd_borders_color;
+    background-image: image($_bg);
+    background-clip: padding-box;
+    box-shadow: inset 0 1px transparentize(white, 0.9);
+    text-shadow: 0 1px black;
+    -gtk-icon-shadow: 0 1px black;
+    outline-color: transparentize($osd_fg_color, 0.7);
+  }
+  @else if $t==osd-active {
+  // active osd button
+    $_bg: if($c!=$bg_color, $c, $osd_borders_color);
+    color: white;
+    border-color: $osd_borders_color;
+    background-image: image($_bg);
+    background-clip: padding-box;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+    outline-color: transparentize($osd_fg_color, 0.7);
+  }
+  @else if $t==osd-insensitive {
+  // insensitive osd button
+    color: $osd_insensitive_fg_color;
+    border-color: $osd_borders_color;
+    background-image: image($osd_insensitive_bg_color);
+    background-clip: padding-box;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+  }
+  @else if $t==undecorated {
+  // reset
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+
+    @include _shadows(inset 0 1px transparentize(white, 1), $_blank_edge);
+
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+  }
+  @else if $t==undecorated-disabled {
+  // insensitive undecorated button
+    @include button(undecorated);
+    color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color);
+    > .label { color: inherit; }
+  }
+}
+
+// check and radio buttons
+@mixin check($t, $c:$bg_color, $tc:$fg_color, $dc: $dark_bg_color, $dfc: $dark_fg_color) {
+  @if $t==normal {
+    color: $tc;
+    background-color: if($variant == 'light', $base_color, lighten($base_color, 14%));
+    border: 1px solid if($variant == 'light', transparentize(black, 0.65), $borders_color);
+    @if $variant == 'light' { box-shadow: 0 0 0 1px transparentize(black, 0.9), inset 0 0 0 1px transparentize(white, 0.9); }
+    transition-duration: $shorter_duration;
+  }
+  @else if $t==hover {
+    color: $tc;
+    border: 1px solid $selected_bg_color;
+  }
+  @else if $t==checked {
+    color: if($variant == 'light', $selected_bg_color, $selected_fg_color);
+    background-color: if($variant == 'light', $base_color, $selected_bg_color);
+    border: 1px solid $selected_bg_color;
+    &:backdrop { color: if($variant == 'light', $selected_bg_color, $selected_fg_color); }
+  }
+  @else if $t==insensitive {
+    $_bg: if($c!=$bg_color, mix($c, $base_color, 85%), $insensitive_bg_color);
+    color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color);
+    border-color: if($variant == 'light', if($c!=$bg_color, _border_color($c), darken($borders_color, 12%)), transparent);
+    background-color: $_bg;
+    box-shadow: none;
+  }
+}
+
+// trough
+@mixin trough($flat:false, $c:$bg_color, $tc:$fg_color, $noedge:false) {
+  color: mix($tc, $bg_color, 80%);
+  @if $flat { background-color: lighten($c, 10%); }
+  @else {
+    background-color: lighten($c, 10%);
+  }
+
+  border-color: if($c!=$bg_color, _border_color($c), $border_color);
+
+  @if not($noedge) {
+    @if lightness($c) > 60% {
+      box-shadow: inset 0 -1px $borders_edge,
+                  0 1px $borders_edge;
+    }
+    @else {
+      box-shadow: inset 0 -1px transparentize($borders_edge, 0.5),
+                  0 1px transparentize($borders_edge, 0.5);
+    }
+  }
+  @else { box-shadow: none; }
+}
+
+@mixin headerbar_fill($c:$header_bg, $tc:lighten($c, 4%), $bc:transparentize($top_hilight, 0.7), $hc:transparentize($top_hilight, 0.4)) {
+//
+// headerbar fill
+//
+// $c:  base color
+// $tc: top color
+// $hc: top highlight color
+// $bc: bottom highlight color
+//
+  background-image: linear-gradient(to bottom, lighten($c, 6%), $c);
+  box-shadow: inset 0 1px $hc, inset 0 -1px $bc; // top and bottom highlight
+  &:backdrop { background-color: $c; background-image: none; }
+}
+
+@mixin ssd_fill($c:$bg_color, $tc:lighten($c, 4%), $hc:transparentize($top_hilight, 0.4)) {
+//
+// server side decoration fill
+//
+// $c:  bg color
+// $hc: top highlight color
+//
+  background-image: linear-gradient(to bottom, lighten($c, 6%), $c);
+  box-shadow: inset 0 1px $hc; // top highlight
+}
+
+@mixin overshoot($p, $t:normal, $c:$fg_color) {
+//
+// overshoot
+//
+// $p: position
+// $t: type
+// $c: base color
+//
+// possible $p values:
+// top, bottom, right, left
+//
+// possible $t values:
+// normal, backdrop
+//
+
+  $_small_gradient_length: 5%;
+  $_big_gradient_length: 100%;
+
+  $_position: center top;
+  $_small_gradient_size: 100% $_small_gradient_length;
+  $_big_gradient_size: 100% $_big_gradient_length;
+
+  @if $p==bottom {
+    $_position: center bottom;
+    $_linear_gradient_direction: to top;
+  }
+
+  @else if $p==right {
+    $_position: right center;
+    $_small_gradient_size: $_small_gradient_length 100%;
+    $_big_gradient_size: $_big_gradient_length 100%;
+  }
+
+  @else if $p==left {
+    $_position: left center;
+    $_small_gradient_size: $_small_gradient_length 100%;
+    $_big_gradient_size: $_big_gradient_length 100%;
+  }
+
+  $_small_gradient_color: $c;
+  $_big_gradient_color: $c;
+
+  @if $c==$fg_color {
+    $_small_gradient_color: darken($borders_color, 10%);
+    $_big_gradient_color: $fg_color;
+  }
+
+  $_small_gradient: -gtk-gradient(radial,
+                                  $_position, 0,
+                                  $_position, 0.5,
+                                  to($_small_gradient_color),
+                                  to(transparentize($_small_gradient_color, 1)));
+
+  $_big_gradient: -gtk-gradient(radial,
+                                $_position, 0,
+                                $_position, 0.6,
+                                from(transparentize($_big_gradient_color, 0.93)),
+                                to(transparentize($_big_gradient_color, 1)));
+
+  @if $t==normal {
+    background-image: $_small_gradient, $_big_gradient;
+    background-size: $_small_gradient_size, $_big_gradient_size;
+  }
+
+  background-repeat: no-repeat;
+  background-position: $_position;
+
+  background-color: transparent; // reset some properties to be sure to not inherit them somehow
+  border: none;                  //
+  box-shadow: none;              //
+}
+
+// Tabs
+@mixin tabs(
+  $th: null,
+  $ba: null,
+  $sa: transparentize($borders_color, 0.65),
+  $sb: if($variant == 'light', transparentize(black, 0.92), transparentize(black, 0.8))
+  ) {
+  //
+  // Tabs
+  //
+  // $po = position
+  // $th = tab header box shadow
+  // $ba = active tab box shadow
+  // $sa = header large inner shadow
+  // $sb = header small inner shadow
+  //
+
+  padding: 1px;
+  border-color: $borders_color;
+  border-width: 1px;
+  &.top, &.bottom { background-image: linear-gradient(to bottom, darken($tabbar_color, 6%), $tabbar_color); }
+  &.left, &.right { background-image: linear-gradient(to right, darken($tabbar_color, 6%), $tabbar_color); }
+
+  &.top { tabs { margin-bottom: -1px; } }
+  &.bottom { tabs { margin-top: -1px; } }
+  &.right { tabs { margin-left: -1px; } }
+  &.left { tabs { margin-right: -1px; } }
+
+  @each $po in (top), (right), (bottom), (left) {
+    @if $po == top {
+      padding-top: 1px;
+      $th: inset 0 1px $sa,
+           inset 0 -1px $sb;
+      $ba: inset 1px 1px $borders_color,
+           inset -1px 0 $borders_color;
+    }
+    @else if $po == left {
+      padding-left: 1px;
+      $th: inset 1px 0 $sa,
+           inset -1px 0 $sb;
+      $ba: inset 1px 1px $borders_color,
+           inset 0 -1px $borders_color;
+    }
+    @else if $po == right {
+      padding-right: 1px;
+      $th: inset -1px 0 $sa,
+           inset 1px 0 $sb;
+      $ba: inset -1px 1px $borders_color,
+           inset 0 -1px $borders_color;
+    }
+    @else if $po == bottom {
+      padding-bottom: 1px;
+      $th: inset 0 -1px $sa,
+           inset 0 1px $sb;
+      $ba: inset 1px -1px $borders_color,
+           inset -1px 0 $borders_color;
+    }
+
+    &.#{$po} {
+      box-shadow: $th; // tab header shadow
+
+      > tabs {
+        > tab {
+          transition-duration: $shortest_duration;
+
+          &:hover { background-color: if($variant == 'light', transparentize($base_color, 0.8), transparentize(black, 0.9)); }
+
+          &:checked, &:checked:hover {
+            background-color: $base_color;
+            box-shadow: $ba;
+            @if $po == 'top' {
+              border-top-left-radius: $button-radius;
+              border-top-right-radius: $button-radius + 1px; // FIXME: why is it not even?
+            }
+            @if $po == 'bottom' {
+              border-bottom-left-radius: $button-radius;
+              border-bottom-right-radius: $button-radius + 1px;
+            }
+            @if $po == 'left' {
+              border-bottom-left-radius: $button-radius + 1px;
+              border-top-left-radius: $button-radius;
+            }
+            @if $po == 'right' {
+              border-bottom-right-radius: $button-radius + 1px;
+              border-top-right-radius: $button-radius;
+            }
+          }
+        }
+      }
+    }
+
+    &.#{$po} > tabs > arrow {
+      border-style: none;
+      @if ($po == top) or ($po == bottom) { @extend %notebook_vert_arrows; }
+      @if ($po == left) or ($po == right) { @extend %notebook_horz_arrows; }
+    }
+    
+    &.#{$po} {
+      @if ($po == top) or ($po == bottom) { padding-left: 0; padding-right: 0; }
+      @if ($po == left) or ($po == right) { padding-top: 0; padding-bottom: 0; }
+    }
+  }
+}

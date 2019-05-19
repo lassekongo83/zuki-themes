@@ -1,0 +1,57 @@
+zukitwo_dark_xfwm4_theme_dir = join_paths(get_option('datadir'), 'themes', meson.project_name()+'two-dark')
+
+# destination directory
+install_dir = join_paths(zukitwo_dark_xfwm4_theme_dir , 'xfwm4')
+
+# files to copy
+data_sources = [
+  'bottom-active.png',
+  'bottom-inactive.png',
+  'bottom-left-active.png',
+  'bottom-left-inactive.png',
+  'bottom-right-active.png',
+  'bottom-right-inactive.png',
+  'close-active.png',
+  'close-inactive.png',
+  'close-prelight.png',
+  'close-pressed.png',
+  'hide-active.png',
+  'hide-inactive.png',
+  'hide-prelight.png',
+  'hide-pressed.png',
+  'left-active.png',
+  'left-inactive.png',
+  'maximize-active.png',
+  'maximize-inactive.png',
+  'maximize-prelight.png',
+  'maximize-pressed.png',
+  'menu-active.png',
+  'menu-inactive.png',
+  'menu-pressed.png',
+  'right-active.png',
+  'right-inactive.png',
+  'shade-active.png',
+  'shade-inactive.png',
+  'shade-pressed.png',
+  'stick-active.png',
+  'stick-inactive.png',
+  'stick-pressed.png',
+  'title-1-active.png',
+  'title-1-inactive.png',
+  'title-2-active.png',
+  'title-2-inactive.png',
+  'title-3-active.png',
+  'title-3-inactive.png',
+  'title-4-active.png',
+  'title-4-inactive.png',
+  'title-5-active.png',
+  'title-5-inactive.png',
+  'top-left-active.png',
+  'top-left-inactive.png',
+  'top-right-active.png',
+  'top-right-inactive.png',
+  'themerc',
+]
+
+# install files
+install_data(data_sources, install_dir: install_dir)

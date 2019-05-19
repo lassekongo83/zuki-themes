@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=X-GNOME-Metatheme
-Name=Zukitre
-Comment=A clean theme for Gnome
-Encoding=UTF-8
-
-[X-GNOME-Metatheme]
-GtkTheme=Zukitre
-ButtonLayout=:minimize,maximize,close

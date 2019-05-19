@@ -1,0 +1,82 @@
+$panel_color: transparentize(black, 0.3); // Not used in 3.32+
+$dock_color: transparentize(black, 0.3);
+
+// Trick due to St limitations. It needs a background to draw a box-shadow
+%panel_fix {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+}
+
+// Dash to Panel extension styling
+
+//#panel { background-color: rgba(0,0,0,0.3); } // .dashtopanelMainPanel no longer works for the bg color. Should instead be changed by the user in the extension's settings.
+
+@each $d in Top, Bottom {
+  $low_d: to-lower-case($d);
+
+  #panel.dashtopanelMainPanel.dashtopanel#{$d} {
+    background-color: $panel_color; // Not used in 3.32+
+
+    //#panelLeft, #panelCenter, #panelRight {} // in case a custom background color/gradient is wanted
+
+    .panel-button {
+      &:hover { background-color: transparentize(white,0.9); }
+      &:active, &:overview, &:focus { background-color: $selected_bg_color; }
+      text-shadow: black 0 1px 1px;
+    }
+
+    .dash-item-container > * { padding: 0 4px; }
+
+    //.show-apps { width: 20px; }
+
+    // panel dash icon
+    @each $d in hover, focus, active, checked, overview {
+      .show-apps .overview-icon {
+        background-image: url("d2p-activities.svg");
+        background-position: center center;
+        border: none;
+        color: transparent;
+        margin: 0;
+        transition-duration: $short-duration;
+      }
+
+      .show-apps:#{$d} .overview-icon {
+        background-image: url("d2p-activities-active.svg");
+        background-color: transparent;
+        background-position: center center;
+        color: transparent;
+        box-shadow: none;
+      }
+
+      .dash-item-container .show-apps {
+        padding: 4px 2px 4px 0; // Seems to do nothing in the latest versions of the extension
+        transition-duration: $short-duration;
+        &:#{$d} { background-color: transparentize(black, 0.2); }
+      }
+    }
+
+    .show-apps-icon { color: transparent; } // Makes sure that no default icon from the icon theme is showing
+
+    // clock and system menu area
+    & > #panelRight {
+      //box-shadow: inset 1px 0 $panel_color;
+      //background-color: transparentize(black, 0.2);
+      //border-radius: 2px;
+      //margin: 4px;
+      .panel-button:hover { box-shadow: none; }
+    }
+
+    .showdesktop-button {
+      padding-right: 8px;
+      //border-image: url("transparent.png");
+    }
+    //.showdesktop-button-hovered { border-image: url("transparent.png"); }
+  }
+}
+
+// Dash to dock extension styling
+
+#dashtodockContainer {
+  #dash { background-color: $dock_color; }
+}
