@@ -1,9 +1,11 @@
 # zuki-themes
 Themes for GNOME and XFCE4.
 
+#### Zukitre
 ![Zukitre](zukitre.png?raw=true)
 <sub>[Wallpapers](https://imgur.com/a/zrijHvk) | [Icons](https://github.com/vinceliuice/Tela-icon-theme) | Fonts: Roboto / SF Mono | GNOME shell extension: Dash to Panel</sub>
 
+#### Zukitwo
 ![Zukitwo](zukitwo.png?raw=true)
 <sub>[Wallpapers](https://imgur.com/a/zrijHvk) | [Icons](https://github.com/vinceliuice/Tela-icon-theme) | Fonts: Roboto / SF Mono | GNOME shell extension: Dash to Panel</sub>
 
