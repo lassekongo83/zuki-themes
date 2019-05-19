@@ -16,6 +16,9 @@
     background-color: $selected_bg_color;
     &:hover { background-color: darken($selected_bg_color, 4%); }
   }
+
+  // https://github.com/lassekongo83/zuki-themes/issues/144
+  &:hover, &:active, &:checked { background-image: none; }
 }
 
 //
@@ -250,7 +253,7 @@ window.background.chromium {
 .thunar {
   .standard-view { border-width: 0; }
   .sidebar .view {
-    background-color: $secondary_bg_color;
+    background-color: $sidebar_bg_color;
     &:hover { background-color: $base_hover_color; }
     &:selected { background-color: $selected_bg_color; }
   }
