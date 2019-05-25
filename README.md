@@ -63,4 +63,4 @@ Xfce users can change themes in `Settings > Appearance` and `Settings > Window m
 
 #### Removing the themes
 
-As root, remove the `Zukitre Zukitwo Zukitre-dark Zukitwo-dark` folders located in `/usr/share/themes`
+As root, remove the `Zukitre Zukitwo Zukitre-dark Zukitwo-dark Zuki-shell` folders located in `/usr/share/themes`

@@ -1968,6 +1968,7 @@ menuitem {
 
   check,
   radio {
+    &:checked, &:checked:hover { @include check(menuitem-checked); }
     min-height: 16px;
     min-width: 16px;
 

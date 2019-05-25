@@ -711,6 +711,10 @@ menuitem accelerator { color: alpha(currentColor,0.55); }
 
 menuitem check, menuitem radio { min-height: 16px; min-width: 16px; }
 
+menuitem check:checked, menuitem check:checked:hover, menuitem radio:checked, menuitem radio:checked:hover { color: #ffffff; background-color: #4a79c7; border: 1px solid #284a83; }
+
+menuitem check:checked:backdrop, menuitem check:checked:hover:backdrop, menuitem radio:checked:backdrop, menuitem radio:checked:hover:backdrop { color: #ffffff; }
+
 menuitem check:dir(ltr), menuitem radio:dir(ltr) { margin-right: 7px; }
 
 menuitem check:dir(rtl), menuitem radio:dir(rtl) { margin-left: 7px; }
