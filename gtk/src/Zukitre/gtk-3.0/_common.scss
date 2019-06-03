@@ -4013,6 +4013,7 @@ headerbar,
 
     &:backdrop {
       color: $backdrop_selected_fg_color;
+      &, &:hover { background-color: $selected_bg_color; }
 
       &:disabled { color: mix($backdrop_selected_fg_color, $selected_bg_color, 30%); }
     }
