@@ -2584,6 +2584,7 @@ treeview.view radio {
     &:focus, & {
       color: $selected_fg_color;
       border-color: $selected_borders_color;
+      background-color: $selected_bg_color;
     }
 
     &:disabled {

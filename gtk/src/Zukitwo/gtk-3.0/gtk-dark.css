@@ -403,7 +403,7 @@ button:link > label:active, button:visited > label:active, *:link:active, button
 
 *:selected button:link > label:active, *:selected button:visited > label:active, *:selected *:link:active, *:selected button:active:link, *:selected button:active:visited { color: #dbe4f4; }
 
-button:link > label:disabled, button:visited > label:disabled, button:link > label:disabled:backdrop, button:visited > label:disabled:backdrop, *:link:disabled, button:disabled:link, button:disabled:visited, *:link:disabled:backdrop, button:disabled:backdrop:link, button:disabled:backdrop:visited { color: rgba(188, 188, 188, 0.8); }
+button:link > label:disabled, button:visited > label:disabled, button:link > label:disabled:backdrop, button:visited > label:disabled:backdrop, *:link:disabled, button:disabled:link, button:disabled:visited, *:link:disabled:backdrop, button:disabled:backdrop:link, button:disabled:backdrop:visited { color: rgba(187, 187, 188, 0.8); }
 
 button:link > label:backdrop:backdrop:hover, button:visited > label:backdrop:backdrop:hover, button:link > label:backdrop:backdrop:hover:selected, button:visited > label:backdrop:backdrop:hover:selected, button:link > label:backdrop, button:visited > label:backdrop, *:link:backdrop:backdrop:hover, button:backdrop:backdrop:hover:link, button:backdrop:backdrop:hover:visited, *:link:backdrop:backdrop:hover:selected, button:backdrop:backdrop:hover:selected:link, button:backdrop:backdrop:hover:selected:visited, .selection-mode .titlebar:not(headerbar) .subtitle:backdrop:backdrop:hover:link, .selection-mode.titlebar:not(headerbar) .subtitle:backdrop:backdrop:hover:link, .selection-mode headerbar .subtitle:backdrop:backdrop:hover:link, headerbar.selection-mode .subtitle:backdrop:backdrop:hover:link, *:link:backdrop, button:backdrop:link, button:backdrop:visited { color: #4a79c7; }
 
@@ -983,7 +983,7 @@ switch image:checked { color: #ffffff; }
 
 .view.content-view.check:active:not(list), iconview.content-view.check:active:not(list), .content-view .tile check:active:not(list) { margin: 4px; min-width: 32px; min-height: 32px; color: transparent; background-color: rgba(74, 121, 199, 0.95); border-radius: 3px; background-image: none; transition: 100ms; box-shadow: none; border-width: 0; -gtk-icon-source: none; -gtk-icon-shadow: none; }
 
-.view.content-view.check:backdrop:not(list), iconview.content-view.check:backdrop:not(list), .content-view .tile check:backdrop:not(list) { margin: 4px; min-width: 32px; min-height: 32px; color: transparent; background-color: rgba(137, 137, 137, 0.95); border-radius: 3px; background-image: none; transition: 100ms; box-shadow: none; border-width: 0; -gtk-icon-source: none; -gtk-icon-shadow: none; }
+.view.content-view.check:backdrop:not(list), iconview.content-view.check:backdrop:not(list), .content-view .tile check:backdrop:not(list) { margin: 4px; min-width: 32px; min-height: 32px; color: transparent; background-color: rgba(136, 136, 137, 0.95); border-radius: 3px; background-image: none; transition: 100ms; box-shadow: none; border-width: 0; -gtk-icon-source: none; -gtk-icon-shadow: none; }
 
 .view.content-view.check:checked:not(list), iconview.content-view.check:checked:not(list), .content-view .tile check:checked:not(list) { margin: 4px; min-width: 32px; min-height: 32px; color: #eeeeec; background-color: rgba(74, 121, 199, 0.95); border-radius: 3px; background-image: none; transition: 100ms; box-shadow: none; border-width: 0; -gtk-icon-source: -gtk-icontheme('object-select-symbolic'); -gtk-icon-shadow: none; }
 
@@ -991,7 +991,7 @@ switch image:checked { color: #ffffff; }
 
 .view.content-view.check:checked:active:not(list), iconview.content-view.check:checked:active:not(list), .content-view .tile check:checked:active:not(list) { margin: 4px; min-width: 32px; min-height: 32px; color: #eeeeec; background-color: rgba(74, 121, 199, 0.95); border-radius: 3px; background-image: none; transition: 100ms; box-shadow: none; border-width: 0; -gtk-icon-source: -gtk-icontheme('object-select-symbolic'); -gtk-icon-shadow: none; }
 
-.view.content-view.check:backdrop:checked:not(list), iconview.content-view.check:backdrop:checked:not(list), .content-view .tile check:backdrop:checked:not(list) { margin: 4px; min-width: 32px; min-height: 32px; color: rgba(238, 238, 236, 0.8); background-color: rgba(137, 137, 137, 0.95); border-radius: 3px; background-image: none; transition: 100ms; box-shadow: none; border-width: 0; -gtk-icon-source: -gtk-icontheme('object-select-symbolic'); -gtk-icon-shadow: none; }
+.view.content-view.check:backdrop:checked:not(list), iconview.content-view.check:backdrop:checked:not(list), .content-view .tile check:backdrop:checked:not(list) { margin: 4px; min-width: 32px; min-height: 32px; color: rgba(238, 238, 236, 0.8); background-color: rgba(136, 136, 137, 0.95); border-radius: 3px; background-image: none; transition: 100ms; box-shadow: none; border-width: 0; -gtk-icon-source: -gtk-icontheme('object-select-symbolic'); -gtk-icon-shadow: none; }
 
 checkbutton.text-button, radiobutton.text-button { padding: 2px 0; outline-offset: 0; }
 
@@ -1047,7 +1047,7 @@ treeview.view radio:checked:selected, radio:checked { -gtk-icon-source: image(-g
 
 treeview.view radio:indeterminate:selected, radio:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")), -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
 
-treeview.view check:selected:focus, treeview.view check:selected, treeview.view radio:selected:focus, treeview.view radio:selected { color: #ffffff; border-color: #284a83; }
+treeview.view check:selected:focus, treeview.view check:selected, treeview.view radio:selected:focus, treeview.view radio:selected { color: #ffffff; border-color: #284a83; background-color: #4a79c7; }
 
 treeview.view check:selected:disabled, treeview.view radio:selected:disabled { color: #919294; }
 
