@@ -410,6 +410,28 @@ StScrollBar {
   padding-bottom: 8px;
 }
 
+.prompt-dialog-null-label {
+  font-size: 10pt;
+  padding-bottom: 8px;
+}
+
+.prompt-dialog-pim-box {
+  spacing: 1em;
+}
+
+.prompt-dialog-grid {
+  spacing-rows: 15px;
+  spacing-columns: 1em;
+}
+
+.prompt-dialog-keyfiles-box {
+  spacing: 1em;
+}
+
+.prompt-dialog-button.button {
+  padding: 8px;
+}
+
 // Polkit Dialog
 
 .polkit-dialog-user-layout {
@@ -1154,6 +1176,15 @@ StScrollBar {
   border: 1px solid $selected_bg_color;
 }
 
+// Pointer location
+.ripple-pointer-location {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px 25px 25px 25px; // radius the size of the box give us the curve
+  background-color: lighten(transparentize($selected_bg_color, 0.7), 30%);
+  box-shadow: 0 0 2px 2px lighten($selected_bg_color, 20%);
+}
+
 // not really top bar only
 .popup-menu-arrow { icon-size: 1.09em; }
 .popup-menu-icon { icon-size: 1.09em; }
@@ -1179,6 +1210,15 @@ StScrollBar {
   &:active {
     background-color: darken($close_button, 5%);
   }
+}
+
+// Pointer accessibility notifications
+.pie-timer {
+  width: 60px;
+  height: 60px;
+  -pie-border-width: 3px;
+  -pie-border-color: $selected_bg_color;
+  -pie-background-color: lighten(transparentize($selected_bg_color, 0.7), 40%);
 }
 
 // NETWORK DIALOGS
