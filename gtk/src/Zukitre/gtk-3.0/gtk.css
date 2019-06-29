@@ -669,9 +669,7 @@ menubar, .menubar { -GtkWidget-window-dragging: true; padding: 0px; background-c
 
 menubar > menuitem, .menubar > menuitem { min-height: 16px; padding: 2px 8px; border: 0; border-color: transparent; color: #2c2c2c; }
 
-menubar > menuitem menu, .menubar > menuitem menu { border-radius: 0; padding: 0; }
-
-menubar > menuitem menu menu, .menubar > menuitem menu menu { border-radius: 0; padding: 0; }
+.csd menubar > menuitem menu, menubar > menuitem menu, .csd .menubar > menuitem menu, .menubar > menuitem menu { border-radius: 0; padding: 0; }
 
 menubar > menuitem:hover, menubar > menuitem:active, .menubar > menuitem:hover, .menubar > menuitem:active { color: #ffffff; border-radius: 0; background-color: #4a79c7; }
 
