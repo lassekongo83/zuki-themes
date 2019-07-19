@@ -590,6 +590,18 @@ StScrollBar {
 // - odd thing for styling App menu when apparently not running under shell. Light Adwaita styled
 //   app menu inside the main app window itself rather than the top bar
 
+// App Icons
+
+// Outline for low res icons
+.lowres-icon {
+  icon-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+// Drapshadow for large icons
+.icon-dropshadow {
+  icon-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
 // OSD
 .osd-window {
   text-align: center;
@@ -1115,11 +1127,6 @@ StScrollBar {
 
 // a little unstructured mess:
 
-.system-switch-user-submenu-icon {
-  icon-size: 16px;
-  padding: 0 4px;
-}
-
 #appMenu {
   spinner-image: url("process-working.svg");
   spacing: 4px;
@@ -1326,11 +1333,8 @@ StScrollBar {
 
 //search results
 
-#searchResultsBin {
-  max-width: 1000px;
-}
-
 #searchResultsContent {
+  max-width: 1000px;
   padding-left: 20px;
   padding-right: 20px;
   spacing: 16px;
@@ -1441,11 +1445,11 @@ StScrollBar {
 .search-provider-icon,
 .list-search-result {
   @extend %icon_tile;
-  &:active, &:checked { background-color: transparentize(darken($osd_bg_color,10%),.1); }
   &:focus, &:selected, &:hover {
     background-color: transparentize($osd_fg_color,.9);
     transition-duration: $long-duration;
   }
+  &:active, &:checked { background-color: transparentize(darken($osd_bg_color,10%),.1); }
 }
 .app-well-app,
 .app-well-app.app-folder,
@@ -1553,7 +1557,6 @@ StScrollBar {
 }
 
 //Some hacks I don't even
-.search-display > StBoxLayout,
 .all-apps,
 .frequent-apps > StBoxLayout {
   // horizontal padding to make sure scrollbars or dash don't overlap content
