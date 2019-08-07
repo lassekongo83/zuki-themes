@@ -212,6 +212,9 @@ XfceHeading,
   // Without this nautilus iconview grabs the bg_color
   notebook,
   notebook > stack:not(:only-child) searchbar { @extend %view; }
+
+  // Nautilus 3.30
+  .path-bar .dim-label { color: transparent; }
 }
 
 .disk-space-display {
