@@ -583,6 +583,15 @@ StScrollBar {
   border-bottom-style: solid;
 }
 
+// Rename popup
+
+.rename-folder-popup {
+  .rename-folder-popup-item {
+    spacing: 6px;
+    &:ltr, &:rtl { padding: 0, 12px; }
+  }
+}
+
 // Background menu
 .background-menu { -boxpointer-gap: 4px; -arrow-rise: 0px; }
 
@@ -714,7 +723,7 @@ StScrollBar {
 
 .ws-switcher-active-up, .ws-switcher-active-down,
 .ws-switcher-active-left, .ws-switcher-active-right {
-  height: 50px;
+  height: 52px;
   background-color: $selected_bg_color;
   color: $selected_fg_color;
   background-size: 32px;

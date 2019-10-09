@@ -272,6 +272,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .popup-separator-menu-item { height: 1px; margin: 6px 0px; background-color: transparent; border-color: rgba(0, 0, 0, 0.2); border-bottom-width: 1px; border-bottom-style: solid; }
 
+.rename-folder-popup .rename-folder-popup-item { spacing: 6px; }
+
+.rename-folder-popup .rename-folder-popup-item:ltr, .rename-folder-popup .rename-folder-popup-item:rtl { padding: 0, 12px; }
+
 .background-menu { -boxpointer-gap: 4px; -arrow-rise: 0px; }
 
 .lowres-icon { icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
@@ -322,7 +326,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .workspace-switcher { background: transparent; border: 0; border-radius: 0; padding: 0; spacing: 8px; }
 
-.ws-switcher-active-up, .ws-switcher-active-down, .ws-switcher-active-left, .ws-switcher-active-right { height: 50px; background-color: #215d9c; color: #ffffff; background-size: 32px; border-radius: 5px; }
+.ws-switcher-active-up, .ws-switcher-active-down, .ws-switcher-active-left, .ws-switcher-active-right { height: 52px; background-color: #215d9c; color: #ffffff; background-size: 32px; border-radius: 5px; }
 
 .ws-switcher-box { height: 50px; border: 1px solid rgba(238, 238, 236, 0.1); background: transparent; border-radius: 5px; }
 

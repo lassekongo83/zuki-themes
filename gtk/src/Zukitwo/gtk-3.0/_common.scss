@@ -1853,7 +1853,7 @@ menubar,
 
     // remove padding and rounding from menubar submenus
     menu {
-      .csd &, & {
+      &:dir(rtl), &:dir(ltr) { // specificity bump
         border-radius: 0;
         padding: 0;
       }
@@ -3368,7 +3368,7 @@ messagedialog { // Message Dialog styling
       border-color: $borders_color;
 
       &:focus {
-        box-shadow: inset 0 0 0 1px $selected_bg_color;
+        box-shadow: inset 0 0 0 1px $selected_bg_color; // FIXME: Fix color on red buttons. https://github.com/lassekongo83/zuki-themes/issues/154
         background-color: $selected_bg_color;
         //color: $selected_fg_color;
       }
