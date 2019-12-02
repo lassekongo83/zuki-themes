@@ -506,6 +506,7 @@ button {
       @include button(active);
     }
 
+    @at-root %button_basic_flat,
     &.flat { &:disabled { @include button(undecorated); }}
 
     &:disabled {

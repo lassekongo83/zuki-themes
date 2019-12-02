@@ -185,7 +185,7 @@ notebook > header > tabs > arrow:active:hover, notebook > header > tabs > arrow:
 
 notebook > header > tabs > arrow:active, notebook > header > tabs > arrow:checked, button:active, button:checked { color: #f6f6f7; outline-color: rgba(246, 246, 247, 0.3); background-color: #1d1f20; box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px rgba(0, 0, 0, 0.08), inset -1px 0 rgba(0, 0, 0, 0.08), inset 0 -1px rgba(0, 0, 0, 0.08); border-color: black; border-top-color: black; }
 
-notebook > header > tabs > arrow.flat:disabled, button.flat:disabled { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(246, 246, 247, 0); text-shadow: none; -gtk-icon-shadow: none; }
+notebook > header > tabs > arrow:disabled, button.sidebar-button:disabled, notebook > header > tabs > arrow.flat:disabled, button.flat:disabled { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(246, 246, 247, 0); text-shadow: none; -gtk-icon-shadow: none; }
 
 notebook > header > tabs > arrow:disabled, button:disabled { color: #919294; box-shadow: none; border-color: #121517; background-color: #303335; text-shadow: none; -gtk-icon-shadow: none; }
 
