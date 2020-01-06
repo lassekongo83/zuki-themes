@@ -1,6 +1,6 @@
 /* This stylesheet is generated, DO NOT EDIT */
 /* Copyright 2009, 2015 Red Hat, Inc. Portions adapted from Mx's data/style/default.css Copyright 2009 Intel Corporation This program is free software; you can redistribute it and/or modify it under the terms and conditions of the GNU Lesser General Public License, version 2.1, as published by the Free Software Foundation. This program is distributed in the hope it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. You should have received a copy of the GNU Lesser General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA. */
-stage { font-family: Roboto, Ubuntu, Sans-Serif; font-size: 10pt; color: #f6f6f7; }
+stage { font-size: 10pt; color: #f6f6f7; }
 
 .button { border-radius: 2px; border-width: 1px; padding: 4px 32px; color: #f6f6f7; background-color: #393d40; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); border-color: transparent; text-shadow: 0 1px black; icon-shadow: 0 1px black; border: 1px solid; }
 
@@ -41,6 +41,8 @@ StEntry:focus { box-shadow: inset 0 1px rgba(255, 255, 255, 0.06); background-co
 StEntry:insensitive { color: #919294; border-color: #303335; box-shadow: none; }
 
 StEntry StIcon.capslock-warning { icon-size: 16px; warning-color: #f57900; padding: 0 4px; }
+
+StEntry StIcon.peek-password { icon-size: 1.09em; padding: 0 4px; }
 
 StScrollView.vfade { -st-vfade-offset: 68px; }
 
@@ -184,7 +186,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .prompt-dialog-password-box { spacing: 1em; padding-bottom: 1em; }
 
-.prompt-dialog-error-label { font-size: 10pt; color: #f57900; padding-bottom: 8px; }
+.prompt-dialog-error-label, .prompt-dialog-caps-lock-warning { font-size: 10pt; color: #f57900; padding-bottom: 8px; }
+
+.prompt-dialog-caps-lock-warning { padding-left: 6.2em; }
 
 .prompt-dialog-info-label { font-size: 10pt; padding-bottom: 8px; }
 
@@ -414,7 +418,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .world-clocks-grid, .weather-grid { spacing-rows: 0.4em; spacing-columns: 0.8em; }
 
-.weather-box { spacing: 0.4em; }
+.weather-header-box, .weather-box { spacing: 0.4em; }
 
 .world-clocks-city { font-weight: bold; font-size: 0.9em; }
 
@@ -452,7 +456,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .calendar-nonwork-day { color: #919294; }
 
-.calendar-today { font-weight: bold; border: 1px solid rgba(18, 21, 23, 0.5); }
+.calendar-today { font-weight: bold; color: white; background-color: #1f2123; }
 
 .calendar-day-with-events { color: white; font-weight: bold; background-image: url("calendar-today.svg"); }
 
@@ -490,13 +494,21 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .message-content { padding: 10px; color: #c0c0c7; }
 
+.message-close-button { color: white; }
+
+.message-close-button:hover { color: #dbdbdf; }
+
+.message-close-button:active { color: #c0c0c7; }
+
 .message-media-control { padding: 12px; color: #c0c0c7; }
 
 .message-media-control:last-child:ltr { padding-right: 18px; }
 
 .message-media-control:last-child:rtl { padding-left: 18px; }
 
-.message-media-control:hover { color: #f6f6f7; }
+.message-media-control:hover { color: #dbdbdf; }
+
+.message-media-control:active { color: #c0c0c7; }
 
 .message-media-control:insensitive { color: #8a8a97; }
 
@@ -518,19 +530,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .aggregate-menu { min-width: 21em; }
 
-.aggregate-menu .popup-menu-icon { padding: 0 4px; }
+.aggregate-menu .popup-menu-icon { padding: 0 4px; -st-icon-style: symbolic; }
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:ltr { padding-left: 12px; margin-left: 1.09em; }
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:rtl { padding-right: 12px; margin-right: 1.09em; }
-
-.system-menu-action { -st-icon-style: symbolic; color: #f6f6f7; border-radius: 32px; padding: 13px; border: 1px solid transparent; background-color: #383b3d; }
-
-.system-menu-action:hover, .system-menu-action:focus { background-color: #4a79c7; color: #f6f6f7; border: none; padding: 14px; }
-
-.system-menu-action:active { background-color: #4a79c7; color: #ffffff; }
-
-.system-menu-action > StIcon { icon-size: 16px; }
 
 .ripple-box { width: 52px; height: 52px; border-radius: 0 0 52px 0; background-color: rgba(230, 236, 247, 0.3); box-shadow: 0 0 2px 2px #98b3df; }
 
@@ -684,15 +688,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .app-folder-icon { padding: 5px; spacing-rows: 5px; spacing-columns: 5px; }
 
-.page-indicator { padding: 15px 20px; }
+.page-indicator { padding: 7px 16px; }
 
-.page-indicator .page-indicator-icon { width: 12px; height: 12px; background-color: transparent; border: 2px solid rgba(255, 255, 255, 0.4); border-radius: 12px; }
-
-.page-indicator:hover .page-indicator-icon { border-color: white; }
-
-.page-indicator:active .page-indicator-icon { border: none; margin: 2px; background-color: white; }
-
-.page-indicator:checked .page-indicator-icon, .page-indicator:checked:active .page-indicator-icon { background-color: white; }
+.page-indicator .page-indicator-icon { width: 12px; height: 12px; background-color: white; border-radius: 6px; }
 
 .app-well-app > .overview-icon.overview-icon-with-label, .grid-search-result .overview-icon.overview-icon-with-label { padding: 10px 8px 5px 8px; spacing: 4px; }
 
@@ -788,7 +786,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #keyboard .page-indicator { padding: 4px 4px; }
 
-#keyboard .page-indicator .page-indicator-icon { width: 6px; height: 6px; }
+#keyboard .page-indicator .page-indicator-icon { width: 8px; height: 8px; }
 
 .keyboard-layout, .key-container { spacing: 10px; padding: 10px; }
 

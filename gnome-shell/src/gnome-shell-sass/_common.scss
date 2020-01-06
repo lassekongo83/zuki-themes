@@ -31,7 +31,6 @@ $large_radius: 12px;
 
 // GLOBALS
 $font-size: 10;
-$font-family: Roboto, Ubuntu, Sans-Serif;
 $_bubble_bg_color: opacify($osd_bg_color,0.25);
 $_bubble_fg_color: $osd_fg_color;
 $_bubble_borders_color: transparentize($osd_fg_color,0.8);
@@ -43,7 +42,6 @@ $short-duration: 100ms;
 $long-duration: 200ms;
 
 stage {
-  font-family: $font-family;
   @include fontsize($font-size);
   color: $fg_color;
 }
@@ -102,6 +100,11 @@ StEntry {
   StIcon.capslock-warning {
     icon-size: 16px;
     warning-color: $warning_color;
+    padding: 0 4px;
+  }
+
+  StIcon.peek-password {
+    icon-size: 1.09em;
     padding: 0 4px;
   }
 }
@@ -396,6 +399,11 @@ StScrollBar {
   font-size: 10pt;
   color: $warning_color;
   padding-bottom: 8px;
+}
+
+.prompt-dialog-caps-lock-warning {
+  @extend .prompt-dialog-error-label;
+  padding-left: 6.2em;
 }
 
 .prompt-dialog-info-label {
@@ -933,6 +941,7 @@ StScrollBar {
   spacing-columns: 0.8em;
 }
 
+.weather-header-box,
 .weather-box {
   spacing: 0.4em;
 }
@@ -1011,9 +1020,9 @@ StScrollBar {
 .calendar-nonwork-day { color: $insensitive_fg_color; }
 .calendar-today {
   font-weight: bold;
-  //color: lighten($fg_color, 10%);
-  //background-color: darken($bg_color, 5%);
-  border: 1px solid transparentize($borders_color, 0.5);
+  color: lighten($fg_color,5%);
+  background-color: darken($bg_color,5%);
+  // border: 1px solid lighten($_bubble_borders_color,20%);
 }
 .calendar-day-with-events {
   color: lighten($fg_color, 10%);
@@ -1086,13 +1095,20 @@ StScrollBar {
   color: darken($fg_color,20%);
 }
 
+.message-close-button {
+  color: lighten($fg_color, 15%);
+  &:hover { color: darken($fg_color, 10%); }
+  &:active { color: darken($fg_color, 20%); }
+}
+
 .message-media-control {
   padding: 12px;
   color: darken($fg_color, 20%);
 
   &:last-child:ltr { padding-right: 18px; }
   &:last-child:rtl { padding-left: 18px; }
-  &:hover { color: $fg_color; }
+  &:hover { color: darken($fg_color, 10%) }
+  &:active { color: darken($fg_color, 20%); }
   &:insensitive { color: darken($fg_color,40%); }
 }
 
@@ -1151,29 +1167,12 @@ StScrollBar {
 
 .aggregate-menu {
   min-width: 21em;
-  .popup-menu-icon { padding: 0 4px; }
+  .popup-menu-icon { padding: 0 4px;
+                     -st-icon-style: symbolic; }
   .popup-sub-menu .popup-menu-item > :first-child {
     &:ltr { padding-left: 12px; margin-left: 1.09em; }
     &:rtl { padding-right: 12px; margin-right: 1.09em; }
   }
-}
-
-.system-menu-action {
-  -st-icon-style: symbolic;
-  color: $fg_color;
-  border-radius: 32px; // wish we could do 50%
-  padding: 13px;
-  border: 1px solid transparent;
-  background-color: $base_color;
-
-  &:hover, &:focus {
-    background-color: $selected_bg_color;
-    color: $fg_color;
-    border: none;
-    padding: 14px;
-  }
-  &:active { background-color: $selected_bg_color; color: $selected_fg_color; }
-  & > StIcon { icon-size: 16px; }
 }
 
 // Activities Ripples
@@ -1526,20 +1525,14 @@ StScrollBar {
 }
 
 .page-indicator {
-  padding: 15px 20px;
+  padding: 7px 16px;
 
   .page-indicator-icon {
     width: 12px;
     height: 12px;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: $large_radius;
+    background-color: white;
+    border-radius: 6px;
   }
-
-  &:hover .page-indicator-icon { border-color: white; }
-  &:active .page-indicator-icon { border: none; margin: 2px; background-color: white; }
-  &:checked .page-indicator-icon,
-  &:checked:active .page-indicator-icon { background-color: white;}
 }
 
 .no-frequent-applications-label { @extend %status_text; }
@@ -1724,8 +1717,8 @@ StScrollBar {
     padding: 4px 4px;
 
     .page-indicator-icon {
-      width: 6px;
-      height: 6px
+      width: 8px;
+      height: 8px;
     }
   }
 }
