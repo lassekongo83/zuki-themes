@@ -1341,7 +1341,8 @@ toolbar {
 searchbar > revealer > box,
 .location-bar {
   @extend %toolbar;
-  @extend %darkbar;
+  // https://github.com/lassekongo83/zuki-themes/issues/157
+  //@extend %darkbar;
 
   border-width: 0 0 1px;
   padding: 3px;
