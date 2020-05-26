@@ -3,8 +3,6 @@ gtk2_dir = join_paths(theme_dir, 'gtk-2.0')
 # static theme files to copy
 gtk2_theme_data_sources = [
   'gtkrc',
-  'xfce-panel.rc',
-  'xfsmlogout.png',
 ]
 
 gtk2_asset_dir = join_paths(gtk2_dir, 'assets')

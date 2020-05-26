@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="14.675558mm"
-   height="6.7733345mm"
-   viewBox="0 0 52.000009 24.000004"
+   width="56"
+   height="24"
+   viewBox="0 0 52.500001 22.5"
    id="svg4686"
    version="1.1"
-   inkscape:version="0.92.1 r"
-   sodipodi:docname="switch-off.svg">
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="toggle-on-dark.svg">
   <defs
      id="defs4688" />
   <sodipodi:namedview
@@ -25,21 +25,26 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="73.967312"
-     inkscape:cy="4.5603743"
+     inkscape:zoom="15.839192"
+     inkscape:cx="12.778526"
+     inkscape:cy="13.275762"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1600"
-     inkscape:window-height="828"
+     inkscape:window-width="1920"
+     inkscape:window-height="915"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     units="px">
+    <inkscape:grid
+       type="xygrid"
+       id="grid822" />
+  </sodipodi:namedview>
   <metadata
      id="metadata4691">
     <rdf:RDF>
@@ -48,7 +53,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,28 +61,29 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-507.85714,-508.93363)">
+     transform="translate(-507.85714,-510.43363)">
     <g
-       id="g4492">
+       id="g827">
       <rect
-         style="opacity:1;fill:#000000;fill-opacity:0.627451;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect6973"
-         width="52.000008"
-         height="24.000004"
+         ry="11.25"
+         y="510.43362"
          x="507.85715"
-         y="508.93362"
-         ry="12.000002" />
+         height="22.5"
+         width="52.5"
+         id="rect6975"
+         style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:none;stroke-width:0.97288954;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <circle
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle6977"
-         cx="519.85712"
-         cy="520.93365"
-         r="10.000001" />
+         r="9.375"
+         cy="521.68365"
+         cx="549.10712"
+         id="circle6979"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.93749994;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <path
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.93749958"
+         d="m 517.23214,522.53592 1.70454,-1.70457 1.70455,2.13075 4.26137,-5.96597 1.70454,1.70456 -5.96591,7.67044 z"
+         id="path7037"
          inkscape:connector-curvature="0"
-         id="path7035"
-         d="m 550.85712,524.93362 h -2 l -2,-2 -2,2 h -2 v -2 l 2,-2 -2,-2 v -2.00001 h 2 l 2,2.00001 2,-2.00001 h 2 v 2.00001 l -2,2 2,2 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+         sodipodi:nodetypes="ccccccc" />
     </g>
   </g>
 </svg>

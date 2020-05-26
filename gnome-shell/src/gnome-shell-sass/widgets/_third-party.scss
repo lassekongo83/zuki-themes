@@ -1,0 +1,78 @@
+// 3rd party extensions styling
+
+// Dash to Panel
+
+@each $d in Top, Bottom {
+  $low_d: to-lower-case($d);
+
+  #panel.dashtopanelMainPanel.dashtopanel#{$d} {
+    .panel-button {
+      &:hover { background-color: transparentize(white,0.85); }
+      &:active, &:overview, &:focus { background-color: $selected_bg_color; }
+      text-shadow: black 0 1px 1px;
+    }
+
+    .show-apps { width: 32px; } // Should not be lower than the image width
+
+    // panel dash icon
+    @each $d in hover, focus, active, checked, overview {
+      .show-apps .overview-icon {
+        border-radius: 0;
+        margin: 0;
+        background-image: url("d2p-activities.svg");
+        background-position: center center;
+      }
+
+      .show-apps:#{$d} .overview-icon {
+        background-image: url("d2p-activities-active.svg");
+        background-position: center center;
+        background-color: transparent;
+      }
+
+      .dash-item-container .show-apps {
+        padding: 4px 2px 4px 0;
+        transition-duration: 100ms;
+        &:#{$d} { background-color: transparentize(black, 0.2); }
+      }
+    }
+
+    .show-apps-icon { color: transparent; } // Hides the default icon
+
+    @each $c in 1, 2, 3, 4 {
+      .app-well-app {
+        margin: 0 2px;
+        border-radius: 0;
+        //> StWidget,
+        &:hover > StWidget {
+          border-image: url("transparent.png"); // Removes the default bg color
+        }
+        &:hover {
+          // Due to St limitations - use a transparent/any gradient when using a box-shadow.
+          background-gradient-direction: vertical;
+          background-gradient-start: rgba(255,255,255,0.1);
+          background-gradient-end: rgba(255,255,255,0.1);
+          //box-shadow: inset 0 -2px rgba(255,255,255,0.5);
+        }
+      }
+
+      .running#{$c} {
+        transition-duration: 100ms;
+        @if $c >= 1 {
+          &:hover,
+          &.focused {
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(255,255,255,0.15);
+            background-gradient-end: rgba(255,255,255,0.15);
+          }
+          &.focused:hover {
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(255,255,255,0.2);
+            background-gradient-end: rgba(255,255,255,0.2);
+          }
+        }
+
+        &.focused .overview-icon, &:hover .overview-icon { border-image: url("transparent.png"); } // Removes the default bg color
+      }
+    }
+  }
+}
