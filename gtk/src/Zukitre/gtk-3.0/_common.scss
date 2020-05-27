@@ -14,7 +14,7 @@ $popover_radius: $button_radius + 4;
 // Optional compact sizes for buttons, headerbar and headerbar widgets
 $_sizevariant: 'default'; //compact otherwise
 $_headerbar_height: if($_sizevariant=='default', 38px, 34px);
-$_entry_height: if($_sizevariant=='default', 32px, 28px);
+$_entry_height: if($_sizevariant=='default', 24px, 24px);
 $_btn_pad: if($_sizevariant=='default', 4px 4px, 2px 3px);
 $_hb_btn_pad: if($_sizevariant=='default', 4px, 3px);
 $_img_btn_pad: if($_sizevariant=='default', 4px, 2px);
