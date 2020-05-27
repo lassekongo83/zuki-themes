@@ -1033,84 +1033,6 @@ style "iconview" {
   }
 }
 
-style "xfce-header" {
-  base[NORMAL] = shade (1.18, @bg_color)
-  engine "murrine" {}
-}
-
-style "xfwm-tabwin"
-{
-  Xfwm4TabwinWidget::border-width       = 0
-  Xfwm4TabwinWidget::icon-size          = 64
-  Xfwm4TabwinWidget::listview-icon-size = 24
-  Xfwm4TabwinWidget::preview-size       = 128
-  Xfwm4TabwinWidget::alpha              = 0.8
-  Xfwm4TabwinWidget::border-radius      = 12
-
-  bg[NORMAL]   = shade (0.15, @text_color)
-  bg[ACTIVE]   = shade (0.65, @selected_bg_color)
-  bg[PRELIGHT] = shade (0.75, @selected_bg_color)
-  bg[SELECTED] = shade (0.55, @bg_color)
-
-  fg[NORMAL]   = shade (0.8, @fg_color)
-  fg[ACTIVE]   = @selected_fg_color
-  fg[PRELIGHT] = @selected_fg_color
-
-  engine "murrine" {
-    roundness  = 2
-    textstyle  = 1
-    text_shade = 0.25
-  }
-}
-
-style "xfwm-tabwin-button" {
-  font_name = "bold"
-}
-
-style "xfdesktop-icon-view" {
-  XfdesktopIconView::label-alpha                = 0
-  XfdesktopIconView::selected-label-alpha       = 80
-  XfdesktopIconView::shadow-x-offset            = 0
-  XfdesktopIconView::shadow-y-offset            = 1
-  XfdesktopIconView::selected-shadow-x-offset   = 0
-  XfdesktopIconView::selected-shadow-y-offset   = 1
-  XfdesktopIconView::shadow-color               = shade(1.5, @tooltip_bg_color)
-  XfdesktopIconView::selected-shadow-color      = shade(1.8, @tooltip_bg_color)
-  XfdesktopIconView::shadow-blur-radius         = 2
-  XfdesktopIconView::cell-spacing               = 2
-  XfdesktopIconView::cell-padding               = 6
-  XfdesktopIconView::cell-text-width-proportion = 1.9
-
-  fg[NORMAL] = shade (0.9, @selected_fg_color)
-  fg[ACTIVE] = @selected_fg_color
-
-  engine "murrine" {}
-}
-
-style "xfsm-logout" {
-  GtkDialog::content-area-border  = 12
-  GtkDialog::content-area-spacing = 6
-  GtkDialog::action-area-spacing  = 0
-
-  bg_pixmap[NORMAL] = "xfsmlogout.png"
-
-  bg[NORMAL]   = @bg_color
-  bg[SELECTED] = shade (1.18, @bg_color) # Border around the dialog
-  fg[NORMAL]   = @fg_color
-
-  engine "murrine" {}
-}
-
-style "xfsm-label" {
-  font_name = "14"
-
-  engine "murrine" {}
-}
-
-style "xfsm-button" = "button" {
-  engine "murrine" {}
-}
-
 style "calendar" {
   fg[NORMAL]   = "#FFFFFF"
   fg[PRELIGHT] = "#FFFFFF"
@@ -1202,16 +1124,6 @@ widget_class "*.<GtkList>.<GtkButton>"     style "treeview-header"
 widget_class "*.<GtkCList>.<GtkButton>"    style "treeview-header"
 widget_class "*GnmSimpleCanvas*"           style "treeview-header" # Gnumeric treeview-headers
 
-# Xfce specific theming
-widget_class "*ExoIconView*"                              style "iconview"
-widget_class "*XfceHeading*"                              style "xfce-header"
-widget "xfwm4-tabwin*"                                    style "xfwm-tabwin"
-widget "xfwm4-tabwin*GtkButton*"                          style "xfwm-tabwin-button"
-widget_class "*XfsmLogoutDialog*"                         style "xfsm-logout"
-widget_class "*XfsmLogoutDialog*GtkVBox.GtkVBox.GtkLabel" style "xfsm-label"
-widget_class "*XfsmLogoutDialog*GtkButton*"               style "xfsm-button"
-widget_class "*XfdesktopIconView*"                        style "xfdesktop-icon-view"
-
 widget_class "*<OsScrollbar>" style "overlay-scrollbar"
 widget_class "*<OsThumb>"     style "overlay-scrollbar"
 
@@ -1264,6 +1176,3 @@ widget_class "*<GtkListItem>*"     style "fg-is-text-color-workaround"
 # Only match GtkCList and not the parent widgets, because that would also change the headers.
 widget_class "*<GtkCList>"         style "fg-is-text-color-workaround"
 widget_class "*<EelEditableLabel>" style "fg-is-text-color-workaround"
-
-# panel theming
-include "xfce-panel.rc"

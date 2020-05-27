@@ -1,10 +1,8 @@
 $variant: 'dark';
-$dark_header: 'true';
+$alt_header: 'false';
 
 @import 'colors';
-@import 'variables';
 @import 'drawing';
 @import 'common';
 @import 'colors-public';
-@import 'apps';
-@import 'lightdm';
+@import 'custom';

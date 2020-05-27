@@ -5,12 +5,10 @@
 // - if you need to inverse a color function use the @if directive to match for dark $variant
 
 $variant: 'light';
-$dark_header: 'false'; // For a darker headerbar
+$alt_header: 'false';
 
 @import 'colors';
-@import 'variables';
 @import 'drawing';
 @import 'common';
 @import 'colors-public';
-@import 'apps';
-@import 'lightdm';
+@import 'custom';

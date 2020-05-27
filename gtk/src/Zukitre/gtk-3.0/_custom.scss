@@ -1,0 +1,681 @@
+// This file is used to apply some larger unofficial custom styles to the Adwaita base.
+
+//---------------//
+// Title buttons //
+//---------------//
+%titlebutton {
+  min-width: $titlebutton_size;
+  min-height: $titlebutton_size;
+  padding: 0;
+  margin: 2px;
+  border-radius: 1.5px;
+}
+
+%titlebuttons {
+  button.titlebutton {
+    @extend %titlebutton;
+
+    &.close, &.maximize, &.minimize {
+      color: transparent;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-width: 0;
+      box-shadow: none;
+      transition-property: background-color;
+    }
+
+    &.close {
+      background-color: $close_button;
+
+      &:hover, &:active { background-color: $close_button_hover; }
+      &:backdrop {
+        background-color: $close_button_backdrop;
+        &:hover, &:active { background-color: $close_button_hover; }
+      }
+    }
+    
+    &.maximize, &.minimize { 
+      &:hover, &:active { background-color: if($variant == 'light' and $alt_header == 'false', $selected_bg_color, transparentize(white, 0.8)); }
+    }
+
+    // titlebutton icons
+    @each $k in ('close', 'maximize', 'minimize') {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
+        &.#{$k}#{$l} {
+          @if($variant=='light' and $alt_header=='false') {
+            background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
+                                          url('assets/titlebutton-#{$k}#{$m}@2.png'));
+          }
+          @else {
+            background-image: -gtk-scaled(url('assets/titlebutton-#{$k}-hover.png'),
+                                          url('assets/titlebutton-#{$k}-hover@2.png'));
+            &:not(:hover) { opacity: 0.8; }
+            &:backdrop:not(:hover) { opacity: 0.5; }
+          }
+        }
+      }
+    }
+  }
+
+  // unmaximize titlebutton icon
+  .maximized & {
+    button.titlebutton {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
+        &.maximize#{$l} {
+          @if($variant=='light' and $alt_header=='false') {
+            background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}.png'),
+                                          url('assets/titlebutton-unmaximize#{$m}@2.png'));
+          }
+          @else {
+            background-image: -gtk-scaled(url('assets/titlebutton-unmaximize-hover.png'),
+                                          url('assets/titlebutton-unmaximize-hover@2.png'));
+            &:not(:hover) { opacity: 0.8; }
+            &:backdrop:not(:hover) { opacity: 0.5; }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ssd .titlebar {
+  @include ssd_fill;
+  border-width: 0;
+  padding: 2px 4px;
+
+  &.default-decoration button.titlebutton {
+    @extend %titlebutton;
+  }
+}
+
+//--------------------//
+// Dark/alt headerbar //
+//--------------------//
+// not used in the dark theme
+$_button_bg_color: lighten($alt_headerbar_bg, 7.5%) !global;
+$_button_border_color: darken($alt_headerbar_bg, 10%) !global;
+
+%alt_titlebar { // TODO: selection-mode titlebar
+  color: $alt_headerbar_fg;
+  text-shadow: none;
+  &:backdrop {
+    color: $alt_headerbar_backdrop_fg;
+    text-shadow: none;
+  }
+
+  label .title {
+    color: $alt_headerbar_fg;
+    &:backdrop { color: $alt_headerbar_backdrop_fg; }
+  }
+
+  .maximized &,
+  .fullscreen & { box-shadow: none; }
+
+  entry {
+    &, &:backdrop {
+      border-color: darken($alt_headerbar_bg, 8%);
+    }
+    &:focus { @include entry(focus); }
+  }
+
+  button:not(.titlebutton),
+  button.linked,
+  button.toggle,
+  button.popup.toggle,
+  button.image-button,
+  button.image-button.toggle,
+  button.text-button,
+  button.text-button.toggle,
+  box button.toggle,
+  buttonbox.toggle,
+  stackswitcher button,
+  filechooser .path-bar.linked>button,
+  .path-bar button {
+    text-shadow: none;
+    &:backdrop {
+      color: $alt_headerbar_backdrop_fg;
+      text-shadow: none;
+    }
+    @include button(normal, $_button_bg_color, $alt_headerbar_fg);
+    &.flat {
+      @include button(undecorated);
+    }
+
+    &:hover {
+      @include button(hover, $_button_bg_color, $alt_headerbar_fg);
+    }
+    &:active, &:checked, &:active:hover, &:checked:hover {
+      @include button(active, $_button_bg_color, $alt_headerbar_fg);
+      border-color: transparentize(black, 0.6);
+    }
+    &:disabled, &:backdrop:disabled {
+      @include button(insensitive, $_button_bg_color, $alt_headerbar_fg);
+    }
+  }
+
+  separator {
+    background: image(lighten($_button_border_color, 5%));
+  }
+  // TODO: Checkbuttons
+  switch {
+    slider { background-color: transparentize(white, 0.5); }
+  }
+}
+
+@if $alt_header=='true' {
+  .titlebar, headerbar { @extend %alt_titlebar; }
+  .ssd .titlebar {
+    @include headerbar_fill($alt_headerbar_bg);
+    color: $alt_headerbar_fg;
+    text-shadow: none;
+    border-width: 0;
+    &:backdrop { color: $alt_headerbar_backdrop_fg; }
+  }
+
+  #MozillaGtkWidget.background  {
+    menubar, .menubar, menubar > menuitem:hover {
+      background-color: $alt_headerbar_bg;
+      color: $alt_headerbar_fg;
+    }
+  }
+
+  window.background.chromium {
+    background-color: $alt_headerbar_bg;
+    button { border-color: $_button_border_color; } // tab borders
+    menubar { color: $alt_headerbar_fg; }
+  }
+}
+
+//----------------//
+// Switch buttons //
+//----------------//
+// TODO: May need a border.
+%switchbutton {
+  margin: 4px 0;
+  padding: 0;
+  border-radius: 99px;
+  border-width: 0;
+  background-color: transparentize(black, 0.62);
+  background-clip: padding-box;
+  transition: all $duration $ease-out;
+
+  &:checked {
+    background-color: $checkradio_bg_color;
+  }
+
+  &:disabled {
+    opacity: 0.38;
+  }
+
+  slider {
+    margin: 2px; //-2px;
+    min-width: 22px;
+    min-height: 22px;
+    border-radius: 99px;
+    background-color: if($variant=='light', white, transparentize($fg_color, 0.5));
+    transition: all $duration $ease-out;
+    box-shadow: 0 2px 2px -2px rgba(black, .3),
+                0 1px 2px -1px rgba(black, .24),
+                0 1px 2px -.6px rgba(black, .17);
+  }
+
+  &:hover > slider,
+  &:focus > slider {
+    background-color: if($variant=='light', white, transparentize($fg_color, 0.5));
+    box-shadow: 0 2px 2px -2px rgba(black, .5),
+                0 1px 2px -1px rgba(black, .44),
+                0 1px 2px -.6px rgba(black, .37);
+  }
+
+  &:checked > slider {
+    background-color: if($variant=='light', white, transparentize($fg_color, 0.5));
+  }
+
+  image { color: transparent; }
+}
+
+//-------------------//
+// Scrollbar buttons //
+//-------------------//
+%scrollbuttons {
+  // button icons
+  &.vertical {
+    button {
+      @each $s,$as in ('',''),
+                      (':disabled','-insensitive') {
+        &.up#{$s} {
+            $_url: if($variant=='dark', 'assets/scrollarrow-up#{$asset_suffix}', 'assets/scrollarrow-up#{$as}');
+            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                          url('#{$_url}@2.png'));
+        }
+
+        &.down#{$s} {
+            $_url: if($variant=='dark', 'assets/scrollarrow-down#{$asset_suffix}', 'assets/scrollarrow-down#{$as}');
+            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                          url('#{$_url}@2.png'));
+        }
+      }
+    }
+  }
+
+  &.horizontal {
+    button {
+      @each $s,$as in ('',''),
+                      (':disabled','-insensitive') {
+        &.up#{$s} {
+            $_url: if($variant=='dark', 'assets/scrollarrow-left#{$asset_suffix}', 'assets/scrollarrow-left#{$as}');
+            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                          url('#{$_url}@2.png'));
+        }
+
+        &.down#{$s} {
+            $_url: if($variant=='dark', 'assets/scrollarrow-right#{$asset_suffix}', 'assets/scrollarrow-right#{$as}');
+            -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                          url('#{$_url}@2.png'));
+        }
+      }
+    }
+  }
+}
+
+//-----------------//
+// Primary toolbar //
+//-----------------//
+
+%primary_toolbar {
+  button,
+  buttom.image-button,
+  button.text-button,
+  button.toggle {
+    &:hover { border-color: $borders_color; }
+  }
+}
+
+//------//
+// XFCE //
+//------//
+
+// Global panel button styles
+%panelbutton {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  border-color: transparent;
+  box-shadow: none;
+  padding: 0 1px;
+  color: transparentize($osd_fg_color, 0.05);
+
+  &:hover {
+    color: $selected_fg_color;
+    background-color: lighten($osd_bg_color, 4%);
+  }
+  &:active, &:checked {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    &:hover { background-color: lighten($selected_bg_color, 4%); }
+  }
+}
+
+.XfceHeading {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-image: none;
+  background-color: darken($bg_color, 10%);
+  color: $text_color;
+}
+
+.xfce4-panel.background {
+  background-color: $osd_bg_color;
+  color: $osd_fg_color;
+  font-weight: normal;
+
+  button { @extend %panelbutton; }
+
+  entry { caret-color: $text_color; }
+  menu {
+    -gtk-icon-effect: none;
+
+    text-shadow: none;
+    // Theme pulseaudio-plugin's mpris buttons
+    .linked button {
+      @extend %linked;
+      @include button(normal, $menu_color, $text_color);
+        &:disabled {
+          @include button(insensitive);
+          border-color: transparentize($borders_color, 0.5);
+        }
+      }
+    }
+  progressbar {
+    margin: 0;
+
+    &.horizontal {
+      trough { min-height: 6px; padding: 0; }
+      progress { min-height: 4px; }
+    }
+    &.vertical {
+      trough { min-width: 6px; padding: 0; }
+      progress { min-width: 4px; }
+    }
+    progress { border-radius: 0px; }
+    trough {
+      background: darken($osd_bg_color, 10%);
+      border-radius: 0px;
+      border-color: darken($osd_bg_color, 18%);
+    }
+  }
+  .tasklist button {
+    border-radius: $button_radius;
+    color: darken($osd_fg_color, 5%);
+    border: none;
+    background: $osd_bg_color;
+
+    &.flat {
+      background-image: none;
+      border: none;
+      box-shadow: none;
+    }
+    &:active, &:checked {
+      background: darken($osd_bg_color, 10%);
+      color: $osd_fg_color;
+    }
+    &:hover, &:active:hover, &:checked:hover {
+      background: darken($osd_bg_color, 5%);
+      color: $osd_fg_color;
+    }
+    image { padding: 3px; }
+  }
+  &.horizontal .tasklist {
+    button {
+      margin: 0 1px;
+      label { padding-right: 3px; }
+    }
+  }
+  &.vertical .tasklist {
+    button {
+      margin: 1px 0;
+      label { padding-bottom: 3px; }
+    }
+  }
+}
+
+// Workspace switcher provided by libwnck
+wnck-pager {
+  &:selected { background-color: darken($selected_bg_color, 10%); }
+  &:hover { background-color: $selected_bg_color; }
+}
+
+XfdesktopIconView.view {
+  background: transparent;
+  color: $osd_fg_color;
+  border-radius: $button_radius;
+  &:active {
+    background: rgba(darken($selected_bg_color, 15%), 0.5);
+    text-shadow: 0 1px 1px black;
+  }
+  .label { text-shadow: 1px 1px 2px black; }
+  .rubberband {
+    @extend rubberband;
+    border-radius: 0;
+  }
+}
+
+#XfceNotifyWindow {
+  @extend %osd;
+  border-radius: $window_radius;
+
+  buttonbox { padding: 0; }
+
+  button {
+    @include button(osd);
+    &:hover, &:focus { @include button(osd-hover); }
+    &:active, &:checked { @include button(osd-active); }
+    &:active:hover, &:checked:hover { @include button(osd-active); }
+    &.default { @include button(osd-hover); }
+    &:disabled { @include button(osd-insensitive); }
+
+    border-radius: $button_radius;
+    text-shadow: none;
+  }
+
+  entry {
+    @include entry(osd);
+    border-radius: $button_radius;
+    text-shadow: none;
+  }
+
+  label#summary {
+    font-weight: bold;
+  }
+
+  progressbar {
+    min-height: 6px;
+    border-radius: $button_radius;
+    progress {
+      background-image: none;
+      background-color: $selected_bg_color;
+      border: none;
+      box-shadow: none;
+    }
+    trough {
+      background-color: lighten($osd_bg_color, 10%);
+      border: none;
+      border-radius: $button_radius;
+      padding: 1px 0;
+    }
+  }
+}
+
+// Xfwm4's alt-tab dialog, aka "tabwin"
+#xfwm-tabwin {
+  padding: 12px;
+  background-image: none;
+  background-color: transparentize(black, 0.2);
+  color: shade($selected_fg_color, 0.65);
+  text-shadow: 0px 1px transparentize(black, 0.2);
+  border-radius: 12px;
+  // Set the application icon- and preview-size to 64px
+  -XfwmTabwinWidget-icon-size: 64px;
+  -XfwmTabwinWidget-preview-size: 64px;
+
+  button {
+    background-image: none;
+    color: $selected_fg_color;
+    font-weight: bold;
+    text-shadow: 0px 1px transparentize(black, 0.2);
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+
+    &:active, &:checked, &:active:hover, &:checked:hover {
+      background-color: $selected_bg_color;
+    }
+    &:hover {
+      background-color: $selected_bg_color;
+      transition-duration: $shorter_duration;
+    }
+  }
+}
+
+//------//
+// Mate //
+//------//
+.gnome-panel-menu-bar,
+.mate-panel-menu-bar {
+
+  &, menubar { background-color: $alt_headerbar_bg; }
+
+  menubar,
+  #PanelApplet label,
+  #PanelApplet image { color: $alt_headerbar_fg; }
+
+  // Panel buttons
+  button:not(#tasklist-button) {
+    @extend %panelbutton;
+  }
+
+  button,
+  #tasklist-button {
+    label, image { color: inherit; }
+  }
+
+  .wnck-pager {
+    color: mix($alt_headerbar_fg, black, 50%);
+    background-color: darken($alt_headerbar_bg, 10%);
+
+    &:hover {
+      background-color: lighten($alt_headerbar_bg, 5%);
+    }
+
+    &:selected {
+      color: lighten($selected_bg_color, 20%);
+      background-color: $selected_bg_color;
+    }
+  }
+
+  na-tray-applet {
+    -NaTrayApplet-icon-padding: 0;
+    -NaTrayApplet-icon-size: 16px;
+  }
+}
+
+// Application specific fixes should be avoided as much as possible! In some cases they are unavoidable.
+
+// Caja
+.caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
+.caja-notebook { border-top: 1px solid $borders_color; }
+.caja-side-pane .frame { border-width: 1px 0 0; }
+.caja-notebook .frame { border-width: 0 0 1px; }
+
+//------//
+// Apps //
+//------//
+
+// Styling 3rd party apps should be avoided as much as possible
+
+// Nautilus
+.nautilus-window {
+  // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
+  searchbar { border-top: 1px solid $borders_color; }
+  .searchbar-container { margin-top: -1px; }
+
+  // sidebar separator
+  paned {
+    > separator {
+      background-image: none;
+      background-size: 0;
+      background-color: transparent;
+    }
+  }
+
+  // sidebar
+  //.sidebar {
+  //  box-shadow: inset -1px 0 transparentize($borders_color, 0.8), inset -2px 0 transparentize($borders_color, 0.9);
+  //}
+
+  // Without this nautilus iconview grabs the bg_color
+  notebook,
+  notebook > stack:not(:only-child) searchbar { @extend %view; }
+
+  // pathbar
+  //.nautilus-path-bar button {
+  //  @include button(undecorated);
+  //  &:hover, &:last-child {
+  //    box-shadow: 0 3px $selected_bg_color;
+  //    border-radius: 0;
+  //  }
+  //}
+}
+
+// Desktop icons FIXME: Remove legacy nautilus stuff after Ubuntu 18.04 LTS ends support
+.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
+  color: $selected_fg_color;
+  text-shadow: 1px 1px 2px transparentize(black, 0.2);
+}
+
+.nautilus-desktop-window {
+  .nautilus-desktop.view {
+    color: $selected_fg_color;
+    text-shadow: 1px 1px 2px transparentize(black, 0.2);
+  }
+}
+
+// disk space pie
+// from https://gitlab.gnome.org/GNOME/nautilus/blob/master/src/resources/css/Adwaita.css
+.disk-space-display {
+  $disk_space_unknown: #888;
+  $disk_space_used: #6ACAD8;
+  $disk_space_free: #eeeeec;
+  border-style: solid;
+  border-width: 2px;
+
+  &.unkown {
+    background-color: $disk_space_unknown;
+    border-color: shade($disk_space_unknown, 0.7);
+    color: $disk_space_unknown;
+
+    &.border {
+      color: shade($disk_space_unknown, 0.7);
+    }
+  }
+
+  &.used {
+    background-color: $disk_space_used;
+    border-color: shade($disk_space_used, 0.7);
+    color: $disk_space_used;
+
+    &.border {
+      color: shade($disk_space_used, 0.7);
+    }
+  }
+
+  &.free {
+    background-color: $disk_space_free;
+    border-color: shade($disk_space_free, 0.7);
+    color: $disk_space_free;
+
+    &.border {
+      color: shade($disk_space_free, 0.7);
+    }
+  }
+}
+
+// Thunar
+.thunar {
+  .standard-view { border-width: 0; }
+  .sidebar .view {
+    background-color: $sidebar_bg_color;
+    &:hover { background-color: $base_hover_color; }
+    &:selected { background-color: $selected_bg_color; }
+  }
+
+  toolbar {
+    border-bottom: 1px solid $borders_color;
+    entry { margin: 2px; }
+  }
+
+  // https://github.com/lassekongo83/plano-theme/issues/37
+  .shortcuts-pane { border-top: 0; }
+}
+
+// gnome-tweaks
+.tweak-categories {
+  background-color: mix($bg_color, $base_color, 50%);
+  border-color: $borders_color;
+}
+
+list.tweak-categories separator {
+  // hide sidebar separators
+  // make the sidebar look like a normal sidebar
+  background: transparent;
+}
+
+// Evolution - https://github.com/lassekongo83/zuki-themes/issues/119
+.table-header {
+  @extend %column_header_button;
+  padding: 4px 0 4px 0;
+  min-height: 24px;
+}
