@@ -11,12 +11,10 @@ gtk3_scss_sources = [
 # Dependencies of the files that need to be compiled
 gtk3_scss_dependencies = [
   '_colors-public.scss',
-  '_variables.scss',
   '_colors.scss',
   '_common.scss',
-  '_apps.scss',
+  '_custom.scss',
   '_drawing.scss',
-  '_lightdm.scss',
 ]
 
 gtk3_asset_dir = join_paths(gtk3_dir, 'assets')
@@ -26,8 +24,11 @@ gtk3_assets = [
   'assets/check-symbolic.svg',
   'assets/dash-symbolic.svg',
   'assets/bullet-symbolic.symbolic.png',
+  'assets/bullet@2-symbolic.symbolic.png',
   'assets/check-symbolic.symbolic.png',
+  'assets/check@2-symbolic.symbolic.png',
   'assets/dash-symbolic.symbolic.png',
+  'assets/dash@2-symbolic.symbolic.png',
   'assets/scrollarrow-down@2.png',
   'assets/scrollarrow-down-dark@2.png',
   'assets/scrollarrow-down-dark.png',
