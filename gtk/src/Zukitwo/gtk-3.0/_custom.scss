@@ -646,3 +646,16 @@ list.tweak-categories separator {
   padding: 4px 0 4px 0;
   min-height: 24px;
 }
+
+// Nemo
+.nemo-window {
+  // Rename entry
+  .nemo-window-pane widget.entry {
+    border: 1px solid;
+    border-radius: $button_radius;
+
+    @include entry(focus);
+
+    &:selected { &:focus, & { @extend %selected_items; }}
+  }
+}
