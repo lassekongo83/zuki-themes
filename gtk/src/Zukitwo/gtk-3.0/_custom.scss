@@ -200,6 +200,17 @@ $_button_border_color: darken($alt_headerbar_bg, 10%) !global;
   }
 
   image { color: transparent; }
+
+  row:selected & {
+    @if $variant == 'light' {
+      box-shadow: none;
+      border: 1px solid $checkradio_borders_color;
+
+      &:backdrop { border-color: $checkradio_borders_color; }
+
+      > slider { &:checked, & { border-color: $checkradio_borders_color; } }
+    }
+  }
 }
 
 //-------------------//

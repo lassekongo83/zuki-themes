@@ -533,7 +533,7 @@ combobox arrow { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); min-heig
 
 combobox:drop(active) { box-shadow: none; }
 
-toolbar, .inline-toolbar, searchbar > revealer > box, .location-bar { -GtkWidget-window-dragging: true; padding: 4px; background-color: #c3c3c3; box-shadow: inset 0 2px rgba(176, 176, 176, 0.35); }
+toolbar, .inline-toolbar, searchbar > revealer > box, .location-bar { -GtkWidget-window-dragging: true; padding: 4px; background-color: #c3c3c3; box-shadow: inset 0 1px rgba(176, 176, 176, 0.35); }
 
 toolbar { padding: 4px 3px 3px 4px; }
 
@@ -564,10 +564,6 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 .titlebar:not(headerbar) .title, headerbar .title { padding-left: 12px; padding-right: 12px; font-weight: bold; }
 
 .titlebar:not(headerbar) .subtitle, headerbar .subtitle { font-size: smaller; padding-left: 12px; padding-right: 12px; }
-
-.titlebar:not(headerbar) stackswitcher button:checked, .titlebar:not(headerbar) button.toggle:checked, headerbar stackswitcher button:checked, headerbar button.toggle:checked { background: image(#ababab); border-color: #a8a8a8; border-top-color: #9b9b9b; }
-
-.titlebar:not(headerbar) stackswitcher button:checked:backdrop, .titlebar:not(headerbar) button.toggle:checked:backdrop, headerbar stackswitcher button:checked:backdrop, headerbar button.toggle:checked:backdrop { color: #5f5f5f; border-color: #b7b7b7; background-image: image(#c7c7c7); box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
 
 .selection-mode .titlebar:not(headerbar), .selection-mode.titlebar:not(headerbar), .selection-mode headerbar, headerbar.selection-mode { color: #ffffff; border-color: #2e5596; text-shadow: 0 -1px rgba(0, 0, 0, 0.5); background: #4a79c7; background-image: linear-gradient(to bottom, #618ace, #4a79c7); box-shadow: inset 0 1px #a5bce3, inset 0 -1px rgba(255, 255, 255, 0.3); }
 
@@ -1829,6 +1825,12 @@ switch:hover > slider, switch:focus > slider { background-color: white; box-shad
 switch:checked > slider { background-color: white; }
 
 switch image { color: transparent; }
+
+row:selected switch { box-shadow: none; border: 1px solid #284a83; }
+
+row:selected switch:backdrop { border-color: #284a83; }
+
+row:selected switch > slider:checked, row:selected switch > slider { border-color: #284a83; }
 
 scrollbar.vertical button.up { -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-up.png"), url("assets/scrollarrow-up@2.png")); }
 
