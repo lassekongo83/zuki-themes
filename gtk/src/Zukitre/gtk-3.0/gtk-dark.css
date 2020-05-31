@@ -1645,8 +1645,6 @@ decoration:backdrop { box-shadow: 0 4px 5px 2px transparent, 0 1px 2px 1px rgba(
 
 .popup decoration { box-shadow: none; }
 
-.csd decoration { background-color: black; }
-
 .ssd decoration { box-shadow: 0 0 0 1px rgba(33, 36, 37, 0.9); }
 
 .ssd decoration.maximized { box-shadow: none; }
