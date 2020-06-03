@@ -66,7 +66,7 @@ $ease-in-out: cubic-bezier(.4, 0, .6, 1);
   outline-style: dashed;
   outline-offset: -3px;
   outline-width: 1px;
-  -gtk-outline-radius: $button-radius - 2;
+  -gtk-outline-radius: $button_radius;
 
   -gtk-secondary-caret-color: $selected_bg_color
 }
