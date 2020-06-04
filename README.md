@@ -61,6 +61,12 @@ gsettings set org.gnome.desktop.interface gtk-theme Adwaita
 
 Xfce users can change themes in `Settings > Appearance` and `Settings > Window manager`
 
+#### Flatpak applications
+
+To use the theme in Flatpak applications you'll have to copy the theme(s) from /usr/share/themes to ~/.themes (Symbolic links won't work.)
+
+As long as the version of the included GTK3 for the Flatpak app is at 3.24.x the theme should be used. Some apps may require you to change the theme in the app's settings.
+
 #### Removing the themes
 
 To be safe from any gnome-shell crashes or weird behavior, change the gnome-shell theme to another one before removing the theme.
