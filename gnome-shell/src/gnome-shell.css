@@ -254,7 +254,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .world-clocks-button .world-clocks-city { color: #f6f6f7; font-size: 11pt; font-weight: normal; }
 
-.world-clocks-button .world-clocks-time { font-weight: bold; color: #f6f6f7; font-feature-settings: "lnum"; font-size: 11pt; text-align: right; }
+.world-clocks-button .world-clocks-time { font-weight: bold; color: #f6f6f7; font-feature-settings: "tnum"; font-size: 11pt; text-align: right; }
 
 .world-clocks-button .world-clocks-timezone { color: #c0c0c7; font-feature-settings: "tnum"; font-size: 10pt; }
 
