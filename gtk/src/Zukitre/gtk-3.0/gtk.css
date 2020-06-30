@@ -1996,6 +1996,28 @@ XfdesktopIconView.view .rubberband { border-radius: 0; }
 
 .disk-space-display.free.border { color: shade(#eeeeec, 0.7); }
 
+.floating-bar { padding: 1px; background-color: #F7F7F7; border-width: 1px; border-style: solid solid none; border-color: #b0b0b0; border-radius: 1px 1px 0 0; }
+
+.floating-bar.bottom.left { border-left-style: none; border-top-left-radius: 0; }
+
+.floating-bar.bottom.right { border-right-style: none; border-top-right-radius: 0; }
+
+.floating-bar:backdrop { background-color: #f4f4f4; border-color: #b7b7b7; }
+
+.floating-bar button { padding: 0px; }
+
+.search-information { background-color: #4a79c7; color: #ffffff; padding: 2px; }
+
+.nautilus-list-view .view.dnd, .nautilus-list-view iconview.dnd { border-style: none; }
+
+flowboxchild:selected { background-color: transparent; }
+
+.icon-background { background-color: black; border-color: #4a79c7; border-style: solid; border-width: 0px; }
+
+flowboxchild > .icon-item-background { padding: 4px; }
+
+flowboxchild:selected > .icon-item-background { padding: 4px; background-color: #4a79c7; border-color: #4a79c7; border-style: solid; border-width: 0px; border-radius: 1px; }
+
 .thunar .standard-view { border-width: 0; }
 
 .thunar .sidebar .view, .thunar .sidebar iconview { background-color: #e7e7e7; }

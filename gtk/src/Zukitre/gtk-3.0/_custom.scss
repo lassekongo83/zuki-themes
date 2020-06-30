@@ -654,6 +654,72 @@ XfdesktopIconView.view {
   }
 }
 
+// Floating status bar
+.floating-bar {
+  padding: 1px;
+  background-color: $base_color;
+  border-width: 1px;
+  border-style: solid solid none;
+  border-color: $borders_color;
+  border-radius: $button_radius $button_radius 0 0;
+
+  &.bottom.left { // axes left border and border radius
+    border-left-style: none;
+    border-top-left-radius: 0;
+  }
+
+  &.bottom.right { // axes right border and border radius
+    border-right-style: none;
+    border-top-right-radius: 0;
+  }
+
+  &:backdrop {
+    background-color: $backdrop_base_color;
+    border-color: $backdrop_borders_color;
+  }
+}
+
+.floating-bar button {
+  padding: 0px;
+}
+
+// view
+.search-information {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+  padding: 2px;
+}
+
+// Hide superfluous treeview drop target indication
+.nautilus-list-view .view.dnd {
+  border-style: none;
+}
+
+// Icon view
+flowboxchild:selected {
+  background-color:transparent;
+}
+
+.icon-background {
+  background-color: black;
+  border-color: $selected_bg_color;
+  border-style: solid;
+  border-width: 0px;
+}
+
+flowboxchild > .icon-item-background {
+  padding: 4px;
+}
+
+flowboxchild:selected > .icon-item-background {
+  padding: 4px;
+  background-color: $selected_bg_color;
+  border-color: $selected_bg_color;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: $button_radius;
+}
+
 // Thunar
 .thunar {
   .standard-view { border-width: 0; }
