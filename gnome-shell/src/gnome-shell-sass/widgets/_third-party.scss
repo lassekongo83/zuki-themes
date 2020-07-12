@@ -13,30 +13,27 @@
     }
 
     .show-apps { width: 32px; } // Should not be lower than the image width
+    // Gets rid of the default hover effect
+    .show-apps > .overview-icon { border-image: url("transparent.png"); }
 
     // panel dash icon
     @each $d in hover, focus, active, checked, overview {
-      .show-apps .overview-icon {
-        border-radius: 0;
-        margin: 0;
+      .dash-item-container .show-apps {
+        //padding: 4px 2px 4px 0;
+        transition-duration: 100ms;
         background-image: url("d2p-activities.svg");
         background-position: center center;
-      }
-
-      .show-apps:#{$d} .overview-icon {
-        background-image: url("d2p-activities-active.svg");
-        background-position: center center;
-        background-color: transparent;
-      }
-
-      .dash-item-container .show-apps {
-        padding: 4px 2px 4px 0;
-        transition-duration: 100ms;
-        &:#{$d} { background-color: transparentize(black, 0.2); }
+        &:#{$d} {
+          background-image: url("d2p-activities-active.svg");
+          background-color: transparentize(black, 0.2);
+        }
       }
     }
 
-    .show-apps-icon { color: transparent; } // Hides the default icon
+    .show-apps-icon {
+      color: transparent; // Hides the default icon
+      border-image: url("transparent.png"); // Will most likely disable any custom icons set by the user
+    }
 
     @each $c in 1, 2, 3, 4 {
       .app-well-app {

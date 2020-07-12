@@ -1034,47 +1034,29 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel.dashtopanelTop .show-apps { width: 32px; }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
+#panel.dashtopanelMainPanel.dashtopanelTop .show-apps > .overview-icon { border-image: url("transparent.png"); }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps:hover .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:hover { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:hover { background-color: rgba(0, 0, 0, 0.8); }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:focus { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps:focus .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:active { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:focus { background-color: rgba(0, 0, 0, 0.8); }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:checked { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps:active .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:overview { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:active { background-color: rgba(0, 0, 0, 0.8); }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps:checked .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:checked { background-color: rgba(0, 0, 0, 0.8); }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps:overview .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:overview { background-color: rgba(0, 0, 0, 0.8); }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .show-apps-icon { color: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelTop .show-apps-icon { color: transparent; border-image: url("transparent.png"); }
 
 #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app { margin: 0 2px; border-radius: 0; }
 
@@ -1140,47 +1122,29 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel.dashtopanelBottom .show-apps { width: 32px; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps > .overview-icon { border-image: url("transparent.png"); }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps:hover .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:hover { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:hover { background-color: rgba(0, 0, 0, 0.8); }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:focus { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps:focus .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:active { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:focus { background-color: rgba(0, 0, 0, 0.8); }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:checked { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps:active .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:overview { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:active { background-color: rgba(0, 0, 0, 0.8); }
-
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
-
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps:checked .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
-
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
-
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:checked { background-color: rgba(0, 0, 0, 0.8); }
-
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps .overview-icon { border-radius: 0; margin: 0; background-image: url("d2p-activities.svg"); background-position: center center; }
-
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps:overview .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center center; background-color: transparent; }
-
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
-
-#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:overview { background-color: rgba(0, 0, 0, 0.8); }
-
-#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps-icon { color: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps-icon { color: transparent; border-image: url("transparent.png"); }
 
 #panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app { margin: 0 2px; border-radius: 0; }
 
