@@ -80,7 +80,7 @@ spinner:checked { opacity: 1; animation: spin 1s linear infinite; }
 
 spinner:checked:disabled { opacity: 0.5; }
 
-.large-title { font-weight: 300; font-size: 24pt; letter-spacing: 0.2rem; }
+.large-title { font-weight: 300; font-size: 24pt; }
 
 .title-1 { font-weight: 800; font-size: 20pt; }
 
