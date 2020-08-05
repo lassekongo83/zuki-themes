@@ -134,7 +134,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .popup-sub-menu { background-color: #242628; box-shadow: none; border-top: 1px solid rgba(24, 25, 26, 0.8); border-bottom: 1px solid rgba(24, 25, 26, 0.8); }
 
-.popup-menu-ornament { text-align: right; width: 1.2em; }
+.popup-menu-ornament { width: 1.2em; }
+
+.popup-menu-ornament:ltr { text-align: right; }
+
+.popup-menu-ornament:rtl { text-align: left; }
 
 .popup-separator-menu-item { padding: 0; }
 
@@ -254,7 +258,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .world-clocks-button .world-clocks-city { color: #f6f6f7; font-size: 11pt; font-weight: normal; }
 
-.world-clocks-button .world-clocks-time { font-weight: bold; color: #f6f6f7; font-feature-settings: "tnum"; font-size: 11pt; text-align: right; }
+.world-clocks-button .world-clocks-time { font-weight: bold; color: #f6f6f7; font-feature-settings: "tnum"; font-size: 11pt; }
+
+.world-clocks-button .world-clocks-time:ltr { text-align: right; }
+
+.world-clocks-button .world-clocks-time:rtl { text-align: left; }
 
 .world-clocks-button .world-clocks-timezone { color: #c0c0c7; font-feature-settings: "tnum"; font-size: 10pt; }
 
@@ -316,7 +324,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .message .message-secondary-bin { padding: 0 8px; }
 
-.message .message-secondary-bin > .event-time { color: rgba(246, 246, 247, 0.5); font-size: 9pt; text-align: right; /* HACK: the label should be baseline-aligned with a 1em label, fake this with some bottom padding */ padding-bottom: 0.13em; }
+.message .message-secondary-bin > .event-time { color: rgba(246, 246, 247, 0.5); font-size: 9pt; /* HACK: the label should be baseline-aligned with a 1em label, fake this with some bottom padding */ padding-bottom: 0.13em; }
+
+.message .message-secondary-bin > .event-time:ltr { text-align: right; }
+
+.message .message-secondary-bin > .event-time:rtl { text-align: left; }
 
 .message .message-close-button { color: white; }
 
@@ -980,11 +992,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .user-widget-label { color: #eeeeec; }
 
-.user-widget.horizontal .user-widget-label { font-size: 13pt; font-weight: bold; text-align: left; padding-left: 15px; }
+.user-widget.horizontal .user-widget-label { font-size: 13pt; font-weight: bold; padding-left: 15px; }
 
-.user-widget.horizontal .user-widget-label:ltr { padding-left: 14px; }
+.user-widget.horizontal .user-widget-label:ltr { padding-left: 14px; text-align: left; }
 
-.user-widget.horizontal .user-widget-label:rtl { padding-right: 14px; }
+.user-widget.horizontal .user-widget-label:rtl { padding-right: 14px; text-align: right; }
 
 .user-widget.vertical .user-widget-label { font-size: 16pt; text-align: center; font-weight: normal; padding-top: 16px; }
 
