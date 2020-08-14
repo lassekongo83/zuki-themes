@@ -60,6 +60,8 @@
 // Dark/alt headerbar //
 //--------------------//
 // not used in the dark theme
+$_button_bg_color: null;
+$_button_border_color: null;
 $_button_bg_color: lighten($alt_headerbar_bg, 7.5%) !global;
 $_button_border_color: darken($alt_headerbar_bg, 10%) !global;
 

@@ -3,8 +3,8 @@
 INKSCAPE="/usr/bin/inkscape"
 OPTIPNG="/usr/bin/optipng"
 
-SRC_FILE="assets.svg"
 INDEX="assets.txt"
+SRC_FILE="assets.svg"
 
 for i in `cat $INDEX`
 do 
@@ -15,7 +15,7 @@ else
     echo Rendering $i.png
     $INKSCAPE --export-id=$i \
               --export-id-only \
-              --export-png=$i.png $SRC_FILE >/dev/null #\
+              --export-filename=$i.png $SRC_FILE >/dev/null #\
     # && $OPTIPNG -o7 --quiet $i.png 
 fi
 done

@@ -38,6 +38,8 @@ $ease-out: cubic-bezier(0, 0, .2, 1);
 $ease-in: cubic-bezier(.4, 0, 1, 1);
 $ease-in-out: cubic-bezier(.4, 0, .6, 1);
 
+$button_fill: null;
+
 * {
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
