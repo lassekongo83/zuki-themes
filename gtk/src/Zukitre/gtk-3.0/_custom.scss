@@ -311,18 +311,13 @@ $_button_border_color: darken($alt_headerbar_bg, 10%) !global;
 
 // Global panel button styles
 %panelbutton {
-  background-image: none;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  border-color: transparent;
-  box-shadow: none;
+  @include button(undecorated);
   padding: 0 1px;
-  color: transparentize($osd_fg_color, 0.05);
+  color: transparentize($panel_fg, 0.05);
 
   &:hover {
     color: $selected_fg_color;
-    background-color: lighten($osd_bg_color, 4%);
+    background-color: lighten($panel_bg, 6%);
   }
   &:active, &:checked {
     color: $selected_fg_color;
@@ -341,11 +336,23 @@ $_button_border_color: darken($alt_headerbar_bg, 10%) !global;
 }
 
 .xfce4-panel.background {
-  background-color: $osd_bg_color;
-  color: $osd_fg_color;
+  background-color: $panel_bg;
+  color: $panel_fg;
   font-weight: normal;
 
-  button { @extend %panelbutton; }
+  button, .tasklist button { @extend %panelbutton; }
+  .tasklist .toggle {
+    background: none;
+    &:hover {
+      color: $selected_fg_color;
+      background-color: lighten($panel_bg, 6%);
+    }
+    &:active, &:checked {
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
+      &:hover { background-color: lighten($selected_bg_color, 4%); }
+    }
+  }
 
   entry { caret-color: $text_color; }
   menu {

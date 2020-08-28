@@ -56,9 +56,9 @@ button label:disabled:backdrop { color: inherit; }
 
 label.error { color: #cc0000; }
 
-label.error:disabled { color: #707070; }
+label.error:disabled { color: rgba(204, 0, 0, 0.5); }
 
-label.error:disabled:backdrop { color: #b0b0b0; }
+label.error:disabled:backdrop { color: rgba(204, 0, 0, 0.4); }
 
 .dim-label, .titlebar:not(headerbar) .subtitle, headerbar .subtitle, label.separator { opacity: 0.55; text-shadow: none; }
 
@@ -1863,9 +1863,9 @@ scrollbar.horizontal button.down:disabled { -gtk-icon-source: -gtk-scaled(url("a
 
 .primary-toolbar button:hover, .primary-toolbar buttom.image-button:hover { border-color: #b0b0b0; }
 
-.gnome-panel-menu-bar button:not(#tasklist-button), .mate-panel-menu-bar button:not(#tasklist-button), .xfce4-panel.background button { background-image: none; background-color: transparent; border: none; border-radius: 0; border-color: transparent; box-shadow: none; padding: 0 1px; color: rgba(238, 238, 236, 0.95); }
+.gnome-panel-menu-bar button:not(#tasklist-button), .mate-panel-menu-bar button:not(#tasklist-button), .xfce4-panel.background button, .xfce4-panel.background .tasklist button { border-color: transparent; background-color: transparent; background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; padding: 0 1px; color: rgba(246, 246, 247, 0.95); }
 
-.gnome-panel-menu-bar button:hover:not(#tasklist-button), .mate-panel-menu-bar button:hover:not(#tasklist-button), .xfce4-panel.background button:hover { color: #ffffff; background-color: rgba(63, 63, 63, 0.7); }
+.gnome-panel-menu-bar button:hover:not(#tasklist-button), .mate-panel-menu-bar button:hover:not(#tasklist-button), .xfce4-panel.background button:hover { color: #ffffff; background-color: #2b2e30; }
 
 .gnome-panel-menu-bar button:active:not(#tasklist-button), .mate-panel-menu-bar button:active:not(#tasklist-button), .xfce4-panel.background button:active, .gnome-panel-menu-bar button:checked:not(#tasklist-button), .mate-panel-menu-bar button:checked:not(#tasklist-button), .xfce4-panel.background button:checked { color: #ffffff; background-color: #4a79c7; }
 
@@ -1873,7 +1873,15 @@ scrollbar.horizontal button.down:disabled { -gtk-icon-source: -gtk-scaled(url("a
 
 .XfceHeading { margin: 0; padding: 0; border-width: 0; background-image: none; background-color: #bdbdbd; color: black; }
 
-.xfce4-panel.background { background-color: rgba(53, 53, 53, 0.7); color: #eeeeec; font-weight: normal; }
+.xfce4-panel.background { background-color: #1d1f20; color: #f6f6f7; font-weight: normal; }
+
+.xfce4-panel.background .tasklist .toggle { background: none; }
+
+.xfce4-panel.background .tasklist .toggle:hover { color: #ffffff; background-color: #2b2e30; }
+
+.xfce4-panel.background .tasklist .toggle:active, .xfce4-panel.background .tasklist .toggle:checked { color: #ffffff; background-color: #4a79c7; }
+
+.xfce4-panel.background .tasklist .toggle:active:hover, .xfce4-panel.background .tasklist .toggle:checked:hover { background-color: #5a85cc; }
 
 .xfce4-panel.background entry { caret-color: black; }
 

@@ -85,3 +85,5 @@ $alt_headerbar_bg: #4d4d4d;
 $alt_headerbar_fg: #eeeeec;
 $alt_headerbar_border: darken($alt_headerbar_bg, 8%);
 $alt_headerbar_backdrop_fg: mix($alt_headerbar_fg, $alt_headerbar_bg, 60%);
+$panel_bg: darken(#2b2e30, 6%);
+$panel_fg: #f6f6f7;
