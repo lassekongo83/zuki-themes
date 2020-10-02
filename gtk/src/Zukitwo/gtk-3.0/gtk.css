@@ -1931,7 +1931,7 @@ XfdesktopIconView.view .label { text-shadow: 1px 1px 2px black; }
 
 XfdesktopIconView.view .rubberband { border-radius: 0; }
 
-#XfceNotifyWindow { background-color: #1d1f20; border-radius: 7px; }
+#XfceNotifyWindow { background-color: #1d1f20; border-radius: 7px; color: #eeeeec; }
 
 #XfceNotifyWindow buttonbox { padding: 0; }
 
