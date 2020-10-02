@@ -487,6 +487,8 @@ XfdesktopIconView.view {
       padding: 1px 0;
     }
   }
+
+  &.keycap { box-shadow: none; }
 }
 
 // Xfwm4's alt-tab dialog, aka "tabwin"
