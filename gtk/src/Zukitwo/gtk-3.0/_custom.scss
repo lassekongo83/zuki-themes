@@ -411,7 +411,7 @@ XfdesktopIconView.view {
 }
 
 #XfceNotifyWindow {
-  @extend %osd;
+  background-color: $panel_bg;
   border-radius: $window_radius;
 
   buttonbox { padding: 0; }

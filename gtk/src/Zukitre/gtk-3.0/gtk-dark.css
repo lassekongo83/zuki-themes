@@ -72,9 +72,9 @@ assistant .sidebar label { padding: 6px 12px; }
 
 assistant .sidebar label.highlight { background-color: #545658; }
 
-#XfceNotifyWindow, .osd .scale-popup, .app-notification, .app-notification.frame, .csd popover.background.osd, popover.background.osd, .csd popover.background.touch-selection, .csd popover.background.magnifier, popover.background.touch-selection, popover.background.magnifier, .osd { color: #eeeeec; border: none; background-color: rgba(38, 38, 38, 0.7); background-clip: padding-box; text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; }
+.osd .scale-popup, .app-notification, .app-notification.frame, .csd popover.background.osd, popover.background.osd, .csd popover.background.touch-selection, .csd popover.background.magnifier, popover.background.touch-selection, popover.background.magnifier, .osd { color: #eeeeec; border: none; background-color: rgba(38, 38, 38, 0.7); background-clip: padding-box; text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; }
 
-#XfceNotifyWindow:backdrop, .osd .scale-popup:backdrop, .app-notification:backdrop, popover.background.osd:backdrop, popover.background.touch-selection:backdrop, popover.background.magnifier:backdrop, .osd:backdrop { text-shadow: none; -gtk-icon-shadow: none; }
+.osd .scale-popup:backdrop, .app-notification:backdrop, popover.background.osd:backdrop, popover.background.touch-selection:backdrop, popover.background.magnifier:backdrop, .osd:backdrop { text-shadow: none; -gtk-icon-shadow: none; }
 
 @keyframes spin { to { -gtk-icon-transform: rotate(1turn); } }
 
@@ -1983,7 +1983,7 @@ XfdesktopIconView.view .label { text-shadow: 1px 1px 2px black; }
 
 XfdesktopIconView.view .rubberband { border-radius: 0; }
 
-#XfceNotifyWindow { border-radius: 3px; }
+#XfceNotifyWindow { background-color: #1d1f20; border-radius: 3px; }
 
 #XfceNotifyWindow buttonbox { padding: 0; }
 
