@@ -151,8 +151,10 @@ $_button_border_color: darken($alt_headerbar_bg, 10%) !global;
 
   window.background.chromium {
     background-color: $alt_headerbar_bg;
+    color: $alt_headerbar_fg;
     button { border-color: $_button_border_color; } // tab borders
     menubar { color: $alt_headerbar_fg; }
+    menu, .menu, .context-menu { color: $fg_color; }
   }
 }
 
