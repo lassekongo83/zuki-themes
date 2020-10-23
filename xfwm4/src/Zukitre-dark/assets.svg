@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -15,7 +13,7 @@
    viewBox="0 0 224 217"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="assets.svg">
   <defs
      id="defs4">
@@ -43,9 +41,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="99.270146"
-     inkscape:cy="114.61799"
+     inkscape:zoom="1"
+     inkscape:cx="73.939486"
+     inkscape:cy="111.84966"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -64,10 +62,11 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      inkscape:window-width="1920"
-     inkscape:window-height="903"
+     inkscape:window-height="917"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid4136"
@@ -1547,22 +1546,22 @@
          id="g6438">
         <path
            id="path4034"
-           d="m -19,806.36215 v 28 H 7.0000002 v -28 z"
            style="opacity:1;fill:#2b2e30;fill-opacity:1;stroke:none;stroke-width:2.1942687;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           inkscape:connector-curvature="0" />
+           d="M 12 107 L 12 109 L 10 109 L 10 135 L 36 135 L 36 109 L 34 109 L 34 107 L 12 107 z "
+           transform="translate(-29,699.36214)" />
         <rect
            y="807.36212"
-           x="-19"
-           height="1"
-           width="26"
+           x="-17"
+           height="1.0000185"
+           width="22"
            id="rect4036-6"
-           style="fill:#3f4143;fill-opacity:1;stroke:none;stroke-width:2.94392037;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1254902" />
+           style="fill:#3f4143;fill-opacity:1;stroke:none;stroke-width:2.94392;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.12549" />
         <rect
-           style="fill:#121517;fill-opacity:1;stroke:none;stroke-width:2.94392037;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1254902"
+           style="fill:#121517;fill-opacity:1;stroke:none;stroke-width:2.94392;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.12549"
            id="rect4038-7"
-           width="26"
-           height="1"
-           x="-19"
+           width="22"
+           height="1.0000185"
+           x="-17"
            y="806.36212" />
       </g>
       <path
@@ -1580,24 +1579,24 @@
          transform="translate(28)"
          id="g6446">
         <path
-           inkscape:connector-curvature="0"
+           id="path6440"
            style="opacity:1;fill:#2b2e30;fill-opacity:1;stroke:none;stroke-width:2.1942687;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m -19,806.36215 v 28 H 7.0000002 v -28 z"
-           id="path6440" />
+           d="M 40 107 L 40 109 L 38 109 L 38 135 L 64 135 L 64 109 L 62 109 L 62 107 L 40 107 z "
+           transform="translate(-57,699.36214)" />
         <rect
-           style="fill:#3f4143;fill-opacity:1;stroke:none;stroke-width:2.94392037;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1254902"
+           style="fill:#3f4143;fill-opacity:1;stroke:none;stroke-width:2.94392;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.12549"
            id="rect6442"
-           width="26"
-           height="1"
-           x="-19"
+           width="22"
+           height="1.0000185"
+           x="-17"
            y="807.36212" />
         <rect
            y="806.36212"
-           x="-19"
-           height="1"
-           width="26"
+           x="-17"
+           height="1.0000185"
+           width="22"
            id="rect6444"
-           style="fill:#121517;fill-opacity:1;stroke:none;stroke-width:2.94392037;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1254902" />
+           style="fill:#121517;fill-opacity:1;stroke:none;stroke-width:2.94392;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.12549" />
       </g>
       <path
          style="fill:#4a79c7;fill-opacity:1;stroke:none;stroke-width:1.00001252px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1615,22 +1614,22 @@
          transform="translate(56)">
         <path
            id="path6448"
-           d="m -19,806.36215 v 28 H 7.0000002 v -28 z"
            style="opacity:1;fill:#2b2e30;fill-opacity:1;stroke:none;stroke-width:2.1942687;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           inkscape:connector-curvature="0" />
+           d="M 68 107 L 68 109 L 66 109 L 66 135 L 92 135 L 92 109 L 90 109 L 90 107 L 68 107 z "
+           transform="translate(-85,699.36214)" />
         <rect
            y="807.36212"
-           x="-19"
-           height="1"
-           width="26"
+           x="-17"
+           height="0.99998158"
+           width="22"
            id="rect6450"
-           style="fill:#3f4143;fill-opacity:1;stroke:none;stroke-width:2.94392037;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1254902" />
+           style="fill:#3f4143;fill-opacity:1;stroke:none;stroke-width:2.94392;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.12549" />
         <rect
-           style="fill:#121517;fill-opacity:1;stroke:none;stroke-width:2.94392037;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1254902"
+           style="fill:#121517;fill-opacity:1;stroke:none;stroke-width:2.94392;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.12549"
            id="rect6452"
-           width="26"
-           height="1"
-           x="-19"
+           width="22"
+           height="1.0000185"
+           x="-17"
            y="806.36212" />
       </g>
       <path
