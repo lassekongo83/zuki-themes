@@ -38,8 +38,6 @@ $ease-out: cubic-bezier(0, 0, .2, 1);
 $ease-in: cubic-bezier(.4, 0, 1, 1);
 $ease-in-out: cubic-bezier(.4, 0, .6, 1);
 
-$button_fill: null;
-
 * {
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
@@ -913,16 +911,14 @@ button {
     $_border_bg: linear-gradient(to top, $alt-borders-color 25%, $borders-color 50%);
 
     &:not(.flat):not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) {
-      @include button(normal);
+      @include button(normal, $backimage: $_border_bg);
 
-      background-image: $button_fill, $_border_bg;
       border-color: transparent;
     }
 
     &:hover:not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) {
-      @include button(hover);
+      @include button(hover, $backimage: $_border_bg);
 
-      background-image: $button_fill, $_border_bg;
       border-color: transparent;
     }
 

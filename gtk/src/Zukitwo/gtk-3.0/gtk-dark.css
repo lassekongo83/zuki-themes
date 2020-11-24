@@ -359,9 +359,9 @@ button.circular { border-radius: 9999px; -gtk-outline-radius: 9999px; padding: 4
 
 button.circular label { padding: 0; }
 
-button.circular:not(.flat):not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) { color: #f6f6f7; outline-color: rgba(246, 246, 247, 0.3); border-color: rgba(33, 36, 37, 0.8); border-bottom-color: rgba(16, 18, 18, 0.8); background-color: #43484b; box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 0 0 1px rgba(0, 0, 0, 0.07); background-image: linear-gradient(to top, #43484b, #43484b), linear-gradient(to top, #18191a 25%, #212425 50%); border-color: transparent; }
+button.circular:not(.flat):not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) { color: #f6f6f7; outline-color: rgba(246, 246, 247, 0.3); border-color: rgba(33, 36, 37, 0.8); border-bottom-color: rgba(16, 18, 18, 0.8); background-color: #43484b; box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 0 0 1px rgba(0, 0, 0, 0.07); border-color: transparent; }
 
-button.circular:hover:not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) { color: #f6f6f7; outline-color: rgba(246, 246, 247, 0.3); border-color: #090a0a; border-bottom-color: black; box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 0 0 1px rgba(0, 0, 0, 0.07); background-color: #484d50; background-image: linear-gradient(to top, #484d50, #484d50), linear-gradient(to top, #18191a 25%, #212425 50%); border-color: transparent; }
+button.circular:hover:not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) { color: #f6f6f7; outline-color: rgba(246, 246, 247, 0.3); border-color: #090a0a; border-bottom-color: black; box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 0 0 1px rgba(0, 0, 0, 0.07); background-color: #484d50; border-color: transparent; }
 
 stacksidebar row.needs-attention > label, .stack-switcher > button.needs-attention > label, .stack-switcher > button.needs-attention > image { animation: needs_attention 150ms ease-in; background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#84a4d9), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.45, to(rgba(0, 0, 0, 0.857255)), to(transparent)); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; background-position: right 3px, right 2px; }
 
