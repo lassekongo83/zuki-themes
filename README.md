@@ -46,6 +46,15 @@ git pull
 sudo ninja -C build install
 ```
 
+### Local installation
+
+Install the theme(s) locally if you for some reason can't run as a sudo user.
+
+1. Download or clone the repository and navigate to the directory.
+2. Run: `sh local-install.sh` to install the theme(s) in `~/.themes`
+
+Note: The script will not install the gnome-shell or xfwm4 theme(s) if you don't run any of those.
+
 #### Changing themes
 
 Use `gnome-tweaks` to change themes.
