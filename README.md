@@ -50,8 +50,14 @@ sudo ninja -C build install
 
 Install the theme(s) locally if you for some reason can't run as a sudo user.
 
-1. Download or clone the repository and navigate to the directory.
-2. Run: `sh local-install.sh` to install the theme(s) in `~/.themes`
+```bash
+git clone https://github.com/lassekongo83/zuki-themes.git
+cd zuki-themes
+meson build
+DESTDIR=/home/your-username/.themes ninja -C build install
+mv ~/.themes/usr/share/themes/* ~/.themes
+rm -r ~/.themes/usr
+```
 
 Note: The script will not install the gnome-shell or xfwm4 theme(s) if you don't run any of those.
 
