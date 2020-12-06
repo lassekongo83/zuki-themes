@@ -59,8 +59,6 @@ mv ~/.themes/usr/share/themes/* ~/.themes
 rm -r ~/.themes/usr
 ```
 
-Note: The script will not install the gnome-shell or xfwm4 theme(s) if you don't run any of those.
-
 #### Changing themes
 
 Use `gnome-tweaks` to change themes.
