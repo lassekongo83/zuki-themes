@@ -696,7 +696,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .list-search-result .list-search-result-description { color: #a6a69b; }
 
 /* App Grid */
-.icon-grid { row-spacing: 36px; column-spacing: 36px; max-row-spacing: 72px; max-column-spacing: 72px; page-padding-top: 36px; page-padding-bottom: 36px; page-padding-left: 36px; page-padding-right: 36px; }
+.icon-grid { row-spacing: 36px; column-spacing: 36px; max-row-spacing: 72px; max-column-spacing: 72px; }
 
 /* App Icons */
 .app-well-app .overview-icon, .grid-search-result .overview-icon { color: #fff; }
@@ -730,7 +730,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .app-folder-dialog .folder-name-container .edit-folder-button > StIcon { icon-size: 16px; }
 
-.app-folder-dialog .icon-grid { row-spacing: 12px; column-spacing: 30px; page-padding-top: 0; page-padding-bottom: 0; page-padding-left: 0; page-padding-right: 0; }
+.app-folder-dialog .icon-grid { row-spacing: 12px; column-spacing: 30px; }
 
 .app-folder-dialog .page-indicators { margin-bottom: 18px; }
 
