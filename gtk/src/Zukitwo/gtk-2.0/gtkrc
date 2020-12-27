@@ -112,7 +112,7 @@ style "default" {
   # Documentation: https://wiki.ubuntu.com/Artwork/Documentation/Murrine#The_Murrine_Engine
   engine "murrine" {
     animation            = FALSE
-    arrowstyle           = 0
+    arrowstyle           = 1
     border_shades        = {1.0,1.0}
     cellstyle            = 0
     colorize_scrollbar   = TRUE
