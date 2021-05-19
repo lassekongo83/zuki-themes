@@ -6,6 +6,8 @@ gtk3_dir = join_paths(theme_dir, 'gtk-3.0')
 gtk3_scss_sources = [
   'gtk',
   'gtk-dark',
+  'gtk-zukitwo',
+  'gtk-zukitwo-dark',
 ]
 
 # Dependencies of the files that need to be compiled

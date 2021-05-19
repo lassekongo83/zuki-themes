@@ -1,7 +1,7 @@
 #! /bin/bash
 
-# INKSCAPE="flatpak run org.inkscape.Inkscape"
-INKSCAPE="/usr/bin/inkscape" # comment this line and uncomment the above line if you're using a flatpak install of inkscape
+INKSCAPE="flatpak run org.inkscape.Inkscape"
+# INKSCAPE="/usr/bin/inkscape" # comment this line and uncomment the above line if you're using a flatpak install of inkscape
 OPTIPNG="/usr/bin/optipng"
 
 INDEX="assets.txt"

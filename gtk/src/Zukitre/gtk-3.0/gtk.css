@@ -825,9 +825,7 @@ popover.background separator { margin: 3px; }
 
 popover.background list separator { margin: 0px; }
 
-notebook > header { padding: 1px; border-color: #b0b0b0; border-width: 0px; background-color: #c3c3c3; }
-
-notebook > header.top, notebook > header.bottom { box-shadow: inset 0 2px rgba(176, 176, 176, 0.35), inset 0 -1px rgba(0, 0, 0, 0.08); }
+notebook > header { padding: 1px; border-color: #b0b0b0; border-width: 0; background-color: #c3c3c3; box-shadow: inset 0 2px rgba(176, 176, 176, 0.35), inset 0 -1px rgba(0, 0, 0, 0.08); }
 
 notebook > header tabs { margin: 0px; }
 
@@ -959,7 +957,7 @@ scrollbar.left { border-right: 0px solid #b0b0b0; }
 
 scrollbar.right { border-left: 0px solid #b0b0b0; }
 
-scrollbar slider { min-width: 14px; min-height: 14px; margin: 0; border: 0px solid transparent; border-radius: 0; background-clip: padding-box; background-color: #707070; transition: background-color 250ms; }
+scrollbar slider { min-width: 14px; min-height: 14px; margin: 0px; border: 0px solid transparent; border-radius: 0; background-clip: padding-box; background-color: #707070; transition: background-color 250ms; }
 
 scrollbar slider:hover { background-color: #4e4e4e; }
 
@@ -1421,7 +1419,7 @@ calendar:backdrop { color: #313131; border-color: #b7b7b7; }
 
 calendar:indeterminate { color: alpha(currentColor,0.1); }
 
-messagedialog .titlebar { min-height: 20px; background-image: none; background-color: #d6d6d6; border-style: none; border-top-left-radius: 7px; border-top-right-radius: 7px; }
+messagedialog .titlebar { min-height: 20px; background-image: none; background-color: #d6d6d6; border-style: none; border-top-left-radius: 3px; border-top-right-radius: 3px; }
 
 messagedialog.csd.background { border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
 
@@ -1990,6 +1988,8 @@ XfdesktopIconView.view .rubberband { border-radius: 0; }
 .caja-side-pane .frame { border-width: 1px 0 0; }
 
 .caja-notebook .frame { border-width: 0 0 1px; }
+
+.nautilus-window { border-radius: 3px 3px 0 0; }
 
 .nautilus-window searchbar { border-top: 1px solid #b0b0b0; }
 

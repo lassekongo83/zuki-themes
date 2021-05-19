@@ -475,10 +475,9 @@
 // $hc: top highlight color
 // $ov: a background layer for background shorthand (hence no commas!)
 //
-  $gradient: linear-gradient(to top, $c, $c);
+  $gradient: if($zukitwo == 'false', linear-gradient(to top, $c, $c), linear-gradient(to bottom, lighten($c, 6%), $c));
 
   @if $variant == 'dark' {
-    $gradient: linear-gradient(to top, $c, $c);
     border-color: transparentize($borders_color, 0.3);
   }
 

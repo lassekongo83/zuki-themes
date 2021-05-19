@@ -6,7 +6,7 @@ StEntry {
   border-width: 1px;
   color: $fg_color;
   @include entry(normal);
-  &:hover { @include entry(hover);}
+  //&:hover { @include entry(hover);}
   &:focus { @include entry(focus);}
   &:insensitive { @include entry(insensitive);}
   selection-background-color: $selected_bg_color;

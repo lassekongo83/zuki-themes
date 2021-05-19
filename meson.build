@@ -1,5 +1,5 @@
 project('Zuki',
-        meson_version: '>= 0.45',
+        meson_version: '>= 0.51',
         license : ['GPL3', 'LGPL 2.1'],
         default_options: ['prefix=/usr'])
 

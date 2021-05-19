@@ -76,7 +76,7 @@ stage {
 %osd_panel {
   color: $osd_fg_color;
   background-color: $osd_bg_color;
-  border: 1px solid $osd_outer_borders_color;
+  //border: 1px solid $osd_outer_borders_color;
   border-radius: $base_border_radius * 2 + 4px;
   padding: $base_padding * 2;
 }
@@ -85,16 +85,15 @@ stage {
 // for the dash and workspace switcher
 %overview_panel {
   color: $osd_fg_color;
-  background-color: transparentize($osd_bg_color, 0.2);
-  border: 1px solid $osd_outer_borders_color;
+  background-color: transparentize($osd_fg_color, 0.9);
 }
 
 // icon tiles
 %icon_tile {
-  border-radius: $base_border_radius;
+  border-radius: $base_border_radius + 4px;
   padding: $base_padding;
   border: 2px solid transparent;
-  transition-duration: 75ms;
+  transition-duration: 100ms;
   text-align: center;
 }
 
@@ -130,8 +129,8 @@ stage {
   border-bottom-width: 0;
 
   &:insensitive { @include button(insensitive, $shadow: none); }
-  &:hover { @include button(hover, $shadow: none); }
   &:focus { @include button(focus, $shadow: none); }
+  &:hover { @include button(hover, $shadow: none); }
   &:active { @include button(active, $shadow: none); }
 
   // radius is 2 pixel less to fit in bubble
@@ -152,7 +151,7 @@ stage {
 
 // notification styling
 @mixin notification_bubble($flat: false) {
-  border-width: 0px;
+  border-width: 0;
   border-style: solid;
   border-radius: $base_border_radius;
   margin: $base_margin;

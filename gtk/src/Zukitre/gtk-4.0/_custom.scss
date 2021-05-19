@@ -1,0 +1,450 @@
+// This file is used to apply some larger unofficial custom styles to the Adwaita base.
+
+//---------------//
+// Title buttons //
+//---------------//
+%titlebutton {
+  min-width: $titlebutton_size;
+  min-height: $titlebutton_size;
+  padding: 0;
+  margin: 4px 2px 4px 8px;
+  @if $zukitwo == 'false' {
+    border-radius: 1.5px;
+  }
+  @else {
+    border-radius: 99px;
+    box-shadow: none;
+    &, &:active { background-color: transparent; }
+  }
+}
+
+%titlebuttons {
+  // Zukitre
+  @if $zukitwo == 'false' {
+    button {
+      @extend %titlebutton;
+
+      &.close, &.maximize, &.minimize {
+        color: transparent;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-width: 0;
+        box-shadow: none;
+        transition-property: background-color;
+        > image {
+          opacity: 0;
+        }
+      }
+
+      &.close {
+        background-color: $close_button;
+
+        &:hover, &:active { background-color: $close_button_hover; }
+        &:backdrop {
+          background-color: $close_button_backdrop;
+          &:hover, &:active { background-color: $close_button_hover; }
+        }
+      }
+    
+      &.maximize, &.minimize {
+        &:hover, &:active { background-color: if($variant == 'light' and $alt_header == 'false', $selected_bg_color, transparentize(white, 0.8)); }
+      }
+
+      // titlebutton icons
+      // linked from the gtk3 theme to avoid having duplicate assets
+      @each $k in ('close', 'maximize', 'minimize') {
+        @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
+          &.#{$k}#{$l} {
+            @if($variant=='light' and $alt_header=='false') {
+              background-image: -gtk-scaled(url('../gtk-3.0/assets/titlebutton-#{$k}#{$m}.png'),
+                                            url('../gtk-3.0/assets/titlebutton-#{$k}#{$m}@2.png'));
+            }
+            @else {
+              background-image: -gtk-scaled(url('../gtk-3.0/assets/titlebutton-#{$k}-hover.png'),
+                                            url('../gtk-3.0/assets/titlebutton-#{$k}-hover@2.png'));
+              &:not(:hover) { opacity: 0.8; }
+              &:backdrop:not(:hover) { opacity: 0.5; }
+            }
+          }
+        }
+      }
+    }
+  }
+  // Zukitwo
+  @else {
+    button {
+      @extend %titlebutton;
+
+      &.close, &.maximize, &.minimize {
+        color: transparent;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-width: 0;
+        box-shadow: none;
+        transition-property: background-color;
+        > image {
+          opacity: 0;
+        }
+      }
+      @each $k in ('close', 'maximize', 'minimize') {
+        @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
+          &.#{$k}#{$l} {
+            @if($variant=='light' and $alt_header=='false') {
+              background-image: -gtk-scaled(url('../gtk-3.0/assets/ztwo-titlebutton-#{$k}#{$m}.png'),
+                                            url('../gtk-3.0/assets/ztwo-titlebutton-#{$k}#{$m}@2.png'));
+            }
+            @else {
+              background-image: -gtk-scaled(url('../gtk-3.0/assets/ztwo-titlebutton-#{$k}#{$m}-dark.png'),
+                                            url('../gtk-3.0/assets/ztwo-titlebutton-#{$k}#{$m}-dark@2.png'));
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Zukitre unmaximize titlebutton icon
+@if $zukitwo == 'false' {
+  .maximized windowcontrols button {
+    @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
+      &.maximize#{$l} {
+        @if($variant=='light' and $alt_header=='false') {
+          background-image: -gtk-scaled(url('../gtk-3.0/assets/titlebutton-unmaximize#{$m}.png'),
+                                        url('../gtk-3.0/assets/titlebutton-unmaximize#{$m}@2.png'));
+        }
+        @else {
+          background-image: -gtk-scaled(url('../gtk-3.0/assets/titlebutton-unmaximize-hover.png'),
+                                        url('../gtk-3.0/assets/titlebutton-unmaximize-hover@2.png'));
+          &:not(:hover) { opacity: 0.8; }
+          &:backdrop:not(:hover) { opacity: 0.5; }
+        }
+      }
+    }
+  }
+}
+
+//---------------------------//
+// headerbar & alt headerbar //
+//---------------------------//
+// not used in the dark theme
+$_button_bg_color: null;
+$_button_border_color: null;
+$_button_bg_color: lighten($alt_headerbar_bg, 7.5%) !global;
+$_button_border_color: darken($alt_headerbar_bg, 10%) !global;
+
+%alt_titlebar {
+  color: $alt_headerbar_fg;
+  text-shadow: none;
+  &:backdrop {
+    color: $alt_headerbar_backdrop_fg;
+    text-shadow: none;
+  }
+
+  .title {
+    color: $alt_headerbar_fg;
+    &:backdrop { color: $alt_headerbar_backdrop_fg; }
+  }
+
+  .maximized &,
+  .fullscreen & { box-shadow: none; }
+
+  entry {
+    &, &:backdrop {
+      border-color: darken($alt_headerbar_bg, 8%);
+      background-color: lighten($_button_bg_color, 25%);
+      color: $alt_headerbar_fg;
+      caret-color: $alt_headerbar_fg;
+    }
+    &:focus { @include entry(focus); }
+  }
+
+  button,
+  button.linked,
+  button.toggle,
+  button.popup.toggle,
+  button.image-button,
+  button.image-button.toggle,
+  button.text-button,
+  button.text-button.toggle,
+  box button.toggle,
+  buttonbox.toggle,
+  stackswitcher button,
+  filechooser .path-bar.linked>button,
+  .path-bar button {
+    text-shadow: none;
+    &:backdrop {
+      @include button(backdrop, $_button_bg_color, $alt_headerbar_backdrop_fg);
+      text-shadow: none;
+    }
+    @include button(normal, $_button_bg_color, $alt_headerbar_fg);
+    &.flat {
+      @include button(undecorated);
+    }
+
+    &:hover {
+      @include button(hover, $_button_bg_color, $alt_headerbar_fg);
+    }
+    &:active, &:checked, &:active:hover, &:checked:hover {
+      @include button(active, $_button_bg_color, $alt_headerbar_fg);
+      border-color: transparentize(black, 0.6);
+    }
+    &:disabled {
+      @include button(insensitive, $_button_bg_color, $alt_headerbar_backdrop_fg);
+      &:backdrop {
+        @include button(backdrop-insensitive, $_button_bg_color, $alt_headerbar_backdrop_fg);
+      }
+    }
+  }
+
+  separator {
+    background: image(lighten($_button_border_color, 5%));
+  }
+  // TODO: Checkbuttons and scales
+  switch {
+    slider { background-color: transparentize(white, 0.5); }
+  }
+
+  // Suggested and Destructive Action buttons
+  @each $b_type, $b_color in (suggested-action, $suggested_bg_color),
+                             (destructive-action, $destructive_color) {
+    &.#{$b_type} {
+      @include button(normal, $b_color, white);
+      border-color: $b_color;
+
+      &.flat {
+        @include button(undecorated);
+        color: $b_color;
+      }
+
+      &:hover {
+        @include button(hover, $b_color, white);
+        border-color: $b_color;
+      }
+
+      &:active,
+      &:checked {
+        @include button(active, $b_color, white);
+        @if $alt_header == 'true' {
+          border-color: darken($suggested_bg_color, 15%);
+        }
+      }
+
+      &, &:hover, &:focus:active { outline-color: $selected_bg_color; }
+
+      &:backdrop,
+      &.flat:backdrop {
+        @include button(backdrop, $b_color, white);
+
+        &:active,
+        &:checked {
+          @include button(backdrop-active, $b_color, white);
+        }
+
+        &:disabled {
+          @include button(backdrop-insensitive, if($variant=='light', darken($alt_headerbar_bg, 14%), $alt_headerbar_bg), $alt_headerbar_backdrop_fg);
+          border-color: darken($alt_headerbar_bg, 3%);
+
+          &:active,
+          &:checked {
+            @include button(backdrop-insensitive-active, $b_color, white);
+          }
+        }
+      }
+
+      &.flat {
+        &:backdrop,
+        &:disabled,
+        &:backdrop:disabled {
+          @include button(undecorated);
+          color: transparentize($b_color, 0.2);
+        }
+      }
+
+      &:disabled {
+        @include button(insensitive, if($variant== "light", darken($alt_headerbar_bg, 15%), $alt_headerbar_bg), $alt_headerbar_fg);
+        border-color: darken($alt_headerbar_bg, 5%);
+        background-image: image(lighten($alt_headerbar_bg, 2%));
+
+        &:active,
+        &:checked {
+          @include button(insensitive-active, $b_color, white);
+        }
+      }
+
+      .osd & {
+        @include button(osd, $b_color);
+
+        &:hover {
+          @include button(osd-hover, $b_color);
+        }
+
+        &:active,
+        &:checked {
+          &:backdrop,
+          & { @include button(osd-active, $b_color); }
+        }
+
+        &:disabled {
+          &:backdrop, & { @include button(osd-insensitive, $b_color); }
+        }
+
+        &:backdrop {
+          @include button(osd-backdrop, $b_color);
+        }
+      }
+    }
+  }
+}
+
+@if $alt_header=='true' {
+  .titlebar, headerbar { @extend %alt_titlebar; }
+  .ssd .titlebar {
+    @include headerbar_fill($alt_headerbar_bg);
+    color: $alt_headerbar_fg;
+    text-shadow: none;
+    border-width: 0;
+    &:backdrop { color: $alt_headerbar_backdrop_fg; }
+  }
+
+  #MozillaGtkWidget.background  {
+    menubar, .menubar, menubar > menuitem:hover {
+      background-color: $alt_headerbar_bg;
+      color: $alt_headerbar_fg;
+    }
+  }
+
+  window.background.chromium {
+    background-color: $alt_headerbar_bg;
+    color: $alt_headerbar_fg;
+    button { border-color: $_button_border_color; } // tab borders
+    menubar { color: $alt_headerbar_fg; }
+    menu, .menu, .context-menu { color: $fg_color; }
+  }
+}
+
+//----------------//
+// Switch buttons //
+//----------------//
+// TODO: May need a border.
+%switchbutton {
+  font-weight: bold;
+  font-size: smaller;
+
+  margin: 4px 0;
+  padding: 0;
+  border-width: 0;
+  border-radius: 99px;
+  background-color: transparentize(black, 0.62);
+  background-clip: padding-box;
+  transition: all $duration $ease-out;
+
+  @include focus-ring($offset: 0, $outer: true);
+
+  headerbar & { background-color: darken($dark_fill,8%); }
+
+  &:checked {
+    background-color: $checkradio_bg_color;
+  }
+
+  &:disabled {
+    opacity: 0.38;
+  }
+
+  > slider {
+    margin: 2px; //-2px;
+    min-width: 22px;
+    min-height: 22px;
+    border-radius: 99px;
+    background-color: if($variant=='light', white, transparentize($fg_color, 0.5));
+    transition: all $duration $ease-out;
+    box-shadow: 0 2px 2px -2px rgba(black, .3),
+                0 1px 2px -1px rgba(black, .24),
+                0 1px 2px -.6px rgba(black, .17);
+  }
+
+  &:hover > slider,
+  &:focus > slider {
+    background-color: if($variant=='light', white, transparentize($fg_color, 0.5));
+    box-shadow: 0 2px 2px -2px rgba(black, .5),
+                0 1px 2px -1px rgba(black, .44),
+                0 1px 2px -.6px rgba(black, .37);
+  }
+
+  &:checked > slider {
+    background-color: if($variant=='light', white, transparentize($fg_color, 0.5));
+  }
+
+  > image { color: transparent; }
+
+  row:selected & {
+    outline-color: $alt_focus_border_color;
+
+    @if $variant == 'light' {
+      box-shadow: none;
+      border: 1px solid $checkradio_borders_color;
+
+      &:backdrop { border-color: $checkradio_borders_color; }
+
+      > slider { &:checked, & { border-color: $checkradio_borders_color; } }
+    }
+  }
+}
+
+// ------------------------ //
+// scale with marks madness //
+// ------------------------ //
+//parts borrowed from https://github.com/hrdwrrsk/tetra-gtk-theme
+%scale_madness {
+  @each $dir_class, $dir_infix in ('horizontal', 'horz'),
+                                  ('vertical', 'vert') {
+    @each $marks_infix, $marks_class in ('scale-has-marks-above', 'marks-before:not(.marks-after)'),
+                                        ('scale-has-marks-below', 'marks-after:not(.marks-before)') {
+      &.#{$dir_class}.#{$marks_class} {
+        > trough > slider {
+          margin: -11px -4px;
+          padding: 0px;
+          border-radius: $button-radius;
+
+          $_scale_slider_bg_pos: bottom;
+
+          @if $dir_class == 'horizontal' {
+            min-height: 22px;
+            min-width: 9px;
+
+            @if $marks_infix == 'scale-has-marks-above' {
+              $_scale_slider_bg_pos: top;
+            }
+          }
+          @else {
+            margin: -4px -11px;
+            min-height: 9px;
+            min-width: 22px;
+
+            @if $marks_infix == 'scale-has-marks-above' {
+              $_scale_slider_bg_pos: left bottom;
+            }
+
+            @else {
+              $_scale_slider_bg_pos: right bottom;
+            }
+          }
+        }
+
+        &.fine-tune > trough > slider {
+          // bigger negative margins to make the trough grow here as well
+          margin: -8px -4px;
+
+          @if $dir_class == 'horizontal' {
+          }
+
+          @else {
+            margin: -4px -8px;
+          }
+        }
+      }
+    }
+  }
+}

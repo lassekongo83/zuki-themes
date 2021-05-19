@@ -4,74 +4,116 @@
 // Title buttons //
 //---------------//
 %titlebutton {
-  min-width: $titlebutton_size;
-  min-height: $titlebutton_size;
-  padding: 0;
-  margin: 2px;
-  border-radius: 1.5px;
+    min-width: $titlebutton_size;
+    min-height: $titlebutton_size;
+    padding: 0;
+    margin: 2px;
+  @if $zukitwo == 'false' {
+    border-radius: 1.5px;
+  }
+  @else {
+    border-radius: 99px;
+    box-shadow: none;
+    &, &:active { background-color: transparent; }
+  }
 }
 
 %titlebuttons {
-  button.titlebutton {
-    @extend %titlebutton;
+  // Zukitre
+  @if $zukitwo == 'false' {
+    button.titlebutton {
+      @extend %titlebutton;
 
-    &.close, &.maximize, &.minimize {
-      color: transparent;
-      background-color: transparent;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-width: 0;
-      box-shadow: none;
-      transition-property: background-color;
-    }
+      &.close, &.maximize, &.minimize {
+        color: transparent;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-width: 0;
+        box-shadow: none;
+        transition-property: background-color;
+      }
 
-    &.close {
-      background-color: $close_button;
+      &.close {
+        background-color: $close_button;
 
-      &:hover, &:active { background-color: $close_button_hover; }
-      &:backdrop {
-        background-color: $close_button_backdrop;
         &:hover, &:active { background-color: $close_button_hover; }
+        &:backdrop {
+          background-color: $close_button_backdrop;
+          &:hover, &:active { background-color: $close_button_hover; }
+        }
+      }
+    
+      &.maximize, &.minimize { 
+        &:hover, &:active { background-color: if($variant == 'light' and $alt_header == 'false', $selected_bg_color, transparentize(white, 0.8)); }
+      }
+
+      // titlebutton icons
+      @each $k in ('close', 'maximize', 'minimize') {
+        @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
+          &.#{$k}#{$l} {
+            @if($variant=='light' and $alt_header=='false') {
+              background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
+                                            url('assets/titlebutton-#{$k}#{$m}@2.png'));
+            }
+            @else {
+              background-image: -gtk-scaled(url('assets/titlebutton-#{$k}-hover.png'),
+                                            url('assets/titlebutton-#{$k}-hover@2.png'));
+              &:not(:hover) { opacity: 0.8; }
+              &:backdrop:not(:hover) { opacity: 0.5; }
+            }
+          }
+        }
       }
     }
-    
-    &.maximize, &.minimize { 
-      &:hover, &:active { background-color: if($variant == 'light' and $alt_header == 'false', $selected_bg_color, transparentize(white, 0.8)); }
-    }
 
-    // titlebutton icons
-    @each $k in ('close', 'maximize', 'minimize') {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
-        &.#{$k}#{$l} {
-          @if($variant=='light' and $alt_header=='false') {
-            background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
-                                          url('assets/titlebutton-#{$k}#{$m}@2.png'));
-          }
-          @else {
-            background-image: -gtk-scaled(url('assets/titlebutton-#{$k}-hover.png'),
-                                          url('assets/titlebutton-#{$k}-hover@2.png'));
-            &:not(:hover) { opacity: 0.8; }
-            &:backdrop:not(:hover) { opacity: 0.5; }
+    // Zukitre unmaximize titlebutton icon
+    .maximized & {
+      button.titlebutton {
+        @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
+          &.maximize#{$l} {
+            @if($variant=='light' and $alt_header=='false') {
+              background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}.png'),
+                                            url('assets/titlebutton-unmaximize#{$m}@2.png'));
+            }
+            @else {
+              background-image: -gtk-scaled(url('assets/titlebutton-unmaximize-hover.png'),
+                                            url('assets/titlebutton-unmaximize-hover@2.png'));
+              &:not(:hover) { opacity: 0.8; }
+              &:backdrop:not(:hover) { opacity: 0.5; }
+            }
           }
         }
       }
     }
   }
-
-  // unmaximize titlebutton icon
-  .maximized & {
+  // Zukitwo
+  @else {
     button.titlebutton {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
-        &.maximize#{$l} {
-          @if($variant=='light' and $alt_header=='false') {
-            background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}.png'),
-                                          url('assets/titlebutton-unmaximize#{$m}@2.png'));
-          }
-          @else {
-            background-image: -gtk-scaled(url('assets/titlebutton-unmaximize-hover.png'),
-                                          url('assets/titlebutton-unmaximize-hover@2.png'));
-            &:not(:hover) { opacity: 0.8; }
-            &:backdrop:not(:hover) { opacity: 0.5; }
+      @extend %titlebutton;
+
+      &.close, &.maximize, &.minimize {
+        color: transparent;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-width: 0;
+        box-shadow: none;
+        transition-property: background-color;
+      }
+
+      // titlebutton icons
+      @each $k in ('close', 'maximize', 'minimize') {
+        @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
+          &.#{$k}#{$l} {
+            @if($variant=='light' and $alt_header=='false') {
+              background-image: -gtk-scaled(url('assets/ztwo-titlebutton-#{$k}#{$m}.png'),
+                                            url('assets/ztwo-titlebutton-#{$k}#{$m}@2.png'));
+            }
+            @else {
+              background-image: -gtk-scaled(url('assets/ztwo-titlebutton-#{$k}#{$m}-dark.png'),
+                                            url('assets/ztwo-titlebutton-#{$k}#{$m}-dark@2.png'));
+            }
           }
         }
       }
@@ -586,6 +628,9 @@ XfdesktopIconView.view {
   // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
   searchbar { border-top: 1px solid $borders_color; }
   .searchbar-container { margin-top: -1px; }
+
+  // Border radius on .nautilus-window since version 40
+  border-radius: $window_radius $window_radius 0 0;
 
   // sidebar separator
   paned {
