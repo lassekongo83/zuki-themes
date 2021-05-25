@@ -1783,6 +1783,8 @@ popover.emoji-completion .emoji:hover { background: #373b3d; }
 
 headerbar button.titlebutton.close, .titlebar button.titlebutton.close, headerbar button.titlebutton.maximize, .titlebar button.titlebutton.maximize, headerbar button.titlebutton.minimize, .titlebar button.titlebutton.minimize { color: transparent; background-color: transparent; background-position: center; background-repeat: no-repeat; border-width: 0; box-shadow: none; transition-property: background-color; }
 
+headerbar button.titlebutton.close > image, .titlebar button.titlebutton.close > image, headerbar button.titlebutton.maximize > image, .titlebar button.titlebutton.maximize > image, headerbar button.titlebutton.minimize > image, .titlebar button.titlebutton.minimize > image { opacity: 0; }
+
 headerbar button.titlebutton.close, .titlebar button.titlebutton.close { background-image: -gtk-scaled(url("assets/ztwo-titlebutton-close-dark.png"), url("assets/ztwo-titlebutton-close-dark@2.png")); }
 
 headerbar button.titlebutton.close:backdrop, .titlebar button.titlebutton.close:backdrop { background-image: -gtk-scaled(url("assets/ztwo-titlebutton-close-backdrop-dark.png"), url("assets/ztwo-titlebutton-close-backdrop-dark@2.png")); }

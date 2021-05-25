@@ -953,15 +953,15 @@ row:selected check, row:selected radio { border-color: #3460aa; }
 
 check { border-radius: 3px; -gtk-icon-size: 14px; }
 
-check:checked { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/check-symbolic.symbolic.png")), -gtk-recolor(url("../gtk-3.0/assets/check@2-symbolic.symbolic.png"))); }
+check:checked { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/check-symbolic.svg")), -gtk-recolor(url("../gtk-3.0/assets/check@2-symbolic.symbolic.png"))); }
 
-check:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/dash-symbolic.symbolic.png")), -gtk-recolor(url("../gtk-3.0/assets/dash@2-symbolic.symbolic.png"))); }
+check:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/dash-symbolic.svg")), -gtk-recolor(url("../gtk-3.0/assets/dash@2-symbolic.symbolic.png"))); }
 
 treeview.view radio:selected:focus, treeview.view radio:selected, radio { border-radius: 100%; -gtk-icon-size: 14px; }
 
-treeview.view radio:checked:selected, radio:checked { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/bullet-symbolic.symbolic.png")), -gtk-recolor(url("../gtk-3.0/assets/bullet@2-symbolic.symbolic.png"))); }
+treeview.view radio:checked:selected, radio:checked { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/bullet-symbolic.svg")), -gtk-recolor(url("../gtk-3.0/assets/bullet@2-symbolic.symbolic.png"))); }
 
-treeview.view radio:indeterminate:selected, radio:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/dash-symbolic.symbolic.png")), -gtk-recolor(url("../gtk-3.0/assets/dash@2-symbolic.symbolic.png"))); }
+treeview.view radio:indeterminate:selected, radio:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/dash-symbolic.svg")), -gtk-recolor(url("../gtk-3.0/assets/dash@2-symbolic.symbolic.png"))); }
 
 treeview.view check:selected:focus, treeview.view check:selected, treeview.view radio:selected:focus, treeview.view radio:selected { color: #ffffff; border-color: #2e5596; }
 
