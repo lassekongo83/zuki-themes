@@ -2344,7 +2344,7 @@ popover.background {
 //-----------//
 notebook {
   > header {
-    padding: 1px;
+    padding: 0px;
     border-color: $borders_color;
     border-width: if($zukitwo == 'false', 0, 1px);
     background-color: if($variant=='light', $dark_fill, darken($base_color, 4%));
@@ -2368,7 +2368,7 @@ notebook {
     &.top {
       border-bottom-style: solid;
       > tabs {
-        margin-bottom: -1px;
+        margin-bottom: 0px;
         > tab {
           &:checked {
             box-shadow: inset 1px 1px $borders_color,
@@ -2381,7 +2381,7 @@ notebook {
     &.bottom {
       border-top-style: solid;
       > tabs {
-        margin-top: -1px;
+        margin-top: 0px;
         > tab {
           &:checked {
             box-shadow: inset 1px -1px $borders_color,
@@ -2394,7 +2394,7 @@ notebook {
     &.left {
       border-right-style: solid;
       > tabs {
-        margin-right: -1px;
+        margin-right: 0px;
         > tab {
           &:checked {
             box-shadow: inset 1px 1px $borders_color,
@@ -2407,7 +2407,7 @@ notebook {
     &.right {
       border-left-style: solid;
       > tabs {
-        margin-left: -1px;
+        margin-left: 0px;
         > tab {
           &:checked {
             box-shadow: inset -1px 1px $borders_color,

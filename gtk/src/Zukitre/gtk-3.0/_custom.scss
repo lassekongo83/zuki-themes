@@ -1,5 +1,10 @@
 // This file is used to apply some larger unofficial custom styles to the Adwaita base.
 
+// Viewport bg color
+viewport {
+  background-color: $sidebar_bg_color;
+}
+
 //---------------//
 // Title buttons //
 //---------------//
