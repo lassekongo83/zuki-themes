@@ -11,17 +11,14 @@ Themes for GNOME and XFCE4.
 
 ### Requirements
 
-- GNOME Shell 40.1+ (Older versions can be found under the releases section.)
 - GTK 3.24.13+ and/or GTK 4.2+
-
-<sub>I can't guarantee that the themes will look as intended on older versions.</sub>
-
-Some of these packages may already be installed by default on some distros. (You can skip the gtk2 dependencies if you do not use any gtk2 applications. Then all you need to install is `git`, `meson`, `sassc`, and `ninja`)
 
 * Debian/Ubuntu/Mint/PopOS - `apt install gtk2-engines-murrine gtk2-engines-pixbuf ninja-build git meson sassc`
 * Arch/Manjaro - `pacman -S gtk-engines gtk-engine-murrine ninja git meson sassc`
 * Opensuse - `zypper in gtk2-engine-murrine gtk2-engines ninja git meson sassc`
 * Fedora - `dnf install gtk-murrine-engine gtk2-engines ninja-build git meson sassc`
+
+If you don't use any GTK-2 applications you can skip the gtk engines.
 
 Other distros may have named the above packages differently.
 
@@ -36,60 +33,60 @@ sudo ninja -C build install
 ```
 The themes will be installed in: `/usr/share/themes/`
 
-### Updating the theme
-
-Navigate to the `zuki-themes` folder that was originally cloned. (If you removed it, do the steps above instead).
-
-Then simply run:
-```bash
-git pull
-sudo ninja -C build install
-```
-
 ### Local installation
 
 Install the theme(s) locally if you for some reason can't run as a sudo user.
 
 ```bash
-git clone https://github.com/lassekongo83/zuki-themes.git
+git clone https://github.com/lassekongo83/adw-gtk3.git
 cd zuki-themes
-meson build
-DESTDIR=/home/your-username/.themes ninja -C build install
-mv ~/.themes/usr/share/themes/* ~/.themes
-rm -r ~/.themes/usr
+meson -Dprefix="${HOME}/.local" build
+ninja -C build install
 ```
 
-#### Changing themes
+### Updating the theme
+
+Navigate to the `zuki-themes` folder that was originally cloned. (If you removed it, do the steps above instead).
+Then run:
+
+For a global install:
+```bash
+git pull
+sudo ninja -C build install
+```
+
+For a local install:
+```bash
+git pull
+ninja -C build install
+```
+
+### Flatpak
+
+Use [stylepak](https://github.com/refi64/stylepak).
+
+## How to change themes
 
 Use `gnome-tweaks` to change themes.
 
 You can also change your GTK themes using a terminal.
 ```bash
-# Changing the theme to Zukitre-dark, simply run
+# Change the theme to Zukitre-dark
 gsettings set org.gnome.desktop.interface gtk-theme Zukitre-dark
 
 # Reverting the change to the default GNOME theme
 gsettings set org.gnome.desktop.interface gtk-theme Adwaita
 ```
 
-To change the gnome-shell theme you need to install and activate the `User themes` extension in the [extensions app](https://flathub.org/apps/details/org.gnome.Extensions).
-1. If the user-themes extension is not installed, then look for the package `gnome-shell-extensions` or `gnome-shell-extension-user-theme` and install it. (Or install it from https://extensions.gnome.org/extension/19/user-themes/)
-2. Open the extensions app and activate the `user themes` extension.
-3. Go to the Appearance page in `gnome-tweaks` and change the Shell theme to Zuki-shell in the drop-down list. (If it still shows a yellow triangle, then restart `gnome-tweaks` or relog.)
-
 Xfce users can change themes in `Settings > Appearance` and `Settings > Window manager`
 
-#### Flatpak applications
+#### How to remove the theme(s)
 
-To use the theme in Flatpak applications you'll have to copy the theme(s) from /usr/share/themes to ~/.themes (Symbolic links won't work.)
+To be safe from any crashes or weirdness, change the theme to another one before running the command below.
 
-The theme will be used if the included GTK version for the Flatpak app is at 3.24.x or 4.x. Some apps may require you to change the theme in the app's settings.
+For a global install: `sudo rm -r /usr/share/themes/Zuki*`
 
-#### Removing the themes
-
-To be safe from any gnome-shell crashes or weird behavior, change the gnome-shell theme to another one before removing the theme.
-
-As root, remove the `Zukitre Zukitwo Zukitre-dark Zukitwo-dark Zuki-shell` folders located in `/usr/share/themes/`
+For a local install: `rm -r ~/.local/share/themes/Zuki*`
 
 ## Copying or Reusing
 
