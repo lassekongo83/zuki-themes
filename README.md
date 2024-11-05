@@ -1,3 +1,5 @@
+# THIS THEME IS NO LONGER MAINTAINED
+
 # zuki-themes
 Themes for GNOME and XFCE4.
 
